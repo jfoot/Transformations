@@ -1,0 +1,91 @@
+﻿<Window x:Name="window" x:Class="Transformations.Rotation_EasyExam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transformations"
+        mc:Ignorable="d"
+        Title="Rotation_EasyExam"  ResizeMode="NoResize" MinWidth="850" MinHeight="650" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" d:DesignWidth="850" d:DesignHeight="689" Topmost="True" KeyDown="KeyPressed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="451*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="WrongAnswer" Height="115" Width="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Red" BorderThickness="4" Visibility="Hidden" Panel.ZIndex="50" Background="#E5FFFFFF" >
+            <Grid>
+                <Label Content="Incorrect" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="72" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+                <Label Content="Try Again" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            </Grid>
+        </Border>
+        <Border x:Name="CorrectAnswer" Height="115" Width="400" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF59FF00" BorderThickness="4" Visibility="Hidden" Panel.ZIndex="50" Background="#E5FFFFFF" >
+            <Grid>
+                <Label Content="Correct" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="72" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+                <Label Content="Well Done!" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            </Grid>
+        </Border>
+        <Border x:Name="OutofAttempts" Height="115" Width="450" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF5D5D5D" BorderThickness="4" Visibility="Hidden" Panel.ZIndex="50" Background="#E5FFFFFF" >
+            <Grid>
+                <Label Content="Question Skipped" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="48" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Margin="16,0,15.6,6.2"/>
+                <Label Content="Out Of attempts" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <Border x:Name="border"  Grid.Column="0"  BorderBrush="#FF7D7D7D" BorderThickness="4" Margin="82,10,80,114" Grid.Row="1" Background="White" Cursor="/Transformations;component/Resources/grab.cur" MouseMove="MouseMove">
+            <Grid ClipToBounds="True" >
+                <Label x:Name="cords"  Canvas.ZIndex="5" Content="(0,0)" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right"  Margin="0,0,24,0" Width="161" FontSize="14"/>
+                <Canvas x:Name="MyCanvas"  Background="Transparent" ClipToBounds="False" Loaded="CanvasLoaded">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform x:Name="scaleTransformCanvas"/>
+                            <TranslateTransform x:Name="TranslationTransformCanvas" />
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                </Canvas>
+            </Grid>
+        </Border>
+
+        <Slider x:Name="ySlider" Canvas.Left="626" Canvas.Top="10" Width="24" Minimum="-2000"  Maximum="2000" Orientation="Vertical" Panel.ZIndex="3" HorizontalAlignment="Right " VerticalAlignment="Stretch" Margin="0,23,82,137"  Cursor="SizeNS" ValueChanged="Scaling" Grid.Row="1"/>
+        <Slider x:Name="xSlider" Minimum="-2000"  Maximum="2000"  Panel.ZIndex="3" HorizontalAlignment="Stretch " VerticalAlignment="Bottom" Margin="98,0,106,120"  Cursor="SizeWE" Height="21" ValueChanged="Scaling" Grid.Row="1" />
+        <Slider x:Name="sliderSf"   Panel.ZIndex="3" Width="302" Cursor="SizeWE" Margin="98,23,0,0" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Maximum="5" Minimum="1" ValueChanged="Scaling" Grid.Row="1" />
+
+
+
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Top"  Grid.RowSpan="2" >
+            <UniformGrid Columns="3" Height="82" Margin="85,0,83.6,0">
+                <Label x:Name="question_no" Content="Question X/ Y" HorizontalAlignment="Center" VerticalAlignment="Top" Height="72" Width="178" FontSize="25" FontWeight="Bold" HorizontalContentAlignment="Center" />
+                <Label x:Name="score" Content="Score X/ Y" HorizontalAlignment="Center" VerticalAlignment="Top" Height="72" Width="178" FontSize="25"  FontWeight="Bold" Margin="-0.2,0,0,0" HorizontalContentAlignment="Center" />
+                <Label x:Name="attempts" Content="Attempts X/ Y" HorizontalAlignment="Center" VerticalAlignment="Top" Height="72" Width="183" FontSize="25" FontWeight="Bold" Margin="0.4,0,-0.2,0" HorizontalContentAlignment="Center"/>
+            </UniformGrid>
+        </StackPanel>
+        <Label x:Name="question"  HorizontalContentAlignment="Center" Content="Question...." HorizontalAlignment="Center"  VerticalAlignment="Bottom" Width="477" FontSize="16" Margin="0,0,0,78" Grid.Row="1"/>
+
+        <Button Content="Submit" HorizontalAlignment="Right" Margin="0,0,81.6,9.8" VerticalAlignment="Bottom" Width="112"  Click="SubmitAnswer" Grid.Row="1" Height="38" FontWeight="Bold"/>
+        <Label HorizontalContentAlignment="Center" Content="Clockwise" HorizontalAlignment="Center" Margin="248,0,498,48" VerticalAlignment="Bottom" Width="120" FontSize="16" Height="35" Grid.Row="1"/>
+        <Label HorizontalContentAlignment="Center" Content="Anti-Clockwise" HorizontalAlignment="Center" Margin="468,0,278,46" VerticalAlignment="Bottom" Width="120" FontSize="16" Height="35" Grid.Row="1"/>
+        <ComboBox x:Name="clockwise_rot" HorizontalAlignment="Center" Margin="240,0,490,26" VerticalAlignment="Bottom" Width="120" Grid.Row="1" SelectedIndex="0">
+            <ComboBoxItem >45 Degrees</ComboBoxItem>
+            <ComboBoxItem >90 Degrees</ComboBoxItem>
+            <ComboBoxItem >135 Degrees</ComboBoxItem>
+            <ComboBoxItem >180 Degrees</ComboBoxItem>
+            <ComboBoxItem >225 Degrees</ComboBoxItem>
+            <ComboBoxItem >270 Degrees</ComboBoxItem>
+            <ComboBoxItem >315 Degrees</ComboBoxItem>
+          </ComboBox>
+        <ComboBox x:Name="anticlock_rot" HorizontalAlignment="Center" Margin="460,0,270,26" VerticalAlignment="Bottom" Width="120" Grid.Row="1"  SelectedIndex="0">
+            <ComboBoxItem >45 Degrees</ComboBoxItem>
+            <ComboBoxItem >90 Degrees</ComboBoxItem>
+            <ComboBoxItem >135 Degrees</ComboBoxItem>
+            <ComboBoxItem >180 Degrees</ComboBoxItem>
+            <ComboBoxItem >225 Degrees</ComboBoxItem>
+            <ComboBoxItem >270 Degrees</ComboBoxItem>
+            <ComboBoxItem >315 Degrees</ComboBoxItem>
+         </ComboBox>
+        <Image HorizontalAlignment="Left" Height="83" VerticalAlignment="Bottom" Width="351" Source="/Transformations;component/Resources/logo3.png" Grid.Row="1" Grid.RowSpan="2"/>
+        <Label x:Name="timer" Content="0:00" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Height="83" Width="214" FontSize="48" HorizontalContentAlignment="Right" Grid.Row="2"/>
+        <Button Content="Exit Exam" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Width="238" Height="80" Click="Exit" Grid.Row="2" />
+
+    </Grid>
+</Window>

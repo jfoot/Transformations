@@ -1,0 +1,28 @@
+﻿<Window x:Class="Transformations.ExamResults"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transformations"
+        mc:Ignorable="d"
+        Title="ExamResults" Height="347.504" Width="288.64" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Topmost="True"  >
+    <Border BorderBrush="Black" BorderThickness="5">
+        <Grid>
+            <Button Content="Save and Exit Exam" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="259" Height="49" Click="Exit"/>
+            <Label Content="End Of Exam" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="PassOrFail" Content="Pass" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" FontSize="48" Width="259" FontWeight="Bold" Height="77" Foreground="Lime" BorderBrush="Black"/>
+            <UniformGrid Columns="2" Rows="2" Margin="0,152,0,106">
+                <Label Content="Score:" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+                <Label x:Name="Score" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+                <Label Content="Total Attempts:" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+                <Label x:Name="Attempts" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+                <Label Content="Time Elapsed:" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+                <Label x:Name="time" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+
+            </UniformGrid>
+            <Label x:Name="ExamName" Content="Exam Name" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,82,0,0" Width="279" FontWeight="Bold" FontSize="14"/>
+            <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="10,113,0,0" TextWrapping="Wrap" Text="To pass an exam you must have a score over 80%, or only one wrong answer." VerticalAlignment="Top" FontStyle="Italic"/>
+
+        </Grid>
+    </Border>
+</Window>

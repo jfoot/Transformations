@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64BBAD84-86BC-4A69-B920-6942FD077119}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Transformations</RootNamespace>
+    <AssemblyName>Transformations</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Computing Project 2017</ProductName>
+    <PublisherName>Jonathan Foot</PublisherName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Transformations.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>33A126103192973F6E708FCAEA75088EF6989539</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WpfApp14_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.6.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.2\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="UpdateChecker.xaml.cs">
+      <DependentUpon>UpdateChecker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\ClassEditor.xaml.cs">
+      <DependentUpon>ClassEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\CreateAccount.xaml.cs">
+      <DependentUpon>CreateAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\CreateTeacherAccount.xaml.cs">
+      <DependentUpon>CreateTeacherAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataBase.cs" />
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\ResultsViewer.xaml.cs">
+      <DependentUpon>ResultsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\Dialog_ComboBox.xaml.cs">
+      <DependentUpon>Dialog_ComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\Dialog_TextBox.xaml.cs">
+      <DependentUpon>Dialog_TextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Enlargement_EasyExam.xaml.cs">
+      <DependentUpon>Enlargement_EasyExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Enlargement_HardExam.xaml.cs">
+      <DependentUpon>Enlargement_HardExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\ExamResults.xaml.cs">
+      <DependentUpon>ExamResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Exams.cs" />
+    <Compile Include="Classes\GraphicsEngine.cs" />
+    <Compile Include="MainWindow\MainWindow.Enlargment.cs" />
+    <Compile Include="MainWindow\MainWindow.Events.cs" />
+    <Compile Include="MainWindow\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\MainWindow.MenuItems.cs" />
+    <Compile Include="MainWindow\MainWindow.Reflection.cs" />
+    <Compile Include="MainWindow\MainWindow.Rotation.cs" />
+    <Compile Include="MainWindow\MainWindow.Scaling.cs" />
+    <Compile Include="MainWindow\MainWindow.ShapeProperties.cs" />
+    <Compile Include="StudentZones\Reflection_EasyExam.xaml.cs">
+      <DependentUpon>Reflection_EasyExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Reflection_HardExam.xaml.cs">
+      <DependentUpon>Reflection_HardExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Rotation_EasyExam.xaml.cs">
+      <DependentUpon>Rotation_EasyExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Rotation_HardExam.xaml.cs">
+      <DependentUpon>Rotation_HardExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ShapePoints.cs" />
+    <Compile Include="Classes\Shapes.cs" />
+    <Compile Include="MainWindow\MainWindow.SpawnShape.cs" />
+    <Compile Include="StudentZones\TakeExam.xaml.cs">
+      <DependentUpon>TakeExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherZone\ClassViewer.xaml.cs">
+      <DependentUpon>ClassViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow\MainWindow.Translation.cs" />
+    <Compile Include="StudentZones\Translation_EasyExam.xaml.cs">
+      <DependentUpon>Translation_EasyExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentZones\Translation_HardExam.xaml.cs">
+      <DependentUpon>Translation_HardExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Troubleshooting.xaml.cs">
+      <DependentUpon>Troubleshooting.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UpdateChecker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\ClassEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\CreateAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\CreateTeacherAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\ResultsViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\Dialog_ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\Dialog_TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Enlargement_EasyExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Enlargement_HardExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\ExamResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="StudentZones\Reflection_EasyExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Reflection_HardExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Rotation_EasyExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Rotation_HardExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\TakeExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherZone\ClassViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Translation_EasyExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentZones\Translation_HardExam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Troubleshooting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gray_grid.png" />
+    <Resource Include="Resources\pink_grid.png" />
+    <Resource Include="Resources\red_grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SettingsF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\feadback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\login_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OpenFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".shape">
+      <Visible>False</Visible>
+      <Description>Open Project Files Into the the program.</Description>
+      <Progid>Comp17</Progid>
+      <DefaultIcon>icon.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <SplashScreen Include="Splash_Screen.png" />
+    <Resource Include="Resources\bugIcon.png" />
+    <Resource Include="Resources\logo4.png" />
+    <Resource Include="Resources\black_dark.png" />
+    <Resource Include="Resources\black_light.png" />
+    <Resource Include="Resources\black_white.png" />
+    <Resource Include="Resources\PDFBack.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Users.png" />
+    <Resource Include="Resources\grabbing.cur" />
+    <Resource Include="Resources\grab.cur" />
+    <Resource Include="Resources\enlH_1.png" />
+    <Resource Include="Resources\enlH_2.png" />
+    <Resource Include="Resources\enl_1.png" />
+    <Resource Include="Resources\enl_2.png" />
+    <Resource Include="Resources\refH_1.png" />
+    <Resource Include="Resources\refH_2.png" />
+    <Resource Include="Resources\ref_1.png" />
+    <Resource Include="Resources\ref_2.png" />
+    <Resource Include="Resources\rotH_1.png" />
+    <Resource Include="Resources\rotH_2.png" />
+    <Resource Include="Resources\rot_1.png" />
+    <Resource Include="Resources\rot_2.png" />
+    <Resource Include="Resources\transH_1.png" />
+    <Resource Include="Resources\transH_2.png" />
+    <Resource Include="Resources\trans_1.png" />
+    <Resource Include="Resources\trans_2.png" />
+    <Resource Include="Resources\eye_hidden.png" />
+    <Resource Include="Resources\eye_visable.png" />
+    <Resource Include="Resources\arrow.png" />
+    <Resource Include="Resources\circle.png" />
+    <Resource Include="Resources\Lshape.png" />
+    <Resource Include="Resources\Paralalgram.png" />
+    <Resource Include="Resources\pentagon.png" />
+    <Resource Include="Resources\Square.png" />
+    <Resource Include="Resources\star.png" />
+    <Resource Include="Resources\trapizum.png" />
+    <Resource Include="Resources\triangle.png" />
+    <Resource Include="Resources\Pen.png" />
+    <Resource Include="Resources\bin.png" />
+    <Resource Include="Resources\snaptogrid.png" />
+    <Resource Include="Resources\Email.png" />
+    <Resource Include="Resources\Export.png" />
+    <Resource Include="Resources\Return.png" />
+    <Resource Include="Resources\Teacher.png" />
+    <Resource Include="Resources\Exam.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

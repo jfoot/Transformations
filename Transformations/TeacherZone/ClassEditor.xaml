@@ -1,0 +1,127 @@
+﻿<Window x:Class="Transformations.ClassEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transformations"
+        mc:Ignorable="d"
+        Title="Class Editor"  Height="610" Width="610" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox  Header="Create Class" HorizontalAlignment="Left" Height="91"  VerticalAlignment="Top" Width="582" Margin="10,0,0,0">
+            <Grid >
+                <Button HorizontalAlignment="Left" Margin="485,39,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="CreateClass" IsEnabled="{Binding ElementName=classname,Path=Text.Length}">Create</Button>
+                <TextBox x:Name="classname" HorizontalAlignment="Left" Height="23" Margin="79,39,0,0" TextWrapping="Wrap" Text= "" VerticalAlignment="Top" Width="401"/>
+                <Label Content="Class Name:" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top"/>
+                <Label Content="To create a new class type a name in the box below and simply click 'Create'." HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+
+
+        <GroupBox  Header="Class Editor" HorizontalAlignment="Left" Height="475" Margin="10,96,0,0" VerticalAlignment="Top" Width="582">
+            <Grid >
+              <!--this code creates the data grid for data, it also has a  "expander, this allows items in the data grid to be grouped--> 
+                <DataGrid x:Name="_ClassGrid" IsReadOnly="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" SelectionMode="Single" SelectionUnit="FullRow" AutoGenerateColumns="True" CanUserAddRows="false" CanUserReorderColumns="False"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,67,8,60"  Width="552" Cursor="Hand" Loaded="GridLoaded" >
+                    <DataGrid.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Path=Name}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                            <GroupStyle.ContainerStyle>
+                                <Style TargetType="{x:Type GroupItem}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type GroupItem}">
+                                                <Expander ExpandDirection="Down" IsExpanded="True" Background="#FF8BB9EC" >
+                                                    <Expander.Header>
+                                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                            <TextBlock Text="{Binding Path=Name}" FontWeight="Bold" />
+                                                            <TextBlock Text=" - "/>
+                                                            <TextBlock Text="{Binding Path=ItemCount}" FontStyle="Italic"/>
+                                                            <TextBlock Text=" Classes" FontStyle="Italic"/>
+                                                        </StackPanel>
+                                                    </Expander.Header>
+                                                    <ItemsPresenter />
+                                                </Expander>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </GroupStyle.ContainerStyle>
+                        </GroupStyle>
+                    </DataGrid.GroupStyle>
+                </DataGrid>
+                <!--This creates a button and then binds the button to the data-grid, the button will only become enabled once the user has selected an item from the data grid-->
+                <Button Content="Delete class and students" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="160" Click="DeleteClass"
+                        Command="{Binding Remove}" CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="IsEnabled" Value="True" />
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=_ClassGrid, Path=SelectedItem}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False" />
+                                    <Setter Property="Opacity" Value=".5" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="See selected class results" HorizontalAlignment="Left" Margin="311,0,0,10" VerticalAlignment="Bottom" Width="251" Height="45" Click="SeeClassData"
+                        Command="{Binding Remove}" CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="IsEnabled" Value="True" />
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=_ClassGrid, Path=SelectedItem}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False" />
+                                    <Setter Property="Opacity" Value=".5" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <TextBlock HorizontalAlignment="Left" Margin="10,6,0,0" TextWrapping="Wrap" Text="Here you can manage all of your classes, simply use the buttons below to perform an action on a selected class. Please note these actions can not be undone.
+ " VerticalAlignment="Top"/>
+                <Button Content="Transfer Ownership of class" HorizontalAlignment="Left" Margin="10,0,0,35" VerticalAlignment="Bottom" Width="160" Click="TransferClass"
+                        Command="{Binding Remove}" CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="IsEnabled" Value="True" />
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=_ClassGrid, Path=SelectedItem}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False" />
+                                    <Setter Property="Opacity" Value=".5" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Content="Rename Class" HorizontalAlignment="Left" Margin="175,0,0,10" VerticalAlignment="Bottom" Width="131" Height="45" Click="RenameClass"
+                        Command="{Binding Remove}" CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="IsEnabled" Value="True" />
+                            <Setter Property="Opacity" Value="1" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=_ClassGrid, Path=SelectedItem}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False" />
+                                    <Setter Property="Opacity" Value=".5" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <RadioButton Content="View only classes I own" GroupName="SelectType" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" IsChecked="True" Checked="ViewSpecific"/>
+                <RadioButton x:Name="ViewAll" Content="View all classes" GroupName="SelectType" HorizontalAlignment="Left" Margin="175,43,0,0" VerticalAlignment="Top" Checked="ViewAllClass"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

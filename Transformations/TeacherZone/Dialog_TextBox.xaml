@@ -1,0 +1,18 @@
+﻿<Window x:Class="Transformations.Dialog_TextBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transformations"
+        mc:Ignorable="d"
+        Title="Dialog TextBox" Height="170.432" Width="415.116" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <GroupBox x:Name="UserGroupBox" Header="GroupBox" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+            <UniformGrid Rows="3">
+                <TextBlock x:Name="UserTextBox" TextWrapping="Wrap" Text=""/>
+                <TextBox x:Name="User_textbox" TextWrapping="Wrap" Text="" Margin="0,0,0,6"/>
+                <Button x:Name="UserButton" Content="Button" Click="Execute"  IsEnabled="{Binding ElementName=User_textbox,Path=Text.Length}"/>
+            </UniformGrid>
+        </GroupBox>
+    </Grid>
+</Window>
