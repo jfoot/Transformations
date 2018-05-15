@@ -530,6 +530,6 @@
                 <TextBlock Text="Delete All Ghosts" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-1" Width="95" />
             </StackPanel>
         </Button>
-        <Label x:Name="DatabaseError" Content="DATABASE FAILUER: PLEASE REFER TO USERMANUAL" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" Foreground="Red" Width="430" Panel.ZIndex="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Margin="206,-3,206,0" Visibility="Hidden" />
+        <Label x:Name="DatabaseError" Content="DATABASE FAILURE: PLEASE REFER TO USERMANUAL" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" Foreground="Red" Width="430" Panel.ZIndex="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Margin="206,-3,206,0" Visibility="Hidden" />
     </Grid>
 </Window>
