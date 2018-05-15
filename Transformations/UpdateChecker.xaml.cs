@@ -31,7 +31,14 @@ namespace Transformations
 			try
 			{
 				var webGet = new HtmlWeb();
-				var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
+              
+                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
+       | SecurityProtocolType.Tls11
+       | SecurityProtocolType.Tls12
+       | SecurityProtocolType.Ssl3;
+
+                var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
 
 				CurrentVersionNo.Content = "V" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 				NewVersionNo.Content = NewVerison;
