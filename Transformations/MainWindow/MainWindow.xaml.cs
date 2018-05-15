@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
@@ -129,7 +130,13 @@ namespace Transformations
 				try
 				{
 					var webGet = new HtmlWeb();
-					var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
+
+                    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
+           | SecurityProtocolType.Tls11
+           | SecurityProtocolType.Tls12
+           | SecurityProtocolType.Ssl3;
+                    var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
 					HtmlNode LatestVersion = doc.DocumentNode.SelectSingleNode("//td[@id='Version']");
 
 					if (LatestVersion.InnerText.ToString() != "V" + Assembly.GetExecutingAssembly().GetName().Version.ToString())
