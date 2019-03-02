@@ -5680,11 +5680,11 @@
 </value>
   </data>
   <data name="FeedbackLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations</value>
+    <value>https://github.com/jfoot/Transformations/issues</value>
     <comment>WebsiteURL to give feedback</comment>
   </data>
   <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations</value>
+    <value>https://github.com/jfoot/Transformations/wiki</value>
     <comment>Website URL to an on-line help manual.</comment>
   </data>
   <data name="Report" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5733,7 +5733,7 @@
 </value>
   </data>
   <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.microsoft.com/en-gb/download/details.aspx?id=23734</value>
+    <value>https://www.microsoft.com/en-us/download/details.aspx?id=54920</value>
     <comment>The site to download the required dependences</comment>
   </data>
   <data name="black_dark" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5831,12 +5831,8 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="UpdatePage" xml:space="preserve">
-    <value>https://jfoot.github.io/</value>
-    <comment>The URLto the github update page </comment>
-  </data>
   <data name="BugReport" xml:space="preserve">
-    <value>https://goo.gl/forms/Nyj9oAK48EjKRPmm1</value>
+    <value>https://github.com/jfoot/Transformations/issues</value>
     <comment>Link to report a bug</comment>
   </data>
   <data name="PDFBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
