@@ -53,11 +53,7 @@ namespace Transformations
 		{
 			System.Diagnostics.Process.Start(Transformations.Properties.Resources.FeedbackLink);
 		}
-        private void AboutClick(object sender, RoutedEventArgs e)      //If the user wants information about the program
-		{
-			AboutBox about = new AboutBox();
-			about.Show();
-		}
+       
         private void HelpClick(object sender, RoutedEventArgs e)       //If the user needs help
 		{
 			System.Diagnostics.Process.Start(Transformations.Properties.Resources.HelpLink);
