@@ -9,7 +9,6 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Effects;
-using HtmlAgilityPack;
 
 namespace Transformations
 {
@@ -58,9 +57,6 @@ namespace Transformations
 			Text.Add("");
 			Text.Add("");
 			stage5();
-			Text.Add("");
-			Text.Add("");
-			stage6();
 			Text.Add("");
 			Text.Add("");
 			Text.Add("TROUBLESHOOTING COMPLETED. PLEASE REVIEW ABOVE FOR ANY ERRORS OR ISSUES.");
@@ -337,35 +333,6 @@ namespace Transformations
 
 			Text.Add("          CERTAIN SETTINGS RESET TO DEFAULT SUCCESSFULLY      ✔");
 			Text.Add("          LOGGED OUT OF ANY ACTIVE ACCOUNT LOGIN SESSIONS     ✔");
-		}
-
-
-		public void stage6()    //Resets the program back to defaults
-		{
-			Text.Add("STAGE 6 : CHECKING FOR UPDATES");
-
-
-			try
-			{
-				var webGet = new HtmlWeb();
-				var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
-				Text.Add("          SUCCESSFULLY CONNECTED TO UPDATE SERVER             ✔");
-
-				HtmlNode LatestVersion = doc.DocumentNode.SelectSingleNode("//td[@id='Version']");
-
-				if (LatestVersion.InnerText.ToString() != "V" + Assembly.GetExecutingAssembly().GetName().Version.ToString())
-				{
-					Text.Add("          YOU ARE RUNNING AN OUTDATTED BUILD - PLEASE UPDATE  ✖");
-				}
-				else
-				{
-					Text.Add("          YOU ARE CURRENTLY RUNNING THE LATEST BUILD          ✔");
-				}
-			}
-			catch (Exception)
-			{
-				Text.Add("          UNABLE TO CHECK FOR UPDATES - CHECK YOUR INTERNET   ✖");
-			}
 		}
 	}
 }
