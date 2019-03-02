@@ -61,7 +61,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.microsoft.com/en-gb/download/details.aspx?id=23734.
+        ///   Looks up a localized string similar to https://www.microsoft.com/en-us/download/details.aspx?id=54920.
         /// </summary>
         internal static string AccessDownload {
             get {
@@ -120,7 +120,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://goo.gl/forms/Nyj9oAK48EjKRPmm1.
+        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/issues.
         /// </summary>
         internal static string BugReport {
             get {
@@ -257,7 +257,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations.
+        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/issues.
         /// </summary>
         internal static string FeedbackLink {
             get {
@@ -316,7 +316,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations.
+        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/wiki.
         /// </summary>
         internal static string HelpLink {
             get {
@@ -681,15 +681,6 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("triangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://jfoot.github.io/.
-        /// </summary>
-        internal static string UpdatePage {
-            get {
-                return ResourceManager.GetString("UpdatePage", resourceCulture);
             }
         }
         
