@@ -487,13 +487,6 @@
                 </MenuItem>
 
             <MenuItem Header="_Help ">
-                <MenuItem Header="_About" x:Name="About" Click="AboutClick" >
-                    <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
-                            <Image Source="/Transformations;component/Resources/Info.png" />
-                        </Viewbox>
-                    </MenuItem.Icon>
-                </MenuItem>
                 <MenuItem Header="_Help" x:Name="Help" Click="HelpClick" >
                     <MenuItem.Icon>
                         <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
