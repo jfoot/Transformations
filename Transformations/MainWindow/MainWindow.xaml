@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="Main_Window1" x:Class="Transformations.MainWindow"
     mc:Ignorable="d"
-    Title="MainWindow" Height="686.667" Width="358" SizeChanged="SizeChange" WindowStartupLocation="CenterScreen"  KeyDown="KeyDownMethod" MinWidth="850" MinHeight="600" Loaded="ProgramLoaded" KeyUp="KeyUpMethod" WindowState="Maximized" ContentRendered="ContentRenderedFunction"  >
+    Title="MainWindow" Height="686.667" Width="358" SizeChanged="SizeChange" WindowStartupLocation="CenterScreen"  KeyDown="KeyDownMethod" MinWidth="850" MinHeight="600" Loaded="ProgramLoaded" KeyUp="KeyUpMethod" WindowState="Maximized">
 
     <Grid x:Name="grid_main" Panel.ZIndex="10" >
 
@@ -505,13 +505,6 @@
                     <MenuItem.Icon>
                         <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/feadback.png" />
-                        </Viewbox>
-                    </MenuItem.Icon>
-                </MenuItem>
-                <MenuItem Header="_Check For Update" x:Name="Update" Click="CheckForUpdate"  >
-                    <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
-                            <Image Source="/Transformations;component/Resources/Refresh.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>

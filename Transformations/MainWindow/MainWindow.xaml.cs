@@ -1,5 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
@@ -81,7 +80,7 @@ namespace Transformations
 			
 			//Updates the UI upon start up.
 			accountName.Content = Properties.Settings.Default.AliasName; 
-			version.Content = String.Format("Created by Jonathan Foot 2017©    Version {0}",Assembly.GetExecutingAssembly().GetName().Version.ToString());
+			version.Content = String.Format("Created by Jonathan Foot 2019©    Version {0}",Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
 			if (Properties.Settings.Default.CurrentUser == "Guest")
 			{
@@ -122,32 +121,6 @@ namespace Transformations
 			//Draws the grid and labels 
 			Grid = new GridLine().DrawGrid(MaxValue, ScaleFactor, MyCanvas);
 			LabelsChecked(sender, e);
-		}
-		private void ContentRenderedFunction(object sender, EventArgs e)
-		{
-			if (Properties.Settings.Default.CheckForUpdates)
-			{
-				try
-				{
-					var webGet = new HtmlWeb();
-
-                    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
-           | SecurityProtocolType.Tls11
-           | SecurityProtocolType.Tls12
-           | SecurityProtocolType.Ssl3;
-                    var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
-					HtmlNode LatestVersion = doc.DocumentNode.SelectSingleNode("//td[@id='Version']");
-
-					if (LatestVersion.InnerText.ToString() != "V" + Assembly.GetExecutingAssembly().GetName().Version.ToString())
-					{
-						UpdateChecker CheckForUpdates = new UpdateChecker(LatestVersion.InnerText.ToString()) { Owner = this };
-						CheckForUpdates.Show();
-					}
-				}
-				catch (Exception)
-				{}
-			}
 		}
 	}
 }

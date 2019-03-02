@@ -1,4 +1,3 @@
-using HtmlAgilityPack;
 using System;
 using System.Data.OleDb;
 using System.Diagnostics;
@@ -49,41 +48,6 @@ namespace Transformations
 		private void ReportBug(object sender, RoutedEventArgs e)    //If the user wants to restart the program.
 		{
 			System.Diagnostics.Process.Start(Properties.Resources.BugReport);
-		}
-		private void CheckForUpdate(object sender, RoutedEventArgs e)
-		{
-
-			try
-			{
-				var webGet = new HtmlWeb();
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
-       | SecurityProtocolType.Tls11
-       | SecurityProtocolType.Tls12
-       | SecurityProtocolType.Ssl3;
-
-                var doc = webGet.Load(Transformations.Properties.Resources.UpdatePage);
-				HtmlNode LatestVersion = doc.DocumentNode.SelectSingleNode("//td[@id='Version']");
-
-				if (LatestVersion.InnerText.ToString() != "V" + Assembly.GetExecutingAssembly().GetName().Version.ToString())
-				{
-					UpdateChecker CheckForUpdates = new UpdateChecker(LatestVersion.InnerText.ToString()) { Owner = this };
-					CheckForUpdates.Show();
-				}
-				else
-				{
-					MessageBox.Show("No new update could be found, you are currently running the latest build.", "No updates available",
-				System.Windows.MessageBoxButton.OK,
-				MessageBoxImage.Information);
-				}
-			}
-			catch (Exception)
-			{
-				MessageBox.Show("An error occurred when trying to check for new updates, please check you are connected to the Internet and allow this application access to it.", "Unable to check for updates",
-				System.Windows.MessageBoxButton.OK,
-				MessageBoxImage.Error);
-			}
-
 		}
 		private void FeedbackClick(object sender, RoutedEventArgs e)   //If the user wants to provide feedback
 		{
