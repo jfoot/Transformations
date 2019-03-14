@@ -1,0 +1,8 @@
+language: csharp
+solution: "./Transformations.sln"
+install:
+ - nuget restore ./Transformations.sln
+ - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release ./Transformations.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./Transformations.Tests/bin/Release/Transformations.Tests.dll
