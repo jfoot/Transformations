@@ -24,7 +24,7 @@ namespace Transformations
 
 		public static double RandomX(Border border, int scaleFactor)   //Creates a random X position for a shape inside of the canvas.
 		{
-			double x = 0;
+			double x;
 
 			int shape_X = Rnd.RandomNumber(0, Convert.ToInt32(border.ActualWidth - scaleFactor * 5));
 			double newleft = (Round.ToNearest((shape_X), (scaleFactor)));
@@ -35,7 +35,7 @@ namespace Transformations
 
 		public static double RandomY(Border border, int scaleFactor) //Creates a random Y position for a shape inside of the canvas.
 		{
-			double y = 0;
+			double y;
 
 			int shape_y = Rnd.RandomNumber(0, Convert.ToInt32(border.ActualHeight - scaleFactor * 5));
 			double newtop = (Round.ToNearest((shape_y), (scaleFactor)));

@@ -1,151 +1,556 @@
 ﻿<Window
+    x:Class="Transformations.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="Main_Window1" x:Class="Transformations.MainWindow"
-    mc:Ignorable="d"
-    Title="MainWindow" Height="686.667" Width="358" SizeChanged="SizeChange" WindowStartupLocation="CenterScreen"  KeyDown="KeyDownMethod" MinWidth="850" MinHeight="600" Loaded="ProgramLoaded" KeyUp="KeyUpMethod" WindowState="Maximized">
+    x:Name="Main_Window1"
+    Title="MainWindow"
+    Width="358"
+    Height="686.667"
+    MinWidth="850"
+    MinHeight="600"
+    KeyDown="KeyDownMethod"
+    KeyUp="KeyUpMethod"
+    Loaded="ProgramLoaded"
+    SizeChanged="SizeChange"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    mc:Ignorable="d">
 
-    <Grid x:Name="grid_main" Panel.ZIndex="10" >
+    <Grid x:Name="grid_main" Panel.ZIndex="10">
 
-        <!--Canvas XAML-->
-        <Border x:Name="border"  Margin="277,45,13,11" MouseMove="MouseMove" MouseWheel="MouesWheel" MouseDown="MouseDown"  MouseUp="MouseUp" VerticalAlignment="Stretch" Background="Transparent" HorizontalAlignment="Stretch" BorderBrush="#FF7D7D7D" BorderThickness="4"  ClipToBounds="True" Panel.ZIndex="3"  >
+        <!--  Canvas XAML  -->
+        <Border
+            x:Name="border"
+            Margin="277,45,13,11"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Panel.ZIndex="3"
+            Background="Transparent"
+            BorderBrush="#FF7D7D7D"
+            BorderThickness="4"
+            ClipToBounds="True"
+            MouseDown="MouseDown"
+            MouseMove="MouseMove"
+            MouseUp="MouseUp"
+            MouseWheel="MouesWheel">
             <StackPanel ClipToBounds="True">
-                <Canvas x:Name="MyCanvas"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Loaded="CanvasLoaded">
+                <Canvas
+                    x:Name="MyCanvas"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Loaded="CanvasLoaded">
                     <Canvas.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform x:Name="scaleTransformCanvas"/>
+                            <ScaleTransform x:Name="scaleTransformCanvas" />
                             <TranslateTransform x:Name="TranslationTransformCanvas" />
                         </TransformGroup>
                     </Canvas.RenderTransform>
                 </Canvas>
             </StackPanel>
         </Border>
-        <Slider x:Name="YSlider" Canvas.Left="626" Canvas.Top="10" Width="24" Minimum="-2000"  Maximum="2000" Orientation="Vertical" Panel.ZIndex="3" HorizontalAlignment="Right " VerticalAlignment="Stretch" Margin="0,61,19,33" ValueChanged="SilderValueChanged" Cursor="SizeNS" />
-        <Slider x:Name="XSlider" Minimum="-2000"  Maximum="2000"  Panel.ZIndex="3" HorizontalAlignment="Stretch " VerticalAlignment="Bottom" Margin="309,0,43,20" ValueChanged="SilderValueChanged" Cursor="SizeWE" />
-        <Slider x:Name="sliderSf"  ValueChanged="SilderValueChanged" Panel.ZIndex="3" Width="302" Cursor="SizeWE" Margin="285,51,0,0" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Maximum="5" Minimum="1" />
+        <Slider
+            x:Name="YSlider"
+            Canvas.Left="626"
+            Canvas.Top="10"
+            Width="24"
+            Margin="0,61,19,33"
+            HorizontalAlignment="Right "
+            VerticalAlignment="Stretch"
+            Panel.ZIndex="3"
+            Cursor="SizeNS"
+            Maximum="2000"
+            Minimum="-2000"
+            Orientation="Vertical"
+            ValueChanged="SilderValueChanged" />
+        <Slider
+            x:Name="XSlider"
+            Margin="309,0,43,20"
+            HorizontalAlignment="Stretch "
+            VerticalAlignment="Bottom"
+            Panel.ZIndex="3"
+            Cursor="SizeWE"
+            Maximum="2000"
+            Minimum="-2000"
+            ValueChanged="SilderValueChanged" />
+        <Slider
+            x:Name="sliderSf"
+            Width="302"
+            Height="27"
+            Margin="285,51,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="3"
+            Cursor="SizeWE"
+            Maximum="5"
+            Minimum="1"
+            ValueChanged="SilderValueChanged" />
 
-        <Label x:Name="version" Content="Version" HorizontalAlignment="Right" Margin="0,21,13,0" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
-        <Image Margin="2,0,0,-5" Width="248" Source="/Transformations;component/Resources/logo3.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="92"  />
-        <ToggleButton x:Name="GridSnap" HorizontalAlignment="Left" Margin="281,23,0,0" VerticalAlignment="Top" Width="105" Click="GridSnapState">
-            <StackPanel Orientation="Horizontal" Height="14" Width="87">
+        <Label
+            x:Name="version"
+            Margin="0,21,13,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Right"
+            Content="Version" />
+        <Image
+            Width="248"
+            Height="92"
+            Margin="2,0,0,-5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Source="/Transformations;component/Resources/logo3.png" />
+        <ToggleButton
+            x:Name="GridSnap"
+            Width="105"
+            Margin="281,23,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="GridSnapState">
+            <StackPanel
+                Width="87"
+                Height="14"
+                Orientation="Horizontal">
                 <Image Source="/Transformations;component/Resources/snaptogrid.png" />
-                <TextBlock Text="Snap To Grid" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-1" Width="75" />
+                <TextBlock
+                    Width="75"
+                    Margin="0,-1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Snap To Grid" />
             </StackPanel>
         </ToggleButton>
 
 
 
-        <ScrollViewer HorizontalAlignment="Left"  Width="272" Margin="0,26,0,87" >
-            <TabControl x:Name="tab_control" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Panel.ZIndex="5" Height="753">
-                <!--Home TAB-->
+        <ScrollViewer
+            Width="272"
+            Margin="0,26,0,87"
+            HorizontalAlignment="Left">
+            <TabControl
+                x:Name="tab_control"
+                Width="250"
+                Height="753"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Panel.ZIndex="5">
+                <!--  Home TAB  -->
                 <TabItem x:Name="tab_home">
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Home" Foreground="Black" />
+                            <TextBlock Foreground="Black" Text="Home" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>
-                        <GroupBox Header="Spawn Shape" HorizontalAlignment="Left" Height="302" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="302"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Spawn Shape">
                             <Grid>
-                                <Button x:Name="spawn_circle"  HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnCircleClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/circle.png" Width="39" Height="36" />
-                                        <TextBlock Text="Circle"   Width="38" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="spawn_circle"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="7,7,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnCircleClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/circle.png" />
+                                        <TextBlock
+                                            Width="38"
+                                            Height="16"
+                                            Text="Circle"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_freeform" HorizontalAlignment="Left" Margin="7,214,0,0" VerticalAlignment="Top" Width="198" Height="60" Click="SpawnFreeFormClick">
-                                    <StackPanel Orientation="Horizontal" Height="30" Width="196">
-                                        <Image Source="/Transformations;component/Resources/pen.png" Width="52" />
-                                        <TextBlock Text="Free Form" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,7" Width="88" TextAlignment="Center" />
+                                <Button
+                                    x:Name="spawn_freeform"
+                                    Width="198"
+                                    Height="60"
+                                    Margin="7,214,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnFreeFormClick">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="30"
+                                        Orientation="Horizontal">
+                                        <Image Width="52" Source="/Transformations;component/Resources/pen.png" />
+                                        <TextBlock
+                                            Width="88"
+                                            Margin="0,7"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Free Form"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_rectangle"  HorizontalAlignment="Left" Margin="76,7,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnRectangleClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/Square.png" Width="39" Height="36" />
-                                        <TextBlock Text="Square"   Width="38" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="spawn_rectangle"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="76,7,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnRectangleClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/Square.png" />
+                                        <TextBlock
+                                            Width="38"
+                                            Height="16"
+                                            Text="Square"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_triangle"  HorizontalAlignment="Left" Margin="145,7,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnTriangleClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/triangle.png" Width="39" Height="36" />
-                                        <TextBlock Text="Triangle"   Width="47" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="spawn_triangle"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="145,7,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnTriangleClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/triangle.png" />
+                                        <TextBlock
+                                            Width="47"
+                                            Height="16"
+                                            Text="Triangle"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_trapzium" HorizontalAlignment="Left" Margin="7,76,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawmTrapeziumClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/trapizum.png" Width="39" Height="36" />
-                                        <TextBlock Text="Trapezium"   Width="50" TextAlignment="Center" Height="16" FontSize="11" />
+                                <Button
+                                    x:Name="spawn_trapzium"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="7,76,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawmTrapeziumClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/trapizum.png" />
+                                        <TextBlock
+                                            Width="50"
+                                            Height="16"
+                                            FontSize="11"
+                                            Text="Trapezium"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_pentagon"  HorizontalAlignment="Left" Margin="76,77,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnPentoganClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/pentagon.png" Width="39" Height="36" />
-                                        <TextBlock Text="Pentagon"   Width="53" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="spawn_pentagon"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="76,77,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnPentoganClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/pentagon.png" />
+                                        <TextBlock
+                                            Width="53"
+                                            Height="16"
+                                            Text="Pentagon"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="spawn_arrow" HorizontalAlignment="Left" Margin="145,76,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnArrowClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/arrow.png" Width="39" Height="36" />
-                                        <TextBlock Text="Arrow"   Width="38" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="spawn_arrow"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="145,76,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnArrowClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/arrow.png" />
+                                        <TextBlock
+                                            Width="38"
+                                            Height="16"
+                                            Text="Arrow"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="Star"  HorizontalAlignment="Left" Margin="7,145,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnStarClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/star.png" Width="39" Height="36" />
-                                        <TextBlock Text="Star"   Width="38" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="Star"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="7,145,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnStarClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/star.png" />
+                                        <TextBlock
+                                            Width="38"
+                                            Height="16"
+                                            Text="Star"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="L_Shape"  HorizontalAlignment="Left" Margin="76,146,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnLShapeClick">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/Lshape.png" Width="39" Height="36" />
-                                        <TextBlock Text="L Shape"   Width="50" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="L_Shape"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="76,146,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnLShapeClick">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/Lshape.png" />
+                                        <TextBlock
+                                            Width="50"
+                                            Height="16"
+                                            Text="L Shape"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="Parallelogram" HorizontalAlignment="Left" Margin="145,145,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="SpawnParaClick" FontSize="9">
-                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                        <Image Source="/Transformations;component/Resources/Paralalgram.png" Width="39" Height="36" />
-                                        <TextBlock Text="Parallelogram"   Width="56" TextAlignment="Center" Height="16" />
+                                <Button
+                                    x:Name="Parallelogram"
+                                    Width="60"
+                                    Height="60"
+                                    Margin="145,145,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="SpawnParaClick"
+                                    FontSize="9">
+                                    <StackPanel
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        Orientation="Vertical">
+                                        <Image
+                                            Width="39"
+                                            Height="36"
+                                            Source="/Transformations;component/Resources/Paralalgram.png" />
+                                        <TextBlock
+                                            Width="56"
+                                            Height="16"
+                                            Text="Parallelogram"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
                             </Grid>
                         </GroupBox>
 
-                        <GroupBox Header="Edit Shape" HorizontalAlignment="Left" Height="220" Margin="10,312,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="220"
+                            Margin="10,312,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Edit Shape">
                             <Grid Margin="0,0,0,0">
-                                <Button x:Name="deleteShape" Content="Delete Shape" HorizontalAlignment="Left" Margin="6,149,0,0" VerticalAlignment="Top" Width="198" Height="46" Click="DeleteShapeClick" IsEnabled="False"></Button>
-                                <Button x:Name="unselectShape" Content="Unselect Shape" HorizontalAlignment="Left" Margin="6,98,0,0" VerticalAlignment="Top" Width="198" Height="46" Click="UnselectShapeClick" IsEnabled="False"/>
-                                <Label x:Name="selectedShapeLabel" Content="No Shape Currently Selected" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" FontSize="14" Width="198" HorizontalContentAlignment="Center" Height="29"/>
-                                <Label x:Name="selected_shape_cord" Content="( 0.00 , 0.00 )" HorizontalAlignment="Left" Margin="6,33,0,0" VerticalAlignment="Top" FontSize="20" Width="198" HorizontalContentAlignment="Center" Height="37"/>
-                                <Label x:Name="selected_shape_dim" Content="Width: 0     Height: 0" HorizontalAlignment="Left" Margin="6,65,0,0" VerticalAlignment="Top" FontSize="14" Width="198" HorizontalContentAlignment="Center" Height="29"/>
+                                <Button
+                                    x:Name="deleteShape"
+                                    Width="198"
+                                    Height="46"
+                                    Margin="6,149,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="DeleteShapeClick"
+                                    Content="Delete Shape"
+                                    IsEnabled="False" />
+                                <Button
+                                    x:Name="unselectShape"
+                                    Width="198"
+                                    Height="46"
+                                    Margin="6,98,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="UnselectShapeClick"
+                                    Content="Unselect Shape"
+                                    IsEnabled="False" />
+                                <Label
+                                    x:Name="selectedShapeLabel"
+                                    Width="198"
+                                    Height="29"
+                                    Margin="6,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    Content="No Shape Currently Selected"
+                                    FontSize="14" />
+                                <Label
+                                    x:Name="selected_shape_cord"
+                                    Width="198"
+                                    Height="37"
+                                    Margin="6,33,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    Content="( 0.00 , 0.00 )"
+                                    FontSize="20" />
+                                <Label
+                                    x:Name="selected_shape_dim"
+                                    Width="198"
+                                    Height="29"
+                                    Margin="6,65,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    Content="Width: 0     Height: 0"
+                                    FontSize="14" />
                             </Grid>
                         </GroupBox>
 
-                        <Rectangle Fill="White" Stroke="#FF2F65B8" Margin="10,536,0,111"  HorizontalAlignment="Left"  Height="58" Width="224" RadiusX="5" RadiusY="5" StrokeThickness="3"/>
-                        <Label x:Name="accountName" Content="Guest Account" HorizontalAlignment="Left" Margin="73,550,0,117"  FontFamily="Segoe UI Light" Height="38" Width="161" FontWeight="Bold" Background="#00000000" Foreground="Black" FontSize="20"/>
-                        <Image  Height="46" Margin="21,542,0,117" HorizontalAlignment="Left"  Width="52" Source="/Transformations;component/Resources/login.png"/>
+                        <Rectangle
+                            Width="224"
+                            Height="58"
+                            Margin="10,536,0,111"
+                            HorizontalAlignment="Left"
+                            Fill="White"
+                            RadiusX="5"
+                            RadiusY="5"
+                            Stroke="#FF2F65B8"
+                            StrokeThickness="3" />
+                        <Label
+                            x:Name="accountName"
+                            Width="161"
+                            Height="38"
+                            Margin="73,550,0,117"
+                            HorizontalAlignment="Left"
+                            Background="#00000000"
+                            Content="Guest Account"
+                            FontFamily="Segoe UI Light"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black" />
+                        <Image
+                            Width="52"
+                            Height="46"
+                            Margin="21,542,0,117"
+                            HorizontalAlignment="Left"
+                            Source="/Transformations;component/Resources/login.png" />
 
-                        <TextBlock TextWrapping="Wrap" Text="Searching for a setting? Check the &quot;Settings&quot;  window under &quot;File&quot; for more controls." Margin="10,602,10,0" Foreground="#FF939393"/>
+                        <TextBlock
+                            Margin="10,602,10,0"
+                            Foreground="#FF939393"
+                            Text="Searching for a setting? Check the &quot;Settings&quot;  window under &quot;File&quot; for more controls."
+                            TextWrapping="Wrap" />
                     </Grid>
 
                 </TabItem>
-                <!--Translation Tab-->
+                <!--  Translation Tab  -->
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Translation" Foreground="#FF8E00DA" />
+                            <TextBlock Foreground="#FF8E00DA" Text="Translation" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>
-                        <GroupBox Header="Translation" HorizontalAlignment="Left" Height="360" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="360"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Translation">
                             <Grid>
-                                <Label Content="[  ]"  VerticalAlignment="Top"  FontSize="120" HorizontalAlignment="Left" Margin="28,-29,0,0" Height="161" Width="165" />
+                                <Label
+                                    Width="165"
+                                    Height="161"
+                                    Margin="28,-29,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="[  ]"
+                                    FontSize="120" />
 
-                                <Button x:Name="trans_execute_button" Content="Execute" HorizontalAlignment="Left" Margin="2,186,0,0" VerticalAlignment="Top" Width="206" Height="46" Click="TranslationExecute" BorderBrush="#FF3C3C3C" FontSize="14" FontWeight="Bold"/>
-                                <TextBox x:Name="transX" TextWrapping="Wrap" Text="0" Margin="56,37,62,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="94"/>
-                                <TextBox x:Name="transY" TextWrapping="Wrap" Text="0" Margin="56,76,62,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="94"/>
-                                <ComboBox x:Name="transSpeed" HorizontalAlignment="Left"  Margin="2,147,0,0"  VerticalAlignment="Top"   Width="206" Height="34" FontSize="15" SelectedIndex="2">
+                                <Button
+                                    x:Name="trans_execute_button"
+                                    Width="206"
+                                    Height="46"
+                                    Margin="2,186,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    BorderBrush="#FF3C3C3C"
+                                    Click="TranslationExecute"
+                                    Content="Execute"
+                                    FontSize="14"
+                                    FontWeight="Bold" />
+                                <TextBox
+                                    x:Name="transX"
+                                    Width="94"
+                                    Height="34"
+                                    Margin="56,37,62,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <TextBox
+                                    x:Name="transY"
+                                    Width="94"
+                                    Height="34"
+                                    Margin="56,76,62,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <ComboBox
+                                    x:Name="transSpeed"
+                                    Width="206"
+                                    Height="34"
+                                    Margin="2,147,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="2">
                                     <ComboBoxItem Content="0 Seconds" />
                                     <ComboBoxItem Content="1 Seconds" />
                                     <ComboBoxItem Content="3 Seconds" />
@@ -153,14 +558,30 @@
                                     <ComboBoxItem Content="10 Seconds" />
                                     <ComboBoxItem Content="15 Seconds" />
                                 </ComboBox>
-                                <ToggleButton x:Name="translationGhostVisibality" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="2,237,4,0" Padding="5" Width="206"  Height="40" Unchecked="HideTranslationGhosts" Checked="ShowTranslationGhosts" IsChecked="True">
+                                <ToggleButton
+                                    x:Name="translationGhostVisibality"
+                                    Width="206"
+                                    Height="40"
+                                    Margin="2,237,4,0"
+                                    Padding="5"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Checked="ShowTranslationGhosts"
+                                    IsChecked="True"
+                                    Unchecked="HideTranslationGhosts">
                                     <ToggleButton.Style>
                                         <Style TargetType="{x:Type ToggleButton}">
                                             <Setter Property="Content">
                                                 <Setter.Value>
-                                                    <StackPanel Orientation="Horizontal" Width="200" >
+                                                    <StackPanel Width="200" Orientation="Horizontal">
                                                         <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_hidden.png" />
-                                                        <TextBlock Text="Translation Ghost Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                        <TextBlock
+                                                            Width="145"
+                                                            Margin="0,9"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Text="Translation Ghost Hidden"
+                                                            TextAlignment="Center" />
                                                     </StackPanel>
                                                 </Setter.Value>
                                             </Setter>
@@ -168,9 +589,15 @@
                                                 <Trigger Property="IsChecked" Value="True">
                                                     <Setter Property="Content">
                                                         <Setter.Value>
-                                                            <StackPanel Orientation="Horizontal"  Width="200">
-                                                                <Image Source="/Transformations;component/Resources/eye_visable.png" HorizontalAlignment="Left" />
-                                                                <TextBlock Text="Translation Ghost Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                            <StackPanel Width="200" Orientation="Horizontal">
+                                                                <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_visable.png" />
+                                                                <TextBlock
+                                                                    Width="145"
+                                                                    Margin="0,9"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Text="Translation Ghost Visible"
+                                                                    TextAlignment="Center" />
                                                             </StackPanel>
                                                         </Setter.Value>
                                                     </Setter>
@@ -179,10 +606,26 @@
                                         </Style>
                                     </ToggleButton.Style>
                                 </ToggleButton>
-                                <Button x:Name="delete_trans"  HorizontalAlignment="Left" Margin="2,282,0,0" VerticalAlignment="Top" Width="206" Height="47" Click="DeleteTranslationGhosts">
-                                    <StackPanel Orientation="Horizontal" Height="34" Width="196">
-                                        <Image Source="/Transformations;component/Resources/bin.png" Width="28" />
-                                        <TextBlock Text="Delete Translation Ghosts" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                <Button
+                                    x:Name="delete_trans"
+                                    Width="206"
+                                    Height="47"
+                                    Margin="2,282,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="DeleteTranslationGhosts">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="34"
+                                        Orientation="Horizontal">
+                                        <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
+                                        <TextBlock
+                                            Width="145"
+                                            Margin="0,9"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Delete Translation Ghosts"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
                             </Grid>
@@ -190,98 +633,326 @@
                     </Grid>
                 </TabItem>
 
-                <!--Reflection Tab-->
+                <!--  Reflection Tab  -->
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Reflection" Foreground="Red" />
+                            <TextBlock Foreground="Red" Text="Reflection" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>
-                        <GroupBox Header="X Axis" HorizontalAlignment="Left" Height="75" Margin="10,278,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="75"
+                            Margin="10,278,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="X Axis">
                             <Grid>
-                                <TextBox x:Name="reflection_X_axis" TextWrapping="Wrap" Text="0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="148" IsEnabled="{Binding IsChecked, ElementName=refX}" Margin="44,9,20,0"/>
-                                <Label Content="X =  " FontSize="15"  VerticalAlignment="Top" Margin="12,9,168,0" />
+                                <TextBox
+                                    x:Name="reflection_X_axis"
+                                    Width="148"
+                                    Height="34"
+                                    Margin="44,9,20,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=refX}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    Margin="12,9,168,0"
+                                    VerticalAlignment="Top"
+                                    Content="X =  "
+                                    FontSize="15" />
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Y = MX + C" HorizontalAlignment="Left" Height="75" Margin="11,118,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="75"
+                            Margin="11,118,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Y = MX + C">
                             <Grid>
 
-                                <Label Content="Y =  " FontSize="15"  VerticalAlignment="Top" Margin="0,10,180,0" />
-                                <Label Content="X + " FontSize="15" VerticalAlignment="Top" Margin="101,11,74,0" />
-                                <TextBox x:Name="reflection_c" TextWrapping="Wrap" Text="C" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="64" IsEnabled="{Binding IsChecked, ElementName=refYMXC}" Margin="135,10,13,0"/>
-                                <TextBox x:Name="reflection_m" TextWrapping="Wrap" Text="M"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="68" IsEnabled="{Binding IsChecked, ElementName=refYMXC}" Margin="33,9,111,0"/>
+                                <Label
+                                    Margin="0,10,180,0"
+                                    VerticalAlignment="Top"
+                                    Content="Y =  "
+                                    FontSize="15" />
+                                <Label
+                                    Margin="101,11,74,0"
+                                    VerticalAlignment="Top"
+                                    Content="X + "
+                                    FontSize="15" />
+                                <TextBox
+                                    x:Name="reflection_c"
+                                    Width="64"
+                                    Height="34"
+                                    Margin="135,10,13,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=refYMXC}"
+                                    Text="C"
+                                    TextWrapping="Wrap" />
+                                <TextBox
+                                    x:Name="reflection_m"
+                                    Width="68"
+                                    Height="34"
+                                    Margin="33,9,111,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=refYMXC}"
+                                    Text="M"
+                                    TextWrapping="Wrap" />
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Reflection" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="100"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Reflection">
                             <Grid>
-                                <RadioButton x:Name="refX"  GroupName="r_CofO" Content="X Axis Reflection" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" FontSize="15" Height="21" RenderTransformOrigin="0.5,0.5"  />
-                                <RadioButton x:Name="refY"  GroupName="r_CofO" Content="Y Axis Reflection" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" FontSize="15" />
-                                <RadioButton x:Name="refYMXC"  GroupName="r_CofO" Content="Y = MX + C Reflection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="15" IsChecked="True"/>
+                                <RadioButton
+                                    x:Name="refX"
+                                    Height="21"
+                                    Margin="10,54,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="X Axis Reflection"
+                                    FontSize="15"
+                                    GroupName="r_CofO"
+                                    RenderTransformOrigin="0.5,0.5" />
+                                <RadioButton
+                                    x:Name="refY"
+                                    Margin="10,32,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Y Axis Reflection"
+                                    FontSize="15"
+                                    GroupName="r_CofO" />
+                                <RadioButton
+                                    x:Name="refYMXC"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Y = MX + C Reflection"
+                                    FontSize="15"
+                                    GroupName="r_CofO"
+                                    IsChecked="True" />
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Y Axis" HorizontalAlignment="Left" Height="75" Margin="11,198,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="75"
+                            Margin="11,198,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Y Axis">
                             <Grid>
-                                <TextBox x:Name="reflection_y_axis" TextWrapping="Wrap" Text="0"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="148" IsEnabled="{Binding IsChecked, ElementName=refY}" Margin="43,9,21,0" />
-                                <Label Content="Y =  " FontSize="15"  VerticalAlignment="Top" Margin="11,9,169,0" />
+                                <TextBox
+                                    x:Name="reflection_y_axis"
+                                    Width="148"
+                                    Height="34"
+                                    Margin="43,9,21,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=refY}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    Margin="11,9,169,0"
+                                    VerticalAlignment="Top"
+                                    Content="Y =  "
+                                    FontSize="15" />
                             </Grid>
                         </GroupBox>
-                        <ToggleButton x:Name="Reflection_Execute" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="19,364,19,0" Padding="5" Width="206" Content="Execute" Height="59" Checked="ReflectionExecute" Unchecked="ReflectionUnexecute" BorderBrush="#FF343434" FontWeight="Bold" FontSize="14" />
+                        <ToggleButton
+                            x:Name="Reflection_Execute"
+                            Width="206"
+                            Height="59"
+                            Margin="19,364,19,0"
+                            Padding="5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            BorderBrush="#FF343434"
+                            Checked="ReflectionExecute"
+                            Content="Execute"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Unchecked="ReflectionUnexecute" />
                     </Grid>
                 </TabItem>
 
-                <!--Rotation Tab-->
+                <!--  Rotation Tab  -->
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Rotations" Foreground="Green" />
+                            <TextBlock Foreground="Green" Text="Rotations" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>
-                        <GroupBox Header="Rotation" HorizontalAlignment="Left" Height="359" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="359"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Rotation">
                             <Grid>
-                                <Button x:Name="rotation_execute_button" Content="Execute" HorizontalAlignment="Left" Margin="5,173,0,0" VerticalAlignment="Top" Width="204" Height="56" Click="RotationExecute" BorderBrush="#FF383838" FontWeight="Bold" FontSize="14"/>
-                                <ComboBox x:Name="rotationAmount" HorizontalAlignment="Left"  Margin="5,5,0,0"  VerticalAlignment="Top"  Width="204" Height="34" FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem >45 Degrees</ComboBoxItem>
-                                    <ComboBoxItem >90 Degrees</ComboBoxItem>
-                                    <ComboBoxItem >180 Degrees</ComboBoxItem>
-                                    <ComboBoxItem >270 Degrees</ComboBoxItem>
-                                    <ComboBoxItem >360 Degrees</ComboBoxItem>
+                                <Button
+                                    x:Name="rotation_execute_button"
+                                    Width="204"
+                                    Height="56"
+                                    Margin="5,173,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    BorderBrush="#FF383838"
+                                    Click="RotationExecute"
+                                    Content="Execute"
+                                    FontSize="14"
+                                    FontWeight="Bold" />
+                                <ComboBox
+                                    x:Name="rotationAmount"
+                                    Width="204"
+                                    Height="34"
+                                    Margin="5,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="2">
+                                    <ComboBoxItem>45 Degrees</ComboBoxItem>
+                                    <ComboBoxItem>90 Degrees</ComboBoxItem>
+                                    <ComboBoxItem>180 Degrees</ComboBoxItem>
+                                    <ComboBoxItem>270 Degrees</ComboBoxItem>
+                                    <ComboBoxItem>360 Degrees</ComboBoxItem>
                                 </ComboBox>
-                                <ComboBox x:Name="rotationDirection" HorizontalAlignment="Left"  Margin="5,45,0,0"  VerticalAlignment="Top"  Width="204" Height="34" FontSize="15" SelectedIndex="0">
-                                    <ComboBoxItem >Clockwise</ComboBoxItem>
-                                    <ComboBoxItem >Anti-Clockwise</ComboBoxItem>
+                                <ComboBox
+                                    x:Name="rotationDirection"
+                                    Width="204"
+                                    Height="34"
+                                    Margin="5,45,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="0">
+                                    <ComboBoxItem>Clockwise</ComboBoxItem>
+                                    <ComboBoxItem>Anti-Clockwise</ComboBoxItem>
                                 </ComboBox>
-                                <TextBox x:Name="rotation_x_center" TextWrapping="Wrap" Text="0" Margin="6,86,110,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="96" IsEnabled="{Binding IsChecked, ElementName=rot_cofo_on}"/>
-                                <TextBox x:Name="rotation_y_center" TextWrapping="Wrap" Text="0" Margin="111,86,5,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="35" VerticalAlignment="Top" Width="96" IsEnabled="{Binding IsChecked, ElementName=rot_cofo_on}"/>
-                                <Button x:Name="delete_rotation" HorizontalAlignment="Left" Margin="5,284,0,0" VerticalAlignment="Top" Width="204" Height="48" Click="DeleteRotationGhosts" >
-                                    <StackPanel Orientation="Horizontal" Height="34" Width="196">
-                                        <Image Source="/Transformations;component/Resources/bin.png" Width="28" />
-                                        <TextBlock Text="Delete Rotation Ghosts" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                <TextBox
+                                    x:Name="rotation_x_center"
+                                    Width="96"
+                                    Height="34"
+                                    Margin="6,86,110,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=rot_cofo_on}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <TextBox
+                                    x:Name="rotation_y_center"
+                                    Width="96"
+                                    Height="35"
+                                    Margin="111,86,5,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=rot_cofo_on}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <Button
+                                    x:Name="delete_rotation"
+                                    Width="204"
+                                    Height="48"
+                                    Margin="5,284,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="DeleteRotationGhosts">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="34"
+                                        Orientation="Horizontal">
+                                        <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
+                                        <TextBlock
+                                            Width="145"
+                                            Margin="0,9"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Delete Rotation Ghosts"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <ComboBox x:Name="rotationSpeed" HorizontalAlignment="Left"  Margin="5,129,0,0"  VerticalAlignment="Top"   Width="204" Height="34" FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem >0 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >1 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >3 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >5 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >10 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >15 Seconds</ComboBoxItem>
+                                <ComboBox
+                                    x:Name="rotationSpeed"
+                                    Width="204"
+                                    Height="34"
+                                    Margin="5,129,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="2">
+                                    <ComboBoxItem>0 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>1 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>3 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>5 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>10 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>15 Seconds</ComboBoxItem>
                                 </ComboBox>
 
-                                <Label Content="( " FontSize="35" Margin="11,161,206,437" VerticalAlignment="Top" />
-                                <Label Content=") " FontSize="35" Margin="212,164,5,434" VerticalAlignment="Top"/>
-                                <Label Content=", " FontSize="35" Margin="113,165,104,433" VerticalAlignment="Top"/>
-                                <ToggleButton x:Name="rotationGhostVisibality" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="6,237,3,0" Padding="5"  Width="203"  Height="40" Checked="ShowRotationGhosts" Unchecked="HideRotationGhosts" IsChecked="True" >
+                                <Label
+                                    Margin="11,161,206,437"
+                                    VerticalAlignment="Top"
+                                    Content="( "
+                                    FontSize="35" />
+                                <Label
+                                    Margin="212,164,5,434"
+                                    VerticalAlignment="Top"
+                                    Content=") "
+                                    FontSize="35" />
+                                <Label
+                                    Margin="113,165,104,433"
+                                    VerticalAlignment="Top"
+                                    Content=", "
+                                    FontSize="35" />
+                                <ToggleButton
+                                    x:Name="rotationGhostVisibality"
+                                    Width="203"
+                                    Height="40"
+                                    Margin="6,237,3,0"
+                                    Padding="5"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Checked="ShowRotationGhosts"
+                                    IsChecked="True"
+                                    Unchecked="HideRotationGhosts">
                                     <ToggleButton.Style>
                                         <Style TargetType="{x:Type ToggleButton}">
                                             <Setter Property="Content">
                                                 <Setter.Value>
-                                                    <StackPanel Orientation="Horizontal" Width="200" >
+                                                    <StackPanel Width="200" Orientation="Horizontal">
                                                         <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_hidden.png" />
-                                                        <TextBlock Text="Rotation Ghost Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                        <TextBlock
+                                                            Width="145"
+                                                            Margin="0,9"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Text="Rotation Ghost Hidden"
+                                                            TextAlignment="Center" />
                                                     </StackPanel>
                                                 </Setter.Value>
                                             </Setter>
@@ -289,9 +960,15 @@
                                                 <Trigger Property="IsChecked" Value="True">
                                                     <Setter Property="Content">
                                                         <Setter.Value>
-                                                            <StackPanel Orientation="Horizontal"  Width="200">
-                                                                <Image Source="/Transformations;component/Resources/eye_visable.png" HorizontalAlignment="Left" />
-                                                                <TextBlock Text="Rotation Ghost Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                            <StackPanel Width="200" Orientation="Horizontal">
+                                                                <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_visable.png" />
+                                                                <TextBlock
+                                                                    Width="145"
+                                                                    Margin="0,9"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Text="Rotation Ghost Visible"
+                                                                    TextAlignment="Center" />
                                                             </StackPanel>
                                                         </Setter.Value>
                                                     </Setter>
@@ -305,60 +982,160 @@
                     </Grid>
                 </TabItem>
 
-                <!--Enlargement Tab-->
+                <!--  Enlargement Tab  -->
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Enlargement" Foreground="Orange" />
+                            <TextBlock Foreground="Orange" Text="Enlargement" />
                         </StackPanel>
                     </TabItem.Header>
                     <Grid>
-                        <GroupBox Header="Enlargement" HorizontalAlignment="Left" Height="415" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
+                        <GroupBox
+                            Width="224"
+                            Height="415"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Enlargement">
                             <Grid>
-                                <Button x:Name="enlargement_execute_button" Content="Execute" HorizontalAlignment="Left" Margin="6,127,0,0" VerticalAlignment="Top" Width="206" Height="56" Click="enlargementExecute" BorderBrush="#FF3C3C3C" FontWeight="Bold" FontSize="14"/>
-                                <ComboBox x:Name="enlargementAmount" HorizontalAlignment="Left"  Margin="4,4,0,0"  VerticalAlignment="Top"  Width="206" Height="34" FontSize="15" SelectedIndex="8">
-                                    <ComboBoxItem >-5 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >-4 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >-3 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >-2 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >-1 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >0.25 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >0.5 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >0.75 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >1 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >2 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >3 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >4 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem >5 Scale Factor</ComboBoxItem>
+                                <Button
+                                    x:Name="enlargement_execute_button"
+                                    Width="206"
+                                    Height="56"
+                                    Margin="6,127,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    BorderBrush="#FF3C3C3C"
+                                    Click="EnlargementExecute"
+                                    Content="Execute"
+                                    FontSize="14"
+                                    FontWeight="Bold" />
+                                <ComboBox
+                                    x:Name="enlargementAmount"
+                                    Width="206"
+                                    Height="34"
+                                    Margin="4,4,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="8">
+                                    <ComboBoxItem>-5 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>-4 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>-3 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>-2 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>-1 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>0.25 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>0.5 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>0.75 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>1 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>2 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>3 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>4 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem>5 Scale Factor</ComboBoxItem>
                                 </ComboBox>
-                                <TextBox x:Name="EnlargementXCenter" TextWrapping="Wrap" Text="0" Margin="6,44,112,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="94" IsEnabled="{Binding IsChecked, ElementName=enl_cofo_on}"/>
-                                <TextBox x:Name="EnlargementYCenter" TextWrapping="Wrap" Text="0" Margin="111,44,4,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="34" VerticalAlignment="Top" Width="97" IsEnabled="{Binding IsChecked, ElementName=enl_cofo_on}"/>
-                                <Button x:Name="delete_enlargement" HorizontalAlignment="Left" Margin="6,281,0,0" VerticalAlignment="Top" Width="206" Height="48" Click="DeleteEnlargementGhosts">
-                                    <StackPanel Orientation="Horizontal" Height="34" Width="196">
-                                        <Image Source="/Transformations;component/Resources/bin.png" Width="28" />
-                                        <TextBlock Text="Delete Enlargement Ghosts" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                <TextBox
+                                    x:Name="EnlargementXCenter"
+                                    Width="94"
+                                    Height="34"
+                                    Margin="6,44,112,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=enl_cofo_on}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <TextBox
+                                    x:Name="EnlargementYCenter"
+                                    Width="97"
+                                    Height="34"
+                                    Margin="111,44,4,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="20"
+                                    IsEnabled="{Binding IsChecked, ElementName=enl_cofo_on}"
+                                    Text="0"
+                                    TextWrapping="Wrap" />
+                                <Button
+                                    x:Name="delete_enlargement"
+                                    Width="206"
+                                    Height="48"
+                                    Margin="6,281,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="DeleteEnlargementGhosts">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="34"
+                                        Orientation="Horizontal">
+                                        <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
+                                        <TextBlock
+                                            Width="145"
+                                            Margin="0,9"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Delete Enlargement Ghosts"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <ComboBox x:Name="enlargement_speed" HorizontalAlignment="Left"  Margin="6,88,0,0"  VerticalAlignment="Top"   Width="206" Height="34" FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem >0 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >1 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >3 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >5 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >10 Seconds</ComboBoxItem>
-                                    <ComboBoxItem >15 Seconds</ComboBoxItem>
+                                <ComboBox
+                                    x:Name="enlargement_speed"
+                                    Width="206"
+                                    Height="34"
+                                    Margin="6,88,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontSize="15"
+                                    SelectedIndex="2">
+                                    <ComboBoxItem>0 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>1 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>3 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>5 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>10 Seconds</ComboBoxItem>
+                                    <ComboBoxItem>15 Seconds</ComboBoxItem>
                                 </ComboBox>
 
-                                <Label Content="( " FontSize="35" Margin="11,124,206,0" VerticalAlignment="Top" />
-                                <Label Content=") " FontSize="35" Margin="212,127,5,0" VerticalAlignment="Top"/>
-                                <Label Content=", " FontSize="35" Margin="113,128,104,0" VerticalAlignment="Top"/>
-                                <ToggleButton x:Name="EnlargementGhostVisibality" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="6,233,0,0" Padding="5" Width="206" Height="40" Unchecked="HideGhostEnlargement" Checked="ShowGhostEnlargement" FontSize="11" IsChecked="True">
+                                <Label
+                                    Margin="11,124,206,0"
+                                    VerticalAlignment="Top"
+                                    Content="( "
+                                    FontSize="35" />
+                                <Label
+                                    Margin="212,127,5,0"
+                                    VerticalAlignment="Top"
+                                    Content=") "
+                                    FontSize="35" />
+                                <Label
+                                    Margin="113,128,104,0"
+                                    VerticalAlignment="Top"
+                                    Content=", "
+                                    FontSize="35" />
+                                <ToggleButton
+                                    x:Name="EnlargementGhostVisibality"
+                                    Width="206"
+                                    Height="40"
+                                    Margin="6,233,0,0"
+                                    Padding="5"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Checked="ShowGhostEnlargement"
+                                    FontSize="11"
+                                    IsChecked="True"
+                                    Unchecked="HideGhostEnlargement">
                                     <ToggleButton.Style>
                                         <Style TargetType="{x:Type ToggleButton}">
                                             <Setter Property="Content">
                                                 <Setter.Value>
-                                                    <StackPanel Orientation="Horizontal" Width="200" >
+                                                    <StackPanel Width="200" Orientation="Horizontal">
                                                         <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_hidden.png" />
-                                                        <TextBlock Text="Enlargement Ghost Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                        <TextBlock
+                                                            Width="145"
+                                                            Margin="0,9"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                            Text="Enlargement Ghost Hidden"
+                                                            TextAlignment="Center" />
                                                     </StackPanel>
                                                 </Setter.Value>
                                             </Setter>
@@ -366,9 +1143,15 @@
                                                 <Trigger Property="IsChecked" Value="True">
                                                     <Setter Property="Content">
                                                         <Setter.Value>
-                                                            <StackPanel Orientation="Horizontal"  Width="200">
-                                                                <Image Source="/Transformations;component/Resources/eye_visable.png" HorizontalAlignment="Left" />
-                                                                <TextBlock Text="Enlargement Ghost Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                                            <StackPanel Width="200" Orientation="Horizontal">
+                                                                <Image HorizontalAlignment="Left" Source="/Transformations;component/Resources/eye_visable.png" />
+                                                                <TextBlock
+                                                                    Width="145"
+                                                                    Margin="0,9"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                                                    Text="Enlargement Ghost Visible"
+                                                                    TextAlignment="Center" />
                                                             </StackPanel>
                                                         </Setter.Value>
                                                     </Setter>
@@ -377,16 +1160,49 @@
                                         </Style>
                                     </ToggleButton.Style>
                                 </ToggleButton>
-                                <Button x:Name="enlargement_rays" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="6,188,0,0" Padding="5" Width="206"  Height="40" Click="DrawRaysClick">
-                                    <StackPanel Orientation="Horizontal" Height="30" Width="196">
-                                        <Image Source="/Transformations;component/Resources/pen.png" Width="28" />
-                                        <TextBlock Text="Draw Ray-lines" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                <Button
+                                    x:Name="enlargement_rays"
+                                    Width="206"
+                                    Height="40"
+                                    Margin="6,188,0,0"
+                                    Padding="5"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Click="DrawRaysClick">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="30"
+                                        Orientation="Horizontal">
+                                        <Image Width="28" Source="/Transformations;component/Resources/pen.png" />
+                                        <TextBlock
+                                            Width="145"
+                                            Margin="0,9"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Draw Ray-lines"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
-                                <Button x:Name="delete_ray"  HorizontalAlignment="Left" Margin="6,334,0,0" VerticalAlignment="Top" Width="206" Height="48" Click="DeleteRays">
-                                    <StackPanel Orientation="Horizontal" Height="34" Width="196">
-                                        <Image Source="/Transformations;component/Resources/bin.png" Width="28" />
-                                        <TextBlock Text="Delete Ray-lines" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9" Width="145" TextAlignment="Center" />
+                                <Button
+                                    x:Name="delete_ray"
+                                    Width="206"
+                                    Height="48"
+                                    Margin="6,334,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Click="DeleteRays">
+                                    <StackPanel
+                                        Width="196"
+                                        Height="34"
+                                        Orientation="Horizontal">
+                                        <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
+                                        <TextBlock
+                                            Width="145"
+                                            Margin="0,9"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Text="Delete Ray-lines"
+                                            TextAlignment="Center" />
                                     </StackPanel>
                                 </Button>
                             </Grid>
@@ -396,47 +1212,84 @@
             </TabControl>
         </ScrollViewer>
 
-        <!--Main Menu XAML DATA-->
-        <Menu Height="21" x:Name="menu1" VerticalAlignment="Top"  Panel.ZIndex="3">
-            <MenuItem Header="_File " >
-                <MenuItem Header="_Open" x:Name="Open" Click="OpenClick" >
+        <!--  Main Menu XAML DATA  -->
+        <Menu
+            x:Name="menu1"
+            Height="21"
+            VerticalAlignment="Top"
+            Panel.ZIndex="3">
+            <MenuItem Header="_File ">
+                <MenuItem
+                    x:Name="Open"
+                    Click="OpenClick"
+                    Header="_Open">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/OpenFolder.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Save" x:Name="Save">
+                <MenuItem x:Name="Save" Header="_Save">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Save.png" />
                         </Viewbox>
                     </MenuItem.Icon>
-                    <MenuItem Header="_Save Image" x:Name="Save_image" Click="SaveImageClick" >
+                    <MenuItem
+                        x:Name="Save_image"
+                        Click="SaveImageClick"
+                        Header="_Save Image">
                         <MenuItem.Icon>
-                            <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                            <Viewbox
+                                Width="16"
+                                Height="16"
+                                HorizontalAlignment="Left">
                                 <Image Source="/Transformations;component/Resources/image.png" />
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_Save File" x:Name="Save_File" Click="SaveFileClick" >
+                    <MenuItem
+                        x:Name="Save_File"
+                        Click="SaveFileClick"
+                        Header="_Save File">
                         <MenuItem.Icon>
-                            <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                            <Viewbox
+                                Width="16"
+                                Height="16"
+                                HorizontalAlignment="Left">
                                 <Image Source="/Transformations;component/Resources/File.png" />
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="_Restart" x:Name="Restart" Click="RestartClick" >
+                <MenuItem
+                    x:Name="Restart"
+                    Click="RestartClick"
+                    Header="_Restart">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Restart.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Settings" x:Name="Settings" Click="SettingsClick" >
+                <MenuItem
+                    x:Name="Settings"
+                    Click="SettingsClick"
+                    Header="_Settings">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/SettingsF.png" />
                         </Viewbox>
                     </MenuItem.Icon>
@@ -444,31 +1297,55 @@
             </MenuItem>
 
             <MenuItem Header="_Account ">
-                <MenuItem Header="_Student Login" x:Name="Login" Click="StudentLoginClick" >
+                <MenuItem
+                    x:Name="Login"
+                    Click="StudentLoginClick"
+                    Header="_Student Login">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/login_male.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Take An Exam" x:Name="Exam" Click="TakeExamClick"  >
+                <MenuItem
+                    x:Name="Exam"
+                    Click="TakeExamClick"
+                    Header="_Take An Exam">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Exam.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator />
-                <MenuItem Header="_Teacher Login" x:Name="Teacher" Click="TeacherLoginClick"  >
+                <MenuItem
+                    x:Name="Teacher"
+                    Click="TeacherLoginClick"
+                    Header="_Teacher Login">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Teacher.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Student Manager" x:Name="Manger" Click="StudentManagerClick"   >
+                <MenuItem
+                    x:Name="Manger"
+                    Click="StudentManagerClick"
+                    Header="_Student Manager">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Users.png" />
                         </Viewbox>
                     </MenuItem.Icon>
@@ -476,46 +1353,102 @@
             </MenuItem>
 
             <MenuItem Header="_View ">
-                <MenuItem Header="_Labels" x:Name="Labels" IsCheckable="true" IsChecked="False" Checked="LabelsChecked" Unchecked="LabelsUnchecked"/>
-                <MenuItem Header="_Reset Axis" x:Name="Axis" Click="ResetAxisClick">
+                <MenuItem
+                    x:Name="Labels"
+                    Checked="LabelsChecked"
+                    Header="_Labels"
+                    IsCheckable="true"
+                    IsChecked="False"
+                    Unchecked="LabelsUnchecked" />
+                <MenuItem
+                    x:Name="Axis"
+                    Click="ResetAxisClick"
+                    Header="_Reset Axis">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Refresh.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                </MenuItem>
+            </MenuItem>
 
             <MenuItem Header="_Help ">
-                <MenuItem Header="_Help" x:Name="Help" Click="HelpClick" >
+                <MenuItem
+                    x:Name="Help"
+                    Click="HelpClick"
+                    Header="_Help">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/Info.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-               <MenuItem Header="_Feedback" x:Name="Feedback" Click="FeedbackClick" >
+                <MenuItem
+                    x:Name="Feedback"
+                    Click="FeedbackClick"
+                    Header="_Feedback">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/feadback.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_Report A Bug" x:Name="BugReport" Click="ReportBug" >
+                <MenuItem
+                    x:Name="BugReport"
+                    Click="ReportBug"
+                    Header="_Report A Bug">
                     <MenuItem.Icon>
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Left">
+                        <Viewbox
+                            Width="16"
+                            Height="16"
+                            HorizontalAlignment="Left">
                             <Image Source="/Transformations;component/Resources/bugIcon.png" />
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
-            </Menu>
-        <Button x:Name="DeleteAllGhostsButton" HorizontalAlignment="Left" Margin="391,23,0,0" VerticalAlignment="Top" Width="112" Click="DeleteAllGhosts">
-            <StackPanel Orientation="Horizontal" Height="14" Width="122">
+        </Menu>
+        <Button
+            x:Name="DeleteAllGhostsButton"
+            Width="112"
+            Margin="391,23,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="DeleteAllGhosts">
+            <StackPanel
+                Width="122"
+                Height="14"
+                Orientation="Horizontal">
                 <Image Source="/Transformations;component/Resources/bin.png" />
-                <TextBlock Text="Delete All Ghosts" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-1" Width="95" />
+                <TextBlock
+                    Width="95"
+                    Margin="0,-1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Delete All Ghosts" />
             </StackPanel>
         </Button>
-        <Label x:Name="DatabaseError" Content="DATABASE FAILURE: PLEASE REFER TO USERMANUAL" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" Foreground="Red" Width="430" Panel.ZIndex="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Margin="206,-3,206,0" Visibility="Hidden" />
+        <Label
+            x:Name="DatabaseError"
+            Width="430"
+            Margin="206,-3,206,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Top"
+            Panel.ZIndex="500"
+            Content="DATABASE FAILURE: PLEASE REFER TO USERMANUAL"
+            FontWeight="Bold"
+            Foreground="Red"
+            Visibility="Hidden" />
     </Grid>
 </Window>

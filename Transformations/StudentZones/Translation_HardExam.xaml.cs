@@ -15,7 +15,7 @@ namespace Transformations
 	/// </summary>
 	public partial class Translation_HardExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -2, "Translation Hard Exam", 4);		//Creates a new exam object
+        readonly Exam Exams;	//Creates a new exam object
 		List<Shapes> MyShapes = new List<Shapes>();								//Creates a list to contain the shape objects
 
 		GridLine Grid;						//Creates a grid object
@@ -24,12 +24,10 @@ namespace Transformations
 		public Translation_HardExam()
 		{
 			InitializeComponent();
-			//Sets a variety of events for both the timer and the canvas- for timing and scaling/moving around.
-			//This allows code to be reused and prevents the need for redundant code.
-			Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-			Exams.Timer.DispatcherTimer.Start();
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
+            //Sets a variety of events for both the timer and the canvas- for timing and scaling/moving around.
+            //This allows code to be reused and prevents the need for redundant code.
+            Exams = new Exam(0, -2, "Translation Hard Exam", 4, timer);
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove +=	new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, canvas, Cursor));
 			border.MouseDown += new MouseButtonEventHandler((sender, e) => Transformations.Scaling.BorderMouseDown(sender, e, canvas));
@@ -130,11 +128,9 @@ namespace Transformations
 		}
 		private int XAnswer()	//Calculates the X answer
 		{
-			int x_answer = 0;
+			int x_answer ;
 			double original_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_x = 0;
-
-			ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
 
 			double answer_pixel = ghost_x - original_x;
 			x_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -142,11 +138,9 @@ namespace Transformations
 		}
 		private int YAnswer()	//Calculates the Y answer
 		{
-			int y_answer = 0;
+			int y_answer;
 			double original_y = Canvas.GetTop(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_y = 0;
-
-			ghost_y = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_y =  Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
 
 			double answer_pixel = original_y - ghost_y;
 			y_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -158,7 +152,7 @@ namespace Transformations
             Exams.ArrayPos += 2;	//Array position is incremented by two (due to two shapes per question)
             if (Exams.QuestionPos > 6)	//If the user has reached the end of the questions (6)
             {
-                Exams.Timer.DispatcherTimer.Stop();								//Stop the timer
+                Exams.Timer.Stop();								//Stop the timer
                 BlurEffect myBlurEffect = new BlurEffect { Radius = 10 };		//Add a blur to the window
                 window.Effect = myBlurEffect;
                 this.Topmost = false;
@@ -222,18 +216,7 @@ namespace Transformations
 				this.Close();
 			}
 		}
-		private void TimerTick(object sender, EventArgs e)	//For every second this method is called
-		{
-			Exams.Timer.Seconds++;  //Increment the second counter
-			//Set the content of the timer text
-			timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
 
-            if (Exams.Timer.Seconds >= 59)	//If second count is greater than or equal to 59
-			{
-				Exams.Timer.Seconds = -1;	//Minus one second
-				Exams.Timer.Minutes++;		//Increment the minutes 
-			}
-		}
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
