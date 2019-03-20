@@ -19,7 +19,7 @@ namespace Transformations
 		/// 
 		//Code for enlargement	
 	
-		private void enlargementExecute(object sender, RoutedEventArgs e)
+		private void EnlargementExecute(object sender, RoutedEventArgs e)
 		{
 			double[] enlAmounts = { -5, -4, -3, -2, -1, 0.25, 0.5, 0.75, 1, 2, 3, 4, 5 };
 			if (SelectedShape != null)  //If the user has a shape selected

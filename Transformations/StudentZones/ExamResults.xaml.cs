@@ -20,7 +20,7 @@ namespace Transformations
 			ExamName.Content = Result.ExamName;
 			Score.Content = Result.ScoreValue;
 			Attempts.Content = Result.TotalAttempts;
-            time.Content = Result.Timer.Seconds <= 9 ? Result.Timer.Minutes + ":0" + Result.Timer.Seconds : time.Content = Result.Timer.Minutes + ":" + Result.Timer.Seconds;
+            time.Content = Result.Timer.GetString();
             
             if (Result.ScoreValue < 5)     //Sets if the user has passed or failed an exam.
 			{

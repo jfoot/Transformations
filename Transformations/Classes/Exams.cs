@@ -1,31 +1,31 @@
-﻿using System.Windows.Threading;
+﻿using System;
+using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace Transformations
 {
 	public class Exam       //Declares an exam object
 	{
-		private Time timer = new Time();    //Creates a timer object
 		private int attmepts = 0;           //Counts the number of attempts
 		private int totalAttempts = 0;      //Counts the number of total attempts 
 		private int scoreValue = 0;        //Records the score 
 		private int questionPos;           //Records the current question their on.
-		private int arrayPos;              //Records the current array index.
-        private int examID;                 //Records the exam ID.
-        private string examName;            //Records the name of the exam.
+		public int ArrayPos { get; set; }              //Records the current array index.
+        public readonly int ExamID;                 //Records the exam ID.
+        public readonly string ExamName;            //Records the name of the exam.
+        public Time Timer { get; set; }    //Creates a timer object
 
-		public Exam(int QuePos, int ArrPos, string ExamName, int ExamID)
+
+        public Exam(int quePos, int arrPos, string examName, int examID, Label label)
 		{
-			questionPos = QuePos;
-			arrayPos = ArrPos;
-            examID = ExamID;
-            examName = ExamName;
+			questionPos = quePos;
+			ArrayPos = arrPos;
+            ExamID = examID;
+            ExamName = examName;
+            Timer = new Time(label);
+            Timer.Start();
 		}
 		
-		public Time Timer
-		{
-			get { return timer; }
-			set { timer = value; }
-		}
 		public int Attmepts
 		{
 			get { return attmepts; }
@@ -42,20 +42,6 @@ namespace Transformations
 		{
 			get { return questionPos; }
 		}
-		public int ArrayPos
-		{
-			get { return arrayPos; }
-			set { arrayPos = value; }
-		}
-        public int ExamID
-        {
-            get { return examID; }
-        }
-        public string ExamName
-        {
-            get { return examName; }
-        }
-
 
 		public void AddAttempt()
 		{
@@ -79,26 +65,39 @@ namespace Transformations
 
 	public class Time   //Declares a timer object
 	{
-		private DispatcherTimer dispatcherTimer = new DispatcherTimer();    //Creates a timer
-		private int seconds = 0;    //Records the number of seconds
-		private int minutes = 0;    //Records the number of minuets.
+		private DispatcherTimer DispatcherTimer { get; set; } = new DispatcherTimer();    //Creates a timer
+        private int seconds;
+        private Label Label;
+        
+        //   int Seconds { get; set; } = 0;    //Records the number of seconds
+		//private int Minutes { get; set; } = 0;    //Records the number of minuets.
 
-		public DispatcherTimer DispatcherTimer
-		{
-			get { return dispatcherTimer; }
-			set { dispatcherTimer = value; }
-		}
+        public Time(Label ls)
+        {
+            Label = ls;
+            DispatcherTimer.Tick += new EventHandler(TimerTick);
+            DispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+        }
 
-		public int Seconds
-		{
-			get { return seconds; }
-			set { seconds = value; }
-		}
+        public void Start()
+        {
+            DispatcherTimer.Start();
+        }
 
-		public int Minutes
-		{
-			get { return minutes; }
-			set { minutes = value; }
-		}
-	}
+        public void Stop()
+        {
+            DispatcherTimer.Stop();
+        }
+
+        private void TimerTick(object sender, EventArgs e)
+        {
+            seconds++;
+            Label.Content = (seconds / 60).ToString("00") + ":" + (seconds % 60).ToString("00");
+        }
+
+        public string GetString()
+        {
+            return (seconds / 60).ToString("00") + ":" + (seconds % 60).ToString("00");
+        }
+    }
 }

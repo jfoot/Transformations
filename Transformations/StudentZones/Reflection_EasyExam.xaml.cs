@@ -16,7 +16,7 @@ namespace Transformations
 	/// </summary>
 	public partial class Reflection_EasyExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -2, "Reflection Easy Exam",5);
+        readonly Exam Exams;
 		List<Shapes> MyShapes = new List<Shapes>();
 
 		List<string> RefType = new List<string>();
@@ -29,10 +29,8 @@ namespace Transformations
 		public Reflection_EasyExam()
 		{
 			InitializeComponent();
-			Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-			Exams.Timer.DispatcherTimer.Start();
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
+			Exams = new Exam(0, -2, "Reflection Easy Exam", 5, timer);
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
 			border.MouseDown += new MouseButtonEventHandler((sender, e) => Transformations.Scaling.BorderMouseDown(sender, e, MyCanvas));
@@ -200,7 +198,7 @@ namespace Transformations
 		}
 		private double XAnswer()
 		{
-			double x_answer = 0;
+			double x_answer;
 			double Orginal_shape = Canvas.GetLeft(MyShapes[Exams.ArrayPos].MyShape);
 			double Ghost_shape = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
 			double difference = ((Ghost_shape + Orginal_shape) / 2);
@@ -210,7 +208,7 @@ namespace Transformations
 		}
 		private double YAnswer()
 		{
-			double y_answer = 0;
+			double y_answer;
 			double Orginal_shape = Canvas.GetTop(MyShapes[Exams.ArrayPos].MyShape);
 			double Ghost_shape = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
 			double difference = ((Ghost_shape + Orginal_shape) / 2);
@@ -235,7 +233,7 @@ namespace Transformations
 
 			if (Exams.QuestionPos > 6)
 			{
-				Exams.Timer.DispatcherTimer.Stop();
+				Exams.Timer.Stop();
 				BlurEffect myBlurEffect = new BlurEffect { Radius = 10 };
 				window.Effect = myBlurEffect;
 				this.Topmost = false;
@@ -274,18 +272,6 @@ namespace Transformations
 			foreach (Label t in GridLine.Labels)
 			{
 				MyCanvas.Children.Add(t);
-			}
-		}
-		private void TimerTick(object sender, EventArgs e)
-		{
-
-			Exams.Timer.Seconds++;
-            timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
-
-            if (Exams.Timer.Seconds >= 59)
-			{
-				Exams.Timer.Seconds = -1;
-				Exams.Timer.Minutes++;
 			}
 		}
 		private void Exit(object sender, RoutedEventArgs e)

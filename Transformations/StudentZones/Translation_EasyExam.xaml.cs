@@ -9,6 +9,7 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Linq;
 
+
 namespace Transformations
 {
 	/// <summary>
@@ -16,7 +17,7 @@ namespace Transformations
 	/// </summary>
 	public partial class Translation_EasyExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -2, "Translation Easy Exam" , 3);  //Creates a new exam object
+        readonly Exam Exams; //Creates a new exam object
 		List<Shapes> MyShapes = new List<Shapes>();                 //Creates a list of shape object
 
 		
@@ -27,10 +28,8 @@ namespace Transformations
 		public Translation_EasyExam()
 		{
             InitializeComponent();
-            Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);                       //The timer will tick every second.
-			Exams.Timer.DispatcherTimer.Start();                                                //Start the timer upon launching the exam window.
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));      //Sets the mouse wheel to scalling.mousewheel method
+            Exams = new Exam(0, -2, "Translation Easy Exam", 3,timer);                                           //Start the timer upon launching the exam window.
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));      //Sets the mouse wheel to scalling.mousewheel method
 																																		   //Allows the user to move and pan around the grid.
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
@@ -87,11 +86,9 @@ namespace Transformations
 }
 		private int XAnswer()  //Gives the X answer value.
 		{
-			int x_answer = 0;
+			int x_answer;
 			double original_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_x = 0;
-							
-			ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
 	
 			double answer_pixel = ghost_x - original_x;
 			x_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -99,11 +96,9 @@ namespace Transformations
 		}
 		private int YAnswer()  //Gives the Y answer value.
 		{
-			int y_answer = 0;
+			int y_answer;
 			double original_y = Canvas.GetTop(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_y = 0;
-				
-			ghost_y = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_y = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
 
 			double answer_pixel = original_y - ghost_y;
 			y_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -118,7 +113,7 @@ namespace Transformations
                
                 if (Exams.QuestionPos > 6) //if the exam questions have reached the end then display the exam results dialog.
                 {
-                    Exams.Timer.DispatcherTimer.Stop();
+                    Exams.Timer.Stop();
                     BlurEffect myBlurEffect = new BlurEffect { Radius = 10 };
                     window.Effect = myBlurEffect;
                     this.Topmost = false;
@@ -230,31 +225,11 @@ namespace Transformations
 		}
       
         //When the button is pressed check the answer.
-        private void Button1(object sender, RoutedEventArgs e)
+        private void OptionPressed(object sender, RoutedEventArgs e)
 		{
-			CheckAnswer(1);
+			CheckAnswer(Convert.ToInt32(((Button)sender).Tag.ToString()));
 		}
-		private void Button2(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(2);
-		}
-		private void Button3(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(3);
-		}
-		private void Button4(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(4);
-		}
-		private void Button5(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(5);
-		}
-		private void Button6(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(6);
-		}
-
+	
         //Used to setup the exam
         private void CanvasLoaded(object sender, RoutedEventArgs e)
         {
@@ -278,18 +253,6 @@ namespace Transformations
 				TakeExam exam = new TakeExam();
 				exam.Show();
 				this.Close();
-			}
-		}
-		private void TimerTick(object sender, EventArgs e)
-		{
-
-			Exams.Timer.Seconds++;
-            timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
-
-            if (Exams.Timer.Seconds >= 59)
-			{
-				Exams.Timer.Seconds = -1;
-				Exams.Timer.Minutes++;
 			}
 		}
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)

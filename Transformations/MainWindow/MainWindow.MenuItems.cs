@@ -304,7 +304,7 @@ namespace Transformations
 						}
 					}
                     //Splits the file using a "!"
-					SaveFile = SaveFile + "!";
+					SaveFile += "!";
 
 
 					foreach (Shapes t in MyShapes)  //Saves each circle shape

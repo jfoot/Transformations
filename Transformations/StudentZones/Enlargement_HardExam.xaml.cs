@@ -15,7 +15,7 @@ namespace Transformations
 	/// </summary>
 	public partial class Enlargement_HardExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -3, "Enlargement Hard Exam", 2);
+        readonly Exam Exams;
 		List<Shapes> MyShapes = new List<Shapes>();
 
 		public readonly double[] Values = {-2, -1, 0.5, 2};
@@ -32,10 +32,8 @@ namespace Transformations
 		public Enlargement_HardExam()
 		{
 			InitializeComponent();
-			Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-			Exams.Timer.DispatcherTimer.Start();
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
+            Exams = new Exam(0, -3, "Enlargement Hard Exam", 2, timer);
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
 			border.MouseDown += new MouseButtonEventHandler((sender, e) => Transformations.Scaling.BorderMouseDown(sender, e, MyCanvas));
@@ -163,7 +161,7 @@ namespace Transformations
 			Exams.ResetAttempts();
             if (Exams.QuestionPos > 6)
             {
-                Exams.Timer.DispatcherTimer.Stop();
+                Exams.Timer.Stop();
                 BlurEffect myBlurEffect = new BlurEffect { Radius = 10 };
                 window.Effect = myBlurEffect;
                 this.Topmost = false;
@@ -224,17 +222,7 @@ namespace Transformations
 				MyCanvas.Children.Add(t);
 			}
 		}
-        private void TimerTick(object sender, EventArgs e)
-		{
-			Exams.Timer.Seconds++;
-            timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
 
-            if (Exams.Timer.Seconds >= 59)
-			{
-				Exams.Timer.Seconds = -1;
-				Exams.Timer.Minutes++;
-			}
-		}
         private void Exit(object sender, RoutedEventArgs e)
 		{
 			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", "Are you sure?",
