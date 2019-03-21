@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -177,15 +178,8 @@ namespace Transformations
 					MyCanvas.Children.Remove(t.MyShape);
 				}
 			}
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					MyCanvas.Children.Remove(line);
-				}
-			}
-			MyRayLines.Clear();
-			MyShapes.RemoveAll(item => item.MyShape.Name.StartsWith("dupe"));
+            DeleteRays(new object(), new RoutedEventArgs());
+            MyShapes.RemoveAll(item => item.MyShape.Name.StartsWith("dupe"));
 			Reflection_Execute.IsChecked = false;
 		}
         private void DeleteGhosts(string transformation) //Allows the user to delete ghosts shapes based upon their transformation type.
@@ -197,19 +191,19 @@ namespace Transformations
 					MyCanvas.Children.Remove(t.MyShape);
 				}
 			}
-			MyShapes.RemoveAll(item => item.MyShape.Name.Contains("dupe_" + transformation));
+            MyShapes.RemoveAll(item => item.MyShape.Name.Contains("dupe_" + transformation));
 			Reflection_Execute.IsChecked = false;
 		}
         public void HideGhosts(string transformation)   //A generalised function, used to hide ghosts based upon their type of transformation.
 		{
-			foreach (Shapes t in MyShapes)
-			{
-				if (t.MyShape.Name == "dupe_" + transformation)
-				{
-					t.MyShape.Visibility = Visibility.Hidden;
-				}
-			}
-		}
+            foreach (Shapes t in MyShapes)
+            {
+                if (t.MyShape.Name == "dupe_" + transformation)
+                {
+                    t.MyShape.Visibility = Visibility.Hidden;
+                }
+            }
+        }
         private void ShowGhosts(string transformation)      //A generalised function, used to show ghosts based upon their type of transformation.
 		{
 			foreach (Shapes t in MyShapes)

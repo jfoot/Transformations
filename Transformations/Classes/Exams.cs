@@ -6,19 +6,18 @@ namespace Transformations
 {
 	public class Exam       //Declares an exam object
 	{
-		private int attmepts = 0;           //Counts the number of attempts
-		private int totalAttempts = 0;      //Counts the number of total attempts 
-		private int scoreValue = 0;        //Records the score 
-		private int questionPos;           //Records the current question their on.
+		public int Attmepts { get; private set; } = 0;           //Counts the number of attempts
+        public int TotalAttempts { get; private set; } = 0;      //Counts the number of total attempts 
+        public int ScoreValue { get; private set; } = 0;        //Records the score 
+        public int QuestionPos { get; private set; }           //Records the current question their on.
 		public int ArrayPos { get; set; }              //Records the current array index.
+        public Time Timer { get; set; }    //Creates a timer object
         public readonly int ExamID;                 //Records the exam ID.
         public readonly string ExamName;            //Records the name of the exam.
-        public Time Timer { get; set; }    //Creates a timer object
-
 
         public Exam(int quePos, int arrPos, string examName, int examID, Label label)
 		{
-			questionPos = quePos;
+			QuestionPos = quePos;
 			ArrayPos = arrPos;
             ExamID = examID;
             ExamName = examName;
@@ -26,39 +25,22 @@ namespace Transformations
             Timer.Start();
 		}
 		
-		public int Attmepts
-		{
-			get { return attmepts; }
-		}
-		public int TotalAttempts
-		{
-			get { return totalAttempts; }
-		}
-		public int ScoreValue
-		{
-			get { return scoreValue; }
-		}
-		public int QuestionPos
-		{
-			get { return questionPos; }
-		}
-
 		public void AddAttempt()
 		{
-			attmepts++;
-			totalAttempts++;
+			Attmepts++;
+			TotalAttempts++;
 		}
 		public void ResetAttempts()
 		{
-			attmepts = 0;
+			Attmepts = 0;
 		}
 		public void AddQuesPos()
 		{
-			questionPos++;
+			QuestionPos++;
 		}
 		public void AddPoint()
 		{
-			scoreValue++;
+			ScoreValue++;
 		}
 	}
 
@@ -69,9 +51,6 @@ namespace Transformations
         private int seconds;
         private Label Label;
         
-        //   int Seconds { get; set; } = 0;    //Records the number of seconds
-		//private int Minutes { get; set; } = 0;    //Records the number of minuets.
-
         public Time(Label ls)
         {
             Label = ls;

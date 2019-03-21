@@ -110,34 +110,16 @@ namespace Transformations
 		private void HideGhostEnlargement(object sender, RoutedEventArgs e)   //Hides all of the ghost enlargement
 		{
 			HideGhosts("enlargement");
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					line.Visibility = Visibility.Hidden;
-				}
-			}
-		}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Hidden));
+        }
 		private void ShowGhostEnlargement(object sender, RoutedEventArgs e)   //Shows all of the ghost enlargement
 		{
 			ShowGhosts("enlargement");
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					line.Visibility = Visibility.Visible;
-				}
-			}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Visible));
 		}
         private void DeleteRays(object sender, RoutedEventArgs e)      //Deletes all of the ray-lines from the grid
 		{
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					MyCanvas.Children.Remove(line);
-				}
-			}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
 			MyRayLines.Clear();
 		}
         private void DeleteEnlargementGhosts(object sender, RoutedEventArgs e)  //Deletes all the enlargement ghosts
