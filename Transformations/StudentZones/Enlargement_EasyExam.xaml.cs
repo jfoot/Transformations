@@ -312,14 +312,9 @@ namespace Transformations
 		}
         private void DeleteRays(object sender, RoutedEventArgs e)
 		{
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					MyCanvas.Children.Remove(line);
-				}
-			}
-		}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
+            MyRayLines.Clear();
+        }
         private void Show(Border type)
         {
             type.Visibility = System.Windows.Visibility.Visible;
