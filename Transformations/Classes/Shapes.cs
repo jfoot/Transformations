@@ -11,44 +11,13 @@ namespace Transformations
 {
     abstract class Shapes    //Declares a shape object
 	{
-		private TransformGroup myTransformGroup = new TransformGroup();     //Creates a transform group to group the transformations
-        private ScaleTransform myScalingTransform = new ScaleTransform();   //Applies a scaling transform
-        private RotateTransform myRotateTransform = new RotateTransform();  //Applies a rotation transform
-        private TranslateTransform myTranslateTransform = new TranslateTransform(); //Applies a translation rotation
-        private Shape myShape;          //Declares the actual shape
-        private string partnerShapes;   //Declares the partner shape - used for reflection
-        
+		public TransformGroup MyTransformGroup { get; set; } = new TransformGroup();     //Creates a transform group to group the transformations
+        public ScaleTransform MyScalingTransform { get; set; } = new ScaleTransform();   //Applies a scaling transform
+        public RotateTransform MyRotateTransform { get; set; } = new RotateTransform();  //Applies a rotation transform
+        public TranslateTransform MyTranslateTransform { get; set; } = new TranslateTransform(); //Applies a translation rotation
+        public Shape MyShape { get; set; }           //Declares the actual shape
+        public string PartnerShape { get; set; }    //Declares the partner shape - used for reflection
 
-        public TransformGroup MyTransformGroup
-        {
-            get { return myTransformGroup; }
-            set { myTransformGroup = value; }
-        }
-        public ScaleTransform MyScalingTransform
-        {
-            get { return myScalingTransform; }
-            set { myScalingTransform = value; }
-        }
-        public RotateTransform MyRotateTransform
-        {
-            get { return myRotateTransform; }
-            set { myRotateTransform = value; }
-        }
-        public TranslateTransform MyTranslateTransform
-        {
-            get { return myTranslateTransform; }
-            set { myTranslateTransform = value; }
-        }
-        public Shape MyShape
-        {
-            get { return myShape; }
-            set { myShape = value; }
-        }
-        public string PartnerShape
-        {
-            get { return partnerShapes; }
-            set { partnerShapes = value; }
-        }
         
 		public void SetDefualts(Canvas canvas)
 		{
@@ -75,16 +44,8 @@ namespace Transformations
                 Height = Properties.Settings.Default.DefaultHeight
             };
         }
-		public Circle(string name)      //Creates a circle with a known name (default constructor)
+		public Circle(string name)  : this()    //Creates a circle with a known name (default constructor)
 		{
-			MyShape = new Ellipse
-			{
-				Fill = new SolidColorBrush(Color.FromArgb(Properties.Settings.Default.DefaultColour.A, Properties.Settings.Default.DefaultColour.R, Properties.Settings.Default.DefaultColour.G, Properties.Settings.Default.DefaultColour.B)),
-				Stroke = Brushes.Black,
-				StrokeThickness = 2,
-				Width = Properties.Settings.Default.DefaultHeight,
-				Height = Properties.Settings.Default.DefaultHeight,
-			};
             Name = name;   
         }
               
@@ -124,15 +85,8 @@ namespace Transformations
                 StrokeThickness = 2
             };
         }
-		public FreeForm(string name)    //Creates a new polygon with a known name (default constructor)
+		public FreeForm(string name) :this()   //Creates a new polygon with a known name (default constructor)
 		{
-			MyShape = new Polygon
-			{
-				Fill = new SolidColorBrush(Color.FromArgb(Properties.Settings.Default.DefaultColour.A, Properties.Settings.Default.DefaultColour.R, Properties.Settings.Default.DefaultColour.G, Properties.Settings.Default.DefaultColour.B)),
-				Stroke = Brushes.Black,
-				StrokeThickness = 2,
-				Name = name
-            };
             Name = name;
         }
       
@@ -204,55 +158,19 @@ namespace Transformations
 
 	class Lines // Declares a line object, this will be used for free-form drawing.
 	{
-		private List<Line> linesList = new List<Line>();    //Declares a list of lines
-		private PointCollection myPoints = new PointCollection();   //Declares a point collection, to retrieve the points from the lines.
-
-		public List<Line> LinesList
-		{
-			get { return linesList; }
-			set { linesList = value; }
-		}
-        public PointCollection MyPoints
-		{
-			get { return myPoints; }
-			set { myPoints = value; }
-		}
+		public List<Line> LinesList { get; set; } = new List<Line>();    //Declares a list of lines
+        public PointCollection MyPoints { get; set; } = new PointCollection();   //Declares a point collection, to retrieve the points from the lines.
 	}
+
 	class GridLine  //Declares a grid-line object
 	{   //Declares a variety of different line lists, used for different parts of the grid.
-		private List<Line> xGridline = new List<Line>();
-		private List<Line> yGridline = new List<Line>();
-		private List<Line> axis = new List<Line>();
-		private List<Line> axisLines = new List<Line>();
-		private List<Label> labels = new List<Label>();
+		public List<Line> XGridline { get; set; } = new List<Line>();
+        public List<Line> YGridline { get; set; } = new List<Line>();
+        public List<Line> Axis { get; set; } = new List<Line>();
+        public List<Line> AxisLines { get; set; } = new List<Line>();
+        public List<Label> Labels { get; set; } = new List<Label>();
 
 		
-		public List<Line> XGridline
-		{
-			get { return xGridline; }
-			set { xGridline = value; }
-		}
-		public List<Line> YGridline
-		{
-			get { return yGridline; }
-			set { yGridline = value; }
-		}
-		public List<Line> Axis
-		{
-			get { return axis; }
-			set { axis = value; }
-		}
-		public List<Line> AxisLines
-		{
-			get { return axisLines; }
-			set { axisLines = value; }
-		}
-		public List<Label> Labels
-		{
-			get { return labels; }
-			set { labels = value; }
-		}
-
 		//Used to draw the grid.
 		public GridLine DrawGrid(int max_value, int scale_factor, Canvas canvas) //Draws the grid
 		{
@@ -278,7 +196,7 @@ namespace Transformations
                 if (x / scale_factor % 5 == 0)
 				{
 					YGridline[YGridline.Count -1].StrokeThickness = 4;
-                    labels.Add(new Label() { Content = (x / scale_factor), Foreground = TextColour });
+                    Labels.Add(new Label() { Content = (x / scale_factor), Foreground = TextColour });
 					Canvas.SetLeft(Labels[Labels.Count - 1], x);
 					Canvas.SetTop(Labels[Labels.Count - 1], 0);
 
@@ -376,12 +294,7 @@ namespace Transformations
 	}
 	class RayLines  //Declares a ray-line object
 	{   //Ray-lines are objectised so the ray-lines object can be encapsulated inside a list.
-		private List<Line> raylinesList = new List<Line>(); //a list containing lines
-		public List<Line> RayLinesList
-		{
-			get { return raylinesList; }
-			set { raylinesList = value; }
-		}
+		public List<Line> RayLinesList { get; set; } = new List<Line>(); //a list containing lines
 	}
 }
 
