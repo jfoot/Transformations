@@ -96,7 +96,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Rotation Hard' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Rotation Hard' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -138,7 +138,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+					"The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Invalid Input Type Error: 300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}

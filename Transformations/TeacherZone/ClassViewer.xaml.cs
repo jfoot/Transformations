@@ -47,7 +47,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to retrieve the students inside of the selected class. " + Properties.Resources.DataBaseError,
+					"Failed to retrieve the students inside of the selected class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read Error: 100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
@@ -103,7 +103,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to delete the selected user. " + Properties.Resources.DataBaseError,
+					"Failed to delete the selected user. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Write Error: 101 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
@@ -152,7 +152,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to retrieve the students inside of the selected class. " + Properties.Resources.DataBaseError,
+					"Failed to retrieve the students inside of the selected class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read Error: 100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}

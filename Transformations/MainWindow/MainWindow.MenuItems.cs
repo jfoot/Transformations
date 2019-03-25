@@ -47,16 +47,17 @@ namespace Transformations
 		}
 		private void ReportBug(object sender, RoutedEventArgs e)    //If the user wants to restart the program.
 		{
-			System.Diagnostics.Process.Start(Properties.Resources.BugReport);
-		}
+			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("BugReport"));
+
+        }
 		private void FeedbackClick(object sender, RoutedEventArgs e)   //If the user wants to provide feedback
 		{
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.FeedbackLink);
+			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("FeedbackLink"));
 		}
        
         private void HelpClick(object sender, RoutedEventArgs e)       //If the user needs help
 		{
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.HelpLink);
+			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("HelpLink"));
 		}
         private void SettingsClick(object sender, RoutedEventArgs e) //Open Settings
 		{
@@ -163,7 +164,7 @@ namespace Transformations
 			catch (Exception)   //Corrupted file format.
 			{
 				Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, XSlider, YSlider, sliderSf, border);
-				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 D",
+				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"), "Critical Program Failure: 400 D",
 					System.Windows.MessageBoxButton.OK,
 					MessageBoxImage.Error);
 				Process.Start(Application.ResourceAssembly.Location);   
@@ -207,7 +208,7 @@ namespace Transformations
 			}
 			catch (Exception) //corrupt file
 			{
-				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 E",
+				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"), "Critical Program Failure: 400 E",
 					System.Windows.MessageBoxButton.OK,
 					MessageBoxImage.Error);
 				Process.Start(Application.ResourceAssembly.Location);
@@ -275,7 +276,7 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Failed to save the image. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 F",
+				MessageBox.Show("Failed to save the image. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"), "Critical Program Failure: 400 F",
 					System.Windows.MessageBoxButton.OK,
 					MessageBoxImage.Error);
 			}
@@ -324,7 +325,7 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Failed to save the shape file. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 G",
+				MessageBox.Show("Failed to save the shape file. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"), "Critical Program Failure: 400 G",
 					System.Windows.MessageBoxButton.OK,
 					MessageBoxImage.Error);
 			}
@@ -381,7 +382,7 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					MessageBox.Show("Failed to retrieve user login details and accounts. " + Properties.Resources.DataBaseError, "Database Read Error: 100 F",
+					MessageBox.Show("Failed to retrieve user login details and accounts. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"), "Database Read Error: 100 F",
 						System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Error);
 				}
@@ -462,7 +463,7 @@ namespace Transformations
                 }
                 catch (Exception)
                 {
-					MessageBox.Show("Failed to retrieve Teacher login details and accounts. " + Properties.Resources.DataBaseError, "Database Read Error: 100 G",
+					MessageBox.Show("Failed to retrieve Teacher login details and accounts. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"), "Database Read Error: 100 G",
 						System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Error);
 				}

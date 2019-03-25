@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Net;
 using System.Reflection;
 using System.Windows;
@@ -41,8 +42,8 @@ namespace Transformations
 		public XmlReader XmlReader;				//Used to store a XML file of a shape
 		public string SaveFile;					//Used to store a save file
 		//Declares different mouse cursors 
-		public readonly Cursor GrabCursor = new Cursor(new System.IO.MemoryStream(Transformations.Properties.Resources.grab));
-		public readonly Cursor GrabbingCursor = new Cursor(new System.IO.MemoryStream(Transformations.Properties.Resources.grabbing));
+	//	public readonly Cursor GrabCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grab")));
+		//public readonly Cursor GrabbingCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grabbing")));
 
 		//Animation Times
 		public int[] Times = { 0, 1, 3, 5, 10, 15 };
@@ -52,7 +53,7 @@ namespace Transformations
 		public MainWindow()
 		{	
 			InitializeComponent();
-			SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
+            SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
 			splash.Show(true, true);
 			//Checks the database connection on startup.
 			System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
@@ -98,7 +99,7 @@ namespace Transformations
 				Teacher.Header = "Teacher Login";
 			}
 			if (Properties.Settings.Default.DarkMode)	//Sets the background colour
-				border.Background = new SolidColorBrush(Color.FromArgb(255, 31, 31, 31));
+				border.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 31, 31, 31));
 		}
 		private void CanvasLoaded(object sender, RoutedEventArgs e) //Called upon when the canvas is loaded
 		{
@@ -122,5 +123,6 @@ namespace Transformations
 			Grid = new GridLine().DrawGrid(MaxValue, ScaleFactor, MyCanvas);
 			LabelsChecked(sender, e);
 		}
-	}
+
+    }
 }

@@ -48,13 +48,13 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-						"The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+						"The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 						"Invalid Input Type Error: 302 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 				}
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape. " + Properties.Resources.UserError,
+				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 		}

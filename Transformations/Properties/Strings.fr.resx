@@ -5698,19 +5698,19 @@
 </value>
   </data>
   <data name="DataBaseError" xml:space="preserve">
-    <value>Please try again or check your database connection string in 'Advance Settings'</value>
+    <value>Veuillez réessayer ou vérifier votre chaîne de connexion de base de données dans « Advance Settings »</value>
     <comment>Generalised error message for a database error. </comment>
   </data>
   <data name="WindowsError" xml:space="preserve">
-    <value>Please check that you've the sufficient computer privileges.</value>
+    <value>S’il vous plaît vérifiez que vous avez les privilèges suffisants d’ordinateur.</value>
     <comment>Generalised Windows privileges error</comment>
   </data>
   <data name="UserError" xml:space="preserve">
-    <value>Please ensure you’ve correctly inputted/ selected a valid value.</value>
+    <value>Veuillez vous assurer que vous avez correctement entré / sélectionné une valeur valide.</value>
     <comment>Generalised User Error</comment>
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
-    <value>An unknown issue has caused a critical failure. Please try again or contact your system administrator.</value>
+    <value>Un problème inconnu a causé une défaillance critique. Réessayez ou contactez votre administrateur système.</value>
     <comment>Generalised Critical Failure Error message</comment>
   </data>
   <data name="Users" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -6585,5 +6585,182 @@
         jAGSlEkkEolEIpFIJBKJRCKRGAMkKZNIJBKJRCKRSCQSiUQiMepYtfr/AYbdzyqqxWGIAAAAAElFTkSu
         QmCC
 </value>
+  </data>
+  <data name="CircleString" xml:space="preserve">
+    <value>Cercle</value>
+  </data>
+  <data name="AccountDrop" xml:space="preserve">
+    <value>Compte</value>
+  </data>
+  <data name="ArrowString" xml:space="preserve">
+    <value>Arrow</value>
+  </data>
+  <data name="BugDrop" xml:space="preserve">
+    <value>Signaler un Bug</value>
+  </data>
+  <data name="DataBaseFailure" xml:space="preserve">
+    <value>DÉFAILLANCE DE LA BASE DE DONNÉES : VEUILLEZ VOUS RÉFÉRER AU USERMANUAL</value>
+  </data>
+  <data name="DeleteAllGhostsString" xml:space="preserve">
+    <value>Supprimer tous les fantômes</value>
+  </data>
+  <data name="DeleteShape" xml:space="preserve">
+    <value>Supprimer la forme</value>
+  </data>
+  <data name="DrawRaylinesString" xml:space="preserve">
+    <value>Tracer des lignes-Ray</value>
+  </data>
+  <data name="EDeleteGhosts" xml:space="preserve">
+    <value>Supprimer les fantômes de l’élargissement</value>
+  </data>
+  <data name="EDeleteRayLines" xml:space="preserve">
+    <value>Supprimer des lignes de Ray</value>
+  </data>
+  <data name="EditShapeString" xml:space="preserve">
+    <value>Modifier la forme</value>
+  </data>
+  <data name="EGhostHidden" xml:space="preserve">
+    <value>Élargissement de fantômes cachés</value>
+  </data>
+  <data name="EGhostVisible" xml:space="preserve">
+    <value>Élargissement de fantômes visibles</value>
+  </data>
+  <data name="EnlargmentString" xml:space="preserve">
+    <value>Englargment</value>
+  </data>
+  <data name="ExecuteString" xml:space="preserve">
+    <value>Exécuter</value>
+  </data>
+  <data name="FeedbackDrop" xml:space="preserve">
+    <value>Vos commentaires</value>
+  </data>
+  <data name="FileDrop" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="FreeFormString" xml:space="preserve">
+    <value>Forme libre</value>
+  </data>
+  <data name="GuestAccount" xml:space="preserve">
+    <value>Compte invité</value>
+  </data>
+  <data name="HelpDrop" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="HomeString" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="LabelsDrop" xml:space="preserve">
+    <value>Étiquettes</value>
+  </data>
+  <data name="LShapeString" xml:space="preserve">
+    <value>Forme de L</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Fenêtre principale</value>
+  </data>
+  <data name="NoShapeSelected" xml:space="preserve">
+    <value>Aucune forme actuellement sélectionné</value>
+  </data>
+  <data name="OpenDrop" xml:space="preserve">
+    <value>Ouvert</value>
+  </data>
+  <data name="ParallelogramString" xml:space="preserve">
+    <value>Parallélogramme</value>
+  </data>
+  <data name="PentagonString" xml:space="preserve">
+    <value>Pentagone</value>
+  </data>
+  <data name="RDeleteGhosts" xml:space="preserve">
+    <value>Supprimer les Rotations fantômes</value>
+  </data>
+  <data name="ReflectionString" xml:space="preserve">
+    <value>Réflexion</value>
+  </data>
+  <data name="ResetAxisDrop" xml:space="preserve">
+    <value>Axe de réinitialisation</value>
+  </data>
+  <data name="RestartDrop" xml:space="preserve">
+    <value>Redémarrez</value>
+  </data>
+  <data name="RGhostHidden" xml:space="preserve">
+    <value>Fantôme de rotation caché</value>
+  </data>
+  <data name="RGhostVisible" xml:space="preserve">
+    <value>Fantôme de rotation Visible</value>
+  </data>
+  <data name="RotationString" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="SaveDrop" xml:space="preserve">
+    <value>sauvegarder</value>
+  </data>
+  <data name="SaveFileDrop" xml:space="preserve">
+    <value>Enregistrer fichier</value>
+  </data>
+  <data name="SaveImageDrop" xml:space="preserve">
+    <value>Enregistrer l’Image</value>
+  </data>
+  <data name="SearchingForSetting" xml:space="preserve">
+    <value>Vous cherchez un cadre ? Vérifiez la fenêtre « Paramètres » sous « Fichier » pour multiplier les contrôles.</value>
+  </data>
+  <data name="SettingsDrop" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="SnapGridString" xml:space="preserve">
+    <value>Aligner sur la grille</value>
+  </data>
+  <data name="SpawnShapeString" xml:space="preserve">
+    <value>Forme de spawn</value>
+  </data>
+  <data name="SquareString" xml:space="preserve">
+    <value>Carré</value>
+  </data>
+  <data name="StarString" xml:space="preserve">
+    <value>étoile</value>
+  </data>
+  <data name="StudentLoginDrop" xml:space="preserve">
+    <value>S'identifier étudiant</value>
+  </data>
+  <data name="StudentMangerDrop" xml:space="preserve">
+    <value>Crèche de l’étudiant</value>
+  </data>
+  <data name="TakeExamDrop" xml:space="preserve">
+    <value>Passer un examen</value>
+  </data>
+  <data name="TDeleteGhosts" xml:space="preserve">
+    <value>Supprimer les fantômes de la traduction</value>
+  </data>
+  <data name="TeacherLoginDrop" xml:space="preserve">
+    <value>S'identifier enseignant</value>
+  </data>
+  <data name="TGhostHidden" xml:space="preserve">
+    <value>Traduction de fantômes cachés</value>
+  </data>
+  <data name="TGhostVisible" xml:space="preserve">
+    <value>Traduction de fantômes visibles</value>
+  </data>
+  <data name="TranslationString" xml:space="preserve">
+    <value>Translation</value>
+  </data>
+  <data name="TrapeziumString" xml:space="preserve">
+    <value>Trapèze</value>
+  </data>
+  <data name="TriangleString" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="UnselectShape" xml:space="preserve">
+    <value>Forme de désélectionner</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>Vue</value>
+  </data>
+  <data name="XAxisRef" xml:space="preserve">
+    <value>X l’axe de réflexion</value>
+  </data>
+  <data name="YAxisRef" xml:space="preserve">
+    <value>Réflexion d’axe Y</value>
+  </data>
+  <data name="YMXCRef" xml:space="preserve">
+    <value>Y = MX + C réflection</value>
   </data>
 </root>

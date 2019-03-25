@@ -85,7 +85,7 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-						"Failed to retrieve your exam results data. " + Properties.Resources.DataBaseError,
+						"Failed to retrieve your exam results data. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 						"Database Read Error: 100 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 			}
@@ -155,7 +155,7 @@ namespace Transformations
 		}
         private void Help(object sender, RoutedEventArgs e)     //Opens the help link
         {
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.HelpLink);
+			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("HelpLink"));
 		}
         private void SavePDF(object sender, RoutedEventArgs e)  //Saves the users exam results into a PDF file.
         {
@@ -180,7 +180,7 @@ namespace Transformations
 
 					if (saveFileDialog1.FileName != "")			//If the user has entered a save name
 					{
-						XImage image = XImage.FromGdiPlusImage(Properties.Resources.PDFBack);	//Adds the background
+						XImage image = XImage.FromGdiPlusImage(LocalizationProvider.GetLocalizedValue<Image>("PDFBack"));	//Adds the background
 						Graph.DrawImage(image, 0, 0, 595, 842);
 
 						PDF.Info.Title = "Exam Results";							//Adds the title to the document
@@ -211,7 +211,7 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-						"Failed to export your results to a PDF. " + Properties.Resources.CriticalFailuer,
+						"Failed to export your results to a PDF. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
 						"Critical Program Failure: 400 N", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 			}

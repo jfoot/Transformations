@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using WPFLocalizeExtension.Extensions;
 using Cursor = System.Windows.Input.Cursor;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 
@@ -97,7 +99,7 @@ namespace Transformations
 			{
 				x_slider.Value += ((e.GetPosition(canvas).X) - (ClickX.X)); //Get position on the canvas and minus it from the original position to allow canvas panning
 				y_slider.Value -= ((e.GetPosition(canvas).Y) - (ClickX.Y));
-				Mouse.SetCursor(new Cursor(new System.IO.MemoryStream(Transformations.Properties.Resources.grabbing)));    //Change mouse cursor 
+				Mouse.SetCursor(new Cursor(new System.IO.MemoryStream(Transformations.Properties.Strings.grabbing)));    //Change mouse cursor 
 			}
 		}
 
@@ -107,4 +109,13 @@ namespace Transformations
 			ClickX = e.GetPosition(canvas);
 		}
 	}
+
+    public static class LocalizationProvider
+    {
+        public static T GetLocalizedValue<T>(string key)
+        {
+            return LocExtension.GetLocalizedValue<T>
+                 (Assembly.GetCallingAssembly().GetName().Name + ":Resources:" + key);
+        }
+    }
 }

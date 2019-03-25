@@ -55,7 +55,7 @@ namespace Transformations
 						}
 						else
 						{
-							MessageBox.Show("A circle cannot be reflected using a Y=MX+C line. " + Properties.Resources.UserError,
+							MessageBox.Show("A circle cannot be reflected using a Y=MX+C line. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 								"Invalid Input Type Error: 302 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 							Reflection_Execute.IsChecked = false;
 						}
@@ -78,7 +78,7 @@ namespace Transformations
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape. " + Properties.Resources.UserError,
+				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 				Reflection_Execute.IsChecked = false;
 			}
@@ -179,7 +179,7 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-						"The line equation entered is not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+						"The line equation entered is not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 						"Invalid Input Type Error: 302 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 					Reflection_Execute.IsChecked = false;
 					foreach (Shapes c in MyShapes)

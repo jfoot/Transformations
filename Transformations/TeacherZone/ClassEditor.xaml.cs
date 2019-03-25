@@ -75,7 +75,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to retrieve data from the database. " + Properties.Resources.DataBaseError,
+                    "Failed to retrieve data from the database. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                     "DataBase Error : 100", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -104,7 +104,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to create a new class. " + Properties.Resources.DataBaseError,
+                    "Failed to create a new class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                     "DataBase Write Error : 101 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -176,7 +176,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to delete class. " + Properties.Resources.DataBaseError,
+                    "Failed to delete class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                     "DataBase Read & Write Error : 102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -253,7 +253,7 @@ namespace Transformations
                 catch (Exception)
                 {
                     MessageBox.Show(
-                        "Failed to retrieve the classes you own. " + Properties.Resources.DataBaseError,
+                        "Failed to retrieve the classes you own. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                         "Database Read Error : 100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }

@@ -30,7 +30,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                   "Failed to retrieve your Windows User name. " + Properties.Resources.WindowsError,
+                   "Failed to retrieve your Windows User name. " + LocalizationProvider.GetLocalizedValue<string>("WindowsError"),
                    "Insufficient Privileges Error : 200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
            
@@ -57,7 +57,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to retrieve teacher names. " + Properties.Resources.DataBaseError,
+                    "Failed to retrieve teacher names. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                     "DataBase Read Error : 100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 		}
@@ -91,7 +91,7 @@ namespace Transformations
 			catch (Exception)
 			{
                 MessageBox.Show(
-                    "Failed to retrieve classes owned by selected teacher. " + Properties.Resources.DataBaseError,
+                    "Failed to retrieve classes owned by selected teacher. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                     "DataBase Read Error : 100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 		}
@@ -145,14 +145,14 @@ namespace Transformations
 				catch (Exception)
 				{
                     MessageBox.Show(
-                 "Failed to create a new user account. " + Properties.Resources.DataBaseError,
+                 "Failed to create a new user account. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                  "Database Read & Write Error : 102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 			}
 			else
 			{
 				MessageBox.Show(
-					"Teacher or class selection has been left blank or invalid. " + Properties.Resources.UserError,
+					"Teacher or class selection has been left blank or invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error : 300 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}

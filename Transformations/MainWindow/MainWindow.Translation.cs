@@ -44,7 +44,7 @@ namespace Transformations
 			}
 			else	//If User did not select any shape
 			{
-				MessageBox.Show("You have not selected any shape. " + Properties.Resources.UserError,
+				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 		}

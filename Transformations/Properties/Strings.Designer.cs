@@ -19,27 +19,27 @@ namespace Transformations.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Strings() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Transformations.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Transformations.Properties.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Transformations.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,25 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized string similar to https://www.microsoft.com/en-us/download/details.aspx?id=54920.
         /// </summary>
-        internal static string AccessDownload {
+        public static string AccessDownload {
             get {
                 return ResourceManager.GetString("AccessDownload", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Account.
+        /// </summary>
+        public static string AccountDrop {
+            get {
+                return ResourceManager.GetString("AccountDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow {
+        public static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -80,9 +89,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arrow.
+        /// </summary>
+        public static string ArrowString {
+            get {
+                return ResourceManager.GetString("ArrowString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bin {
+        public static System.Drawing.Bitmap bin {
             get {
                 object obj = ResourceManager.GetObject("bin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -92,7 +110,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap black_dark {
+        public static System.Drawing.Bitmap black_dark {
             get {
                 object obj = ResourceManager.GetObject("black_dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -102,7 +120,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap black_light {
+        public static System.Drawing.Bitmap black_light {
             get {
                 object obj = ResourceManager.GetObject("black_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -112,7 +130,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap black_white {
+        public static System.Drawing.Bitmap black_white {
             get {
                 object obj = ResourceManager.GetObject("black_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -120,9 +138,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Report A Bug.
+        /// </summary>
+        public static string BugDrop {
+            get {
+                return ResourceManager.GetString("BugDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/issues.
         /// </summary>
-        internal static string BugReport {
+        public static string BugReport {
             get {
                 return ResourceManager.GetString("BugReport", resourceCulture);
             }
@@ -131,7 +158,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle {
+        public static System.Drawing.Bitmap circle {
             get {
                 object obj = ResourceManager.GetObject("circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -139,9 +166,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Circle.
+        /// </summary>
+        public static string CircleString {
+            get {
+                return ResourceManager.GetString("CircleString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unknown issue has caused a critical failure. Please try again or contact your system administrator..
         /// </summary>
-        internal static string CriticalFailuer {
+        public static string CriticalFailuer {
             get {
                 return ResourceManager.GetString("CriticalFailuer", resourceCulture);
             }
@@ -150,16 +186,97 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Please try again or check your database connection string in &apos;Advance Settings&apos;.
         /// </summary>
-        internal static string DataBaseError {
+        public static string DataBaseError {
             get {
                 return ResourceManager.GetString("DataBaseError", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DATABASE FAILURE: PLEASE REFER TO USERMANUAL.
+        /// </summary>
+        public static string DataBaseFailure {
+            get {
+                return ResourceManager.GetString("DataBaseFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete All Ghosts.
+        /// </summary>
+        public static string DeleteAllGhostsString {
+            get {
+                return ResourceManager.GetString("DeleteAllGhostsString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Shape.
+        /// </summary>
+        public static string DeleteShape {
+            get {
+                return ResourceManager.GetString("DeleteShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw Ray-Lines .
+        /// </summary>
+        public static string DrawRaylinesString {
+            get {
+                return ResourceManager.GetString("DrawRaylinesString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Enlargment Ghosts.
+        /// </summary>
+        public static string EDeleteGhosts {
+            get {
+                return ResourceManager.GetString("EDeleteGhosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Ray-Lines.
+        /// </summary>
+        public static string EDeleteRayLines {
+            get {
+                return ResourceManager.GetString("EDeleteRayLines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Shape.
+        /// </summary>
+        public static string EditShapeString {
+            get {
+                return ResourceManager.GetString("EditShapeString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enlargment Ghosts Hidden.
+        /// </summary>
+        public static string EGhostHidden {
+            get {
+                return ResourceManager.GetString("EGhostHidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enlargment Ghosts Visible.
+        /// </summary>
+        public static string EGhostVisible {
+            get {
+                return ResourceManager.GetString("EGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Email {
+        public static System.Drawing.Bitmap Email {
             get {
                 object obj = ResourceManager.GetObject("Email", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -169,7 +286,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap enl_1 {
+        public static System.Drawing.Bitmap enl_1 {
             get {
                 object obj = ResourceManager.GetObject("enl_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -179,7 +296,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap enl_2 {
+        public static System.Drawing.Bitmap enl_2 {
             get {
                 object obj = ResourceManager.GetObject("enl_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -187,9 +304,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Englargment.
+        /// </summary>
+        public static string EnlargmentString {
+            get {
+                return ResourceManager.GetString("EnlargmentString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap enlH_1 {
+        public static System.Drawing.Bitmap enlH_1 {
             get {
                 object obj = ResourceManager.GetObject("enlH_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -199,7 +325,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap enlH_2 {
+        public static System.Drawing.Bitmap enlH_2 {
             get {
                 object obj = ResourceManager.GetObject("enlH_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -209,7 +335,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Exam {
+        public static System.Drawing.Bitmap Exam {
             get {
                 object obj = ResourceManager.GetObject("Exam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -217,9 +343,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Execute.
+        /// </summary>
+        public static string ExecuteString {
+            get {
+                return ResourceManager.GetString("ExecuteString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Export {
+        public static System.Drawing.Bitmap Export {
             get {
                 object obj = ResourceManager.GetObject("Export", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -229,7 +364,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eye_hidden {
+        public static System.Drawing.Bitmap eye_hidden {
             get {
                 object obj = ResourceManager.GetObject("eye_hidden", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -239,7 +374,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eye_visable {
+        public static System.Drawing.Bitmap eye_visable {
             get {
                 object obj = ResourceManager.GetObject("eye_visable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -249,7 +384,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap feadback {
+        public static System.Drawing.Bitmap feadback {
             get {
                 object obj = ResourceManager.GetObject("feadback", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -257,9 +392,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Feedback.
+        /// </summary>
+        public static string FeedbackDrop {
+            get {
+                return ResourceManager.GetString("FeedbackDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/issues.
         /// </summary>
-        internal static string FeedbackLink {
+        public static string FeedbackLink {
             get {
                 return ResourceManager.GetString("FeedbackLink", resourceCulture);
             }
@@ -268,7 +412,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap File {
+        public static System.Drawing.Bitmap File {
             get {
                 object obj = ResourceManager.GetObject("File", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -276,9 +420,27 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _File.
+        /// </summary>
+        public static string FileDrop {
+            get {
+                return ResourceManager.GetString("FileDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free Form.
+        /// </summary>
+        public static string FreeFormString {
+            get {
+                return ResourceManager.GetString("FreeFormString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] grab {
+        public static byte[] grab {
             get {
                 object obj = ResourceManager.GetObject("grab", resourceCulture);
                 return ((byte[])(obj));
@@ -288,7 +450,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] grabbing {
+        public static byte[] grabbing {
             get {
                 object obj = ResourceManager.GetObject("grabbing", resourceCulture);
                 return ((byte[])(obj));
@@ -298,7 +460,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gray_grid {
+        public static System.Drawing.Bitmap gray_grid {
             get {
                 object obj = ResourceManager.GetObject("gray_grid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -306,9 +468,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guest Account.
+        /// </summary>
+        public static string GuestAccount {
+            get {
+                return ResourceManager.GetString("GuestAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hand_with_pen {
+        public static System.Drawing.Bitmap hand_with_pen {
             get {
                 object obj = ResourceManager.GetObject("hand_with_pen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -316,18 +487,36 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Help.
+        /// </summary>
+        public static string HelpDrop {
+            get {
+                return ResourceManager.GetString("HelpDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/wiki.
         /// </summary>
-        internal static string HelpLink {
+        public static string HelpLink {
             get {
                 return ResourceManager.GetString("HelpLink", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string HomeString {
+            get {
+                return ResourceManager.GetString("HomeString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap image {
+        public static System.Drawing.Bitmap image {
             get {
                 object obj = ResourceManager.GetObject("image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -337,7 +526,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Info {
+        public static System.Drawing.Bitmap Info {
             get {
                 object obj = ResourceManager.GetObject("Info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -345,9 +534,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Labels.
+        /// </summary>
+        public static string LabelsDrop {
+            get {
+                return ResourceManager.GetString("LabelsDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login {
+        public static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -357,7 +555,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_male {
+        public static System.Drawing.Bitmap login_male {
             get {
                 object obj = ResourceManager.GetObject("login_male", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -367,7 +565,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lshape {
+        public static System.Drawing.Bitmap Lshape {
             get {
                 object obj = ResourceManager.GetObject("Lshape", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -375,9 +573,45 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to L Shape.
+        /// </summary>
+        public static string LShapeString {
+            get {
+                return ResourceManager.GetString("LShapeString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Window.
+        /// </summary>
+        public static string MainWindowTitle {
+            get {
+                return ResourceManager.GetString("MainWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Shape Currently Selected.
+        /// </summary>
+        public static string NoShapeSelected {
+            get {
+                return ResourceManager.GetString("NoShapeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Open.
+        /// </summary>
+        public static string OpenDrop {
+            get {
+                return ResourceManager.GetString("OpenDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OpenFolder {
+        public static System.Drawing.Bitmap OpenFolder {
             get {
                 object obj = ResourceManager.GetObject("OpenFolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -387,7 +621,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Paralalgram {
+        public static System.Drawing.Bitmap Paralalgram {
             get {
                 object obj = ResourceManager.GetObject("Paralalgram", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -395,9 +629,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parallelogram.
+        /// </summary>
+        public static string ParallelogramString {
+            get {
+                return ResourceManager.GetString("ParallelogramString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PDFBack {
+        public static System.Drawing.Bitmap PDFBack {
             get {
                 object obj = ResourceManager.GetObject("PDFBack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -407,7 +650,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pen {
+        public static System.Drawing.Bitmap Pen {
             get {
                 object obj = ResourceManager.GetObject("Pen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -417,7 +660,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pentagon {
+        public static System.Drawing.Bitmap pentagon {
             get {
                 object obj = ResourceManager.GetObject("pentagon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -425,9 +668,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pentagon.
+        /// </summary>
+        public static string PentagonString {
+            get {
+                return ResourceManager.GetString("PentagonString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pink_grid {
+        public static System.Drawing.Bitmap pink_grid {
             get {
                 object obj = ResourceManager.GetObject("pink_grid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -435,9 +687,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Rotations Ghosts.
+        /// </summary>
+        public static string RDeleteGhosts {
+            get {
+                return ResourceManager.GetString("RDeleteGhosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_grid {
+        public static System.Drawing.Bitmap red_grid {
             get {
                 object obj = ResourceManager.GetObject("red_grid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -447,7 +708,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ref_1 {
+        public static System.Drawing.Bitmap ref_1 {
             get {
                 object obj = ResourceManager.GetObject("ref_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -457,7 +718,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ref_2 {
+        public static System.Drawing.Bitmap ref_2 {
             get {
                 object obj = ResourceManager.GetObject("ref_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -467,7 +728,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap refH_1 {
+        public static System.Drawing.Bitmap refH_1 {
             get {
                 object obj = ResourceManager.GetObject("refH_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -477,7 +738,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap refH_2 {
+        public static System.Drawing.Bitmap refH_2 {
             get {
                 object obj = ResourceManager.GetObject("refH_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -485,9 +746,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reflection.
+        /// </summary>
+        public static string ReflectionString {
+            get {
+                return ResourceManager.GetString("ReflectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Refresh {
+        public static System.Drawing.Bitmap Refresh {
             get {
                 object obj = ResourceManager.GetObject("Refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -497,7 +767,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Report {
+        public static System.Drawing.Bitmap Report {
             get {
                 object obj = ResourceManager.GetObject("Report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -505,9 +775,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Reset Axis.
+        /// </summary>
+        public static string ResetAxisDrop {
+            get {
+                return ResourceManager.GetString("ResetAxisDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Restart {
+        public static System.Drawing.Bitmap Restart {
             get {
                 object obj = ResourceManager.GetObject("Restart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -515,9 +794,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Restart.
+        /// </summary>
+        public static string RestartDrop {
+            get {
+                return ResourceManager.GetString("RestartDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Return {
+        public static System.Drawing.Bitmap Return {
             get {
                 object obj = ResourceManager.GetObject("Return", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -525,9 +813,27 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rotation Ghost Hidden.
+        /// </summary>
+        public static string RGhostHidden {
+            get {
+                return ResourceManager.GetString("RGhostHidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotation Ghost Visible.
+        /// </summary>
+        public static string RGhostVisible {
+            get {
+                return ResourceManager.GetString("RGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rot_1 {
+        public static System.Drawing.Bitmap rot_1 {
             get {
                 object obj = ResourceManager.GetObject("rot_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -537,7 +843,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rot_2 {
+        public static System.Drawing.Bitmap rot_2 {
             get {
                 object obj = ResourceManager.GetObject("rot_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -545,9 +851,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rotation.
+        /// </summary>
+        public static string RotationString {
+            get {
+                return ResourceManager.GetString("RotationString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rotH_1 {
+        public static System.Drawing.Bitmap rotH_1 {
             get {
                 object obj = ResourceManager.GetObject("rotH_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -557,7 +872,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rotH_2 {
+        public static System.Drawing.Bitmap rotH_2 {
             get {
                 object obj = ResourceManager.GetObject("rotH_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -567,7 +882,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save {
+        public static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -575,9 +890,54 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Save.
+        /// </summary>
+        public static string SaveDrop {
+            get {
+                return ResourceManager.GetString("SaveDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Save File.
+        /// </summary>
+        public static string SaveFileDrop {
+            get {
+                return ResourceManager.GetString("SaveFileDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Save Image.
+        /// </summary>
+        public static string SaveImageDrop {
+            get {
+                return ResourceManager.GetString("SaveImageDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for a setting? Check the &quot;Settings&quot;  window under &quot;File&quot; for more controls..
+        /// </summary>
+        public static string SearchingForSetting {
+            get {
+                return ResourceManager.GetString("SearchingForSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Settings.
+        /// </summary>
+        public static string SettingsDrop {
+            get {
+                return ResourceManager.GetString("SettingsDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SettingsF {
+        public static System.Drawing.Bitmap SettingsF {
             get {
                 object obj = ResourceManager.GetObject("SettingsF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -585,9 +945,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Snap To Grid.
+        /// </summary>
+        public static string SnapGridString {
+            get {
+                return ResourceManager.GetString("SnapGridString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snaptogrid {
+        public static System.Drawing.Bitmap snaptogrid {
             get {
                 object obj = ResourceManager.GetObject("snaptogrid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -595,9 +964,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spawn Shape.
+        /// </summary>
+        public static string SpawnShapeString {
+            get {
+                return ResourceManager.GetString("SpawnShapeString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Square {
+        public static System.Drawing.Bitmap Square {
             get {
                 object obj = ResourceManager.GetObject("Square", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -605,9 +983,18 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Square.
+        /// </summary>
+        public static string SquareString {
+            get {
+                return ResourceManager.GetString("SquareString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap star {
+        public static System.Drawing.Bitmap star {
             get {
                 object obj = ResourceManager.GetObject("star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -615,9 +1002,54 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Star.
+        /// </summary>
+        public static string StarString {
+            get {
+                return ResourceManager.GetString("StarString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Student Login.
+        /// </summary>
+        public static string StudentLoginDrop {
+            get {
+                return ResourceManager.GetString("StudentLoginDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Student Manger.
+        /// </summary>
+        public static string StudentMangerDrop {
+            get {
+                return ResourceManager.GetString("StudentMangerDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Take An Exam.
+        /// </summary>
+        public static string TakeExamDrop {
+            get {
+                return ResourceManager.GetString("TakeExamDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Translation Ghosts.
+        /// </summary>
+        public static string TDeleteGhosts {
+            get {
+                return ResourceManager.GetString("TDeleteGhosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Teacher {
+        public static System.Drawing.Bitmap Teacher {
             get {
                 object obj = ResourceManager.GetObject("Teacher", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -625,9 +1057,36 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _Teacher Login.
+        /// </summary>
+        public static string TeacherLoginDrop {
+            get {
+                return ResourceManager.GetString("TeacherLoginDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translation Ghosts Hidden.
+        /// </summary>
+        public static string TGhostHidden {
+            get {
+                return ResourceManager.GetString("TGhostHidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translation Ghosts Visible.
+        /// </summary>
+        public static string TGhostVisible {
+            get {
+                return ResourceManager.GetString("TGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trans_1 {
+        public static System.Drawing.Bitmap trans_1 {
             get {
                 object obj = ResourceManager.GetObject("trans_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -637,7 +1096,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trans_2 {
+        public static System.Drawing.Bitmap trans_2 {
             get {
                 object obj = ResourceManager.GetObject("trans_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -647,7 +1106,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap transH_1 {
+        public static System.Drawing.Bitmap transH_1 {
             get {
                 object obj = ResourceManager.GetObject("transH_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -657,7 +1116,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap transH_2 {
+        public static System.Drawing.Bitmap transH_2 {
             get {
                 object obj = ResourceManager.GetObject("transH_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -665,9 +1124,27 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Translation.
+        /// </summary>
+        public static string TranslationString {
+            get {
+                return ResourceManager.GetString("TranslationString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trapezium.
+        /// </summary>
+        public static string TrapeziumString {
+            get {
+                return ResourceManager.GetString("TrapeziumString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trapizum {
+        public static System.Drawing.Bitmap trapizum {
             get {
                 object obj = ResourceManager.GetObject("trapizum", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -677,7 +1154,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap triangle {
+        public static System.Drawing.Bitmap triangle {
             get {
                 object obj = ResourceManager.GetObject("triangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -685,9 +1162,27 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Triangle.
+        /// </summary>
+        public static string TriangleString {
+            get {
+                return ResourceManager.GetString("TriangleString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unselect Shape.
+        /// </summary>
+        public static string UnselectShape {
+            get {
+                return ResourceManager.GetString("UnselectShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please ensure you’ve correctly inputted/ selected a valid value..
         /// </summary>
-        internal static string UserError {
+        public static string UserError {
             get {
                 return ResourceManager.GetString("UserError", resourceCulture);
             }
@@ -696,7 +1191,7 @@ namespace Transformations.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Users {
+        public static System.Drawing.Bitmap Users {
             get {
                 object obj = ResourceManager.GetObject("Users", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -704,11 +1199,47 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _View.
+        /// </summary>
+        public static string ViewDrop {
+            get {
+                return ResourceManager.GetString("ViewDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please check that you&apos;ve the sufficient computer privileges..
         /// </summary>
-        internal static string WindowsError {
+        public static string WindowsError {
             get {
                 return ResourceManager.GetString("WindowsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X Axis Reflection.
+        /// </summary>
+        public static string XAxisRef {
+            get {
+                return ResourceManager.GetString("XAxisRef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y Axis Reflection.
+        /// </summary>
+        public static string YAxisRef {
+            get {
+                return ResourceManager.GetString("YAxisRef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y = MX + C Relfection.
+        /// </summary>
+        public static string YMXCRef {
+            get {
+                return ResourceManager.GetString("YMXCRef", resourceCulture);
             }
         }
     }

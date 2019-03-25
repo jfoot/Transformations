@@ -112,7 +112,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to randomly generate an 'Reflection Easy' exam. " + Properties.Resources.CriticalFailuer,
+					"Failed to randomly generate an 'Reflection Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
 					"Critical Program Failure: 400 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 
@@ -192,7 +192,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"The line equation entered is not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+					"The line equation entered is not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Invalid Input Type Error: 302 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}

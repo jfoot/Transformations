@@ -125,7 +125,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Enlargement Easy' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Enlargement Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
