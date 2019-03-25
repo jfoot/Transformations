@@ -38,7 +38,7 @@ namespace Transformations
 			catch (Exception)
 			{
                 MessageBox.Show(
-					"User/Class transfer request was invalid. " + Properties.Resources.UserError,
+					"User/Class transfer request was invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Invalid Request Error: 301 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 
@@ -69,7 +69,7 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-				   "Failed to retrieve teacher names. " + Properties.Resources.DataBaseError,
+				   "Failed to retrieve teacher names. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 				   "Database Read Error: 100 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 			}
@@ -124,14 +124,14 @@ namespace Transformations
 				else
 				{
 					MessageBox.Show(
-						"The new owner can not be left blank. " + Properties.Resources.DataBaseError,
+						"The new owner can not be left blank. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 						"Field Empty Error: 300 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 				}
 			}
 			catch (Exception)
 			{
 				MessageBox.Show(
-						 "Failed to transfer user/class to a new owner. " + Properties.Resources.DataBaseError,
+						 "Failed to transfer user/class to a new owner. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 						 "Database Write Error: 101 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 
 			}
@@ -166,7 +166,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to retrieve classes owned by selected teacher. " + Properties.Resources.DataBaseError,
+					"Failed to retrieve classes owned by selected teacher. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read Error: 100 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 
 			}

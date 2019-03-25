@@ -83,7 +83,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Rotation Easy' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Rotation Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -130,7 +130,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"You have not selected both a clockwise and/or an anti-clockwise rotation. " + Properties.Resources.UserError,
+					"You have not selected both a clockwise and/or an anti-clockwise rotation. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}

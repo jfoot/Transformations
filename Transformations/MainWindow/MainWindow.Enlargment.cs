@@ -52,13 +52,13 @@ namespace Transformations
 				}
 				catch (Exception)   //Coordinates not in a numerical value 
 				{
-					MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+					MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 						"Invalid Input Type Error: 302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 				}
 			}
 			else //No shape has been selected 
 			{
-				MessageBox.Show("You have not selected any shape.  " + Properties.Resources.UserError,
+				MessageBox.Show("You have not selected any shape.  " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 		}
@@ -80,7 +80,7 @@ namespace Transformations
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape or the selected shape is invalid.  " + Properties.Resources.UserError,
+				MessageBox.Show("You have not selected any shape or the selected shape is invalid.  " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Field Empty Error: 300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 		}

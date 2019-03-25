@@ -77,7 +77,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Translation Hard' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Translation Hard' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 M", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
@@ -118,7 +118,7 @@ namespace Transformations
 			catch (Exception)
 			{
                 MessageBox.Show(
-					"The vector entered was not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+					"The vector entered was not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
 					"Invalid Input Type Error: 302 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
             finally

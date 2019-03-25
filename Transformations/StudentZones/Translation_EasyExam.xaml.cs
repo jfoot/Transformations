@@ -80,7 +80,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-				"Failed to randomly generate an 'Translation Easy' exam. " + Properties.Resources.CriticalFailuer,
+				"Failed to randomly generate an 'Translation Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
 				"Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 }
@@ -189,7 +189,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Translation Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

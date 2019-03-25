@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Windows;
+using WPFLocalizeExtension.Engine;
 
 namespace Transformations
 {
@@ -12,10 +14,18 @@ namespace Transformations
 		public FileInfo file;
 		public string file_path = null;
 
-		private void Application_Startup(object sender, StartupEventArgs e)
+        public App()
+        {
+            LocalizeDictionary.Instance.SetCurrentThreadCulture = true;
+            LocalizeDictionary.Instance.Culture = new CultureInfo("fr");
+
+        }
+
+
+        private void Application_Startup(object sender, StartupEventArgs e)
 		{
-		
-			if (e.Args.Length == 1) //If a startup argument is sent to the program.
+         
+            if (e.Args.Length == 1) //If a startup argument is sent to the program.
 			{
                 //If the start up argument matches a known start up command then preform the command.
                 if (e.Args[0] == "-Exam")

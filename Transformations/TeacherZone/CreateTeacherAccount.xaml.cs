@@ -20,7 +20,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                   "Failed to retrieve your Windows User name. " + Properties.Resources.WindowsError,
+                   "Failed to retrieve your Windows User name. " + LocalizationProvider.GetLocalizedValue<string>("WindowsError"),
                    "Insufficient Privileges Error : 200 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
     	}
@@ -70,7 +70,7 @@ namespace Transformations
                 catch (Exception)
                 {
                     MessageBox.Show(
-                      "Failed to create a new teacher account. " + Properties.Resources.DataBaseError,
+                      "Failed to create a new teacher account. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                       "DataBase Read & Write Error : 102 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }

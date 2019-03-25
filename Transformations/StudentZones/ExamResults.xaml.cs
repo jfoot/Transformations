@@ -52,7 +52,7 @@ namespace Transformations
 				catch (Exception)
 				{
 					MessageBox.Show(
-						"Failed to save your exam results. " + Properties.Resources.DataBaseError,
+						"Failed to save your exam results. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 						"Database Write Error: 101 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 			}

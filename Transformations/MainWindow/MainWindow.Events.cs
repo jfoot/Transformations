@@ -64,7 +64,7 @@ namespace Transformations
 		
 			if (CtrlDown)
 			{
-				this.Cursor = GrabbingCursor;
+				//this.Cursor = GrabbingCursor;
 			}
 			MouseMove(sender, e);
 		}
@@ -105,7 +105,7 @@ namespace Transformations
 			{
 				XSlider.Value += ((e.GetPosition(MyCanvas).X) - (ClickX.X));
 				YSlider.Value -= ((e.GetPosition(MyCanvas).Y) - (ClickX.Y));
-				this.Cursor = GrabbingCursor;
+				//this.Cursor = GrabbingCursor;
 			}
 		}
 		//Key Down - triggered when a user presses a key on their keyboard
@@ -147,7 +147,7 @@ namespace Transformations
 				CtrlDown = true;
 				if (Ctrldragging == false)
 				{
-					this.Cursor = GrabCursor;   //Change mouse cursor
+					//this.Cursor = GrabCursor;   //Change mouse cursor
 				}
 			}
 			else

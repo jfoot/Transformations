@@ -26,7 +26,7 @@ namespace Transformations
             catch (System.Exception)
             {
                 MessageBox.Show(
-                    "Class rename request was invalid. " + Properties.Resources.UserError,
+                    "Class rename request was invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
                     "Invalid Request Error: 301 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -52,7 +52,7 @@ namespace Transformations
             catch (System.Exception)
             {
                 MessageBox.Show(
-                       "Failed to rename the class. " + Properties.Resources.DataBaseError,
+                       "Failed to rename the class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                        "Database Write Error: 101 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

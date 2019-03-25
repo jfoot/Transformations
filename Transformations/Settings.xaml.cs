@@ -76,7 +76,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to retrieve your teacher and class. " + Properties.Resources.DataBaseError,
+					"Failed to retrieve your teacher and class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read Error: 100 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 
@@ -479,13 +479,13 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to delete your user account. " + Properties.Resources.DataBaseError,
+					"Failed to delete your user account. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read & Write Error: 102 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
         private void Download(object sender, System.Windows.Input.MouseButtonEventArgs e)   //Download dependency software
 		{
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.AccessDownload);
+			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("AccessDownload"));
 		}
         private void ChangeClassClick(object sender, RoutedEventArgs e)     //Change class 
 		{
@@ -529,7 +529,7 @@ namespace Transformations
 			catch (Exception)
 			{
 				MessageBox.Show(
-					"Failed to re-log you in, please manually logout and re-login. " + Properties.Resources.DataBaseError,
+					"Failed to re-log you in, please manually logout and re-login. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
 					"Database Read Error: 100 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 			Load(sender, new RoutedEventArgs());

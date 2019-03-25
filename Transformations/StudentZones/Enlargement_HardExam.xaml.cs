@@ -109,7 +109,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Enlargement Hard' exam. " + Properties.Resources.CriticalFailuer,
+                    "Failed to randomly generate an 'Enlargement Hard' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -148,7 +148,7 @@ namespace Transformations
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
+                    MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
                         "Invalid Input Type Error: 302 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }

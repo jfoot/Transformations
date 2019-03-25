@@ -33,7 +33,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "User/Class data request was invalid. " + Properties.Resources.UserError,
+                    "User/Class data request was invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
                     "Invalid Request Error: 301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -85,7 +85,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                                "Failed to retrieve  user/class exam results. " + Properties.Resources.DataBaseError,
+                                "Failed to retrieve  user/class exam results. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
                                 "Database Read Error: 100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -158,7 +158,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Results exportation failed. " + Properties.Resources.CriticalFailuer,
+                    "Results exportation failed. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
                     "Critical Program Failure: 400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -190,7 +190,7 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Unable to delete this exam result. This result could already be deleted. " + Properties.Resources.UserError,
+                    "Unable to delete this exam result. This result could already be deleted. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
                     "Invalid Request Error: 301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
