@@ -70,6 +70,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Successfully deleted your account, feel free to create another account..
+        /// </summary>
+        public static string AccountDeleted {
+            get {
+                return ResourceManager.GetString("AccountDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Account.
         /// </summary>
         public static string AccountDrop {
@@ -97,6 +106,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Type: .
+        /// </summary>
+        public static string AccountType {
+            get {
+                return ResourceManager.GetString("AccountType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Anti-Clockwise.
         /// </summary>
         public static string acw {
@@ -106,11 +124,74 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Advanced.
+        /// </summary>
+        public static string Advanced {
+            get {
+                return ResourceManager.GetString("Advanced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alias Name: .
+        /// </summary>
+        public static string AliasName {
+            get {
+                return ResourceManager.GetString("AliasName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heres the error message, this is all we know....
+        /// </summary>
+        public static string AllWeKnow {
+            get {
+                return ResourceManager.GetString("AllWeKnow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply Changes.
+        /// </summary>
+        public static string ApplyChanges {
+            get {
+                return ResourceManager.GetString("ApplyChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure?.
+        /// </summary>
+        public static string AreYouSure {
+            get {
+                return ResourceManager.GetString("AreYouSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete .
         /// </summary>
         public static string AreYouSureDelete {
             get {
                 return ResourceManager.GetString("AreYouSureDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wish to delete your account? While you can create a new one you will lose any exam results you currently have..
+        /// </summary>
+        public static string AreYouSureDeleteAccount {
+            get {
+                return ResourceManager.GetString("AreYouSureDeleteAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wish to delete your teacher account? Deleting a teacher account will delete all your classes, all the student accounts inside of your classes and all of their exam results. This action can not be undone. Be sure to transfer a class or student to a different teacher if you wish to keep their data..
+        /// </summary>
+        public static string AreYouSureDeleteAccountTeacher {
+            get {
+                return ResourceManager.GetString("AreYouSureDeleteAccountTeacher", resourceCulture);
             }
         }
         
@@ -134,12 +215,30 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to re-log you in, please manually logout and re-login. .
+        /// </summary>
+        public static string AutoLoginFailed {
+            get {
+                return ResourceManager.GetString("AutoLoginFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap bin {
             get {
                 object obj = ResourceManager.GetObject("bin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Black.
+        /// </summary>
+        public static string Black {
+            get {
+                return ResourceManager.GetString("Black", resourceCulture);
             }
         }
         
@@ -174,6 +273,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blue.
+        /// </summary>
+        public static string Blue {
+            get {
+                return ResourceManager.GetString("Blue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Report A Bug.
         /// </summary>
         public static string BugDrop {
@@ -188,6 +296,15 @@ namespace Transformations.Properties {
         public static string BugReport {
             get {
                 return ResourceManager.GetString("BugReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Class.
+        /// </summary>
+        public static string ChangeClass {
+            get {
+                return ResourceManager.GetString("ChangeClass", resourceCulture);
             }
         }
         
@@ -207,6 +324,42 @@ namespace Transformations.Properties {
         public static string CircleString {
             get {
                 return ResourceManager.GetString("CircleString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class ID:.
+        /// </summary>
+        public static string ClassID {
+            get {
+                return ResourceManager.GetString("ClassID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class Name:.
+        /// </summary>
+        public static string ClassName {
+            get {
+                return ResourceManager.GetString("ClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to connect to the database using the custom connection string:.
+        /// </summary>
+        public static string ConnectionStringUnable {
+            get {
+                return ResourceManager.GetString("ConnectionStringUnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection String:.
+        /// </summary>
+        public static string ConnString {
+            get {
+                return ResourceManager.GetString("ConnString", resourceCulture);
             }
         }
         
@@ -292,6 +445,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark Gray.
+        /// </summary>
+        public static string DarkGray {
+            get {
+                return ResourceManager.GetString("DarkGray", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please try again or check your database connection string in &apos;Advance Settings&apos;.
         /// </summary>
         public static string DataBaseError {
@@ -310,6 +472,96 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DataBase Connection.
+        /// </summary>
+        public static string DBConnection {
+            get {
+                return ResourceManager.GetString("DBConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ONLY TO BE CHANGED BY A SYSTEM ADMINISTRATOR.
+        /// </summary>
+        public static string DBWarning {
+            get {
+                return ResourceManager.GetString("DBWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark - Dark Gray.
+        /// </summary>
+        public static string DDarkGray {
+            get {
+                return ResourceManager.GetString("DDarkGray", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Colour.
+        /// </summary>
+        public static string DefualtColour {
+            get {
+                return ResourceManager.GetString("DefualtColour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The deufalt colour for the shapes spawned..
+        /// </summary>
+        public static string DefualtColourText {
+            get {
+                return ResourceManager.GetString("DefualtColourText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defualt Grid Colour.
+        /// </summary>
+        public static string DefualtGridColour {
+            get {
+                return ResourceManager.GetString("DefualtGridColour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The defualt colour of the grid..
+        /// </summary>
+        public static string DefualtGridColourText {
+            get {
+                return ResourceManager.GetString("DefualtGridColourText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Size.
+        /// </summary>
+        public static string DefualtSize {
+            get {
+                return ResourceManager.GetString("DefualtSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The default size of spawned shapes.
+        /// </summary>
+        public static string DefualtSizeText {
+            get {
+                return ResourceManager.GetString("DefualtSizeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Account.
+        /// </summary>
+        public static string DeleteAccount {
+            get {
+                return ResourceManager.GetString("DeleteAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete All Ghosts.
         /// </summary>
         public static string DeleteAllGhostsString {
@@ -319,11 +571,20 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Deleted Successfully.
         /// </summary>
         public static string DeleteConfirm {
             get {
                 return ResourceManager.GetString("DeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted Successfully.
+        /// </summary>
+        public static string DeletedSuccessfully {
+            get {
+                return ResourceManager.GetString("DeletedSuccessfully", resourceCulture);
             }
         }
         
@@ -337,11 +598,65 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dependency Download.
+        /// </summary>
+        public static string DependencyDownload {
+            get {
+                return ResourceManager.GetString("DependencyDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise &apos;Reset Defaults&apos;..
+        /// </summary>
+        public static string DetailsText {
+            get {
+                return ResourceManager.GetString("DetailsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions goto the store page and look at the detials secton..
+        /// </summary>
+        public static string DetailsText2 {
+            get {
+                return ResourceManager.GetString("DetailsText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark - Light Gray.
+        /// </summary>
+        public static string DLightGray {
+            get {
+                return ResourceManager.GetString("DLightGray", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Draw Ray-Lines .
         /// </summary>
         public static string DrawRaylinesString {
             get {
                 return ResourceManager.GetString("DrawRaylinesString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark - White.
+        /// </summary>
+        public static string DWhite {
+            get {
+                return ResourceManager.GetString("DWhite", resourceCulture);
             }
         }
         
@@ -405,6 +720,15 @@ namespace Transformations.Properties {
         public static string EM_DataBaseReadError {
             get {
                 return ResourceManager.GetString("EM_DataBaseReadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database Read &amp; Write Error: .
+        /// </summary>
+        public static string EM_DBRandWError {
+            get {
+                return ResourceManager.GetString("EM_DBRandWError", resourceCulture);
             }
         }
         
@@ -544,6 +868,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ERROR: Failed to establish a connection.
+        /// </summary>
+        public static string FailedToConnect {
+            get {
+                return ResourceManager.GetString("FailedToConnect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to delete your user account. .
+        /// </summary>
+        public static string FailedToDeleteAccount {
+            get {
+                return ResourceManager.GetString("FailedToDeleteAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to save the image..
         /// </summary>
         public static string FailedToSave {
@@ -553,11 +895,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings failed to save due to an invalid database connection string. Please enter a correct connection string or use default to save settings..
+        /// </summary>
+        public static string FailedToSaveSettings {
+            get {
+                return ResourceManager.GetString("FailedToSaveSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to save the shape file..
         /// </summary>
         public static string FailedToSaveShape {
             get {
                 return ResourceManager.GetString("FailedToSaveShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve your teacher and class..
+        /// </summary>
+        public static string FailiedToGetTeacherandClass {
+            get {
+                return ResourceManager.GetString("FailiedToGetTeacherandClass", resourceCulture);
             }
         }
         
@@ -627,6 +987,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        public static string General {
+            get {
+                return ResourceManager.GetString("General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] grab {
@@ -653,6 +1022,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("gray_grid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green.
+        /// </summary>
+        public static string Green {
+            get {
+                return ResourceManager.GetString("Green", resourceCulture);
             }
         }
         
@@ -712,6 +1090,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to High Resolution Display (1920×1080)+.
+        /// </summary>
+        public static string HighRes {
+            get {
+                return ResourceManager.GetString("HighRes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string HomeString {
@@ -746,6 +1133,42 @@ namespace Transformations.Properties {
         public static string LabelsDrop {
             get {
                 return ResourceManager.GetString("LabelsDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language will update upon restart..
+        /// </summary>
+        public static string LanguageText {
+            get {
+                return ResourceManager.GetString("LanguageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Below you can select the language to be used throughout the whole program. If you find a mistake in a translation feel free to help fix it on the GitHub repository..
+        /// </summary>
+        public static string LanguageText2 {
+            get {
+                return ResourceManager.GetString("LanguageText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light Gray.
+        /// </summary>
+        public static string LightGray {
+            get {
+                return ResourceManager.GetString("LightGray", resourceCulture);
             }
         }
         
@@ -833,6 +1256,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Low End Device.
+        /// </summary>
+        public static string LowEndDevice {
+            get {
+                return ResourceManager.GetString("LowEndDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Low Resoultion Display.
+        /// </summary>
+        public static string LowRes {
+            get {
+                return ResourceManager.GetString("LowRes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Lshape {
@@ -857,6 +1298,24 @@ namespace Transformations.Properties {
         public static string MainWindowTitle {
             get {
                 return ResourceManager.GetString("MainWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monitor Resoultion.
+        /// </summary>
+        public static string MResoultion {
+            get {
+                return ResourceManager.GetString("MResoultion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changing this setting will make the application start-up size differ.
+        /// </summary>
+        public static string MResoultionText {
+            get {
+                return ResourceManager.GetString("MResoultionText", resourceCulture);
             }
         }
         
@@ -992,6 +1451,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Performance.
+        /// </summary>
+        public static string Performance {
+            get {
+                return ResourceManager.GetString("Performance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you are experiencing performance issues switch to &apos;Low End Device&apos;.
+        /// </summary>
+        public static string PerformanceText {
+            get {
+                return ResourceManager.GetString("PerformanceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap pink_grid {
@@ -1007,6 +1484,15 @@ namespace Transformations.Properties {
         public static string RDeleteGhosts {
             get {
                 return ResourceManager.GetString("RDeleteGhosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Red.
+        /// </summary>
+        public static string Red {
+            get {
+                return ResourceManager.GetString("Red", resourceCulture);
             }
         }
         
@@ -1104,6 +1590,15 @@ namespace Transformations.Properties {
         public static string ResetAxisDrop {
             get {
                 return ResourceManager.GetString("ResetAxisDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Defaults.
+        /// </summary>
+        public static string ResetDefualts {
+            get {
+                return ResourceManager.GetString("ResetDefualts", resourceCulture);
             }
         }
         
@@ -1214,6 +1709,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you wish to save before opening a new file?.
+        /// </summary>
+        public static string SaveBeforeOpening {
+            get {
+                return ResourceManager.GetString("SaveBeforeOpening", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Completed.
+        /// </summary>
+        public static string SaveCompeted {
+            get {
+                return ResourceManager.GetString("SaveCompeted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Save.
         /// </summary>
         public static string SaveDrop {
@@ -1237,6 +1750,15 @@ namespace Transformations.Properties {
         public static string SaveImageDrop {
             get {
                 return ResourceManager.GetString("SaveImageDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file save successful..
+        /// </summary>
+        public static string SaveSuccesful {
+            get {
+                return ResourceManager.GetString("SaveSuccesful", resourceCulture);
             }
         }
         
@@ -1304,6 +1826,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Settings.
         /// </summary>
         public static string SettingsDrop {
@@ -1319,6 +1850,33 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("SettingsF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The application settings allow you to change default settings. These choices will be remembered for the next time you restart the application..
+        /// </summary>
+        public static string SettingsGeneral {
+            get {
+                return ResourceManager.GetString("SettingsGeneral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your settings have been reset back to defaults successfully. The application will now restart..
+        /// </summary>
+        public static string SettingsReset {
+            get {
+                return ResourceManager.GetString("SettingsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your settings have been saved successfully. The application will now restart..
+        /// </summary>
+        public static string SettingsSaved {
+            get {
+                return ResourceManager.GetString("SettingsSaved", resourceCulture);
             }
         }
         
@@ -1440,6 +1998,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Size: .
+        /// </summary>
+        public static string Size {
+            get {
+                return ResourceManager.GetString("Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Snap To Grid.
         /// </summary>
         public static string SnapGridString {
@@ -1487,6 +2054,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Standard Device (Normal).
+        /// </summary>
+        public static string StandardDevice {
+            get {
+                return ResourceManager.GetString("StandardDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap star {
@@ -1511,6 +2087,15 @@ namespace Transformations.Properties {
         public static string String1 {
             get {
                 return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student Account.
+        /// </summary>
+        public static string StudentAccount {
+            get {
+                return ResourceManager.GetString("StudentAccount", resourceCulture);
             }
         }
         
@@ -1570,6 +2155,51 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Teacher.
+        /// </summary>
+        public static string Teacher2 {
+            get {
+                return ResourceManager.GetString("Teacher2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher Account.
+        /// </summary>
+        public static string TeacherAccount {
+            get {
+                return ResourceManager.GetString("TeacherAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully deleted your account, including.
+        /// </summary>
+        public static string TeacherDelete1 {
+            get {
+                return ResourceManager.GetString("TeacherDelete1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Classes, containing a total of .
+        /// </summary>
+        public static string TeacherDelete2 {
+            get {
+                return ResourceManager.GetString("TeacherDelete2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Student accounts and their results..
+        /// </summary>
+        public static string TeacherDelete3 {
+            get {
+                return ResourceManager.GetString("TeacherDelete3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Teacher Login.
         /// </summary>
         public static string TeacherLoginDrop {
@@ -1622,6 +2252,24 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("trans_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer User.
+        /// </summary>
+        public static string TransferUser {
+            get {
+                return ResourceManager.GetString("TransferUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select below a new teacher and a new class to which you would like to transfer to.&quot;.
+        /// </summary>
+        public static string TransferUserText {
+            get {
+                return ResourceManager.GetString("TransferUserText", resourceCulture);
             }
         }
         
@@ -1702,6 +2350,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ERROR: Unable to save settings..
+        /// </summary>
+        public static string UnableToSaveSettings {
+            get {
+                return ResourceManager.GetString("UnableToSaveSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UNKNOWN CUSTOM SHAPE.
         /// </summary>
         public static string UnknownShape {
@@ -1720,11 +2377,47 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use Custom.
+        /// </summary>
+        public static string UseCustom {
+            get {
+                return ResourceManager.GetString("UseCustom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Default.
+        /// </summary>
+        public static string UseDefault {
+            get {
+                return ResourceManager.GetString("UseDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please ensure you’ve correctly inputted/ selected a valid value..
         /// </summary>
         public static string UserError {
             get {
                 return ResourceManager.GetString("UserError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User ID: .
+        /// </summary>
+        public static string UserID {
+            get {
+                return ResourceManager.GetString("UserID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserName: .
+        /// </summary>
+        public static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
         

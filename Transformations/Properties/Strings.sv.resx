@@ -504,4 +504,238 @@
   <data name="Width" xml:space="preserve">
     <value>Bredd:</value>
   </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Är du säker?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Vill du spara innan du öppnar en ny fil?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Spara ifyllda</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>Filen spara framgångsrikt.</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>Programinställningar kan du ändra standardinställningarna. Dessa val kommer att bli ihågkommen för nästa gång du startar programmet.</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>Deufalt färg för formerna lekt.</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Allmänna</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Inställningar</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Svart</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blå</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Defualt rutnät färg</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>Defualt färgen på rutnätet.</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Grön</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Röd</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Mörkgrå</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Dark - mörkgrå</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Dark - ljusgrå</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Ljusgrå</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Dark - vit</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Storlek:</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Raderades</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Standard färg</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Tillämpa ändringar</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Standardstorlek</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>Standardstorleken för lekt former</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Återställa standardinställningar</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Avancerad</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Språk</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Avancerade inställningar är utformad för erfarna användare endast. Ändra dessa inställningar på din egen risk. Om problem uppstår 'Återställ standardvärden'.</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>Hög upplösning (1920 × 1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Låg Resoultion Display</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Övervaka Resoultion</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Ändra den här inställningen kommer att göra programmet start-up storlek skiljer sig</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Anslutningssträng:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>Databasanslutning</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>ENDAST SKA ÄNDRAS AV EN SYSTEMADMINISTRATÖR</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Språket kommer uppdatera vid omstart.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Nedan kan du välja språket som ska användas genomgående i hela programmet. Om du hittar ett misstag i en översättning gärna hjälpa fixa det på databasen GitHub.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Låg slut enhet</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Prestanda</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Standardinformation om enheten (Normal)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Använda anpassade</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Använd standard</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Om du upplever prestandaproblem växla till 'Låg slutet enhet'</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Denna produkt har varit licensierad till och skapat för utbildningsinstitut. Alla rättigheter reserverade till Jonathan Foot ©. För fullständiga regler och villkor goto den store sida och titta på den detials secton.</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Ändra klass</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Radera konto</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Beroende nedladdning</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Kontotyp:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Aliasnamn:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>Klass-ID:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Klassnamn:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Lärare</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>Användar-ID:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Användarnamn:</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Kunde inte hämta din lärare och klass.</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Lärarkonto</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres felmeddelandet, detta är allt vi vet...</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Kan inte ansluta till databasen med hjälp av en anpassad anslutningssträng:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>FEL: Det gick inte att upprätta en anslutning</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Inställningar gick inte att spara på grund av en ogiltig databasanslutningssträng. Vänligen ange en korrekt anslutningssträng eller Använd standard för att spara inställningarna.</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Inställningarna har återställts till standardvärden framgångsrikt. Programmet startas om.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Inställningarna har sparats. Programmet startas om.</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>FEL: Det gick inte att spara inställningarna.</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Har tagit bort ditt konto, Känn dig fri att skapa ett nytt konto.</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Är du säker du vill ta bort kontot? Du kan skapa en ny förlorar du alla provresultat som du för närvarande har.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Är du säker du vill ta bort ditt lärarkonto? Ett lärarkonto kommer tar bort alla dina klasser, alla student konton inne i dina klasser och alla deras testresultat. Åtgärden kan inte ångras. Glöm inte att överföra en klass eller student till en annan lärare om du vill behålla sina data.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Misslyckades att åter logga in dig i, vänligen manuellt logga ut och logga in.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Raderades</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Databas Läs &amp; Write Error:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Kunde inte ta bort ditt användarkonto.</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Har tagit bort ditt konto, inklusive</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Klasser, som innehåller totalt</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>Studentkonto och deras resultat.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Överföra användare</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Vänligen välj nedan nya lärare och en ny klass som du skulle vilja överföra till ”.</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Studentkonto</value>
+  </data>
 </root>

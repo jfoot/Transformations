@@ -504,4 +504,238 @@
   <data name="Width" xml:space="preserve">
     <value>Šířka:</value>
   </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Opravdu?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Přejete si uložit před otevřením nového souboru?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Ukládání dokončeno.</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>Soubor uložit úspěšné.</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>Nastavení aplikace umožňují změnit výchozí nastavení. Tyto volby se bude vzpomínat na dobu příštího restartování aplikace.</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>Deufalt barva pro obrazce plodil.</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Obecné</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Černá</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Modrá</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Výchozí mřížka barva</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>Výchozí barva mřížky.</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Zelená</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Červená</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Tmavě šedá</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Dark - tmavě šedá</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Tmavě - světle šedá</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Světle šedá</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Dark - bílá</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Velikost:</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Úspěšně odstraněn</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Výchozí barva</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Použít změny</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Výchozí velikost</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>Výchozí velikost zplozený obrazců</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Obnovit výchozí nastavení</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>upřesnit</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Podrobnosti &lt;&lt;</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Pokročilá nastavení jsou určeny pouze pro zkušené uživatele. Změňte toto nastavení na vlastní nebezpečí. Pokud vzniknou problémy "Obnovit výchozí".</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>Displej s vysokým rozlišením (1920 × 1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Nízké Resoultion displej</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Sledovat Resoultion</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Změna tohoto nastavení bude aplikace počáteční velikost se liší</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Připojovací řetězec:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>Připojení databáze</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>POUZE NA BÝT ZMĚNĚNY SPRÁVCEM SYSTÉMU</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Jazyka bude aktualizován po restartu.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Níže můžete vybrat jazyk, který má být použit v celém programu. Pokud najdete chybu v překladu klidně pomoci opravit na úložiště GitHub.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Nízké koncového zařízení</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Výkon</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Standardní zařízení (normální)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Použít vlastní</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Použít výchozí</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Pokud jste má problémy s výkonem přepnout do "Low End zařízení"</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Tento produkt licencován a vytvořil pro vzdělávací instituce. Všechna práva vyhrazena Jonathan nohy ©. Pro plné všeobecných prodejních podmínek goto stránku obchodu a podívat se na údaje podle bodu.</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Změna třídy</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Odstranit účet</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Stažení závislostí</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Typ účtu:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Název aliasu:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>ID třídy:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Název třídy:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Učitel</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>ID uživatele:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Uživatelské jméno:</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Nepodařilo se načíst své učitele a třídy.</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Toglic</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres chybová zpráva, to je vše, co víme...</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Nelze se připojit k databázi pomocí vlastního připojovacího řetězce:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Chyba: Nepodařilo se navázat spojení</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Nastavení se nepodařilo uložit kvůli připojovací řetězec databáze je neplatný. Prosím zadejte správné připojovací řetězec nebo použít výchozí nastavení uložíte.</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Vaše nastavení bylo obnoveno zpět na výchozí hodnoty úspěšně. Aplikace bude nyní restartován.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Vaše nastavení bylo úspěšně uloženo. Aplikace bude nyní restartován.</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>Chyba: Nelze uložit nastavení.</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Úspěšně odstranit váš účet, můžete vytvořit další účet.</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Opravdu že si přejete smazat svůj účet? Můžete vytvořit novou jeden ztratí všechny výsledky zkoušek, které máte v současnosti.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Opravdu že si přejete smazat účet učitel? Učitelka účtu budou odstraněny všechny třídy, veškeré studentské účty uvnitř své třídy a všechny výsledky. Tuto akci nelze vrátit zpět. Ujistěte se, aby třídy nebo studenta na jiný učitel, pokud chcete zachovat svá data.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Nepodařilo se znovu přihlásit, prosím ručně odhlásit a re přihlášení.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Úspěšně odstraněn</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Čtení databáze &amp; chyba při zápisu:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Odstranění uživatelského účtu se nezdařilo.</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Úspěšně odstraněn účtu, včetně</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Třídy, obsahující celkem</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>Studentské účty a jejich výsledky.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Přenést uživatele</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Vyberte pod nového učitele a novou třídu, do které chcete přenést do."</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Studentské konto</value>
+  </data>
 </root>

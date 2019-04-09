@@ -1,9 +1,10 @@
 ﻿<Window x:Class="Transformations.Settings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:Transformations" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:Transformations.Properties"
-        Title="Settings"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:Transformations" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:Transformations.Properties"
+        Title="{lex:Loc Settings}"
         Width="483.353" Height="480.72"
-        Loaded="Load" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        lex:LocalizeDictionary.DesignCulture="en-GB" lex:ResxLocalizationProvider.DefaultAssembly="Transformations" lex:ResxLocalizationProvider.DefaultDictionary="Strings" Loaded="Load" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
     <Window.Resources>
@@ -14,17 +15,17 @@
     <Grid>
 
         <TabControl Margin="0,0,0,56" TabStripPlacement="Left">
-            <TabItem Header="General">
+            <TabItem Header="{lex:Loc General}">
                 <UniformGrid Rows="4">
-                    <TextBlock Width="381" Height="62" Margin="16,3,8,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The application settings allow you to change default settings. These choices will be remembered for the next time you restart the application." TextWrapping="Wrap" />
-                    <GroupBox Height="115" Margin="16,-33,10,0" VerticalAlignment="Top" Header="Default Colour">
+                    <TextBlock Width="381" Height="62" Margin="16,3,8,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc SettingsGeneral}" TextWrapping="Wrap" />
+                    <GroupBox Height="115" Margin="16,-33,10,0" VerticalAlignment="Top" Header="{lex:Loc DefualtColour}">
                         <Grid>
                             <UniformGrid Rows="5">
-                                <TextBlock Width="386" Height="41" Margin="0,0,-7,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The default colour of a spawned shape." TextWrapping="Wrap" />
-                                <RadioButton x:Name="blue_shape" Width="100" HorizontalAlignment="Left" Checked="BlueShapeChecked" Content="Blue" GroupName="default_colour" />
-                                <RadioButton x:Name="red_shape" Width="100" HorizontalAlignment="Left" Checked="RedShapeChecked" Content="Red" GroupName="default_colour" />
-                                <RadioButton x:Name="green_shape" Width="100" HorizontalAlignment="Left" Checked="GreenShapeChecked" Content="Green" GroupName="default_colour" />
-                                <RadioButton x:Name="black_shape" Width="100" HorizontalAlignment="Left" Checked="BlackShapeChecked" Content="Black" GroupName="default_colour" />
+                                <TextBlock Width="386" Height="41" Margin="0,0,-7,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc DefualtColourText}" TextWrapping="Wrap" />
+                                <RadioButton x:Name="blue_shape" Width="100" HorizontalAlignment="Left" Checked="BlueShapeChecked" Content="{lex:Loc Blue}" GroupName="default_colour" />
+                                <RadioButton x:Name="red_shape" Width="100" HorizontalAlignment="Left" Checked="RedShapeChecked" Content="{lex:Loc Red}" GroupName="default_colour" />
+                                <RadioButton x:Name="green_shape" Width="100" HorizontalAlignment="Left" Checked="GreenShapeChecked" Content="{lex:Loc Green}" GroupName="default_colour" />
+                                <RadioButton x:Name="black_shape" Width="100" HorizontalAlignment="Left" Checked="BlackShapeChecked" Content="{lex:Loc Black}" GroupName="default_colour" />
 
                             </UniformGrid>
                             <Ellipse x:Name="shape_example"
@@ -36,21 +37,21 @@
 
 
 
-                    <GroupBox Height="92" Margin="16,-5,10,0" VerticalAlignment="Top" Header="Default Grid Colour">
+                    <GroupBox Height="92" Margin="16,-5,10,0" VerticalAlignment="Top" Header="{lex:Loc DefualtGridColour}">
                         <Grid>
-                            <TextBlock Width="196" Margin="6,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The default colour of the grid." TextWrapping="Wrap" />
+                            <TextBlock Width="196" Margin="6,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc DefualtGridColourText}" TextWrapping="Wrap" />
 
 
                             <UniformGrid Margin="0,20,124,-20" Rows="4">
 
-                                <RadioButton x:Name="light_gray" Width="100" HorizontalAlignment="Left" Content="Light Gray" GroupName="default_grid_colour" />
-                                <RadioButton x:Name="black_light_gray" Width="121" HorizontalAlignment="Left" Content="Dark - Light Gray" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="light_gray" Width="100" HorizontalAlignment="Left" Content="{lex:Loc LightGray}" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_light_gray" Width="121" HorizontalAlignment="Left" Content="{lex:Loc DLightGray}" GroupName="default_grid_colour" />
 
-                                <RadioButton x:Name="dark_gray" Width="100" HorizontalAlignment="Left" Content="Dark Gray" GroupName="default_grid_colour" />
-                                <RadioButton x:Name="black_dark_gray" Width="123" HorizontalAlignment="Left" Content="Dark - Dark Gray" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="dark_gray" Width="100" HorizontalAlignment="Left" Content="{lex:Loc DarkGray}" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_dark_gray" Width="123" HorizontalAlignment="Left" Content="{lex:Loc DDarkGray}" GroupName="default_grid_colour" />
 
-                                <RadioButton x:Name="red" Width="100" HorizontalAlignment="Left" Content="Red" GroupName="default_grid_colour" />
-                                <RadioButton x:Name="black_white" Width="100" HorizontalAlignment="Left" Content="Dark - White" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="red" Width="100" HorizontalAlignment="Left" Content="{lex:Loc Red}" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_white" Width="100" HorizontalAlignment="Left" Content="{lex:Loc DWhite}" GroupName="default_grid_colour" />
                             </UniformGrid>
                             <Grid Margin="275,0,0,0">
                                 <Image x:Name="image_dark_gray"
@@ -89,47 +90,50 @@
                     </GroupBox>
 
 
-                    <GroupBox Height="93" Margin="16,-5,10,0" VerticalAlignment="Top" Header="Default Size">
+                    <GroupBox Height="93" Margin="16,-5,10,0" VerticalAlignment="Top" Header="{lex:Loc DefualtSize}">
                         <UniformGrid Rows="3">
-                            <TextBlock Text="The default size of a spawned shape." TextWrapping="Wrap" />
+                            <TextBlock Text="{lex:Loc DefualtSizeText}" TextWrapping="Wrap" />
                             <Slider x:Name="size_slider"
                                     Width="222"
                                     HorizontalAlignment="Left" VerticalAlignment="Top"
                                     IsSnapToTickEnabled="True" Maximum="15" Minimum="1" ValueChanged="ValueChange" />
-                            <Label x:Name="size_label" Content="Size: " />
+                            <Label x:Name="size_label" Content="{lex:Loc Size}" />
                         </UniformGrid>
                     </GroupBox>
 
                 </UniformGrid>
             </TabItem>
-            <TabItem Header="Advanced">
+            <TabItem Header="{lex:Loc Advanced}">
                 <UniformGrid Margin="0,0,0,-60" Rows="5">
-                    <TextBlock Width="369" Margin="18,10,18,30" Text="Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise 'Reset Defaults'." TextWrapping="Wrap" />
-                    <GroupBox Margin="17,-33,22,28" Header="Monitor Resolution">
+                    <TextBlock Width="369" Margin="18,10,18,30" Text="{lex:Loc DetailsText}" TextWrapping="Wrap" />
+                    <GroupBox Margin="17,-33,22,28" Header="{lex:Loc MResoultion}">
                         <UniformGrid Margin="0,0,0,0" Columns="1" Rows="3">
-                            <TextBlock Margin="0,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Changing this setting will make the application start-up size differ" TextWrapping="Wrap" />
-                            <RadioButton x:Name="high_res" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="High Resolution Display (1920×1080)" GroupName="resoultion" />
-                            <RadioButton x:Name="low_res" Margin="0,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Low Resolution Display " GroupName="resoultion" />
+                            <TextBlock Margin="0,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc MResoultionText}" TextWrapping="Wrap" />
+                            <RadioButton x:Name="high_res" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc HighRes}" GroupName="resoultion" />
+                            <RadioButton x:Name="low_res" Margin="0,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc LowRes}" GroupName="resoultion" />
                         </UniformGrid>
                     </GroupBox>
 
-                    <GroupBox Margin="17,-22,22,7" Header="Performance">
+                    <GroupBox Margin="17,-22,22,7" Header="{lex:Loc Performance}">
                         <UniformGrid Columns="1" Rows="3">
-                            <TextBlock Margin="0,0,0,-6" Text="If you are experiencing performance issues switch to 'Low End Device'" TextWrapping="Wrap" />
-                            <RadioButton x:Name="high_prof" Height="22" Margin="0,11,0,-5" VerticalAlignment="Top" Content="Standard Device (Normal)" GroupName="preformance" />
-                            <RadioButton x:Name="low_prof" Margin="0,9,0,0" VerticalAlignment="Top" Content="Low End Device " GroupName="preformance" />
+                            <TextBlock Margin="0,0,0,-6" Text="{lex:Loc PerformanceText}" TextWrapping="Wrap" />
+                            <RadioButton x:Name="high_prof" Height="22" Margin="0,11,0,-5" VerticalAlignment="Top" Content="{lex:Loc StandardDevice}" GroupName="preformance" />
+                            <RadioButton x:Name="low_prof" Margin="0,9,0,0" VerticalAlignment="Top" Content="{lex:Loc LowEndDevice}" GroupName="preformance" />
                         </UniformGrid>
                     </GroupBox>
-                    <GroupBox Width="366" Margin="17,5,22,-19" Header="DataBase Connection">
+                    <GroupBox Width="366" Margin="17,5,22,-19" Header="{lex:Loc DBConnection}">
                         <UniformGrid Rows="3">
 
                             <UniformGrid Margin="0,0,0,5" VerticalAlignment="Center" Columns="2">
-                                <RadioButton x:Name="data_defualt" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Use Default" FontWeight="Bold" GroupName="database" />
-                                <RadioButton x:Name="data_custom" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Use Custom" FontWeight="Bold" GroupName="database" />
+                                <RadioButton x:Name="data_defualt" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc UseDefault}" FontWeight="Bold" GroupName="database" />
+                                <RadioButton x:Name="data_custom" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc UseCustom}" FontWeight="Bold" GroupName="database" />
                             </UniformGrid>
-                            <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="ONLY TO BE CHANGED BY A SYSTEM ADMINISTRATOR" FontFamily="Arial" FontWeight="Bold" />
+                            <Label Width="332"
+                                   Margin="10,-0.2,11.6,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
+                                   Content="{lex:Loc DBWarning}"
+                                   FontFamily="Arial" FontWeight="Bold" />
                             <UniformGrid Columns="2">
-                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="ConnectionString" />
+                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc ConnString}" />
                                 <TextBox x:Name="connectionstring"
                                          Width="233" Height="23"
                                          Margin="-68,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -142,158 +146,103 @@
                 </UniformGrid>
 
             </TabItem>
-            <TabItem Header="Language">
-                <UniformGrid Rows="4">
-                    <ComboBox Margin="43,72,34,-15.4">
-                        <ComboBoxItem>
+            <TabItem Header="{lex:Loc Language}">
+                <Grid>
+                    <ComboBox Name="LangDrop" Margin="61,99,47,254.6">
+                        <ComboBoxItem Tag="EN">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/EnglishF.jpg" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                                <TextBlock Padding="5" VerticalAlignment="Center" Text="English (GB)" />
-
+                                <Image Height="20" Source="Resources/EnglishF.jpg" />
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="English (EN)" />
                             </WrapPanel>
                         </ComboBoxItem>
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="FR">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/FranceF.png" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/FranceF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Français (FR)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="ZH">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/ChineseF.jpg" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/ChineseF.jpg" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="中文 (ZH)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
-
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="ES">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/SpanishFlag.png" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/SpanishFlag.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Español (ES)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="DE">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/GermanF.png" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/GermanF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Deutsche (DE)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
 
 
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="SV">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/SwedenF.png" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/SwedenF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Svenska (SV)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="RU">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/RussianF.jpg" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/RussianF.jpg" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Pусский (RU)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem Tag="CS">
                             <WrapPanel>
-                                <Button Width="30" Height="30">
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Image Height="25" Source="Resources/CzechF.png" />
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+                                <Image Height="20" Source="Resources/CzechF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Čeština (CS)" />
-
                             </WrapPanel>
                         </ComboBoxItem>
-
                     </ComboBox>
 
+                    <Label Margin="144,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc Language}" FontSize="18" FontWeight="Bold" />
+                    <TextBlock Margin="203,364,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc LanguageText}" TextWrapping="Wrap" />
+                    <TextBlock Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc LanguageText2}" TextWrapping="Wrap" />
 
-                </UniformGrid>
+                </Grid>
             </TabItem>
-            <TabItem Header="Details">
+            <TabItem Header="{lex:Loc Details}">
                 <Grid>
-                    <TextBlock Height="100" Margin="12,10,10,280" Text="This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions please refer to the 'About' tab under 'Help'. " TextDecorations="{x:Null}" TextWrapping="Wrap" />
+                    <TextBlock Height="100" Margin="12,10,10,280" Text="{lex:Loc DetailsText2}" TextDecorations="{x:Null}" TextWrapping="Wrap" />
                     <UniformGrid Margin="12,81,161,259" Columns="2" Rows="2">
-                        <Label Width="100" Height="100" Content="Account Type: " FontWeight="Bold" />
-                        <Label x:Name="AccountType" Width="100" Height="100" Content="Student Account " />
-                        <Label Width="100" Height="100" Content="Alias Name: " FontWeight="Bold" />
+                        <Label Width="100" Height="100" Content="{lex:Loc AccountType}" FontWeight="Bold" />
+                        <Label x:Name="AccountType" Width="100" Height="100" Content="{lex:Loc StudentAccount}" />
+                        <Label Width="100" Height="100" Content="{lex:Loc AliasName}" FontWeight="Bold" />
                         <Label x:Name="AliasName" Width="100" Height="100" Content="Alias Name " />
-                        <Label Width="100" Height="100" Content="UserName: " FontWeight="Bold" />
+                        <Label Width="100" Height="100" Content="{lex:Loc UserName}" FontWeight="Bold" />
                         <Label x:Name="usernameLabel" Width="100" Height="100" Content="USERNAME" />
-                        <Label Width="100" Height="100" Content="UserID: " FontWeight="Bold" />
+                        <Label Width="100" Height="100" Content="{lex:Loc UserID}" FontWeight="Bold" />
                         <Label x:Name="userIDLabel" Width="100" Height="100" Content="ID" />
-                        <Label x:Name="TechDisc" Width="100" Height="100" Content="Teacher: " FontWeight="Bold" />
+                        <Label x:Name="TechDisc" Width="100" Height="100" Content="{lex:Loc Teacher2}" FontWeight="Bold" />
                         <Label x:Name="TeacherName" Width="100" Height="100" Content="Null" />
-                        <Label x:Name="ClassDisc" Width="100" Height="100" Content="Class Name: " FontWeight="Bold" />
+                        <Label x:Name="ClassDisc" Width="100" Height="100" Content="{lex:Loc ClassName}" FontWeight="Bold" />
                         <Label x:Name="ClassName" Width="100" Height="100" Content="Null" />
-                        <Label x:Name="ClassIDDisc" Width="100" Height="100" Content="Class ID: " FontWeight="Bold" />
+                        <Label x:Name="ClassIDDisc" Width="100" Height="100" Content="{lex:Loc ClassID}" FontWeight="Bold" />
                         <Label x:Name="ClassID" Width="100" Height="100" Content="ID" />
 
                         <Label Width="100" Height="100" Content="" FontWeight="Bold" />
                         <Label Width="100" Height="100" Content="" />
 
-                        <Button x:Name="DeleteAccount" Margin="0,0,-3,0" Click="DeleteAccountButton" Content="Delete Account" FontWeight="Bold" Foreground="Red" />
-                        <Button x:Name="ChangeClass" Margin="8,0,-3,0" Click="ChangeClassClick" Content="Change Class" Foreground="Black" />
-                        <Label Width="100" Height="100" Content="Version: " />
+                        <Button x:Name="DeleteAccount" Margin="0,0,-3,0" Click="DeleteAccountButton" Content="{lex:Loc DeleteAccount}" FontWeight="Bold" Foreground="Red" />
+                        <Button x:Name="ChangeClass" Margin="8,0,-3,0" Click="ChangeClassClick" Content="{lex:Loc ChangeClass}" Foreground="Black" />
+                        <Label Width="100" Height="100" Content="{lex:Loc ver}" />
                         <Label x:Name="Version" Width="100" Height="100" Content="V X" />
                     </UniformGrid>
-                    <TextBlock Margin="10,347,261,10" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="Dependency download" TextDecorations="Underline" TextWrapping="Wrap" />
+                    <TextBlock Margin="10,347,220,9.6" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="{lex:Loc DependencyDownload}" TextDecorations="Underline" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
         </TabControl>
 
-        <Button x:Name="ResetDefualtsButton" Margin="171,401,168,10" Click="ResetChanges" Content="Reset Defaults" />
-        <Button x:Name="ApplyChangesButton" Margin="314,401,12,10" Click="ApplyChanges" Content="Apply Changes" />
+        <Button x:Name="ResetDefualtsButton" Margin="171,401,168,10" Click="ResetChanges" Content="{lex:Loc ResetDefualts}" />
+        <Button x:Name="ApplyChangesButton" Margin="314,401,12,10" Click="ApplyChanges" Content="{lex:Loc ApplyChanges}" />
     </Grid>
 </Window>

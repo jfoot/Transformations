@@ -3,6 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows;
 using WPFLocalizeExtension.Engine;
+using Transformations.Properties;
 
 namespace Transformations
 {
@@ -17,8 +18,6 @@ namespace Transformations
         public App()
         {
             LocalizeDictionary.Instance.SetCurrentThreadCulture = true;
-            LocalizeDictionary.Instance.Culture = new CultureInfo("zh");
-
         }
 
 

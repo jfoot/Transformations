@@ -504,4 +504,238 @@
   <data name="Width" xml:space="preserve">
     <value>宽度：</value>
   </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>是否确定？</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>是否要在打开新文件之前保存？</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>保存已完成</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>文件保存成功。</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>应用程序设置允许您更改默认设置。这些选择将在下次重新启动应用程序时被记住。</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>形状的变形颜色产生了。</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>黑</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>蓝色</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>默认网格颜色</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>网格的褪色颜色。</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>红</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>深灰色</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>深灰色</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>暗色-浅灰色</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>浅灰色</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>深色-白色</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>大小：</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>已成功删除</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>默认颜色</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>应用更改</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>默认大小</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>生成形状的默认大小</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>重置默认值</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>先进</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>高级设置仅为有经验的用户设计。更改这些设置的风险由您自己承担。如果出现问题, "重置默认值"。</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>高分辨率显示器 (1920x1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>低恢复显示</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>监控恢复</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>更改此设置将使应用程序启动大小不同</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>连接字符串:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>数据库连接</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>已成功删除</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>只有由系统管理员更改</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>语言将在重新启动时更新。</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>下面您可以选择整个程序中使用的语言。如果您在翻译中发现错误, 请随时帮助在 GitHub 存储库中修复它。</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>低端设备</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>标准设备 (正常)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>使用自定义</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>使用默认值</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>如果您遇到性能问题, 请切换到 "低端设备"</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>该产品已获得教育机构的许可并为其创建。所有权利保留给乔纳森第足©。要了解完整的条款和条件, 请访问商店页面, 并查看 detials secton。</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>更改类</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>删除帐户</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>依赖关系下载</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>账户类型:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>别名:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>类别 ID:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>类名:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>老师</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>用户 ID:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用户：</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>无法检索您的老师和类。</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>教师账户</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>这是错误消息, 这就是我们所知道的.....。</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>无法使用自定义连接字符串连接到数据库:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>错误: 无法建立连接</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>由于数据库连接字符串无效, 无法保存设置。请输入正确的连接字符串或使用默认值保存设置。</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>您的设置已成功重置为默认值。应用程序现在将重新启动。</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>您的设置已成功保存。应用程序现在将重新启动。</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>错误: 无法保存设置。</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>已成功删除您的帐户, 请随时创建另一个帐户。</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>确实要删除您的帐户吗？虽然你可以创建一个新的, 你会失去你目前有的任何考试成绩。</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>确实要删除您的教师帐户吗？删除教师帐户将删除您的所有课程、课程中的所有学生帐户及其所有考试成绩。此操作无法撤消。如果你想保留一个班级或学生的数据, 一定要把他们转给另一个老师。</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>未能重新登录, 请手动注销并重新登录。</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>数据库读和写错误:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>无法删除您的用户帐户。</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>已成功删除您的帐户, 包括</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>类, 包含总的</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>学生帐户和他们的结果。</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>传输用户</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>请选择下面的新老师和一个新的班级, 你想转移到。</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>学生账户</value>
+  </data>
 </root>
