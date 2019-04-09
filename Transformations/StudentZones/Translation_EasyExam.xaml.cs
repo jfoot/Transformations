@@ -79,9 +79,9 @@ namespace Transformations
 		    }
 			catch (Exception)
 			{
-				MessageBox.Show(
-				"Failed to randomly generate an 'Translation Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
-				"Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//"Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
+				//Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 }
 		private int XAnswer()  //Gives the X answer value.
@@ -188,9 +188,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to randomly generate an 'Translation Easy' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
-                    "Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                ////MessageBox.Show(
+                ////    "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
+                ////    Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void RefreshText()   //Used to refresh the text UI.

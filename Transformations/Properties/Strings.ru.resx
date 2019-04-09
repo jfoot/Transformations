@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FeedbackLink" xml:space="preserve">
+    <value>HTTPS://GitHub.com/jfoot/Transformations/Issues</value>
+  </data>
+  <data name="HelpLink" xml:space="preserve">
+    <value>HTTPS://GitHub.com/jfoot/Transformations/wiki</value>
+  </data>
+  <data name="DataBaseError" xml:space="preserve">
+    <value>Пожалуйста, попробуйте снова или проверить строку подключения базы данных в «Настройки заранее»</value>
+  </data>
+  <data name="WindowsError" xml:space="preserve">
+    <value>Пожалуйста, проверьте, что у вас достаточно привилегий компьютер.</value>
+  </data>
+  <data name="UserError" xml:space="preserve">
+    <value>Пожалуйста, убедитесь, вы правильно введены / выбрано допустимое значение.</value>
+  </data>
+  <data name="CriticalFailuer" xml:space="preserve">
+    <value>Неизвестная проблема вызвала критического сбоя. Пожалуйста, повторите попытку или обратитесь к системному администратору.</value>
+  </data>
+  <data name="AccessDownload" xml:space="preserve">
+    <value>HTTPS://www.Microsoft.com/en-US/download/Details.aspx?ID=54920</value>
+  </data>
+  <data name="BugReport" xml:space="preserve">
+    <value>HTTPS://GitHub.com/jfoot/Transformations/Issues</value>
+  </data>
+  <data name="CircleString" xml:space="preserve">
+    <value>Круг</value>
+  </data>
+  <data name="AccountDrop" xml:space="preserve">
+    <value>Учетная запись</value>
+  </data>
+  <data name="ArrowString" xml:space="preserve">
+    <value>Стрелка</value>
+  </data>
+  <data name="BugDrop" xml:space="preserve">
+    <value>Сообщить об ошибке</value>
+  </data>
+  <data name="DataBaseFailure" xml:space="preserve">
+    <value>ОШИБКА БАЗЫ ДАННЫХ: ПОЖАЛУЙСТА, ОБРАТИТЕСЬ К РУКОВОДСТВО</value>
+  </data>
+  <data name="DeleteAllGhostsString" xml:space="preserve">
+    <value>Удалить все призраки</value>
+  </data>
+  <data name="DeleteShape" xml:space="preserve">
+    <value>Удаление фигуры</value>
+  </data>
+  <data name="DrawRaylinesString" xml:space="preserve">
+    <value>Рэй-линии</value>
+  </data>
+  <data name="EDeleteGhosts" xml:space="preserve">
+    <value>Удаление увеличения призраков</value>
+  </data>
+  <data name="EDeleteRayLines" xml:space="preserve">
+    <value>Удаление Рэй линии</value>
+  </data>
+  <data name="EditShapeString" xml:space="preserve">
+    <value>Изменить форму</value>
+  </data>
+  <data name="EGhostHidden" xml:space="preserve">
+    <value>Увеличение призраки скрытые</value>
+  </data>
+  <data name="EGhostVisible" xml:space="preserve">
+    <value>Увеличение призраки видимой</value>
+  </data>
+  <data name="EnlargmentString" xml:space="preserve">
+    <value>Englargment</value>
+  </data>
+  <data name="ExecuteString" xml:space="preserve">
+    <value>Выполнение</value>
+  </data>
+  <data name="FeedbackDrop" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="FileDrop" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="FreeFormString" xml:space="preserve">
+    <value>Свободная форма</value>
+  </data>
+  <data name="GuestAccount" xml:space="preserve">
+    <value>Учетная запись гостя</value>
+  </data>
+  <data name="HelpDrop" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="HomeString" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="LabelsDrop" xml:space="preserve">
+    <value>Этикетки</value>
+  </data>
+  <data name="LShapeString" xml:space="preserve">
+    <value>L форма</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Главное окно</value>
+  </data>
+  <data name="NoShapeSelected" xml:space="preserve">
+    <value>Фигура не выбран</value>
+  </data>
+  <data name="OpenDrop" xml:space="preserve">
+    <value>Открытые</value>
+  </data>
+  <data name="ParallelogramString" xml:space="preserve">
+    <value>Параллелограмм</value>
+  </data>
+  <data name="PentagonString" xml:space="preserve">
+    <value>Пентагон</value>
+  </data>
+  <data name="RDeleteGhosts" xml:space="preserve">
+    <value>Удаление вращений призраков</value>
+  </data>
+  <data name="ReflectionString" xml:space="preserve">
+    <value>Отражение</value>
+  </data>
+  <data name="ResetAxisDrop" xml:space="preserve">
+    <value>Сбросить оси</value>
+  </data>
+  <data name="RestartDrop" xml:space="preserve">
+    <value>Перезагрузка</value>
+  </data>
+  <data name="RGhostHidden" xml:space="preserve">
+    <value>Вращение призрак скрытые</value>
+  </data>
+  <data name="RGhostVisible" xml:space="preserve">
+    <value>Вращение призрак видимый</value>
+  </data>
+  <data name="RotationString" xml:space="preserve">
+    <value>Вращение</value>
+  </data>
+  <data name="SaveDrop" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SaveFileDrop" xml:space="preserve">
+    <value>Сохранить файл</value>
+  </data>
+  <data name="SaveImageDrop" xml:space="preserve">
+    <value>Сохранить изображение</value>
+  </data>
+  <data name="SearchingForSetting" xml:space="preserve">
+    <value>Поиск для параметра? Проверьте в окне «Параметры» под «Файл» для нескольких элементов управления.</value>
+  </data>
+  <data name="SettingsDrop" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="SnapGridString" xml:space="preserve">
+    <value>Привязка к сетке</value>
+  </data>
+  <data name="SpawnShapeString" xml:space="preserve">
+    <value>Спаун форма</value>
+  </data>
+  <data name="SquareString" xml:space="preserve">
+    <value>Площадь</value>
+  </data>
+  <data name="StarString" xml:space="preserve">
+    <value>Звезда</value>
+  </data>
+  <data name="StudentLoginDrop" xml:space="preserve">
+    <value>Вход для студентов</value>
+  </data>
+  <data name="StudentMangerDrop" xml:space="preserve">
+    <value>Студент яслях</value>
+  </data>
+  <data name="TakeExamDrop" xml:space="preserve">
+    <value>Сдать экзамен</value>
+  </data>
+  <data name="TDeleteGhosts" xml:space="preserve">
+    <value>Удалить перевод призраков</value>
+  </data>
+  <data name="TeacherLoginDrop" xml:space="preserve">
+    <value>Вход для преподавателя</value>
+  </data>
+  <data name="TGhostHidden" xml:space="preserve">
+    <value>Перевод призраки скрытые</value>
+  </data>
+  <data name="TGhostVisible" xml:space="preserve">
+    <value>Перевод призраки видимой</value>
+  </data>
+  <data name="TranslationString" xml:space="preserve">
+    <value>Перевод</value>
+  </data>
+  <data name="TrapeziumString" xml:space="preserve">
+    <value>Трапеция</value>
+  </data>
+  <data name="TriangleString" xml:space="preserve">
+    <value>Треугольник</value>
+  </data>
+  <data name="UnselectShape" xml:space="preserve">
+    <value>Отменить выбор формы</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="XAxisRef" xml:space="preserve">
+    <value>X оси отражения</value>
+  </data>
+  <data name="YAxisRef" xml:space="preserve">
+    <value>Y оси отражения</value>
+  </data>
+  <data name="YMXCRef" xml:space="preserve">
+    <value>Y = MX + C Relfection</value>
+  </data>
+  <data name="acw" xml:space="preserve">
+    <value>Против часовой стрелки</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Создан</value>
+  </data>
+  <data name="cw" xml:space="preserve">
+    <value>По часовой стрелке</value>
+  </data>
+  <data name="d180" xml:space="preserve">
+    <value>180 градусов</value>
+  </data>
+  <data name="d270" xml:space="preserve">
+    <value>270 градусов</value>
+  </data>
+  <data name="d360" xml:space="preserve">
+    <value>360 градусов</value>
+  </data>
+  <data name="d45" xml:space="preserve">
+    <value>45 градусов</value>
+  </data>
+  <data name="d90" xml:space="preserve">
+    <value>90 градусов</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Гость</value>
+  </data>
+  <data name="seconds0" xml:space="preserve">
+    <value>0 секунд</value>
+  </data>
+  <data name="seconds1" xml:space="preserve">
+    <value>1 второй</value>
+  </data>
+  <data name="seconds10" xml:space="preserve">
+    <value>10 секунд</value>
+  </data>
+  <data name="seconds15" xml:space="preserve">
+    <value>15 секунд</value>
+  </data>
+  <data name="seconds3" xml:space="preserve">
+    <value>3 секунды</value>
+  </data>
+  <data name="seconds5" xml:space="preserve">
+    <value>5 секунд</value>
+  </data>
+  <data name="sf-1" xml:space="preserve">
+    <value>-Масштаб 1</value>
+  </data>
+  <data name="sf-2" xml:space="preserve">
+    <value>-2 масштабный коэффициент</value>
+  </data>
+  <data name="sf-3" xml:space="preserve">
+    <value>-3 масштабный коэффициент</value>
+  </data>
+  <data name="sf-4" xml:space="preserve">
+    <value>-4 масштабный коэффициент</value>
+  </data>
+  <data name="sf-5" xml:space="preserve">
+    <value>-5 масштабный коэффициент</value>
+  </data>
+  <data name="sf025" xml:space="preserve">
+    <value>0,25 масштабный коэффициент</value>
+  </data>
+  <data name="sf05" xml:space="preserve">
+    <value>0.5 коэффициент масштабирования</value>
+  </data>
+  <data name="sf075" xml:space="preserve">
+    <value>0,75 масштабный коэффициент</value>
+  </data>
+  <data name="sf1" xml:space="preserve">
+    <value>1 масштабный коэффициент</value>
+  </data>
+  <data name="sf2" xml:space="preserve">
+    <value>2 масштаб</value>
+  </data>
+  <data name="sf3" xml:space="preserve">
+    <value>3 масштабный коэффициент</value>
+  </data>
+  <data name="sf4" xml:space="preserve">
+    <value>4 масштабный коэффициент</value>
+  </data>
+  <data name="sf5" xml:space="preserve">
+    <value>5 масштабный коэффициент</value>
+  </data>
+  <data name="StudentLogOutDrop" xml:space="preserve">
+    <value>Студент выход</value>
+  </data>
+  <data name="TeacherLogOutDrop" xml:space="preserve">
+    <value>Учитель выход</value>
+  </data>
+  <data name="ver" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="EM_FieldEmpty" xml:space="preserve">
+    <value>Поле пустым ошибка:</value>
+  </data>
+  <data name="EM_InvalidInputTypeError" xml:space="preserve">
+    <value>Ошибка недопустимый тип входных данных:</value>
+  </data>
+  <data name="NoShapeSelected1" xml:space="preserve">
+    <value>Вы не выбрали любой формы или выделенной фигуры является недопустимым.</value>
+  </data>
+  <data name="NumericCordsOnly" xml:space="preserve">
+    <value>Координаты вступил были не в правильный формат; допускаются только числовые значения.</value>
+  </data>
+  <data name="AccountFound" xml:space="preserve">
+    <value>Учетная запись найдена</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Учетная запись не найдена</value>
+  </data>
+  <data name="EM_CriticalFailure" xml:space="preserve">
+    <value>Сбой критических программы:</value>
+  </data>
+  <data name="EM_DataBaseReadError" xml:space="preserve">
+    <value>Ошибка чтения базы данных:</value>
+  </data>
+  <data name="EM_InvalidRequestError" xml:space="preserve">
+    <value>Ошибка недопустимого запроса:</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>Не удается сохранить изображение.</value>
+  </data>
+  <data name="FailedToSaveShape" xml:space="preserve">
+    <value>Не удалось сохранить файл формы.</value>
+  </data>
+  <data name="FailToGetLoginAccounts" xml:space="preserve">
+    <value>Не удалось получить данные для входа пользователя и учетных записей.</value>
+  </data>
+  <data name="LoggedInAsTeacherError" xml:space="preserve">
+    <value>Вы в настоящее время вошли в качестве преподавателя, пожалуйста первый журнал из учитель входа, прежде чем пытаться войти в студенческих входа.</value>
+  </data>
+  <data name="LoginSuccesfull" xml:space="preserve">
+    <value>Успешный вход, вы теперь были войти в свой аккаунт.</value>
+  </data>
+  <data name="NoAccountFound" xml:space="preserve">
+    <value>Нет учетной записи пользователя может быть найден, пожалуйста, сделайте новую учетную запись пользователя.</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Не удается открыть файл. Выбранный файл может быть поврежден или не совместим с текущей версией этой программы.</value>
+  </data>
+  <data name="Loggedout" xml:space="preserve">
+    <value>Вышли из.</value>
+  </data>
+  <data name="logoutSuccessful" xml:space="preserve">
+    <value>Вы успешно выполнен.</value>
+  </data>
+  <data name="LogOutOfStudentFirst" xml:space="preserve">
+    <value>Вы в настоящее время вошли качестве студента, пожалуйста первый журнал из студентов-входа, прежде чем пытаться войти в учитель входа.</value>
+  </data>
+  <data name="LogOutOfStudentOrGuest" xml:space="preserve">
+    <value>Вы в настоящее время вошли как студент или гость, пожалуйста, логин для входа учитель.</value>
+  </data>
+  <data name="CurrentlyUsingGuest" xml:space="preserve">
+    <value>В настоящее время с помощью гостевой учетной записи.</value>
+  </data>
+  <data name="LogOutOfTeacher" xml:space="preserve">
+    <value>Вы в настоящее время вошли в качестве преподавателя, пожалуйста, войдите из учитель учетную запись и войти в студенческий счет для доступа к экзаменам.</value>
+  </data>
+  <data name="NotLoggedIn" xml:space="preserve">
+    <value>В настоящее время вы не вошли. Никакого прогресса будет сохранен или записанных при использовании Гостевой вход.</value>
+  </data>
+  <data name="NoCircleReflection" xml:space="preserve">
+    <value>Круг не могут быть отражены с использованием Y = MX + C линия.</value>
+  </data>
+  <data name="ReflectNotCorrectFormat" xml:space="preserve">
+    <value>Уравнение линии вступил находится не в правильный формат; допускаются только числовые значения.</value>
+  </data>
+  <data name="VectorNotInFormat" xml:space="preserve">
+    <value>Вектор вступил был не в правильный формат; допускаются только числовые значения</value>
+  </data>
+  <data name="AreYouSureDelete" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Высота:</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Подтверждение удаления</value>
+  </data>
+  <data name="UnknownShape" xml:space="preserve">
+    <value>НЕИЗВЕСТНЫЕ ПОЛЬЗОВАТЕЛЬСКИЕ ФОРМЫ</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Ширина:</value>
+  </data>
+</root>

@@ -95,9 +95,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to randomly generate an 'Rotation Hard' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
-                    "Critical Program Failure: 400 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            //    MessageBox.Show(
+            //        "Failed to randomly generate an 'Rotation Hard' exam. " + Properties.Strings.CriticalFailuer,
+            //        Properties.Strings.EM_CriticalFailure + "400 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void AnswerSubmit(object sender, RoutedEventArgs e)
@@ -137,9 +137,9 @@ namespace Transformations
             }
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Invalid Input Type Error: 300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+				//MessageBox.Show(
+				//	Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+				//	Properties.Strings.EM_InvalidInputTypeError + "300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}
 		private void NextQuestion()

@@ -30,7 +30,7 @@ namespace Transformations
 			}
 
 			
-			if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
+			if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
 			{
 				try
 				{
@@ -51,9 +51,9 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					MessageBox.Show(
-						"Failed to save your exam results. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-						"Database Write Error: 101 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+					//MessageBox.Show(
+					//	"Failed to save your exam results. " + Properties.Strings.DataBaseError ,
+					//	"Database Write Error: 101 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 				}
 			}
 		}

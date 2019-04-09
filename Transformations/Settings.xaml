@@ -1,73 +1,101 @@
 ﻿<Window x:Class="Transformations.Settings"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Transformations"
-        xmlns:p="clr-namespace:Transformations.Properties"
-        mc:Ignorable="d"
-        Title="Settings" Height="480.72" Width="483.353" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Load">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:Transformations" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:Transformations.Properties"
+        Title="Settings"
+        Width="483.353" Height="480.72"
+        Loaded="Load" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
 
     <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Window.Resources>
 
 
     <Grid>
 
-        <TabControl TabStripPlacement="Left" Margin="0,0,0,56">
-            <TabItem Header="General" >
-                <UniformGrid Rows="4"  >
-                    <TextBlock  HorizontalAlignment="Left" Margin="16,3,8,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="The application settings allow you to change default settings. These choices will be remembered for the next time you restart the application." Height="62" Width="381"/>
-                    <GroupBox Header="Default Colour" Height="115"  VerticalAlignment="Top" Margin="16,-33,10,0">
+        <TabControl Margin="0,0,0,56" TabStripPlacement="Left">
+            <TabItem Header="General">
+                <UniformGrid Rows="4">
+                    <TextBlock Width="381" Height="62" Margin="16,3,8,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The application settings allow you to change default settings. These choices will be remembered for the next time you restart the application." TextWrapping="Wrap" />
+                    <GroupBox Height="115" Margin="16,-33,10,0" VerticalAlignment="Top" Header="Default Colour">
                         <Grid>
                             <UniformGrid Rows="5">
-                                <TextBlock  HorizontalAlignment="Left" Margin="0,0,-7,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="The default colour of a spawned shape." Height="41" Width="386"/>
-                                <RadioButton x:Name="blue_shape"   GroupName="default_colour" Content="Blue" Width="100" Checked="BlueShapeChecked" HorizontalAlignment="Left"  />
-                                <RadioButton x:Name="red_shape"  GroupName="default_colour" Content="Red" Width="100"  Checked="RedShapeChecked" HorizontalAlignment="Left"   />
-                                <RadioButton x:Name="green_shape"  GroupName="default_colour" Content="Green" Width="100" Checked="GreenShapeChecked" HorizontalAlignment="Left" />
-                                <RadioButton x:Name="black_shape"  GroupName="default_colour" Content="Black" Width="100"  Checked="BlackShapeChecked" HorizontalAlignment="Left" />
+                                <TextBlock Width="386" Height="41" Margin="0,0,-7,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The default colour of a spawned shape." TextWrapping="Wrap" />
+                                <RadioButton x:Name="blue_shape" Width="100" HorizontalAlignment="Left" Checked="BlueShapeChecked" Content="Blue" GroupName="default_colour" />
+                                <RadioButton x:Name="red_shape" Width="100" HorizontalAlignment="Left" Checked="RedShapeChecked" Content="Red" GroupName="default_colour" />
+                                <RadioButton x:Name="green_shape" Width="100" HorizontalAlignment="Left" Checked="GreenShapeChecked" Content="Green" GroupName="default_colour" />
+                                <RadioButton x:Name="black_shape" Width="100" HorizontalAlignment="Left" Checked="BlackShapeChecked" Content="Black" GroupName="default_colour" />
 
                             </UniformGrid>
-                            <Ellipse  x:Name="shape_example"  HorizontalAlignment="Left" Height="80" Margin="265,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="80" Fill="#FFEEEEEE"/>
+                            <Ellipse x:Name="shape_example"
+                                     Width="80" Height="80"
+                                     Margin="265,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                     Fill="#FFEEEEEE" Stroke="Black" />
                         </Grid>
                     </GroupBox>
 
 
 
-                    <GroupBox Header="Default Grid Colour"  Height="92" VerticalAlignment="Top" Margin="16,-5,10,0">
+                    <GroupBox Height="92" Margin="16,-5,10,0" VerticalAlignment="Top" Header="Default Grid Colour">
                         <Grid>
-                            <TextBlock  HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Text="The default colour of the grid." Margin="6,1,0,0" Width="196"/>
+                            <TextBlock Width="196" Margin="6,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="The default colour of the grid." TextWrapping="Wrap" />
 
 
-                            <UniformGrid Rows="4" Margin="0,20,124,-20">
+                            <UniformGrid Margin="0,20,124,-20" Rows="4">
 
-                                <RadioButton x:Name="light_gray"  GroupName="default_grid_colour" Content="Light Gray" Width="100" HorizontalAlignment="Left"/>
-                                <RadioButton x:Name="black_light_gray"  GroupName="default_grid_colour" Content="Dark - Light Gray" Width="121" HorizontalAlignment="Left" />
+                                <RadioButton x:Name="light_gray" Width="100" HorizontalAlignment="Left" Content="Light Gray" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_light_gray" Width="121" HorizontalAlignment="Left" Content="Dark - Light Gray" GroupName="default_grid_colour" />
 
-                                <RadioButton x:Name="dark_gray"  GroupName="default_grid_colour" Content="Dark Gray" Width="100" HorizontalAlignment="Left"  />
-                                <RadioButton x:Name="black_dark_gray"  GroupName="default_grid_colour" Content="Dark - Dark Gray" Width="123" HorizontalAlignment="Left" />
+                                <RadioButton x:Name="dark_gray" Width="100" HorizontalAlignment="Left" Content="Dark Gray" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_dark_gray" Width="123" HorizontalAlignment="Left" Content="Dark - Dark Gray" GroupName="default_grid_colour" />
 
-                                <RadioButton x:Name="red"  GroupName="default_grid_colour" Content="Red" Width="100" HorizontalAlignment="Left"   />
-                                <RadioButton x:Name="black_white"  GroupName="default_grid_colour" Content="Dark - White" Width="100" HorizontalAlignment="Left"  />
+                                <RadioButton x:Name="red" Width="100" HorizontalAlignment="Left" Content="Red" GroupName="default_grid_colour" />
+                                <RadioButton x:Name="black_white" Width="100" HorizontalAlignment="Left" Content="Dark - White" GroupName="default_grid_colour" />
                             </UniformGrid>
                             <Grid Margin="275,0,0,0">
-                                <Image x:Name="image_dark_gray" HorizontalAlignment="Left" Height="65"  VerticalAlignment="Top" Width="65" Source="Resources/gray_grid.png" OpacityMask="Black"  Visibility="{Binding IsChecked, ElementName=dark_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                <Image x:Name="image_light_gray" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="65" Source="Resources/pink_grid.png" OpacityMask="Black" Visibility="{Binding IsChecked, ElementName=light_gray,Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                <Image x:Name="image_red" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="65" Source="Resources/red_grid.png" OpacityMask="Black" Visibility="{Binding IsChecked, ElementName=red, Mode=TwoWay,Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                <Image x:Name="black_image_dark_gray" HorizontalAlignment="Left" Height="65"  VerticalAlignment="Top" Width="65" Source="Resources/black_dark.png" OpacityMask="Black"  Visibility="{Binding IsChecked, ElementName=black_dark_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                                <Image x:Name="black_image_light_gray" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="65" Source="Resources/black_light.png" OpacityMask="Black" Visibility="{Binding IsChecked, ElementName=black_light_gray,Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                <Image x:Name="black_image_white" HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="65" Source="Resources/black_white.png" OpacityMask="Black" Visibility="{Binding IsChecked, ElementName=black_white, Mode=TwoWay,Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="image_dark_gray"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/gray_grid.png"
+                                       Visibility="{Binding IsChecked, ElementName=dark_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="image_light_gray"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/pink_grid.png"
+                                       Visibility="{Binding IsChecked, ElementName=light_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="image_red"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/red_grid.png"
+                                       Visibility="{Binding IsChecked, ElementName=red, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="black_image_dark_gray"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/black_dark.png"
+                                       Visibility="{Binding IsChecked, ElementName=black_dark_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="black_image_light_gray"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/black_light.png"
+                                       Visibility="{Binding IsChecked, ElementName=black_light_gray, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                <Image x:Name="black_image_white"
+                                       Width="65" Height="65"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                                       OpacityMask="Black" Source="Resources/black_white.png"
+                                       Visibility="{Binding IsChecked, ElementName=black_white, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
                             </Grid>
                         </Grid>
                     </GroupBox>
 
 
-                    <GroupBox Header="Default Size" Height="93" VerticalAlignment="Top" Margin="16,-5,10,0">
+                    <GroupBox Height="93" Margin="16,-5,10,0" VerticalAlignment="Top" Header="Default Size">
                         <UniformGrid Rows="3">
-                            <TextBlock  TextWrapping="Wrap" Text="The default size of a spawned shape."/>
-                            <Slider x:Name="size_slider" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="222"   IsSnapToTickEnabled="True" Minimum="1" Maximum="15" ValueChanged="ValueChange"/>
+                            <TextBlock Text="The default size of a spawned shape." TextWrapping="Wrap" />
+                            <Slider x:Name="size_slider"
+                                    Width="222"
+                                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                                    IsSnapToTickEnabled="True" Maximum="15" Minimum="1" ValueChanged="ValueChange" />
                             <Label x:Name="size_label" Content="Size: " />
                         </UniformGrid>
                     </GroupBox>
@@ -75,74 +103,197 @@
                 </UniformGrid>
             </TabItem>
             <TabItem Header="Advanced">
-                <UniformGrid Rows="5" Margin="0,0,0,-60">
-                    <TextBlock   TextWrapping="Wrap" Text="Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise 'Reset Defaults'." Margin="18,10,18,30" Width="369"/>
-                    <GroupBox Header="Monitor Resolution" Margin="17,-33,22,28" >
-                        <UniformGrid Rows="3" Columns="1" Margin="0,0,0,0" >
-                            <TextBlock  TextWrapping="Wrap" Text="Changing this setting will make the application start-up size differ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,4,0,0" />
-                            <RadioButton x:Name="high_res"  GroupName="resoultion" Content="High Resolution Display (1920×1080)" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top"  />
-                            <RadioButton x:Name="low_res"  GroupName="resoultion" Content="Low Resolution Display "  HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="0,2,0,0"  />
+                <UniformGrid Margin="0,0,0,-60" Rows="5">
+                    <TextBlock Width="369" Margin="18,10,18,30" Text="Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise 'Reset Defaults'." TextWrapping="Wrap" />
+                    <GroupBox Margin="17,-33,22,28" Header="Monitor Resolution">
+                        <UniformGrid Margin="0,0,0,0" Columns="1" Rows="3">
+                            <TextBlock Margin="0,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Changing this setting will make the application start-up size differ" TextWrapping="Wrap" />
+                            <RadioButton x:Name="high_res" Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="High Resolution Display (1920×1080)" GroupName="resoultion" />
+                            <RadioButton x:Name="low_res" Margin="0,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Low Resolution Display " GroupName="resoultion" />
                         </UniformGrid>
                     </GroupBox>
 
-                    <GroupBox Header="Performance" Margin="17,-22,22,7" >
-                        <UniformGrid Rows="3" Columns="1">
-                            <TextBlock   TextWrapping="Wrap" Text="If you are experiencing performance issues switch to 'Low End Device'" Margin="0,0,0,-6"/>
-                            <RadioButton x:Name="high_prof"  GroupName="preformance" Content="Standard Device (Normal)" VerticalAlignment="Top" Margin="0,11,0,-5" Height="22"  />
-                            <RadioButton x:Name="low_prof"  GroupName="preformance" Content="Low End Device "  VerticalAlignment="Top" Margin="0,9,0,0" />
+                    <GroupBox Margin="17,-22,22,7" Header="Performance">
+                        <UniformGrid Columns="1" Rows="3">
+                            <TextBlock Margin="0,0,0,-6" Text="If you are experiencing performance issues switch to 'Low End Device'" TextWrapping="Wrap" />
+                            <RadioButton x:Name="high_prof" Height="22" Margin="0,11,0,-5" VerticalAlignment="Top" Content="Standard Device (Normal)" GroupName="preformance" />
+                            <RadioButton x:Name="low_prof" Margin="0,9,0,0" VerticalAlignment="Top" Content="Low End Device " GroupName="preformance" />
                         </UniformGrid>
                     </GroupBox>
-                    <GroupBox Header="DataBase Connection" Margin="17,5,22,-19" Width="366" >
+                    <GroupBox Width="366" Margin="17,5,22,-19" Header="DataBase Connection">
                         <UniformGrid Rows="3">
 
-                            <UniformGrid Columns="2" Margin="0,0,0,5" VerticalAlignment="Center">
-                                <RadioButton x:Name="data_defualt" Content="Use Default"  GroupName="database" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Center" />
-                                <RadioButton x:Name="data_custom" Content="Use Custom"  GroupName="database" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            <UniformGrid Margin="0,0,0,5" VerticalAlignment="Center" Columns="2">
+                                <RadioButton x:Name="data_defualt" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Use Default" FontWeight="Bold" GroupName="database" />
+                                <RadioButton x:Name="data_custom" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Use Custom" FontWeight="Bold" GroupName="database" />
                             </UniformGrid>
-                            <Label Content="ONLY TO BE CHANGED BY A SYSTEM ADMINISTRATOR" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" HorizontalContentAlignment="Center"/>
-                            <UniformGrid Columns="2" >
-                                <Label Content="ConnectionString" HorizontalAlignment="Left"  VerticalAlignment="Top" />
-                                <TextBox x:Name="connectionstring" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=ConnectionString, Mode=OneWay}" VerticalAlignment="Top" Width="233" IsEnabled="{Binding IsChecked, ElementName=data_custom}" Margin="-68,0,0,0" />
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="ONLY TO BE CHANGED BY A SYSTEM ADMINISTRATOR" FontFamily="Arial" FontWeight="Bold" />
+                            <UniformGrid Columns="2">
+                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="ConnectionString" />
+                                <TextBox x:Name="connectionstring"
+                                         Width="233" Height="23"
+                                         Margin="-68,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         IsEnabled="{Binding IsChecked, ElementName=data_custom}"
+                                         Text="{Binding Source={x:Static p:Settings.Default}, Path=ConnectionString, Mode=OneWay}"
+                                         TextWrapping="Wrap" />
                             </UniformGrid>
                         </UniformGrid>
                     </GroupBox>
                 </UniformGrid>
 
             </TabItem>
-            <TabItem Header="Details" >
+            <TabItem Header="Language">
+                <UniformGrid Rows="4">
+                    <ComboBox Margin="43,72,34,-15.4">
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/EnglishF.jpg" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="English (GB)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/FranceF.png" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Français (FR)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/ChineseF.jpg" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="中文 (ZH)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/SpanishFlag.png" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Español (ES)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/GermanF.png" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Deutsche (DE)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/SwedenF.png" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Svenska (SV)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/RussianF.jpg" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Pусский (RU)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <WrapPanel>
+                                <Button Width="30" Height="30">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image Height="25" Source="Resources/CzechF.png" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <TextBlock Padding="5" VerticalAlignment="Center" Text="Čeština (CS)" />
+
+                            </WrapPanel>
+                        </ComboBoxItem>
+
+                    </ComboBox>
+
+
+                </UniformGrid>
+            </TabItem>
+            <TabItem Header="Details">
                 <Grid>
-                    <TextBlock Height="100" TextWrapping="Wrap" Text="This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions please refer to the 'About' tab under 'Help'. " Margin="12,10,10,280" TextDecorations="{x:Null}"/>
-                    <UniformGrid Rows="2" Columns="2" Margin="12,81,161,259">
-                        <Label Content="Account Type: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="AccountType" Content="Student Account " Height="100" Width="100"/>
-                        <Label Content="Alias Name: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="AliasName" Content="Alias Name " Height="100" Width="100"/>
-                        <Label Content="UserName: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="usernameLabel" Content="USERNAME" Height="100" Width="100"/>
-                        <Label Content="UserID: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="userIDLabel" Content="ID" Height="100" Width="100"/>
-                        <Label x:Name="TechDisc" Content="Teacher: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="TeacherName" Content="Null" Height="100" Width="100"/>
-                        <Label x:Name="ClassDisc" Content="Class Name: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="ClassName" Content="Null" Height="100" Width="100"/>
-                        <Label x:Name="ClassIDDisc" Content="Class ID: " Height="100" Width="100" FontWeight="Bold"/>
-                        <Label x:Name="ClassID" Content="ID" Height="100" Width="100"/>
+                    <TextBlock Height="100" Margin="12,10,10,280" Text="This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions please refer to the 'About' tab under 'Help'. " TextDecorations="{x:Null}" TextWrapping="Wrap" />
+                    <UniformGrid Margin="12,81,161,259" Columns="2" Rows="2">
+                        <Label Width="100" Height="100" Content="Account Type: " FontWeight="Bold" />
+                        <Label x:Name="AccountType" Width="100" Height="100" Content="Student Account " />
+                        <Label Width="100" Height="100" Content="Alias Name: " FontWeight="Bold" />
+                        <Label x:Name="AliasName" Width="100" Height="100" Content="Alias Name " />
+                        <Label Width="100" Height="100" Content="UserName: " FontWeight="Bold" />
+                        <Label x:Name="usernameLabel" Width="100" Height="100" Content="USERNAME" />
+                        <Label Width="100" Height="100" Content="UserID: " FontWeight="Bold" />
+                        <Label x:Name="userIDLabel" Width="100" Height="100" Content="ID" />
+                        <Label x:Name="TechDisc" Width="100" Height="100" Content="Teacher: " FontWeight="Bold" />
+                        <Label x:Name="TeacherName" Width="100" Height="100" Content="Null" />
+                        <Label x:Name="ClassDisc" Width="100" Height="100" Content="Class Name: " FontWeight="Bold" />
+                        <Label x:Name="ClassName" Width="100" Height="100" Content="Null" />
+                        <Label x:Name="ClassIDDisc" Width="100" Height="100" Content="Class ID: " FontWeight="Bold" />
+                        <Label x:Name="ClassID" Width="100" Height="100" Content="ID" />
 
-                        <Label Content="" Height="100" Width="100" FontWeight="Bold"/>
-                        <Label Content="" Height="100" Width="100"/>
+                        <Label Width="100" Height="100" Content="" FontWeight="Bold" />
+                        <Label Width="100" Height="100" Content="" />
 
-                        <Button x:Name="DeleteAccount"  Content="Delete Account"  Margin="0,0,-3,0" FontWeight="Bold" Foreground="Red" Click="DeleteAccountButton"/>
-                        <Button x:Name="ChangeClass"  Content="Change Class"  Margin="8,0,-3,0" Foreground="Black" Click="ChangeClassClick" />
-                        <Label Content="Version: " Height="100" Width="100"/>
-                        <Label x:Name="Version" Content="V X" Height="100" Width="100"/>
+                        <Button x:Name="DeleteAccount" Margin="0,0,-3,0" Click="DeleteAccountButton" Content="Delete Account" FontWeight="Bold" Foreground="Red" />
+                        <Button x:Name="ChangeClass" Margin="8,0,-3,0" Click="ChangeClassClick" Content="Change Class" Foreground="Black" />
+                        <Label Width="100" Height="100" Content="Version: " />
+                        <Label x:Name="Version" Width="100" Height="100" Content="V X" />
                     </UniformGrid>
-                    <TextBlock TextWrapping="Wrap" Text="Dependency download" Margin="10,347,261,10" TextDecorations="Underline" Foreground="#FF000CFF" MouseDown="Download" Cursor="Hand"/>
-                    <CheckBox x:Name="CheckForUpdates" Content="Check for updates on start-up" Margin="149,348,17,10"/>
+                    <TextBlock Margin="10,347,261,10" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="Dependency download" TextDecorations="Underline" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
         </TabControl>
 
-        <Button x:Name="ResetDefualtsButton"  Content="Reset Defaults" Click="ResetChanges" Margin="171,401,168,10"/>
-        <Button x:Name="ApplyChangesButton" Content="Apply Changes"  Click="ApplyChanges" Margin="314,401,12,10"/>
+        <Button x:Name="ResetDefualtsButton" Margin="171,401,168,10" Click="ResetChanges" Content="Reset Defaults" />
+        <Button x:Name="ApplyChangesButton" Margin="314,401,12,10" Click="ApplyChanges" Content="Apply Changes" />
     </Grid>
 </Window>

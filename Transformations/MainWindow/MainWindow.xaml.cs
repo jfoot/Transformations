@@ -42,7 +42,8 @@ namespace Transformations
 		public XmlReader XmlReader;				//Used to store a XML file of a shape
 		public string SaveFile;					//Used to store a save file
 		//Declares different mouse cursors 
-	//	public readonly Cursor GrabCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grab")));
+	    
+        //public readonly Cursor GrabCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grab")));
 		//public readonly Cursor GrabbingCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grabbing")));
 
 		//Animation Times
@@ -78,26 +79,27 @@ namespace Transformations
 			//Set the animation frame rate depending upon the graphics setting
 			try { if (!Properties.Settings.Default.DefaultPerformance)
 					Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata { DefaultValue = 15 }); } catch (Exception){}
-			
-			//Updates the UI upon start up.
-			accountName.Content = Properties.Settings.Default.AliasName; 
-			version.Content = String.Format("Created by Jonathan Foot 2019©    Version {0}",Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
-			if (Properties.Settings.Default.CurrentUser == "Guest")
-			{
-				Login.Header = "Student Login";
-				Teacher.Header = "Teacher Login";
-			}
-			else if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == true)
-			{
-				Login.Header = "Student Login";
-				Teacher.Header = "Teacher Log Out";
-			}
-			else if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == false)
-			{
-				Login.Header = "Student Log Out";
-				Teacher.Header = "Teacher Login";
-			}
+           // Updates the UI upon start up.
+
+            accountName.Content = Properties.Settings.Default.AliasName;
+            version.Content = String.Format(Properties.Strings.CreatedBy + " Jonathan Foot 2019©    " + Properties.Strings.ver + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+
+            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
+            {
+                Login.Header = Properties.Strings.StudentLoginDrop;
+                Teacher.Header = Properties.Strings.TeacherLoginDrop;
+            }
+            else if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == true)
+            {
+                Login.Header = Properties.Strings.StudentLoginDrop;
+                Teacher.Header = Properties.Strings.TeacherLogOutDrop;
+            }
+            else if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)
+            {
+                Login.Header = Properties.Strings.StudentLogOutDrop;
+                Teacher.Header = Properties.Strings.TeacherLoginDrop;
+            }
 			if (Properties.Settings.Default.DarkMode)	//Sets the background colour
 				border.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 31, 31, 31));
 		}

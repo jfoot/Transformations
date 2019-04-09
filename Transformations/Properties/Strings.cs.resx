@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FeedbackLink" xml:space="preserve">
+    <value>https://GitHub.com/jfoot/Transformations/issues</value>
+  </data>
+  <data name="HelpLink" xml:space="preserve">
+    <value>https://GitHub.com/jfoot/Transformations/wiki</value>
+  </data>
+  <data name="DataBaseError" xml:space="preserve">
+    <value>Opakujte akci nebo Zkontrolujte připojovací řetězec databáze v "Upřesnit nastavení"</value>
+  </data>
+  <data name="WindowsError" xml:space="preserve">
+    <value>Zkontrolujte, že máte dostatečná oprávnění k počítači.</value>
+  </data>
+  <data name="UserError" xml:space="preserve">
+    <value>Ujistěte se, zda jste správně zadaných / vybraných platnou hodnotu.</value>
+  </data>
+  <data name="CriticalFailuer" xml:space="preserve">
+    <value>Neznámý problém způsobil kritickou chybu. Opakujte akci nebo se obraťte na správce systému.</value>
+  </data>
+  <data name="AccessDownload" xml:space="preserve">
+    <value>https://www.Microsoft.com/en-us/download/details.aspx?ID=54920</value>
+  </data>
+  <data name="BugReport" xml:space="preserve">
+    <value>https://GitHub.com/jfoot/Transformations/issues</value>
+  </data>
+  <data name="CircleString" xml:space="preserve">
+    <value>Kruh</value>
+  </data>
+  <data name="AccountDrop" xml:space="preserve">
+    <value>Účet</value>
+  </data>
+  <data name="ArrowString" xml:space="preserve">
+    <value>Šipka</value>
+  </data>
+  <data name="BugDrop" xml:space="preserve">
+    <value>Nahlásit chybu</value>
+  </data>
+  <data name="DataBaseFailure" xml:space="preserve">
+    <value>CHYBA DATABÁZE: VIZ NÁVOD KOBSLUZE</value>
+  </data>
+  <data name="DeleteAllGhostsString" xml:space="preserve">
+    <value>Odstranit všechny duchy</value>
+  </data>
+  <data name="DeleteShape" xml:space="preserve">
+    <value>Odstranit tvar</value>
+  </data>
+  <data name="DrawRaylinesString" xml:space="preserve">
+    <value>Ray-čar</value>
+  </data>
+  <data name="EDeleteGhosts" xml:space="preserve">
+    <value>Odstranit zvětšení duchové</value>
+  </data>
+  <data name="EDeleteRayLines" xml:space="preserve">
+    <value>Ray řádky odstranit</value>
+  </data>
+  <data name="EditShapeString" xml:space="preserve">
+    <value>Upravit tvar</value>
+  </data>
+  <data name="EGhostHidden" xml:space="preserve">
+    <value>Skryté duchy zvětšení</value>
+  </data>
+  <data name="EGhostVisible" xml:space="preserve">
+    <value>Zvětšení duchové viditelný</value>
+  </data>
+  <data name="EnlargmentString" xml:space="preserve">
+    <value>Englargment</value>
+  </data>
+  <data name="ExecuteString" xml:space="preserve">
+    <value>Spustit</value>
+  </data>
+  <data name="FeedbackDrop" xml:space="preserve">
+    <value>Zpětná vazba</value>
+  </data>
+  <data name="FileDrop" xml:space="preserve">
+    <value>Soubor</value>
+  </data>
+  <data name="FreeFormString" xml:space="preserve">
+    <value>Free Form</value>
+  </data>
+  <data name="GuestAccount" xml:space="preserve">
+    <value>Účet Guest</value>
+  </data>
+  <data name="HelpDrop" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="HomeString" xml:space="preserve">
+    <value>Domů</value>
+  </data>
+  <data name="LabelsDrop" xml:space="preserve">
+    <value>Štítky</value>
+  </data>
+  <data name="LShapeString" xml:space="preserve">
+    <value>Tvar L</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Hlavní okno</value>
+  </data>
+  <data name="NoShapeSelected" xml:space="preserve">
+    <value>Žádné aktuálně vybraného obrazce</value>
+  </data>
+  <data name="OpenDrop" xml:space="preserve">
+    <value>Otevřené</value>
+  </data>
+  <data name="ParallelogramString" xml:space="preserve">
+    <value>Rovnoběžník</value>
+  </data>
+  <data name="PentagonString" xml:space="preserve">
+    <value>Pětiúhelník</value>
+  </data>
+  <data name="RDeleteGhosts" xml:space="preserve">
+    <value>Odstranit střídání duchové</value>
+  </data>
+  <data name="ReflectionString" xml:space="preserve">
+    <value>Reflexe</value>
+  </data>
+  <data name="ResetAxisDrop" xml:space="preserve">
+    <value>Obnovení osy</value>
+  </data>
+  <data name="RestartDrop" xml:space="preserve">
+    <value>Restartování počítače</value>
+  </data>
+  <data name="RGhostHidden" xml:space="preserve">
+    <value>Rotace duch skryté</value>
+  </data>
+  <data name="RGhostVisible" xml:space="preserve">
+    <value>Rotace Ghost viditelné</value>
+  </data>
+  <data name="RotationString" xml:space="preserve">
+    <value>Rotace</value>
+  </data>
+  <data name="SaveDrop" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="SaveFileDrop" xml:space="preserve">
+    <value>Uložení souboru</value>
+  </data>
+  <data name="SaveImageDrop" xml:space="preserve">
+    <value>Uložit obrázek</value>
+  </data>
+  <data name="SearchingForSetting" xml:space="preserve">
+    <value>Hledání nastavení? Zkontrolujte okno "Nastavení" pod "File" pro další ovládací prvky.</value>
+  </data>
+  <data name="SettingsDrop" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="SnapGridString" xml:space="preserve">
+    <value>Přichytit k mřížce</value>
+  </data>
+  <data name="SpawnShapeString" xml:space="preserve">
+    <value>Třeli tvar</value>
+  </data>
+  <data name="SquareString" xml:space="preserve">
+    <value>Náměstí</value>
+  </data>
+  <data name="StarString" xml:space="preserve">
+    <value>Hvězda</value>
+  </data>
+  <data name="StudentLoginDrop" xml:space="preserve">
+    <value>Studentské příhlášení</value>
+  </data>
+  <data name="StudentMangerDrop" xml:space="preserve">
+    <value>Studentské Manger</value>
+  </data>
+  <data name="TakeExamDrop" xml:space="preserve">
+    <value>Zkoušku</value>
+  </data>
+  <data name="TDeleteGhosts" xml:space="preserve">
+    <value>Odstranit překlad duchové</value>
+  </data>
+  <data name="TeacherLoginDrop" xml:space="preserve">
+    <value>Přihlášení učitele</value>
+  </data>
+  <data name="TGhostHidden" xml:space="preserve">
+    <value>Skryté duchy překlad</value>
+  </data>
+  <data name="TGhostVisible" xml:space="preserve">
+    <value>Překlad duchové viditelný</value>
+  </data>
+  <data name="TranslationString" xml:space="preserve">
+    <value>Překlad</value>
+  </data>
+  <data name="TrapeziumString" xml:space="preserve">
+    <value>Lichoběžníková</value>
+  </data>
+  <data name="TriangleString" xml:space="preserve">
+    <value>Trojúhelník</value>
+  </data>
+  <data name="UnselectShape" xml:space="preserve">
+    <value>Výběr tvaru</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>Pohled</value>
+  </data>
+  <data name="XAxisRef" xml:space="preserve">
+    <value>X osa reflexe</value>
+  </data>
+  <data name="YAxisRef" xml:space="preserve">
+    <value>Reflexe osy Y</value>
+  </data>
+  <data name="YMXCRef" xml:space="preserve">
+    <value>Y = MX + C Relfection</value>
+  </data>
+  <data name="acw" xml:space="preserve">
+    <value>Proti směru hodinových ručiček</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Vytvořil(a)</value>
+  </data>
+  <data name="cw" xml:space="preserve">
+    <value>Ve směru hodinových ručiček</value>
+  </data>
+  <data name="d180" xml:space="preserve">
+    <value>180 stupňů</value>
+  </data>
+  <data name="d270" xml:space="preserve">
+    <value>270 stupňů.</value>
+  </data>
+  <data name="d360" xml:space="preserve">
+    <value>360 stupňů</value>
+  </data>
+  <data name="d45" xml:space="preserve">
+    <value>45 stupňů</value>
+  </data>
+  <data name="d90" xml:space="preserve">
+    <value>90 stupňů</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Hodnocení</value>
+  </data>
+  <data name="seconds0" xml:space="preserve">
+    <value>0 sekund</value>
+  </data>
+  <data name="seconds1" xml:space="preserve">
+    <value>1 sekundu</value>
+  </data>
+  <data name="seconds10" xml:space="preserve">
+    <value>10 sekund</value>
+  </data>
+  <data name="seconds15" xml:space="preserve">
+    <value>15 sekund</value>
+  </data>
+  <data name="seconds3" xml:space="preserve">
+    <value>3 sekundy</value>
+  </data>
+  <data name="seconds5" xml:space="preserve">
+    <value>5 sekund</value>
+  </data>
+  <data name="sf-1" xml:space="preserve">
+    <value>-1 měřítko</value>
+  </data>
+  <data name="sf-2" xml:space="preserve">
+    <value>-2 měřítko</value>
+  </data>
+  <data name="sf-3" xml:space="preserve">
+    <value>-3 měřítko</value>
+  </data>
+  <data name="sf-4" xml:space="preserve">
+    <value>-4 měřítko</value>
+  </data>
+  <data name="sf-5" xml:space="preserve">
+    <value>-5 měřítko</value>
+  </data>
+  <data name="sf025" xml:space="preserve">
+    <value>0,25 měřítko</value>
+  </data>
+  <data name="sf05" xml:space="preserve">
+    <value>0,5 faktor měřítka</value>
+  </data>
+  <data name="sf075" xml:space="preserve">
+    <value>0,75 měřítko</value>
+  </data>
+  <data name="sf1" xml:space="preserve">
+    <value>1 měřítko</value>
+  </data>
+  <data name="sf2" xml:space="preserve">
+    <value>2 měřítko</value>
+  </data>
+  <data name="sf3" xml:space="preserve">
+    <value>3 měřítko</value>
+  </data>
+  <data name="sf4" xml:space="preserve">
+    <value>4 měřítko</value>
+  </data>
+  <data name="sf5" xml:space="preserve">
+    <value>5 měřítko</value>
+  </data>
+  <data name="StudentLogOutDrop" xml:space="preserve">
+    <value>Studentka Log-Out</value>
+  </data>
+  <data name="TeacherLogOutDrop" xml:space="preserve">
+    <value>Učitelka Log-Out</value>
+  </data>
+  <data name="ver" xml:space="preserve">
+    <value>Verze</value>
+  </data>
+  <data name="EM_FieldEmpty" xml:space="preserve">
+    <value>Chyba prázdné pole:</value>
+  </data>
+  <data name="EM_InvalidInputTypeError" xml:space="preserve">
+    <value>Chyba neplatný typ vstupu:</value>
+  </data>
+  <data name="NoShapeSelected1" xml:space="preserve">
+    <value>Nevybrali jste žádné obrazce nebo vybraný obrazec je neplatná.</value>
+  </data>
+  <data name="NumericCordsOnly" xml:space="preserve">
+    <value>Zadané souřadnice nejsou ve správném formátu; jsou povoleny pouze číselné hodnoty.</value>
+  </data>
+  <data name="AccountFound" xml:space="preserve">
+    <value>Nalezen účet</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Účet nebyl nalezen.</value>
+  </data>
+  <data name="EM_CriticalFailure" xml:space="preserve">
+    <value>Selhání kritické programu:</value>
+  </data>
+  <data name="EM_DataBaseReadError" xml:space="preserve">
+    <value>Chyba při čtení databáze:</value>
+  </data>
+  <data name="EM_InvalidRequestError" xml:space="preserve">
+    <value>Chyba neplatný požadavek:</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>Nepodařilo se uložit obrázek.</value>
+  </data>
+  <data name="FailedToSaveShape" xml:space="preserve">
+    <value>Nepodařilo se uložit soubor s příponou shape.</value>
+  </data>
+  <data name="FailToGetLoginAccounts" xml:space="preserve">
+    <value>Nepodařilo se načíst přihlašovací údaje uživatele a účty.</value>
+  </data>
+  <data name="LoggedInAsTeacherError" xml:space="preserve">
+    <value>Jste aktuálně přihlášeni jako učitel, prosím první log z přihlášení učitele, než se snaží přihlásit do studentské příhlášení.</value>
+  </data>
+  <data name="LoginSuccesfull" xml:space="preserve">
+    <value>Přihlášení úspěšné, můžete mít nyní přihlášeni ke svému účtu.</value>
+  </data>
+  <data name="NoAccountFound" xml:space="preserve">
+    <value>Žádný uživatelský účet nebyl nalezen, prosím vytvořit nový uživatelský účet.</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Nelze otevřít soubor. Vybraný soubor mohl být poškozen nebo není kompatibilní s aktuální verzí tohoto programu.</value>
+  </data>
+  <data name="Loggedout" xml:space="preserve">
+    <value>Odhlášeni.</value>
+  </data>
+  <data name="logoutSuccessful" xml:space="preserve">
+    <value>Byli jste úspěšně odhlášeni.</value>
+  </data>
+  <data name="LogOutOfStudentFirst" xml:space="preserve">
+    <value>Jste aktuálně přihlášeni jako student, prosím první log z přihlášení studentů, než se snaží přihlásit do přihlášení učitel.</value>
+  </data>
+  <data name="LogOutOfStudentOrGuest" xml:space="preserve">
+    <value>Jste aktuálně přihlášeni jako student nebo host, přihlaste se k přihlášení učitel.</value>
+  </data>
+  <data name="CurrentlyUsingGuest" xml:space="preserve">
+    <value>V současné době pomocí účtu guest.</value>
+  </data>
+  <data name="LogOutOfTeacher" xml:space="preserve">
+    <value>Jste aktuálně přihlášeni jako učitel, odhlaste se z učitele účet a přihlášení do studentského účtu přístup zkoušky.</value>
+  </data>
+  <data name="NotLoggedIn" xml:space="preserve">
+    <value>Momentálně nejste přihlášeni. Žádný pokrok bude uloženo nebo zaznamenaných při používání přihlášení hosta.</value>
+  </data>
+  <data name="NoCircleReflection" xml:space="preserve">
+    <value>Kruhu nelze odrazit pomocí Y = MX + C řádku.</value>
+  </data>
+  <data name="ReflectNotCorrectFormat" xml:space="preserve">
+    <value>Zadaný řádek rovnice není ve správném formátu; jsou povoleny pouze číselné hodnoty.</value>
+  </data>
+  <data name="VectorNotInFormat" xml:space="preserve">
+    <value>Zadaný vektor nebyl ve správném formátu; jsou povoleny pouze číselné hodnoty</value>
+  </data>
+  <data name="AreYouSureDelete" xml:space="preserve">
+    <value>Opravdu že chcete odstranit</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Výška:</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Potvrzení odstranění</value>
+  </data>
+  <data name="UnknownShape" xml:space="preserve">
+    <value>NEZNÁMÉ VLASTNÍ TVAR</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Šířka:</value>
+  </data>
+</root>

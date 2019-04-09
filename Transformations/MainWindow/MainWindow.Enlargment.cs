@@ -52,15 +52,15 @@ namespace Transformations
 				}
 				catch (Exception)   //Coordinates not in a numerical value 
 				{
-					MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-						"Invalid Input Type Error: 302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-				}
+                    MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                         Properties.Strings.EM_InvalidInputTypeError +  "302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
 			}
 			else //No shape has been selected 
 			{
-				MessageBox.Show("You have not selected any shape.  " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error: 300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 		}
 
         private void DrawRaysClick(object sender, RoutedEventArgs e)   //The user has clicked on the ray-lines button
@@ -80,9 +80,9 @@ namespace Transformations
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape or the selected shape is invalid.  " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error: 300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 		}
         private void LineCaculator(double X, double Y)  //Used to calculate to position of the ray-lines so that they stretch to infinity
 		{

@@ -38,16 +38,16 @@ namespace Transformations
 				catch (Exception)	//If user input could not been turned into a double.
 				{
                     MessageBox.Show(
-						"The vector entered was not in the correct format; only numerical values are allowed",
-						"Invalid Input Type Error: 302 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+						Properties.Strings.VectorNotInFormat,
+						Properties.Strings.EM_InvalidInputTypeError + "302 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 				}
 			}
 			else	//If User did not select any shape
 			{
-				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error: 300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
-		}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
         private void HideTranslationGhosts(object sender, RoutedEventArgs e)      //Hide translation ghosts
         {
 			HideGhosts("translation");

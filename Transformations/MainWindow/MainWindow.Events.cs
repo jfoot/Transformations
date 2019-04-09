@@ -131,7 +131,7 @@ namespace Transformations
 				}
 				//Create a new free form shape out of the points created
 				Counter.myPolygon++;
-				MyShapes.Add((new FreeForm(("FreeForm_" + (Counter.myPolygon).ToString())).SpawnCustomShape(MyLines[MyLines.Count - 1].MyPoints, MyCanvas)));
+				MyShapes.Add((new FreeForm((Properties.Strings.FreeFormString + "_" + (Counter.myPolygon).ToString())).SpawnCustomShape(MyLines[MyLines.Count - 1].MyPoints, MyCanvas)));
 				MyShapes[MyShapes.Count - 1].MyShape.MouseLeftButtonDown += new MouseButtonEventHandler(MyPolygonMouseDown);
 				Canvas.SetTop(MyShapes[MyShapes.Count - 1].MyShape, 0); 
 				Canvas.SetLeft(MyShapes[MyShapes.Count - 1].MyShape, 0);

@@ -134,6 +134,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Properties\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Strings.fr.Designer.cs">
       <DependentUpon>Strings.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -307,16 +312,14 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Strings.cs.resx" />
+    <EmbeddedResource Include="Properties\Strings.de.resx" />
+    <EmbeddedResource Include="Properties\Strings.es.resx" />
     <EmbeddedResource Include="Properties\Strings.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.fr.Designer.cs</LastGenOutput>
@@ -324,9 +327,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.ru.resx" />
+    <EmbeddedResource Include="Properties\Strings.sv.resx" />
+    <EmbeddedResource Include="Properties\Strings.zh.resx" />
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -420,6 +426,14 @@
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\RussianF.jpg" />
+    <Resource Include="Resources\CzechF.png" />
+    <Resource Include="Resources\SwedenF.png" />
+    <Resource Include="Resources\GermanF.png" />
+    <Resource Include="Resources\SpanishFlag.png" />
+    <Resource Include="Resources\ChineseF.jpg" />
+    <Resource Include="Resources\FranceF.png" />
+    <Resource Include="Resources\EnglishF.jpg" />
     <SplashScreen Include="Splash_Screen.png" />
     <Resource Include="Resources\bugIcon.png" />
     <Resource Include="Resources\logo4.png" />

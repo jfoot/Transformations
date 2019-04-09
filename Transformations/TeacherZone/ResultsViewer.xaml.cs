@@ -32,9 +32,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "User/Class data request was invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-                    "Invalid Request Error: 301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "User/Class data request was invalid. " + Properties.Strings.UserError,
+                //    Properties.Strings.EM_InvalidRequestError + "301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void FillData()
@@ -84,9 +84,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                                "Failed to retrieve  user/class exam results. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                                "Database Read Error: 100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //                "Failed to retrieve  user/class exam results. " + Properties.Strings.DataBaseError ,
+                //                Properties.Strings.EM_DataBaseReadError + "100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void GirdLoaded(object sender, RoutedEventArgs e)
@@ -157,9 +157,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Results exportation failed. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
-                    "Critical Program Failure: 400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "Results exportation failed. " + Properties.Strings.CriticalFailuer,
+                //    Properties.Strings.EM_CriticalFailure + "400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void DeleteResult(object sender, RoutedEventArgs e)	//Delete an exam result
@@ -189,9 +189,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Unable to delete this exam result. This result could already be deleted. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-                    "Invalid Request Error: 301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "Unable to delete this exam result. This result could already be deleted. " + Properties.Strings.UserError,
+                //    Properties.Strings.EM_InvalidRequestError + "301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

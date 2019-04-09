@@ -203,12 +203,12 @@
                                           Width="206" Height="34"
                                           Margin="2,147,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem Content="0 Seconds" />
-                                    <ComboBoxItem Content="1 Seconds" />
-                                    <ComboBoxItem Content="3 Seconds" />
-                                    <ComboBoxItem Content="5 Seconds" />
-                                    <ComboBoxItem Content="10 Seconds" />
-                                    <ComboBoxItem Content="15 Seconds" />
+                                    <ComboBoxItem Content="{lex:Loc seconds0}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds1}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds3}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds5}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds10}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds15}" />
                                 </ComboBox>
                                 <ToggleButton x:Name="translationGhostVisibality"
                                               Width="206" Height="40"
@@ -344,18 +344,18 @@
                                           Width="204" Height="34"
                                           Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem>45 Degrees</ComboBoxItem>
-                                    <ComboBoxItem>90 Degrees</ComboBoxItem>
-                                    <ComboBoxItem>180 Degrees</ComboBoxItem>
-                                    <ComboBoxItem>270 Degrees</ComboBoxItem>
-                                    <ComboBoxItem>360 Degrees</ComboBoxItem>
+                                    <ComboBoxItem Content="{lex:Loc d45}" />
+                                    <ComboBoxItem Content="{lex:Loc d90}" />
+                                    <ComboBoxItem Content="{lex:Loc d180}" />
+                                    <ComboBoxItem Content="{lex:Loc d270}" />
+                                    <ComboBoxItem Content="{lex:Loc d360}" />
                                 </ComboBox>
                                 <ComboBox x:Name="rotationDirection"
                                           Width="204" Height="34"
                                           Margin="5,45,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="0">
-                                    <ComboBoxItem>Clockwise</ComboBoxItem>
-                                    <ComboBoxItem>Anti-Clockwise</ComboBoxItem>
+                                    <ComboBoxItem Content="{lex:Loc cw}" />
+                                    <ComboBoxItem Content="{lex:Loc acw}" />
                                 </ComboBox>
                                 <TextBox x:Name="rotation_x_center"
                                          Width="96" Height="34"
@@ -379,12 +379,12 @@
                                           Width="204" Height="34"
                                           Margin="5,129,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem>0 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>1 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>3 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>5 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>10 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>15 Seconds</ComboBoxItem>
+                                    <ComboBoxItem Content="{lex:Loc seconds0}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds1}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds3}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds5}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds10}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds15}" />
                                 </ComboBox>
 
                                 <Label Margin="11,161,206,437" VerticalAlignment="Top" Content="( " FontSize="35" />
@@ -444,19 +444,19 @@
                                           Width="206" Height="34"
                                           Margin="4,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="8">
-                                    <ComboBoxItem>-5 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>-4 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>-3 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>-2 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>-1 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>0.25 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>0.5 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>0.75 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>1 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>2 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>3 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>4 Scale Factor</ComboBoxItem>
-                                    <ComboBoxItem>5 Scale Factor</ComboBoxItem>
+                                    <ComboBoxItem Content="{lex:Loc sf-5}" />
+                                    <ComboBoxItem Content="{lex:Loc sf-4}" />
+                                    <ComboBoxItem Content="{lex:Loc sf-3}" />
+                                    <ComboBoxItem Content="{lex:Loc sf-2}" />
+                                    <ComboBoxItem Content="{lex:Loc sf-1}" />
+                                    <ComboBoxItem Content="{lex:Loc sf025}" />
+                                    <ComboBoxItem Content="{lex:Loc sf05}" />
+                                    <ComboBoxItem Content="{lex:Loc sf075}" />
+                                    <ComboBoxItem Content="{lex:Loc sf1}" />
+                                    <ComboBoxItem Content="{lex:Loc sf2}" />
+                                    <ComboBoxItem Content="{lex:Loc sf3}" />
+                                    <ComboBoxItem Content="{lex:Loc sf4}" />
+                                    <ComboBoxItem Content="{lex:Loc sf5}" />
                                 </ComboBox>
                                 <TextBox x:Name="EnlargementXCenter"
                                          Width="94" Height="34"
@@ -480,12 +480,12 @@
                                           Width="206" Height="34"
                                           Margin="6,88,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                                           FontSize="15" SelectedIndex="2">
-                                    <ComboBoxItem>0 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>1 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>3 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>5 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>10 Seconds</ComboBoxItem>
-                                    <ComboBoxItem>15 Seconds</ComboBoxItem>
+                                    <ComboBoxItem Content="{lex:Loc seconds0}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds1}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds3}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds5}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds10}" />
+                                    <ComboBoxItem Content="{lex:Loc seconds15}" />
                                 </ComboBox>
 
                                 <Label Margin="11,124,206,0" VerticalAlignment="Top" Content="( " FontSize="35" />

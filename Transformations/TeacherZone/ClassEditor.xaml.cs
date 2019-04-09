@@ -74,9 +74,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to retrieve data from the database. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                    "DataBase Error : 100", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "Failed to retrieve data from the database. " + Properties.Strings.DataBaseError ,
+                //    "DataBase Error : 100", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void CreateClass(object sender, RoutedEventArgs e)      //used to create a new class
@@ -95,17 +95,17 @@ namespace Transformations
                 }
 
                 RefreshGrid();
-                MessageBox.Show(
-                    "A new class called \"" + classname.Text.ToString() + "\" has been made successfully.",
-                    "Class Created.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show(
+                //    "A new class called \"" + classname.Text.ToString() + "\" has been made successfully.",
+                //    "Class Created.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                 classname.Text = "";
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to create a new class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                    "DataBase Write Error : 101 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "Failed to create a new class. " + Properties.Strings.DataBaseError ,
+                //    "DataBase Write Error : 101 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void GridLoaded(object sender, RoutedEventArgs e)       //Called upon when the grid is loaded
@@ -175,9 +175,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to delete class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                    "DataBase Read & Write Error : 102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                ////MessageBox.Show(
+                ////    "Failed to delete class. " + Properties.Strings.DataBaseError ,
+                ////    "DataBase Read & Write Error : 102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void SeeClassData(object sender, RoutedEventArgs e)     //See all the class data
@@ -244,17 +244,17 @@ namespace Transformations
 
                     if (check == false)
                     {
-                        MessageBox.Show(
-                            "You are not the owner of this class, although you may still edit it as if it was your own; please be considerate to other teachers.",
-                            "Attention", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        //MessageBox.Show(
+                        //    "You are not the owner of this class, although you may still edit it as if it was your own; please be considerate to other teachers.",
+                        //    "Attention", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                     }
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show(
-                        "Failed to retrieve the classes you own. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                        "Database Read Error : 100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    //MessageBox.Show(
+                    //    "Failed to retrieve the classes you own. " + Properties.Strings.DataBaseError ,
+                    //    "Database Read Error : 100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

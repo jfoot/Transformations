@@ -114,7 +114,7 @@ namespace Transformations
         public Shapes SpawnCustomShape(PointCollection points, Canvas canvas) //Reusable Function for drawing of polygon shapes.
         {
             ((MyShape) as Polygon).Points = points;
-			MyShape.Name = Name;
+			MyShape.Name = Name.Replace(" ", "");
 			SetDefualts(canvas);
             Canvas.SetTop(MyShape, -Properties.Settings.Default.DefaultHeight);
             Canvas.SetLeft(MyShape, 0);
@@ -273,7 +273,7 @@ namespace Transformations
                 if (y / scale_factor % 5 == 0)
 				{
 					XGridline[XGridline.Count - 1].StrokeThickness = 4;
-                    Labels.Add(new Label() { Content = -(y / scale_factor), Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)) });
+                    Labels.Add(new Label() { Content = -(y / scale_factor), Foreground = TextColour });
 					Canvas.SetLeft(Labels[Labels.Count - 1], 0);
 					Canvas.SetTop(Labels[Labels.Count - 1], y);
 

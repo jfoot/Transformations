@@ -17,7 +17,7 @@ namespace Transformations
         public App()
         {
             LocalizeDictionary.Instance.SetCurrentThreadCulture = true;
-            LocalizeDictionary.Instance.Culture = new CultureInfo("fr");
+            LocalizeDictionary.Instance.Culture = new CultureInfo("zh");
 
         }
 

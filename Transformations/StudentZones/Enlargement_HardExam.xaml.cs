@@ -108,9 +108,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to randomly generate an 'Enlargement Hard' exam. " + LocalizationProvider.GetLocalizedValue<string>("CriticalFailuer"),
-                    "Critical Program Failure: 400 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show(
+                //    "Failed to randomly generate an 'Enlargement Hard' exam. " + Properties.Strings.CriticalFailuer,
+                //    Properties.Strings.EM_CriticalFailure + "400 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void SubmitAnswer(object sender, RoutedEventArgs e)
@@ -148,8 +148,8 @@ namespace Transformations
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-                        "Invalid Input Type Error: 302 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                    //MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                    //    Properties.Strings.EM_InvalidInputTypeError + "302 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
            RefreshText();
