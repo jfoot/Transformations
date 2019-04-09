@@ -29,9 +29,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                   "Failed to retrieve your Windows User name. " + LocalizationProvider.GetLocalizedValue<string>("WindowsError"),
-                   "Insufficient Privileges Error : 200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            //    MessageBox.Show(
+            //       "Failed to retrieve your Windows User name. " + LocalizationProvider.GetLocalizedValue<string>("WindowsError"),
+            //       "Insufficient Privileges Error : 200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
            
             try
@@ -56,10 +56,10 @@ namespace Transformations
             }
             catch (Exception)
             {
-                MessageBox.Show(
-                    "Failed to retrieve teacher names. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                    "DataBase Read Error : 100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+                //    MessageBox.Show(
+                //        "Failed to retrieve teacher names. " + Properties.Strings.DataBaseError ,
+                //        "DataBase Read Error : 100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 		}
         private void TeacherSelected(object sender, SelectionChangedEventArgs e)
 		{
@@ -90,9 +90,9 @@ namespace Transformations
             }
 			catch (Exception)
 			{
-                MessageBox.Show(
-                    "Failed to retrieve classes owned by selected teacher. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                    "DataBase Read Error : 100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                ////MessageBox.Show(
+                ////    "Failed to retrieve classes owned by selected teacher. " + Properties.Strings.DataBaseError ,
+                ////    "DataBase Read Error : 100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 		}
         private void CreateAccountButton(object sender, RoutedEventArgs e)
@@ -144,16 +144,16 @@ namespace Transformations
                 }
 				catch (Exception)
 				{
-                    MessageBox.Show(
-                 "Failed to create a new user account. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-                 "Database Read & Write Error : 102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //    MessageBox.Show(
+                // "Failed to create a new user account. " + Properties.Strings.DataBaseError ,
+                // "Database Read & Write Error : 102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 			}
 			else
 			{
-				MessageBox.Show(
-					"Teacher or class selection has been left blank or invalid. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error : 300 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+				//MessageBox.Show(
+				//	"Teacher or class selection has been left blank or invalid. " + Properties.Strings.UserError,
+				//	"Field Empty Error : 300 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}
 	}

@@ -322,10 +322,10 @@ namespace Transformations
 
 			Properties.Settings.Default.DefaultPerformance = false;
 			Properties.Settings.Default.DefaultResolution = false;
-			Properties.Settings.Default.CurrentUser = "Guest";
+			Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 			Properties.Settings.Default.UserID = 0;
 			Properties.Settings.Default.ClassID = 0;
-			Properties.Settings.Default.AliasName = "Guest";
+			Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 			Properties.Settings.Default.IsTeacher = false;
 
 			Properties.Settings.Default.Save();

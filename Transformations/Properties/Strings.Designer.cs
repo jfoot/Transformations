@@ -79,6 +79,42 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Found.
+        /// </summary>
+        public static string AccountFound {
+            get {
+                return ResourceManager.GetString("AccountFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account Not Found.
+        /// </summary>
+        public static string AccountNotFound {
+            get {
+                return ResourceManager.GetString("AccountNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anti-Clockwise.
+        /// </summary>
+        public static string acw {
+            get {
+                return ResourceManager.GetString("acw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete .
+        /// </summary>
+        public static string AreYouSureDelete {
+            get {
+                return ResourceManager.GetString("AreYouSureDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap arrow {
@@ -175,11 +211,83 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Created By.
+        /// </summary>
+        public static string CreatedBy {
+            get {
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unknown issue has caused a critical failure. Please try again or contact your system administrator..
         /// </summary>
         public static string CriticalFailuer {
             get {
                 return ResourceManager.GetString("CriticalFailuer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currently using a guest account..
+        /// </summary>
+        public static string CurrentlyUsingGuest {
+            get {
+                return ResourceManager.GetString("CurrentlyUsingGuest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clockwise.
+        /// </summary>
+        public static string cw {
+            get {
+                return ResourceManager.GetString("cw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 180 Degrees.
+        /// </summary>
+        public static string d180 {
+            get {
+                return ResourceManager.GetString("d180", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 270 Degrees.
+        /// </summary>
+        public static string d270 {
+            get {
+                return ResourceManager.GetString("d270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 360 Degrees.
+        /// </summary>
+        public static string d360 {
+            get {
+                return ResourceManager.GetString("d360", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 45 Degrees.
+        /// </summary>
+        public static string d45 {
+            get {
+                return ResourceManager.GetString("d45", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 90 Degrees.
+        /// </summary>
+        public static string d90 {
+            get {
+                return ResourceManager.GetString("d90", resourceCulture);
             }
         }
         
@@ -207,6 +315,15 @@ namespace Transformations.Properties {
         public static string DeleteAllGhostsString {
             get {
                 return ResourceManager.GetString("DeleteAllGhostsString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string DeleteConfirm {
+            get {
+                return ResourceManager.GetString("DeleteConfirm", resourceCulture);
             }
         }
         
@@ -270,6 +387,51 @@ namespace Transformations.Properties {
         public static string EGhostVisible {
             get {
                 return ResourceManager.GetString("EGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical Program Failure: .
+        /// </summary>
+        public static string EM_CriticalFailure {
+            get {
+                return ResourceManager.GetString("EM_CriticalFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Database Read Error: .
+        /// </summary>
+        public static string EM_DataBaseReadError {
+            get {
+                return ResourceManager.GetString("EM_DataBaseReadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Empty Error: .
+        /// </summary>
+        public static string EM_FieldEmpty {
+            get {
+                return ResourceManager.GetString("EM_FieldEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Input Type Error: .
+        /// </summary>
+        public static string EM_InvalidInputTypeError {
+            get {
+                return ResourceManager.GetString("EM_InvalidInputTypeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Request Error: .
+        /// </summary>
+        public static string EM_InvalidRequestError {
+            get {
+                return ResourceManager.GetString("EM_InvalidRequestError", resourceCulture);
             }
         }
         
@@ -382,6 +544,33 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to save the image..
+        /// </summary>
+        public static string FailedToSave {
+            get {
+                return ResourceManager.GetString("FailedToSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save the shape file..
+        /// </summary>
+        public static string FailedToSaveShape {
+            get {
+                return ResourceManager.GetString("FailedToSaveShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve user login details and accounts..
+        /// </summary>
+        public static string FailToGetLoginAccounts {
+            get {
+                return ResourceManager.GetString("FailToGetLoginAccounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap feadback {
@@ -468,6 +657,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guest.
+        /// </summary>
+        public static string Guest {
+            get {
+                return ResourceManager.GetString("Guest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Guest Account.
         /// </summary>
         public static string GuestAccount {
@@ -483,6 +681,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("hand_with_pen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to      Height: .
+        /// </summary>
+        public static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
             }
         }
         
@@ -543,6 +750,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You are currently logged in as a teacher, please first log out of teacher login, before trying to log in into the student login..
+        /// </summary>
+        public static string LoggedInAsTeacherError {
+            get {
+                return ResourceManager.GetString("LoggedInAsTeacherError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logged out..
+        /// </summary>
+        public static string Loggedout {
+            get {
+                return ResourceManager.GetString("Loggedout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap login {
@@ -559,6 +784,51 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("login_male", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login Successful, you have now been logged into your account..
+        /// </summary>
+        public static string LoginSuccesfull {
+            get {
+                return ResourceManager.GetString("LoginSuccesfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are currently logged in as a student, please first log out of student login, before trying to log in into the teacher login..
+        /// </summary>
+        public static string LogOutOfStudentFirst {
+            get {
+                return ResourceManager.GetString("LogOutOfStudentFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are currently logged in as a student or guest, please login to the teacher login..
+        /// </summary>
+        public static string LogOutOfStudentOrGuest {
+            get {
+                return ResourceManager.GetString("LogOutOfStudentOrGuest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are currently logged in as a teacher, please log out of a teacher account and login into a student account to access exams..
+        /// </summary>
+        public static string LogOutOfTeacher {
+            get {
+                return ResourceManager.GetString("LogOutOfTeacher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have been successfully logged out..
+        /// </summary>
+        public static string logoutSuccessful {
+            get {
+                return ResourceManager.GetString("logoutSuccessful", resourceCulture);
             }
         }
         
@@ -591,11 +861,56 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No user account could be found, please make a new user account..
+        /// </summary>
+        public static string NoAccountFound {
+            get {
+                return ResourceManager.GetString("NoAccountFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A circle cannot be reflected using a Y=MX+C line. .
+        /// </summary>
+        public static string NoCircleReflection {
+            get {
+                return ResourceManager.GetString("NoCircleReflection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No Shape Currently Selected.
         /// </summary>
         public static string NoShapeSelected {
             get {
                 return ResourceManager.GetString("NoShapeSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not selected any shape or the selected shape is invalid. .
+        /// </summary>
+        public static string NoShapeSelected1 {
+            get {
+                return ResourceManager.GetString("NoShapeSelected1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are currently not logged in. No progress will be saved or recorded while using a Guest login..
+        /// </summary>
+        public static string NotLoggedIn {
+            get {
+                return ResourceManager.GetString("NotLoggedIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The coordinates entered were not in the correct format; only numerical values are allowed. .
+        /// </summary>
+        public static string NumericCordsOnly {
+            get {
+                return ResourceManager.GetString("NumericCordsOnly", resourceCulture);
             }
         }
         
@@ -751,6 +1066,15 @@ namespace Transformations.Properties {
         public static string ReflectionString {
             get {
                 return ResourceManager.GetString("ReflectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The line equation entered is not in the correct format; only numerical values are allowed. .
+        /// </summary>
+        public static string ReflectNotCorrectFormat {
+            get {
+                return ResourceManager.GetString("ReflectNotCorrectFormat", resourceCulture);
             }
         }
         
@@ -926,6 +1250,60 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0 Seconds.
+        /// </summary>
+        public static string seconds0 {
+            get {
+                return ResourceManager.GetString("seconds0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Second.
+        /// </summary>
+        public static string seconds1 {
+            get {
+                return ResourceManager.GetString("seconds1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 Seconds.
+        /// </summary>
+        public static string seconds10 {
+            get {
+                return ResourceManager.GetString("seconds10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15 Seconds.
+        /// </summary>
+        public static string seconds15 {
+            get {
+                return ResourceManager.GetString("seconds15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 Seconds.
+        /// </summary>
+        public static string seconds3 {
+            get {
+                return ResourceManager.GetString("seconds3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 Seconds.
+        /// </summary>
+        public static string seconds5 {
+            get {
+                return ResourceManager.GetString("seconds5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Settings.
         /// </summary>
         public static string SettingsDrop {
@@ -941,6 +1319,123 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("SettingsF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -1 Scale Factor.
+        /// </summary>
+        public static string sf_1 {
+            get {
+                return ResourceManager.GetString("sf-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -2 Scale Factor.
+        /// </summary>
+        public static string sf_2 {
+            get {
+                return ResourceManager.GetString("sf-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -3 Scale Factor.
+        /// </summary>
+        public static string sf_3 {
+            get {
+                return ResourceManager.GetString("sf-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -4 Scale Factor.
+        /// </summary>
+        public static string sf_4 {
+            get {
+                return ResourceManager.GetString("sf-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -5 Scale Factor.
+        /// </summary>
+        public static string sf_5 {
+            get {
+                return ResourceManager.GetString("sf-5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.25 Scale Factor.
+        /// </summary>
+        public static string sf025 {
+            get {
+                return ResourceManager.GetString("sf025", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.5 Scale Factor.
+        /// </summary>
+        public static string sf05 {
+            get {
+                return ResourceManager.GetString("sf05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.75 Scale Factor.
+        /// </summary>
+        public static string sf075 {
+            get {
+                return ResourceManager.GetString("sf075", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Scale Factor.
+        /// </summary>
+        public static string sf1 {
+            get {
+                return ResourceManager.GetString("sf1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 Scale Factor.
+        /// </summary>
+        public static string sf2 {
+            get {
+                return ResourceManager.GetString("sf2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 Scale Factor.
+        /// </summary>
+        public static string sf3 {
+            get {
+                return ResourceManager.GetString("sf3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 Scale Factor.
+        /// </summary>
+        public static string sf4 {
+            get {
+                return ResourceManager.GetString("sf4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 Scale Factor.
+        /// </summary>
+        public static string sf5 {
+            get {
+                return ResourceManager.GetString("sf5", resourceCulture);
             }
         }
         
@@ -1011,11 +1506,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Confirmation.
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _Student Login.
         /// </summary>
         public static string StudentLoginDrop {
             get {
                 return ResourceManager.GetString("StudentLoginDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Student Log-Out.
+        /// </summary>
+        public static string StudentLogOutDrop {
+            get {
+                return ResourceManager.GetString("StudentLogOutDrop", resourceCulture);
             }
         }
         
@@ -1062,6 +1575,15 @@ namespace Transformations.Properties {
         public static string TeacherLoginDrop {
             get {
                 return ResourceManager.GetString("TeacherLoginDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Teacher Log-Out.
+        /// </summary>
+        public static string TeacherLogOutDrop {
+            get {
+                return ResourceManager.GetString("TeacherLogOutDrop", resourceCulture);
             }
         }
         
@@ -1171,6 +1693,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to open file. The selected file could be corrupted or not compatible with the current version of this program..
+        /// </summary>
+        public static string UnableToOpen {
+            get {
+                return ResourceManager.GetString("UnableToOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UNKNOWN CUSTOM SHAPE.
+        /// </summary>
+        public static string UnknownShape {
+            get {
+                return ResourceManager.GetString("UnknownShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unselect Shape.
         /// </summary>
         public static string UnselectShape {
@@ -1199,11 +1739,38 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The vector entered was not in the correct format; only numerical values are allowed.
+        /// </summary>
+        public static string VectorNotInFormat {
+            get {
+                return ResourceManager.GetString("VectorNotInFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        public static string ver {
+            get {
+                return ResourceManager.GetString("ver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _View.
         /// </summary>
         public static string ViewDrop {
             get {
                 return ResourceManager.GetString("ViewDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width: .
+        /// </summary>
+        public static string Width {
+            get {
+                return ResourceManager.GetString("Width", resourceCulture);
             }
         }
         

@@ -46,9 +46,9 @@ namespace Transformations
             }
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to retrieve the students inside of the selected class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Read Error: 100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to retrieve the students inside of the selected class. " + Properties.Strings.DataBaseError ,
+				//	Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
         private void GridLoaded(object sender, RoutedEventArgs e)
@@ -102,9 +102,9 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to delete the selected user. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Write Error: 101 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to delete the selected user. " + Properties.Strings.DataBaseError ,
+				//	"Database Write Error: 101 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
         private void AllUsers(object sender, RoutedEventArgs e) //View the whole class exam results
@@ -151,9 +151,9 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to retrieve the students inside of the selected class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Read Error: 100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to retrieve the students inside of the selected class. " + Properties.Strings.DataBaseError ,
+				//	Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
 	}

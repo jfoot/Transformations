@@ -23,7 +23,7 @@ namespace Transformations
 
 		private void Load(object sender, RoutedEventArgs e) //Called when the window loads
 		{
-            if (Properties.Settings.Default.CurrentUser == "Guest")
+            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
 			{
 				DeleteAccount.Visibility = Visibility.Hidden;
 				ChangeClass.Visibility = Visibility.Hidden;
@@ -49,7 +49,7 @@ namespace Transformations
 
 			try
 			{
-				if (Properties.Settings.Default.CurrentUser != "Guest")
+				if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest)
 				{
 					using (var conn = new OleDbConnection { ConnectionString = DataBase.ConnectionString() })
 					{
@@ -75,17 +75,11 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to retrieve your teacher and class. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Read Error: 100 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to retrieve your teacher and class. " + Properties.Strings.DataBaseError ,
+				//	Properties.Strings.EM_DataBaseReadError + "100 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 
-
-
-			if(Properties.Settings.Default.CheckForUpdates == true)
-			{
-				CheckForUpdates.IsChecked = true;
-			}
 
 
 			//Shape Colour
@@ -315,17 +309,7 @@ namespace Transformations
 				Properties.Settings.Default.DatalocDefault = false;
 			}
 
-			if (CheckForUpdates.IsChecked == true)
-			{
-				Properties.Settings.Default.CheckForUpdates = true;
-			}
-			else
-			{
-				Properties.Settings.Default.CheckForUpdates = false;
-			}
-
-
-
+			
 			Properties.Settings.Default.ConnectionString = connectionstring.Text;
 			Properties.Settings.Default.DefaultHeight = Convert.ToInt32(size_slider.Value * (75 / 5));
 
@@ -343,7 +327,7 @@ namespace Transformations
 		{
 			try
 			{
-				if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == false)
+				if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)
 				{
 					MessageBoxResult open = MessageBox.Show("Are you sure you wish to delete your account? While you can create a new one you will lose any exam results you currently have.", "Are you sure?",
 						System.Windows.MessageBoxButton.YesNo,
@@ -367,10 +351,10 @@ namespace Transformations
 						}
 
 
-						Properties.Settings.Default.CurrentUser = "Guest";
+						Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 						Properties.Settings.Default.UserID = 0;
 						Properties.Settings.Default.ClassID = 0;
-						Properties.Settings.Default.AliasName = "Guest";
+						Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 						Properties.Settings.Default.IsTeacher = false;
 
 						Properties.Settings.Default.Save();
@@ -383,7 +367,7 @@ namespace Transformations
 						Application.Current.Shutdown();
 					}
 				}
-				if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == true)
+				if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == true)
 				{
 					MessageBoxResult open = MessageBox.Show("Are you sure you wish to delete your teacher account? Deleting a teacher account will delete all your classes, all the student accounts inside of your classes and all of their exam results. This action can not be undone. Be sure to transfer a class or student to a different teacher if you wish to keep their data.", "Are you sure?",
 						System.Windows.MessageBoxButton.YesNo,
@@ -456,10 +440,10 @@ namespace Transformations
 							}
 						}
 
-						Properties.Settings.Default.CurrentUser = "Guest";
+						Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 						Properties.Settings.Default.UserID = 0;
 						Properties.Settings.Default.ClassID = 0;
-						Properties.Settings.Default.AliasName = "Guest";
+						Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 						Properties.Settings.Default.IsTeacher = false;
 
 						Properties.Settings.Default.Save();
@@ -478,14 +462,14 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to delete your user account. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Read & Write Error: 102 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to delete your user account. " + Properties.Strings.DataBaseError ,
+				//	"Database Read & Write Error: 102 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 		}
         private void Download(object sender, System.Windows.Input.MouseButtonEventArgs e)   //Download dependency software
 		{
-			System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("AccessDownload"));
+			//System.Diagnostics.Process.Start(LocalizationProvider.GetLocalizedValue<string>("AccessDownload"));
 		}
         private void ChangeClassClick(object sender, RoutedEventArgs e)     //Change class 
 		{
@@ -528,9 +512,9 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				MessageBox.Show(
-					"Failed to re-log you in, please manually logout and re-login. " + LocalizationProvider.GetLocalizedValue<string>("DataBaseError"),
-					"Database Read Error: 100 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+				//MessageBox.Show(
+				//	"Failed to re-log you in, please manually logout and re-login. " + Properties.Strings.DataBaseError ,
+				//	Properties.Strings.EM_DataBaseReadError + "100 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 			}
 			Load(sender, new RoutedEventArgs());
 		}

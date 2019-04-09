@@ -55,10 +55,10 @@ namespace Transformations
 						}
 						else
 						{
-							MessageBox.Show("A circle cannot be reflected using a Y=MX+C line. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-								"Invalid Input Type Error: 302 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-							Reflection_Execute.IsChecked = false;
-						}
+                            MessageBox.Show( Properties.Strings.NoCircleReflection  + Properties.Strings.UserError,
+                                Properties.Strings.EM_InvalidInputTypeError + "302 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                            Reflection_Execute.IsChecked = false;
+                        }
 					}
 					else if (refY.IsChecked == true) //Horizontal Line
 					{
@@ -78,10 +78,10 @@ namespace Transformations
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error: 300 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-				Reflection_Execute.IsChecked = false;
-			}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                Reflection_Execute.IsChecked = false;
+            }
 		}
        	private void ReflectionPolygon() //While user is moving the mouse and reflection is activated 
 		{
@@ -178,11 +178,11 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					MessageBox.Show(
-						"The line equation entered is not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-						"Invalid Input Type Error: 302 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-					Reflection_Execute.IsChecked = false;
-					foreach (Shapes c in MyShapes)
+                    MessageBox.Show(
+                        Properties.Strings.ReflectNotCorrectFormat + Properties.Strings.UserError,
+                        Properties.Strings.EM_InvalidInputTypeError + "302 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                    Reflection_Execute.IsChecked = false;
+                    foreach (Shapes c in MyShapes)
 					{
 						if (c.MyShape.Name.StartsWith("dupe_reflection"))
 						{

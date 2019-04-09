@@ -47,17 +47,17 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					MessageBox.Show(
-						"The coordinates entered were not in the correct format; only numerical values are allowed. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-						"Invalid Input Type Error: 302 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-				}
-			}
+                    MessageBox.Show(
+                        Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                        Properties.Strings.EM_InvalidInputTypeError + "302 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
 			else
 			{
-				MessageBox.Show("You have not selected any shape. " + LocalizationProvider.GetLocalizedValue<string>("UserError"),
-					"Field Empty Error: 300 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
-		}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
         private void ShowRotationGhosts(object sender, RoutedEventArgs e) //Show rotation ghosts
 		{
 			ShowGhosts("rotation");

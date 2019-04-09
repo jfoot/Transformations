@@ -56,9 +56,9 @@ namespace Transformations
 		
 				string Accuracy = GridSnap.IsChecked == true ? "0" : "0.00";
 				//Updates the UI for the details of the updated shape
-				if (SelectedShape.Name.StartsWith("Trapezium"))
+				if (SelectedShape.Name.StartsWith(Properties.Strings.TrapeziumString))
 				{
-					selected_shape_dim.Content = "Width: " + (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString() + "     Height: " +
+					selected_shape_dim.Content = Properties.Strings.Width + (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString() + Properties.Strings.Height +
 					                             (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString();
 					selected_shape_cord.Content =
 						"( " + (-(- Canvas.GetLeft(SelectedShape)) / ScaleFactor).ToString(Accuracy) + " , "
@@ -66,14 +66,14 @@ namespace Transformations
 						(((-Canvas.GetTop(SelectedShape)) / ScaleFactor) - (Round.ToNearest(Properties.Settings.Default.DefaultHeight / 2, 15)) / (ScaleFactor))
 						.ToString(Accuracy) + " )";
 				}
-				else if (SelectedShape.Name.StartsWith("FreeForm"))
+				else if (SelectedShape.Name.StartsWith(Properties.Strings.FreeFormString))
 				{
-					selected_shape_dim.Content = "UNKNOWN CUSTOM SHAPE";
-					selected_shape_cord.Content = "X: " + ((Canvas.GetLeft(SelectedShape) + (SelectedShape as Polygon).Points[0].X) / ScaleFactor).ToString(Accuracy) + "  Y: " + (-(Canvas.GetTop(SelectedShape) + +(SelectedShape as Polygon).Points[0].Y) / ScaleFactor).ToString(Accuracy);
+                    selected_shape_dim.Content = Properties.Strings.UnknownShape;
+                    selected_shape_cord.Content = "X: " + ((Canvas.GetLeft(SelectedShape) + (SelectedShape as Polygon).Points[0].X) / ScaleFactor).ToString(Accuracy) + "  Y: " + (-(Canvas.GetTop(SelectedShape) + +(SelectedShape as Polygon).Points[0].Y) / ScaleFactor).ToString(Accuracy);
 				}
 				else
 				{
-					selected_shape_dim.Content = "Width: " + (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString() + "     Height: " +
+					selected_shape_dim.Content = Properties.Strings.Width + (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString() + Properties.Strings.Height +
 					                             (Properties.Settings.Default.DefaultHeight / ScaleFactor).ToString();
 					selected_shape_cord.Content =
 						"( " + ( Canvas.GetLeft(SelectedShape) / ScaleFactor).ToString(Accuracy) + " , "
@@ -122,7 +122,7 @@ namespace Transformations
         private void DeleteShapeClick(object sender, RoutedEventArgs e) //Allows the user to delete a shape upon pressing the button
 		{
 			MessageBoxResult messageBoxResult = MessageBox.Show(
-				"Are you sure you want to delete " + SelectedShape.Name.ToString() + " ?", "Delete Confirmation",
+				Properties.Strings.AreYouSureDelete + SelectedShape.Name.ToString() + "?", Properties.Strings.DeleteConfirm,
 				System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Question);
 			if (messageBoxResult == MessageBoxResult.Yes)
 			{
@@ -139,8 +139,8 @@ namespace Transformations
 
 				unselectShape.IsEnabled = false;
 				deleteShape.IsEnabled = false;
-				selectedShapeLabel.Content = "No Shape Currently Selected";
-				selected_shape_dim.Content = "Width: 0     Height: 0";
+				selectedShapeLabel.Content = Properties.Strings.NoShapeSelected;
+				selected_shape_dim.Content = Properties.Strings.Width + "0 "+ Properties.Strings.Height +"0";
 				selected_shape_cord.Content = "( 0.00 , 0.00 )";
 			}
 		}
@@ -150,11 +150,11 @@ namespace Transformations
 
 			unselectShape.IsEnabled = false;
 			deleteShape.IsEnabled = false;
-			selectedShapeLabel.Content = "No Shape Currently Selected";
-			selected_shape_dim.Content = "Width: 0     Height: 0";
-			selected_shape_cord.Content = "( 0.00 , 0.00 )";
+            selectedShapeLabel.Content = Properties.Strings.NoShapeSelected;
+            selected_shape_dim.Content = Properties.Strings.Width + "0 " + Properties.Strings.Height + "0";
+            selected_shape_cord.Content = "( 0.00 , 0.00 )";
 
-			foreach (Shapes polygon in MyShapes) //Need to run through the circle and also the my polygon free form.
+            foreach (Shapes polygon in MyShapes) //Need to run through the circle and also the my polygon free form.
 			{
 				if (!polygon.MyShape.Name.StartsWith("dupe"))
 				{
@@ -204,7 +204,7 @@ namespace Transformations
                 }
             }
         }
-        private void ShowGhosts(string transformation)      //A generalised function, used to show ghosts based upon their type of transformation.
+        private void ShowGhosts(string transformation)      //A generalized function, used to show ghosts based upon their type of transformation.
 		{
 			foreach (Shapes t in MyShapes)
 			{
