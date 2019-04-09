@@ -504,4 +504,238 @@
   <data name="Width" xml:space="preserve">
     <value>Ширина:</value>
   </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Уверен?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Вы хотите сохранить перед открытием нового файла?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Сохранение завершено</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>Файл, сохранить успешным.</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>Параметры приложений позволяют изменять параметры по умолчанию. Эти варианты будут помнить в следующий раз вы перезапустите приложение.</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>Цвет deufalt для фигур породил.</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Общие</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Черный</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Цвет сетки defualt</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>Defualt цвет сетки.</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Грин</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Темно-серый</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Темно - темно-серый</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Темно - серый</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Светло-серый</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Темно - белый</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Размер:</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Удалено успешно</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Цвет по умолчанию</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Применить изменения</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Размер по умолчанию</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>По умолчанию размер породил фигур</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Сброс значений по умолчанию</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Расширенный</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Дополнительные настройки предназначены для опытных пользователей только. Измените эти настройки на свой собственный риск. Если проблемы возникают, «Сброс по умолчанию».</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>Дисплей с высоким разрешением (1920 × 1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Низкое разрешение дисплея</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Разрешение монитора</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Изменение этого параметра будет сделать начальный размер приложения отличаются</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Строка подключения:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>Подключение к базе данных</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>ТОЛЬКО ДЛЯ ТОГО, ЧТОБЫ БЫТЬ ИЗМЕНЕНЫ АДМИНИСТРАТОРОМ СИСТЕМЫ</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Язык будет обновлять после перезапуска.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Ниже вы можете выбрать язык для использования на протяжении всей программы. Если вы нашли ошибку в переводе не стесняйтесь, чтобы помочь исправить его на хранилище GitHub.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Низкий конец устройства</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Стандартное устройство (нормальный)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Использование пользовательских</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Использовать по умолчанию</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Если вы испытываете производительность вопросы переключения «Низкий конец устройства»</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Этот продукт по лицензии и создан для образовательных учреждений. Все права защищены Джонатан ноги ©. Для полного положения и условия goto страницы магазина и посмотрите на детали ассемблерного.</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Измените класс</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Удаление учетной записи</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Скачать зависимостей</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Тип счета:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Псевдоним:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>Идентификатор класса:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Имя класса:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Учитель</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>Идентификатор пользователя:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Имя пользователя:</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Не удалось получить ваш учитель и класс.</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Учитель счета</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres сообщение об ошибке, это все, что мы знаем...</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Не удается подключиться к базе данных с помощью пользовательской строки подключения:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Ошибка: Не удалось установить подключение</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Параметры не удалось сохранить из-за недопустимого базы данных строка подключения. Пожалуйста введите строку правильного подключения или использовать по умолчанию для сохранения настроек.</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Ваши настройки были сброшены по умолчанию успешно. Приложение будет перезагружен.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Ваши настройки сохранены успешно. Приложение будет перезагружен.</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>Ошибка: Не удалось сохранить параметры.</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Успешно удалил ваш аккаунт, вы можете создать другую учетную запись.</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить свой аккаунт? Хотя вы можете создать новый один будут потеряны любые результаты экзамена в настоящее время у вас.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить свой аккаунт учитель? Удаление учетной записи учитель будет удалить все ваши классы, все учетные записи студентов внутри классов и все их результаты экзамена. Это действие не может быть отменено. Не забудьте передать класса или студент другой учитель если вы хотите сохранить свои данные.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Не удалось повторно войти в, пожалуйста вручную, выйдите из системы и повторного входа.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Удалено успешно</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Базы данных чтения &amp; ошибка записи:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Не удалось удалить учетную запись пользователя.</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Успешно удалил ваш аккаунт, включая</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Классы, содержащие в общей сложности</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>Учетные записи студентов и их результаты.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Передавать пользователю</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель и новый класс, к которому вы хотите передать.»</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Студенческий счет</value>
+  </data>
 </root>

@@ -6929,7 +6929,7 @@
     <value>Are you sure you want to delete </value>
   </data>
   <data name="DeleteConfirm" xml:space="preserve">
-    <value />
+    <value>Deleted Successfully</value>
   </data>
   <data name="Height" xml:space="preserve">
     <value>     Height: </value>
@@ -6951,5 +6951,236 @@
   </data>
   <data name="Width" xml:space="preserve">
     <value>Width: </value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Do you wish to save before opening a new file?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Save Completed</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>The file save successful.</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Apply Changes</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Dark Gray</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Dark - Dark Gray</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Default Colour</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>The deufalt colour for the shapes spawned.</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Defualt Grid Colour</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>The defualt colour of the grid.</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Default Size</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>The default size of spawned shapes</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Dark - Light Gray</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Dark - White</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Light Gray</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Reset Defaults</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>The application settings allow you to change default settings. These choices will be remembered for the next time you restart the application.</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size: </value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Successfully deleted your account, feel free to create another account.</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Account Type: </value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Alias Name: </value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres the error message, this is all we know...</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Are you sure you wish to delete your account? While you can create a new one you will lose any exam results you currently have.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Are you sure you wish to delete your teacher account? Deleting a teacher account will delete all your classes, all the student accounts inside of your classes and all of their exam results. This action can not be undone. Be sure to transfer a class or student to a different teacher if you wish to keep their data.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Failed to re-log you in, please manually logout and re-login. </value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Change Class</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>Class ID:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Class Name:</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Unable to connect to the database using the custom connection string:</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Connection String:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>DataBase Connection</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>ONLY TO BE CHANGED BY A SYSTEM ADMINISTRATOR</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Delete Account</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Deleted Successfully</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Dependency Download</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise 'Reset Defaults'.</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions goto the store page and look at the detials secton.</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Database Read &amp; Write Error: </value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>ERROR: Failed to establish a connection</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Failed to delete your user account. </value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Settings failed to save due to an invalid database connection string. Please enter a correct connection string or use default to save settings.</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Failed to retrieve your teacher and class.</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>High Resolution Display (1920×1080)+</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Language will update upon restart.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Below you can select the language to be used throughout the whole program. If you find a mistake in a translation feel free to help fix it on the GitHub repository.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Low End Device</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Low Resoultion Display</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Monitor Resoultion</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Changing this setting will make the application start-up size differ</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>If you are experiencing performance issues switch to 'Low End Device'</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Your settings have been reset back to defaults successfully. The application will now restart.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Your settings have been saved successfully. The application will now restart.</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Standard Device (Normal)</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Student Account</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Teacher Account</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Successfully deleted your account, including</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Classes, containing a total of </value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value> Student accounts and their results.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Transfer User</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Please select below a new teacher and a new class to which you would like to transfer to."</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>ERROR: Unable to save settings.</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Use Custom</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Use Default</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>User ID: </value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>UserName: </value>
   </data>
 </root>

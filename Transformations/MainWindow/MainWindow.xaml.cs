@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Net;
 using System.Reflection;
 using System.Windows;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml;
+using WPFLocalizeExtension.Engine;
 using Point = System.Windows.Point;
 
 namespace Transformations
 {
-	public partial class MainWindow : Window
+    public partial class MainWindow : Window
 	{
 		//Grid Variables
 		GridLine Grid;						//Creates a gird object.
@@ -54,6 +52,8 @@ namespace Transformations
 		public MainWindow()
 		{	
 			InitializeComponent();
+            LocalizeDictionary.Instance.Culture = new System.Globalization.CultureInfo(Properties.Settings.Default.Language);
+
             SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
 			splash.Show(true, true);
 			//Checks the database connection on startup.

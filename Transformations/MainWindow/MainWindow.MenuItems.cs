@@ -128,7 +128,7 @@ namespace Transformations
 		{
 			try
 			{
-				MessageBoxResult open = MessageBox.Show("Do you wish to save before opening a new file?", "Are you sure?",
+				MessageBoxResult open = MessageBox.Show(Properties.Strings.SaveBeforeOpening, Properties.Strings.AreYouSure,
 					System.Windows.MessageBoxButton.YesNoCancel,
 					MessageBoxImage.Information);
 
@@ -268,9 +268,9 @@ namespace Transformations
 						fs.Close();
 
 					}
-					MessageBox.Show("The file save successful.", "Save Completed", System.Windows.MessageBoxButton.OK,
-						MessageBoxImage.Information);
-				}
+                    MessageBox.Show(Properties.Strings.SaveSuccesful, Properties.Strings.SaveCompeted, System.Windows.MessageBoxButton.OK,
+                           MessageBoxImage.Information);
+                }
 			}
 			catch (Exception)
 			{
@@ -317,7 +317,7 @@ namespace Transformations
 					writer.WriteLine(SaveFile);
 					writer.Close();
 
-					MessageBox.Show("The file save successful.", "Save Completed", System.Windows.MessageBoxButton.OK,
+					MessageBox.Show(Properties.Strings.SaveSuccesful, Properties.Strings.SaveCompeted, System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Information);
 				}
 			}

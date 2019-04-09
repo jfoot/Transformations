@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -503,5 +503,239 @@
   </data>
   <data name="Width" xml:space="preserve">
     <value>Breite:</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Bist du sicher?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Möchten Sie vor dem Öffnen einer neuen Datei speichern?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Speichern fertig</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>Die Datei speichern erfolgreich.</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>Die Anwendungseinstellungen können Sie Standardeinstellungen ändern. Diese Auswahl werden für die nächste Zeit erinnert, die Sie die Anwendung neu starten.</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>Die Deufalt Farbe für die Formen hervorgebracht.</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Allgemeine</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Schwarz</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blau</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Defualt Raster Farbe</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>Die Defualt Farbe des Gitters.</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Grün</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Rot</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Dunkelgrau</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Dark - dunkelgrau</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Dark - hellgrau</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Hellgrau</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Dark - White</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Größe:</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Erfolgreich gelöscht</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Standardfarbe</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Änderungen übernehmen</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Standardgröße</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>Die Standardgröße des erzeugten Formen</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Standardeinstellungen zurücksetzen</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Erweiterte</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Erweiterte Einstellungen eignen sich für erfahrene Benutzer nur. Ändern Sie diese Einstellungen auf Ihr eigenes Risiko. Wenn "Reset Defaults" zu Problemen kommen.</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>Display mit hoher Auflösung (1920 × 1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Niedrige Resoultion Display</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Monitor Resoultion</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Das Ändern dieser Einstellung machen die Anwendung Start-up Größe abweichen</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Verbindungszeichenfolge:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>Datenbank-Verbindung</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>NUR AUF EINEM SYSTEM-ADMINISTRATOR GEÄNDERT WERDEN</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Sprache wird nach dem Neustart aktualisiert.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Unten können Sie die Sprache während des gesamten Programms verwendet werden. Wenn Sie einen Fehler in der Übersetzung finden zögern Sie nicht, um es auf GitHub Repository zu beheben.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Low-End-Gerät</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Leistung</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Grundgerät (Normal)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Verwenden Sie benutzerdefinierte</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Verwenden Sie Standard</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Wenn Sie Leistung Probleme Schalter auf "Low-End-Gerät" erleben</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Dieses Produkt wurde lizenziert und für Bildungseinrichtungen erstellt. Alle Rechte vorbehalten, Jonathan Foot ©. Für vollständige Allgemeine Geschäftsbedingungen Goto die Speicherseite und Blick auf die Detials i.d.</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Klasse wechseln</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Konto löschen</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Abhängigkeit-Download</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Kontotyp:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Alias-Name:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>Klassen-ID:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Klassennamen:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Lehrer</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>Benutzer-ID:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nutzername:</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Fehler beim Abrufen von Ihrem Lehrer und Klasse.</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Lehrer-Konto</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres die Fehlermeldung, das ist alles was, die wir wissen...</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Keine Verbindung zu der Datenbank mithilfe der benutzerdefinierten Verbindungszeichenfolge:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Fehler: Fehler beim Herstellen eine Verbindung</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Einstellungen fehlgeschlagen durch eine ungültige Datenbank-Verbindungszeichenfolge speichern. Bitte geben Sie eine korrekte Verbindungszeichenfolge oder verwenden Sie Standard, um Einstellungen zu speichern.</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Ihre Einstellungen wurden erfolgreich wieder auf Standardwerte zurückgesetzt. Die Anwendung wird neu gestartet.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Ihre Einstellungen wurden erfolgreich gespeichert. Die Anwendung wird neu gestartet.</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>Fehler: Nicht in der Lage, Einstellungen zu speichern.</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Ihr Konto wurde erfolgreich gelöscht fühlen Sie sich frei, um ein anderes Konto zu erstellen.</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie Ihr Konto löschen möchten? Während Sie ein neues erstellen können verlieren Sie alle Prüfungsergebnisse, die Sie derzeit haben.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie Ihre Lehrer-Konto löschen möchten? Ein Lehrer Konto löschen werden alle Klassen, alle Schülerkonten innerhalb Ihrer Klassen und alle ihre Prüfungsergebnisse. Diese Aktion kann nicht rückgängig gemacht werden. Achten Sie darauf, eine Klasse oder ein Student an einem anderen Lehrer übertragen, wenn Sie ihre Daten behalten möchten.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Sie im neu Anmeldung fehlgeschlagen, bitte manuell abmelden und erneut anmelden.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Erfolgreich gelöscht</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Datenbank lesen &amp; Schreibfehler:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Ihr Benutzerkonto löschen fehlgeschlagen.</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Ihr Konto wurde erfolgreich gelöscht einschließlich</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Klassen mit insgesamt</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>Schülerkonten und deren Ergebnisse.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Benutzer zu übertragen</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Bitte wählen Sie unten einen neuen Lehrer und eine neue Klasse, auf die Sie übertragen möchten."</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Ausbildungskonto</value>
   </data>
 </root>
