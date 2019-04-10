@@ -39,20 +39,31 @@ namespace Transformations
 		//Ghost Shapes
 		public XmlReader XmlReader;				//Used to store a XML file of a shape
 		public string SaveFile;					//Used to store a save file
-		//Declares different mouse cursors 
-	    
+		
+        //Declares different mouse cursors     
         //public readonly Cursor GrabCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grab")));
 		//public readonly Cursor GrabbingCursor = new Cursor(new System.IO.MemoryStream(LocalizationProvider.GetLocalizedValue<int>("grabbing")));
 
 		//Animation Times
-		public int[] Times = { 0, 1, 3, 5, 10, 15 };
+		public readonly int[] Times = { 0, 1, 3, 5, 10, 15 };
 		//Reflection
 		public Line ReflLine = new Line();		//Used to create the reflection line on the canvas
 	
 		public MainWindow()
 		{	
 			InitializeComponent();
+
+            //If this is the first time loading the program first try and see if you can find the language of the 
+            //user and match it with one of the languages the program is translated to. If it can't find a translation
+            //then it will set it to EN English by default. 
+            if (!Properties.Settings.Default.IsSetUp)
+            {
+                Properties.Settings.Default.Language = System.Globalization.CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
+                Properties.Settings.Default.IsSetUp = true;
+                Properties.Settings.Default.Save();
+            }
             LocalizeDictionary.Instance.Culture = new System.Globalization.CultureInfo(Properties.Settings.Default.Language);
+                      
 
             SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
 			splash.Show(true, true);
@@ -71,9 +82,9 @@ namespace Transformations
 			{
 				conn.Close();
 			}
-
-			//Change the width and height of the application based upon the monitors resolution
-			this.Width = Properties.Settings.Default.DefaultResolution == false ? 850 : 1100;   
+            
+            //Change the width and height of the application based upon the monitors resolution
+            this.Width = Properties.Settings.Default.DefaultResolution == false ? 850 : 1100;   
 			this.Height = Properties.Settings.Default.DefaultResolution == false ? 600 : 900;
 
 			//Set the animation frame rate depending upon the graphics setting
@@ -125,6 +136,5 @@ namespace Transformations
 			Grid = new GridLine().DrawGrid(MaxValue, ScaleFactor, MyCanvas);
 			LabelsChecked(sender, e);
 		}
-
     }
 }

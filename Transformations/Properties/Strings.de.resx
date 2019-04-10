@@ -639,9 +639,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Wenn Sie Leistung Probleme Schalter auf "Low-End-Gerät" erleben</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Dieses Produkt wurde lizenziert und für Bildungseinrichtungen erstellt. Alle Rechte vorbehalten, Jonathan Foot ©. Für vollständige Allgemeine Geschäftsbedingungen Goto die Speicherseite und Blick auf die Detials i.d.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Klasse wechseln</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Ausbildungskonto</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Dieses Produkt wurde an Bildungseinrichtungen lizenziert und erstellt. Alle Rechte sind Jonathan Foot © vorbehalten. Die vollständigen Geschäftsbedingungen finden Sie auf der Store-Seite und im Abschnitt mit den Details.!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Account Erstellung</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Konto erstellen</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>zuzuordnen</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Fehler bei unzureichenden Berechtigungen:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Fehler beim Abrufen Ihres Windows-Benutzernamens. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Benutzerkonto erfolgreich erstellt, die Anwendung wird jetzt neu gestartet und Sie werden angemeldet.!</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Konto erstellt</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Fehler beim Abrufen von Klassen, die dem ausgewählten Lehrer gehören. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Fehler beim Erstellen eines neuen Benutzerkontos.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Fehler beim Abrufen der Lehrernamen !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Die Lehrer- oder Klassenauswahl wurde leer oder ungültig gelassen. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Informationen</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Willkommen auf dem Studentenportal, können hier Sie überprüfen Ihre Vergangenheit Prüfung führt und eine neue Prüfung ablegen. Ihre Ergebnisse werden sichtbar mit Ihrem Lehrer. Gestartete Anwendung die Registerkarten oben, wählen ein Thema und Prüfung Schwierigkeiten bekommen.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Einfache Prüfung</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Penisvergrößerung-Prüfungen</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Prüfungen nach Schwierigkeitsgrad</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Prüfungen nach Typ</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Ergebnisse als PDF-Datei exportieren</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Gast-Login: Kein Fortschritt wird gespeichert.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Harte Prüfung</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Aktuelle Prüfungsergebnisse</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Reflexion-Prüfungen</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Wieder dem Studium</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Drehung-Prüfungen</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Nehmen Sie eine Prüfung</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Hier kann man eine Prüfung zu den Themen Transformationen und testen Sie Ihr wissen. Es gibt zwei Schwierigkeiten, Prüfungen, leicht und schwer. Es ist Sie Versuch einfach und nur Fortschritte auf harte empfehlen sobald Sie 90 erreicht haben % +. Jede Prüfung wird nach dem Zufallsprinzip generiert und die Plätze werden am Ende jeder Prüfung aufgezeichnet werden. Keine Sorge, nehmen Sie eine Prüfung so oft wie Sie wollen!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Testen Zone</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Übersetzung-Prüfungen</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Fehler beim Abrufen Ihrer Prüfung Ergebnisdaten.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>Sie sind derzeit als Gast angemeldet, Gast haben keine Ergebnisse exportieren speichern.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Versäumt, Ihre Ergebnisse in einer PDF-Datei zu exportieren.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Ihre Ergebnisse wurden erfolgreich auf eine PDF-Datei gespeichert.</value>
   </data>
 </root>

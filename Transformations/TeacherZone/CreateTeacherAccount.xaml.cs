@@ -20,8 +20,8 @@ namespace Transformations
             catch (Exception)
             {
                 //MessageBox.Show(
-                //   "Failed to retrieve your Windows User name. " + LocalizationProvider.GetLocalizedValue<string>("WindowsError"),
-                //   "Insufficient Privileges Error : 200 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                //   "Failed to retrieve your Windows User name. " + Properties.Strings.WindowsError,
+                //   Properties.Strings.EM_InsuffientPrivileges + "200 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
     	}
         private void CreateTeacherAccountButton(object sender, RoutedEventArgs e)
@@ -71,7 +71,7 @@ namespace Transformations
                 {
                     //MessageBox.Show(
                     //  "Failed to create a new teacher account. " + Properties.Strings.DataBaseError ,
-                    //  "DataBase Read & Write Error : 102 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    //  Properties.Strings.EM_DataBaseReadError + "102 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else

@@ -639,9 +639,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Si usted está experimentando problemas de rendimiento cambiar a 'Aparato baja'</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Este producto ha sido licenciado a y creado para Institutos educativos. Todos los derechos reservados a Jonathan Foot ©. Total términos y condiciones de ir la página de la tienda y mirar los apartados detials.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Cambio de clase</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Cuenta de estudiante</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Este producto ha sido autorizado y creado para institutos educativos. Todos los derechos reservados a Jonathan Foot ©. Para ver todos los términos y condiciones, vaya a la página de la tienda y consulte la sección de detalles.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>nombre</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Crear Cuenta</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Crear cuenta</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>¡Para ser asignado!</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Error de privilegios insuficientes:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Error al recuperar su nombre de usuario de Windows. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>La cuenta de usuario se creó correctamente, la aplicación ahora se reiniciará e iniciará sesión.</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Cuenta creada</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Error al recuperar las clases de propiedad del profesor seleccionado. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Error al crear una nueva cuenta de usuario.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Error al recuperar los nombres de los maestros. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>La selección del profesor o de la clase se ha dejado en blanco o no es válida. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Bienvenido al portal del estudiante, aquí puede revisar tu pasado examen de los resultados y tomar un nuevo examen. Los resultados serán visibles a su maestro. Utilizar a iniciado las pestañas de arriba para seleccionar un tema y examen de la dificultad.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Examen fácil</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Exámenes Enlargment</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Exámenes por dificultad</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Exámenes por tipo</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Resultados de la exportación a PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Invitado Login: no se guardará ningún progreso.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Duro examen</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Últimos resultados de los exámenes</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Exámenes de reflexión</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Volver a estudiar</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Exámenes de rotación</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Tomar un examen</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Aquí se puede tomar un examen sobre los temas de las transformaciones y prueba tus conocimientos. Hay dos dificultades para exámenes, fáciles y difíciles. Es recomendamos intento fácil y sólo progreso en duro una vez que has logrado 90% +. Cada examen se genera aleatoriamente y las marcas se registrarán al final de cada examen. No se preocupe usted puede tomar un examen tantas veces como quieras!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Zona de pruebas</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Exámenes de traducción</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Error al recuperar los datos de resultados de examen.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>Actualmente está conectado como un invitado, huésped que no guardar los resultados de exportación.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Error al exportar los resultados a formato PDF.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Los resultados se han salvado con éxito a un PDF.</value>
   </data>
 </root>

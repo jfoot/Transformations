@@ -639,9 +639,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Pokud jste má problémy s výkonem přepnout do "Low End zařízení"</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Tento produkt licencován a vytvořil pro vzdělávací instituce. Všechna práva vyhrazena Jonathan nohy ©. Pro plné všeobecných prodejních podmínek goto stránku obchodu a podívat se na údaje podle bodu.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Změna třídy</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Studentské konto</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Tento produkt byl licencován a vytvořen pro vzdělávací instituce. Všechna práva vyhrazena pro Jonathana Foot ©. Kompletní podmínky naleznete na stránce obchodu a podívejte se do sekce Podrobnosti.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>název</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Založení účtu</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Vytvořit účet</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>Být přidělen!</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Nedostatečná oprávnění Chyba:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Nepodařilo se načíst uživatelské jméno systému Windows. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Uživatelský účet byl úspěšně vytvořen, aplikace se nyní restartuje a přihlásí.</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Účet se vytvořil.</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Nepodařilo se načíst třídy vlastněné vybraným učitelem. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Nepodařilo se vytvořit nový uživatelský účet.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Nepodařilo se načíst jména učitelů. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Výběr učitele nebo třídy byl ponechán prázdný nebo neplatný. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Informace!</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Vítejte v portálu studenta, zde si můžete prohlédnout svou minulost, zkoušky výsledků a vzít novou zkoušku. Vaše výsledky budou zobrazitelné na váš učitel. Chcete-li získat začal používat záložky nahoře vybrat téma a zkoušku potíže.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Jednoduchá zkouška</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Zvětšení zkoušky</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Zkoušky dle obtížnosti</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Zkoušky podle typu</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Výsledky exportovat do PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Přihlášení hosta: Žádný pokrok se neuloží.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Tvrdá zkouška</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Nedávné výsledky zkoušky</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Reflexe zkoušky</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Návrat ke studiu</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Rotace zkoušky</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Zkoušku</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Zde si můžete vzít na zkoušku na témata transformace a otestujte si své znalosti. Existují dva problémy zkoušky, snadné a pevné. To je důrazně doporučujeme pokus o snadné a jen pokrok na tvrdé Jakmile jste dosáhli 90 % +. Každá zkouška je náhodně vygenerován a značky bude zaznamenána na konci každé zkoušky. Nebojte se si můžete vzít na zkoušku jako tolikrát, kolikrát budete chtít!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Testovací zóna</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Překlad zkoušky</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Nepodařilo se načíst data výsledků zkoušky.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>Jste aktuálně přihlášeni jako host, hodnocení nemají žádné výsledky exportu uložit.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Nepodařilo se exportovat výsledky do souboru PDF.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Vaše výsledky byly úspěšně uloženy do PDF.</value>
   </data>
 </root>

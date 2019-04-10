@@ -73,7 +73,7 @@ namespace Transformations.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool DefaultPerformance {
             get {
                 return ((bool)(this["DefaultPerformance"]));
@@ -191,18 +191,6 @@ namespace Transformations.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool CheckForUpdates {
-            get {
-                return ((bool)(this["CheckForUpdates"]));
-            }
-            set {
-                this["CheckForUpdates"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("EN")]
         public string Language {
             get {
@@ -210,6 +198,18 @@ namespace Transformations.Properties {
             }
             set {
                 this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsSetUp {
+            get {
+                return ((bool)(this["IsSetUp"]));
+            }
+            set {
+                this["IsSetUp"] = value;
             }
         }
     }
