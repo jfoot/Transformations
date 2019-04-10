@@ -639,9 +639,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Om du upplever prestandaproblem växla till 'Låg slutet enhet'</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Denna produkt har varit licensierad till och skapat för utbildningsinstitut. Alla rättigheter reserverade till Jonathan Foot ©. För fullständiga regler och villkor goto den store sida och titta på den detials secton.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Ändra klass</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Studentkonto</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Denna produkt har licensierats till och skapats för utbildningsinstitut. Alla rättigheter reserverade till Jonathan Foot ©. För fullständiga villkor gå till butikssidan och titta på detaljerna avsnittet!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>namn</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Avbryt skapande av konto</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Skapa konto</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>Resursnummer eller resursgrupp som ska tilldelas.</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Konto har skapats</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Otillräckliga privilegier Fel:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Det gick inte att hämta ditt Windows-användarnamn. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Användarkonto som har skapats, kommer nu att starta om och logga in.!</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Misslyckades med att hämta klasser som ägs av utvalda lärare. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Misslyckades med att skapa ett nytt användarkonto.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Misslyckades med att hämta lärarnamn. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Lärare eller klassval har lämnats tomt eller ogiltigt. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Välkommen till Studentportalen, här kan du granska dina tidigare exam resultat och ta en ny examen. Dina resultat kommer att vara synliga för din lärare. Att få igång använda flikarna ovan för att välja ett ämne och tentamen svårigheter.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Lätt Exam</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Förstoring-examina</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Prov av svårigheter</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Proven av typ</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Exportera resultat till PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Gästinloggning: Inga framsteg kommer att sparas.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Svårt examen</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Senaste testresultat</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Speglar-examina</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Tillbaka till studera</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Rotation-examina</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Ta en examen</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Här kan du ta en examen på ämnena av transformationer och testa dina kunskaper. Det finns två svårigheter till tentor, lätt och svårt. Det är starkt rekommendera du försök lätt och endast framsteg på hårt när du har uppnått 90% +. Varje examen genereras slumpmässigt och dina varumärken kommer att spelas in i slutet av varje tentamen. Oroa dig inte du kan ta en examen så många gånger du vill!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Testning zon</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Översättning-examina</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Det gick inte att hämta din tentamen Resultatdata.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>Du är inloggad som gäst, guest har ingen spara resultaten att exportera.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Det gick inte att exportera resultaten till en PDF-fil.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Dina resultat har sparats till en PDF.</value>
   </data>
 </root>

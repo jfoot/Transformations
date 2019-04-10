@@ -168,10 +168,9 @@ namespace Transformations
 
             size_slider.Value = (Properties.Settings.Default.DefaultHeight) / (75 / 5);
             size_label.Content = Properties.Strings.Size + ": " + size_slider.Value.ToString();
+                       
 
-
-            LangDrop.SelectedItem = LangDrop.Items.Cast<object>().Single(p => ((ComboBoxItem)p).Tag.Equals(Properties.Settings.Default.Language));
-
+            LangDrop.SelectedItem = LangDrop.Items.Cast<object>().Any(p => ((ComboBoxItem)p).Tag.Equals(Properties.Settings.Default.Language)) ? LangDrop.Items.Cast<object>().Single(p => ((ComboBoxItem)p).Tag.Equals(Properties.Settings.Default.Language)) : LangDrop.Items.Cast<object>().Single(p => ((ComboBoxItem)p).Tag.Equals("EN"));
         }
         private void BlueShapeChecked(object sender, RoutedEventArgs e)   //Blue colour checked
         {

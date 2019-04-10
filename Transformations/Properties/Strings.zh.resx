@@ -642,9 +642,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>如果您遇到性能问题, 请切换到 "低端设备"</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>该产品已获得教育机构的许可并为其创建。所有权利保留给乔纳森第足©。要了解完整的条款和条件, 请访问商店页面, 并查看 detials secton。</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>更改类</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>学生账户</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>取消帐户创建</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>创建帐户</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>由于此用户以前在另一台计算机上安装过来自策略 %2!s! 的已发布应用程序 %1!s!，所以它设置成已分配。</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>已创建帐户</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>该产品已获得许可并为教育机构创建。保留所有权利Jonathan Foot©。有关完整的条款和条件，请转到商店页面并查看详细信息部分。</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>权限不足错误：</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>无法检索Windows用户名。</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>用户帐户已成功创建，应用程序现在将重新启动并登录。</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>无法检索所选教师拥有的课程。</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>无法创建新的用户帐户。</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>无法检索教师姓名。</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>教师或班级选择已空白或无效。 </value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>信息!</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>欢迎来到学生门户网站, 在这里您可以查看您过去的考试成绩并参加新的考试。你的成绩将向你的老师观看。若要开始使用上面的选项卡选择主题和考试难度。</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>简单的考试</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>扩大考试</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>难度考试</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>按类型划分的考试</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>将结果导出到 PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>来宾登录: 不会保存任何进度。</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>硬质考试</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>最近的考试结果</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>反射考试</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>重返学习</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>旋转考试</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>参加考试</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>在这里, 您可以参加关于转换主题的考试, 并测试您的知识。考试有两个困难, 容易和困难。强烈建议您尝试轻松, 只有在达到90% 以上后才会艰难地前进。每次考试都是随机生成的, 每次考试结束时都会记录你的分数。别担心, 你可以参加尽可能多的考试, 你想!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>测试区</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>翻译考试</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>检索考试成绩数据失败。</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>您当前以来宾身份登录, 来宾没有要导出的保存结果。</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>无法将结果导出到 PDF。</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>您的结果已成功保存到 PDF。</value>
   </data>
 </root>

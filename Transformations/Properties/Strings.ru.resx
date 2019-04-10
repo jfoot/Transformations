@@ -639,9 +639,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Если вы испытываете производительность вопросы переключения «Низкий конец устройства»</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Этот продукт по лицензии и создан для образовательных учреждений. Все права защищены Джонатан ноги ©. Для полного положения и условия goto страницы магазина и посмотрите на детали ассемблерного.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Измените класс</value>
   </data>
@@ -737,5 +734,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Студенческий счет</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Этот продукт был лицензирован и создан для образовательных учреждений. Все права защищены Джонатан Фут ©. Для ознакомления с полными условиями перейдите на страницу магазина и просмотрите раздел с подробностями.!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>имя</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Создание аккаунта</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Создать учетную запись</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>Быть назначенным!</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Ошибка недостаточных привилегий:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Не удалось получить ваше имя пользователя Windows. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Учетная запись пользователя успешно создана, приложение перезапустится и войдет в систему.!</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Создана учетная запись</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Не удалось получить классы, принадлежащие выбранному учителю. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Не удалось создать новую учетную запись пользователя.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Не удалось получить имена учителей. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Выбор учителя или класса был оставлен пустым или недействительным. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Сведения.</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Добро пожаловать на Студенческий портал, здесь вы можете просмотреть ваше прошлое экзамен результаты и принять новый экзамен. Ваши результаты будут видны вашим учителем. Получить начал использовать вкладки выше выбрать тему и экзамен трудности.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Легко экзамен</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Увеличение экзамены</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Экзамены по сложности</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Экзамены по типу</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Экспорт результатов в PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Гостевой вход: Никакого прогресса будут сохранены.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Жесткий экзамен</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Недавние результаты экзамена</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Отражение экзамены</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Вернуться к изучению</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Вращение экзамены</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Сдать экзамен</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Здесь вы можете сдавать экзамен по вопросам преобразований и проверить свои знания. Существует две трудности для экзаменов, легкий и жесткий. Это настоятельно рекомендуем вам попытка легко и только прогресс на жесткий, как только вы достигли 90% +. Каждый экзамен генерируется случайным образом, и ваши знаки будут записаны в конце каждого экзамена. Не волнуйтесь вы можете сдавать экзамен столько раз, сколько пожелаете!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Тестирование зоны</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Экзамены для перевода</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Не удалось получить данные результатов экзамена.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>В настоящее время вы вошли как гость, гость не имеет права сохранять результаты для экспорта.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Не удалось экспортировать результаты в файл PDF.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Ваши результаты успешно сохранены в формате PDF.</value>
   </data>
 </root>

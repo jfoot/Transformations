@@ -177,7 +177,7 @@ namespace Transformations
             {
                 ////MessageBox.Show(
                 ////    "Failed to delete class. " + Properties.Strings.DataBaseError ,
-                ////    "DataBase Read & Write Error : 102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                ////    Properties.Strings.EM_DataBaseReadError + "102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void SeeClassData(object sender, RoutedEventArgs e)     //See all the class data
@@ -254,7 +254,7 @@ namespace Transformations
                 {
                     //MessageBox.Show(
                     //    "Failed to retrieve the classes you own. " + Properties.Strings.DataBaseError ,
-                    //    "Database Read Error : 100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    //    Properties.Strings.EM_DataBaseReadError + "100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

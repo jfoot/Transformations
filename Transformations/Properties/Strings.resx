@@ -6962,7 +6962,7 @@
     <value>Save Completed</value>
   </data>
   <data name="SaveSuccesful" xml:space="preserve">
-    <value>The file save successful.</value>
+    <value>File save successful.</value>
   </data>
   <data name="ApplyChanges" xml:space="preserve">
     <value>Apply Changes</value>
@@ -7088,7 +7088,7 @@
     <value>Advanced settings are designed for experienced users only. Change these settings at your own risk. If problems arise 'Reset Defaults'.</value>
   </data>
   <data name="DetailsText2" xml:space="preserve">
-    <value>This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions goto the store page and look at the detials secton.</value>
+    <value>This product has been licensed to and created for educational institutes. All Rights reserved to Jonathan Foot©. For full terms and conditions go to the store page and look at the details section.</value>
   </data>
   <data name="EM_DBRandWError" xml:space="preserve">
     <value>Database Read &amp; Write Error: </value>
@@ -7182,5 +7182,104 @@
   </data>
   <data name="UserName" xml:space="preserve">
     <value>UserName: </value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>User account successfully created, the application will now restart and log you in.</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Account Created</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Account Creation</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Failed to retrieve classes owned by selected teacher. </value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Create Account</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Easy Exam</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Insufficient Privileges Error : </value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Enlargment Exams</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Exams By Difficulty</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Exams By Type</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>_Export results to PDF</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Failed to create a new user account.</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Failed to retrieve your exam results data. </value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>You are currently logged in as a guest, guest have no save results to export.</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Guest Login: No Progress will be saved.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Hard Exam</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Failed to export your results to a PDF. </value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Your results have been saved successfully to a PDF.</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Recent Exam Results</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Reflection Exams</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>_Return to Studying</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Rotation Exams</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Take An Exam</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Welcome to the student portal, here you can review your past exam results and take a new exam. Your results will be viewable to your teacher. To get started use the tabs above to select a topic and exam difficulty.</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Here you can take an exam on the topics of transformations and test your knowledge. There are two difficulties to exams, easy and hard. It is strongly recommend you attempt easy and only progress onto hard once you've achieved 90%+. Each exam is randomly generated and your marks will be recorded at the end of every exam. Don't worry you can take an exam as many times as you wish!</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>To Be assigned</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Failed to retrieve teacher names. </value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Teacher or class selection has been left blank or invalid. </value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Testing Zone</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Translation Exams</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Failed to retrieve your Windows User name. </value>
   </data>
 </root>

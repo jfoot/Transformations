@@ -7084,9 +7084,6 @@
   <data name="PerformanceText" xml:space="preserve">
     <value>Si vous rencontrez des performances interrupteur questions « Low End Device »</value>
   </data>
-  <data name="DetailsText2" xml:space="preserve">
-    <value>Ce produit a été autorisé à et créé pour les établissements d’enseignement. Tous droits réservés à Jonathan Foot ©. Pour plein conditions générales goto la page de la boutique et regarder la secton detials.</value>
-  </data>
   <data name="ChangeClass" xml:space="preserve">
     <value>Changement de classe</value>
   </data>
@@ -7182,5 +7179,107 @@
   </data>
   <data name="StudentAccount" xml:space="preserve">
     <value>Compte étudiant</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Ce produit a été concédé sous licence à et créé pour les instituts d&amp;#39;enseignement. Tous droits réservés à Jonathan Foot ©. Pour connaître les conditions générales, accédez à la page du magasin et à la section Détails.!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>nom</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Création de compte</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Créer un compte</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>A affecter</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Erreur de privilèges insuffisants:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Impossible de récupérer votre nom d&amp;#39;utilisateur Windows. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Compte d&amp;#39;utilisateur créé avec succès, l&amp;#39;application va maintenant redémarrer et vous connecter.!</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Compte créé</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Échec de récupération des classes appartenant à l&amp;#39;enseignant sélectionné. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Échec de la création d&amp;#39;un nouveau compte d&amp;#39;utilisateur.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Impossible de récupérer les noms des enseignants. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>La sélection de l&amp;#39;enseignant ou de la classe est vide ou invalide. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information !</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Bienvenue sur le portail étudiant, ici vous pouvez consulter votre passé examen des résultats et prendre un nouvel examen. Vos résultats seront visibles à votre professeur. Pour obtenir commencé utiliser les onglets ci-dessus pour choisir une difficulté du sujet et examen.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Examen facile</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Examens de l’élargissement</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Examens par difficulté</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Examens par Type</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Exporter les résultats au format PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Invité Connectez-vous : Aucun progrès ne seront sauvegardés.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Examen dur</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Récents résultats de l’examen</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Examens de la réflexion</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Retour à l’étude</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Examens de rotation</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Passer un examen</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Ici vous pouvez passer un examen sur les thèmes des transformations et tester vos connaissances. Il y a deux difficultés aux examens, faciles et difficiles. Il est fortement vous recommander tentative facile et que les progrès sur dur une fois que vous avez atteint 90 % +. Chaque examen est généré de façon aléatoire et vos points seront enregistrés à la fin de chaque examen. Ne vous inquiétez pas vous pouvez prendre un examen autant de fois que vous le souhaitez !</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Zone de test</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Examens de la traduction</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Impossible d’extraire les données des résultats de votre examen.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>Vous êtes actuellement connecté en tant qu’invité, les commentaires n’ont pas enregistrer les résultats à l’exportation.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Impossible d’exporter vos résultats au format PDF.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Vos résultats ont été enregistrés sur un fichier PDF.</value>
   </data>
 </root>

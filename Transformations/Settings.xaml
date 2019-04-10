@@ -35,15 +35,10 @@
                         </Grid>
                     </GroupBox>
 
-
-
                     <GroupBox Height="92" Margin="16,-5,10,0" VerticalAlignment="Top" Header="{lex:Loc DefualtGridColour}">
                         <Grid>
                             <TextBlock Width="196" Margin="6,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc DefualtGridColourText}" TextWrapping="Wrap" />
-
-
                             <UniformGrid Margin="0,20,124,-20" Rows="4">
-
                                 <RadioButton x:Name="light_gray" Width="100" HorizontalAlignment="Left" Content="{lex:Loc LightGray}" GroupName="default_grid_colour" />
                                 <RadioButton x:Name="black_light_gray" Width="121" HorizontalAlignment="Left" Content="{lex:Loc DLightGray}" GroupName="default_grid_colour" />
 
@@ -84,7 +79,6 @@
                                        HorizontalAlignment="Left" VerticalAlignment="Top"
                                        OpacityMask="Black" Source="Resources/black_white.png"
                                        Visibility="{Binding IsChecked, ElementName=black_white, Mode=TwoWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
-
                             </Grid>
                         </Grid>
                     </GroupBox>
@@ -133,7 +127,7 @@
                                    Content="{lex:Loc DBWarning}"
                                    FontFamily="Arial" FontWeight="Bold" />
                             <UniformGrid Columns="2">
-                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc ConnString}" />
+                                <Label Width="116" Margin="-9,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc ConnString}" />
                                 <TextBox x:Name="connectionstring"
                                          Width="233" Height="23"
                                          Margin="-68,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -173,29 +167,24 @@
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Español (ES)" />
                             </WrapPanel>
                         </ComboBoxItem>
-
                         <ComboBoxItem Tag="DE">
                             <WrapPanel>
                                 <Image Height="20" Source="Resources/GermanF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Deutsche (DE)" />
                             </WrapPanel>
                         </ComboBoxItem>
-
-
                         <ComboBoxItem Tag="SV">
                             <WrapPanel>
                                 <Image Height="20" Source="Resources/SwedenF.png" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Svenska (SV)" />
                             </WrapPanel>
                         </ComboBoxItem>
-
                         <ComboBoxItem Tag="RU">
                             <WrapPanel>
                                 <Image Height="20" Source="Resources/RussianF.jpg" />
                                 <TextBlock Padding="5" VerticalAlignment="Center" Text="Pусский (RU)" />
                             </WrapPanel>
                         </ComboBoxItem>
-
                         <ComboBoxItem Tag="CS">
                             <WrapPanel>
                                 <Image Height="20" Source="Resources/CzechF.png" />
@@ -207,7 +196,6 @@
                     <Label Margin="144,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc Language}" FontSize="18" FontWeight="Bold" />
                     <TextBlock Margin="203,364,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc LanguageText}" TextWrapping="Wrap" />
                     <TextBlock Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc LanguageText2}" TextWrapping="Wrap" />
-
                 </Grid>
             </TabItem>
             <TabItem Header="{lex:Loc Details}">
@@ -237,11 +225,10 @@
                         <Label Width="100" Height="100" Content="{lex:Loc ver}" />
                         <Label x:Name="Version" Width="100" Height="100" Content="V X" />
                     </UniformGrid>
-                    <TextBlock Margin="10,347,220,9.6" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="{lex:Loc DependencyDownload}" TextDecorations="Underline" TextWrapping="Wrap" />
+                    <TextBlock Margin="10,347,9.6,9.6" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="{lex:Loc DependencyDownload}" TextDecorations="Underline" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
         </TabControl>
-
         <Button x:Name="ResetDefualtsButton" Margin="171,401,168,10" Click="ResetChanges" Content="{lex:Loc ResetDefualts}" />
         <Button x:Name="ApplyChangesButton" Margin="314,401,12,10" Click="ApplyChanges" Content="{lex:Loc ApplyChanges}" />
     </Grid>
