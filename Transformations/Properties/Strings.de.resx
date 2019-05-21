@@ -837,4 +837,40 @@
   <data name="PDFSaved" xml:space="preserve">
     <value>Ihre Ergebnisse wurden erfolgreich auf eine PDF-Datei gespeichert.</value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Versuche</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Frage</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Partitur</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Koordinaten:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 Grad</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 Grad</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 Grad</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Ausfahrt Prüfung</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Tipp</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Senden</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Tipp: Die Antwort könnte sein, 0,5 / nicht-ganzzahlige</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Hinweis: Diese Form gedreht hat: 0 Grad im Uhrzeigersinn</value>
+  </data>
 </root>

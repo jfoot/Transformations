@@ -4,7 +4,7 @@
         x:Name="window" Title="Translation_EasyExam"
         MinWidth="850" MinHeight="600"
         d:DesignHeight="600" d:DesignWidth="850" lex:LocalizeDictionary.DesignCulture="en-GB" lex:ResxLocalizationProvider.DefaultAssembly="Transformations" lex:ResxLocalizationProvider.DefaultDictionary="Strings" ResizeMode="NoResize" Topmost="True"
-        WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" 
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -162,7 +162,7 @@
                Width="214" Height="83"
                HorizontalAlignment="Right" VerticalAlignment="Bottom" HorizontalContentAlignment="Right"
                Content="0:00" FontSize="48" />
-        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="Exit Exam" />
+        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="{lex:Loc ExitExam}" />
 
     </Grid>
 </Window>

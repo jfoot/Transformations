@@ -96,7 +96,7 @@
         </StackPanel>
         <Button Width="112" Height="38"
                 Margin="0,0,82,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="SubmitAnswer" Content="Submit" FontWeight="Bold" />
+                Click="SubmitAnswer" Content="{lex:Loc Submit}" FontWeight="Bold" />
 
 
         <Label x:Name="question"
@@ -108,9 +108,9 @@
                  Width="128" Height="23"
                  Margin="361,0,361,9" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
                  Text="0" TextWrapping="Wrap" />
-        <RadioButton x:Name="XButton" Margin="361,0,438,37" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="X Line" GroupName="lineType" IsChecked="True" />
-        <RadioButton x:Name="YButton" Margin="438,0,361,37" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Y Line" GroupName="lineType" />
-        <Label Margin="0,0,82,48" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tip: Answer maybe a .5" FontStyle="Italic" />
+        <RadioButton x:Name="XButton" Margin="342,0,456.6,37.4" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="{lex:Loc XAxisRef}" GroupName="lineType" IsChecked="True" />
+        <RadioButton x:Name="YButton" Margin="465,0,333.6,37.4" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="{lex:Loc YAxisRef}" GroupName="lineType" />
+        <Label Margin="0,0,82,48" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="{lex:Loc Tip1}" FontStyle="Italic" />
 
 
         <Image Grid.RowSpan="2" Width="351" Height="95" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="/Transformations;component/Resources/logo3.png" />
@@ -122,6 +122,6 @@
         <Button Grid.Row="1"
                 Width="238" Height="80"
                 Margin="306,0" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Click="Exit" Content="Exit Exam" />
+                Click="Exit" Content="{lex:Loc ExitExam}" />
     </Grid>
 </Window>

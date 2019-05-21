@@ -74,7 +74,7 @@
                 Click="DrawRays">
             <StackPanel Width="145" Height="30" Orientation="Horizontal">
                 <Image Width="28" Margin="0,0,0,7" Source="/Transformations;component/Resources/pen.png" />
-                <TextBlock Width="117" Margin="0,7" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Draw Ray-lines" TextAlignment="Center" />
+                <TextBlock Width="117" Margin="0,7" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{lex:Loc DrawRaylinesString}" TextAlignment="Center" />
             </StackPanel>
         </Button>
         <Button x:Name="delete_ray"
@@ -84,7 +84,7 @@
                 Click="DeleteRays">
             <StackPanel Width="155" Height="34" Orientation="Horizontal">
                 <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
-                <TextBlock Width="125" Margin="0,9" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Delete Ray-lines" TextAlignment="Center" />
+                <TextBlock Width="125" Margin="0,9" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{lex:Loc EDeleteRayLines}" TextAlignment="Center" />
             </StackPanel>
         </Button>
 
@@ -133,11 +133,11 @@
                       Grid.Row="1"
                       Width="112" Height="30"
                       Margin="0,0,82,53" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                      Checked="HintsOn" Content="Hint" FontStyle="Italic" Unchecked="HintsOff" />
+                      Checked="HintsOn" Content="{lex:Loc Hint}" FontStyle="Italic" Unchecked="HintsOff" />
         <Button Grid.Row="1"
                 Width="112" Height="38"
                 Margin="0,0,81.6,9.8" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="SubmitAnswer" Content="Submit" FontWeight="Bold" />
+                Click="SubmitAnswer" Content="{lex:Loc Submit}" FontWeight="Bold" />
         <Label Grid.Row="1"
                Width="120" Height="35"
                Margin="233,0,497,44" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
@@ -147,7 +147,7 @@
                Width="214" Height="83"
                HorizontalAlignment="Right" VerticalAlignment="Bottom" HorizontalContentAlignment="Right"
                Content="0:00" FontSize="48" />
-        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="Exit Exam" />
+        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="{lex:Loc ExitExam}" />
         <TextBox x:Name="XGuess"
                  Grid.Row="1"
                  Width="68" Height="23"

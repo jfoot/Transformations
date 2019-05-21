@@ -837,4 +837,40 @@
   <data name="PDFSaved" xml:space="preserve">
     <value>Vaše výsledky byly úspěšně uloženy do PDF.</value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Pokusy</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Otázka</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Skóre</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Souřadnice:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 stupňů</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 stupňů</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 stupňů</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Konec zkoušky</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Odeslat</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Tip: Odpověď může být 0,5 / celé číslo</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Tip: Tento obrazec otočit: 0 stupňů ve směru hodinových ručiček</value>
+  </data>
 </root>

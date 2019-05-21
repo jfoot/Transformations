@@ -837,4 +837,40 @@
   <data name="PDFSaved" xml:space="preserve">
     <value>Ваши результаты успешно сохранены в формате PDF.</value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Попытки</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Вопрос</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Оценка</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Координаты:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 градусов</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 градусов</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 градусов</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Выход экзамен</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Подсказка</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Подсказка: Ответ может быть 0.5 / нецелого</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Подсказка: Эта форма вращалось: 0 градусов по часовой стрелке</value>
+  </data>
 </root>

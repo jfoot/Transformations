@@ -118,10 +118,10 @@
         <ToggleButton x:Name="hint"
                       Width="112" Height="30"
                       Margin="0,0,82,53" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                      Checked="HintsOn" Content="Hint" FontStyle="Italic" Unchecked="HintsOff" />
+                      Checked="HintsOn" Content="{lex:Loc Hint}" FontStyle="Italic" Unchecked="HintsOff" />
         <Button Width="112" Height="38"
                 Margin="0,0,82,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="SubmitAnswer" Content="Submit" FontWeight="Bold" />
+                Click="SubmitAnswer" Content="{lex:Loc Submit}" FontWeight="Bold" />
 
 
         <Image Grid.RowSpan="2" Width="351" Height="95" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="/Transformations;component/Resources/logo3.png" />
@@ -133,7 +133,7 @@
         <Button Grid.Row="1"
                 Width="238" Height="80"
                 Margin="306,0" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Click="Exit" Content="Exit Exam" />
+                Click="Exit" Content="{lex:Loc ExitExam}" />
 
 
 

@@ -110,22 +110,27 @@
                       Grid.Row="1"
                       Width="112" Height="30"
                       Margin="0,0,82,53" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                      Checked="HintsOn" Content="Hint" Unchecked="HintsOff" />
+                      Checked="HintsOn"
+                      Content="{lex:Loc Hint}"
+                      Unchecked="HintsOff" />
         <Button Grid.Row="1"
                 Width="112" Height="38"
                 Margin="0,0,81.6,9.8" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="AnswerSubmit" Content="Submit" FontWeight="Bold" />
+                Click="AnswerSubmit"
+                Content="{lex:Loc Submit}"
+                FontWeight="Bold" />
         <Label Grid.Row="1"
                Width="120" Height="35"
                Margin="233,0,497,44" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
-               Content="Coordinates:" FontSize="16" />
+               Content="{lex:Loc Coordinates}"
+               FontSize="16" />
         <Image Grid.Row="1" Grid.RowSpan="2" Width="351" Height="83" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="/Transformations;component/Resources/logo3.png" />
         <Label x:Name="timer"
                Grid.Row="2"
                Width="214" Height="83"
                HorizontalAlignment="Right" VerticalAlignment="Bottom" HorizontalContentAlignment="Right"
                Content="0:00" FontSize="48" />
-        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="Exit Exam" />
+        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="{lex:Loc ExitExam}" />
         <TextBox x:Name="X_Guess"
                  Grid.Row="1"
                  Width="68" Height="23"
@@ -152,7 +157,8 @@
                Grid.Row="1"
                Width="465"
                Margin="186,0,199,13" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
-               Content="Hint: This shape has rotated: 0 Degrees Clockwise" FontSize="16" FontStyle="Italic" FontWeight="Bold" />
+               Content="{lex:Loc Tip2}"
+               FontSize="16" FontStyle="Italic" FontWeight="Bold" />
 
     </Grid>
 </Window>

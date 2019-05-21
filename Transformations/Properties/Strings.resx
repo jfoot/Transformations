@@ -7282,4 +7282,40 @@
   <data name="WinUserNameFail" xml:space="preserve">
     <value>Failed to retrieve your Windows User name. </value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Attempts</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Coordinates:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 Degrees</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 Degrees</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 Degrees</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Exit Exam</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Tip: Answer may be 0.5/ non-integer</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Hint: This shape has rotated: 0 Degrees Clockwise</value>
+  </data>
 </root>

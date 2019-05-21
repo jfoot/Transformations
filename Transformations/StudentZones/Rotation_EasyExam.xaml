@@ -109,32 +109,36 @@
         <Button Grid.Row="1"
                 Width="112" Height="38"
                 Margin="0,0,81.6,9.8" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="SubmitAnswer" Content="Submit" FontWeight="Bold" />
+                Click="SubmitAnswer"
+                Content="{lex:Loc Submit}"
+                FontWeight="Bold" />
         <Label Grid.Row="1"
                Width="120" Height="35"
                Margin="248,0,498,48" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
-               Content="Clockwise" FontSize="16" />
+               Content="{lex:Loc CW}"
+               FontSize="16" />
         <Label Grid.Row="1"
                Width="120" Height="35"
                Margin="468,0,278,46" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
-               Content="Anti-Clockwise" FontSize="16" />
+               Content="{lex:Loc ACW}"
+               FontSize="16" />
         <ComboBox x:Name="clockwise_rot" Grid.Row="1" Width="120" Margin="240,0,490,26" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectedIndex="0">
-            <ComboBoxItem>45 Degrees</ComboBoxItem>
-            <ComboBoxItem>90 Degrees</ComboBoxItem>
-            <ComboBoxItem>135 Degrees</ComboBoxItem>
-            <ComboBoxItem>180 Degrees</ComboBoxItem>
-            <ComboBoxItem>225 Degrees</ComboBoxItem>
-            <ComboBoxItem>270 Degrees</ComboBoxItem>
-            <ComboBoxItem>315 Degrees</ComboBoxItem>
+            <ComboBoxItem Content="{lex:Loc d45}" />
+            <ComboBoxItem Content="{lex:Loc d90}" />
+            <ComboBoxItem Content="{lex:Loc d135}" />
+            <ComboBoxItem Content="{lex:Loc d180}" />
+            <ComboBoxItem Content="{lex:Loc d225}" />
+            <ComboBoxItem Content="{lex:Loc d270}" />
+            <ComboBoxItem Content="{lex:Loc d315}" />
         </ComboBox>
         <ComboBox x:Name="anticlock_rot" Grid.Row="1" Width="120" Margin="460,0,270,26" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectedIndex="0">
-            <ComboBoxItem>45 Degrees</ComboBoxItem>
-            <ComboBoxItem>90 Degrees</ComboBoxItem>
-            <ComboBoxItem>135 Degrees</ComboBoxItem>
-            <ComboBoxItem>180 Degrees</ComboBoxItem>
-            <ComboBoxItem>225 Degrees</ComboBoxItem>
-            <ComboBoxItem>270 Degrees</ComboBoxItem>
-            <ComboBoxItem>315 Degrees</ComboBoxItem>
+            <ComboBoxItem Content="{lex:Loc d45}" />
+            <ComboBoxItem Content="{lex:Loc d90}" />
+            <ComboBoxItem Content="{lex:Loc d135}" />
+            <ComboBoxItem Content="{lex:Loc d180}" />
+            <ComboBoxItem Content="{lex:Loc d225}" />
+            <ComboBoxItem Content="{lex:Loc d270}" />
+            <ComboBoxItem Content="{lex:Loc d315}" />
         </ComboBox>
         <Image Grid.Row="1" Grid.RowSpan="2" Width="351" Height="83" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="/Transformations;component/Resources/logo3.png" />
         <Label x:Name="timer"
@@ -142,7 +146,7 @@
                Width="214" Height="83"
                HorizontalAlignment="Right" VerticalAlignment="Bottom" HorizontalContentAlignment="Right"
                Content="0:00" FontSize="48" />
-        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="Exit Exam" />
+        <Button Grid.Row="2" Width="238" Height="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Exit" Content="{lex:Loc ExitExam}" />
 
     </Grid>
 </Window>

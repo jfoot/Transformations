@@ -75,7 +75,7 @@
                 Click="DrawRays">
             <StackPanel Width="145" Height="30" Orientation="Horizontal">
                 <Image Width="28" Margin="0,0,0,7" Source="/Transformations;component/Resources/pen.png" />
-                <TextBlock Width="117" Margin="0,7" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Draw Ray-lines" TextAlignment="Center" />
+                <TextBlock Width="117" Margin="0,7" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{lex:Loc DrawRaylinesString}" TextAlignment="Center" />
             </StackPanel>
         </Button>
         <Button x:Name="delete_ray"
@@ -85,7 +85,7 @@
                 Click="DeleteRays">
             <StackPanel Width="155" Height="30" Orientation="Horizontal">
                 <Image Width="28" Source="/Transformations;component/Resources/bin.png" />
-                <TextBlock Width="125" Margin="0,9" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Delete Ray-lines" TextAlignment="Center" />
+                <TextBlock Width="125" Margin="0,9" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{lex:Loc EDeleteRayLines}" TextAlignment="Center" />
             </StackPanel>
         </Button>
 
@@ -109,15 +109,18 @@
                 <Label x:Name="question_no"
                        Width="178" Height="72"
                        HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
-                       Content="Question X/ Y" FontSize="25" FontWeight="Bold" />
+                       Content="{lex:Loc Question}"
+                       FontSize="25" FontWeight="Bold" />
                 <Label x:Name="score"
                        Width="178" Height="72"
                        Margin="-0.2,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
-                       Content="Score X/ Y" FontSize="25" FontWeight="Bold" />
+                       Content="{lex:Loc Score}"
+                       FontSize="25" FontWeight="Bold" />
                 <Label x:Name="attempts"
                        Width="183" Height="72"
                        Margin="0.4,0,-0.2,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
-                       Content="Attempts X/ Y" FontSize="25" FontWeight="Bold" />
+                       Content="{lex:Loc Attempts}"
+                       FontSize="25" FontWeight="Bold" />
             </UniformGrid>
         </StackPanel>
 
@@ -126,17 +129,19 @@
                Margin="0,0,0,52" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
                Content="Question...." FontSize="16" />
         <ComboBox x:Name="enlargement_answer" Width="120" Margin="0,0,0,30" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectedIndex="5">
-            <ComboBoxItem Content="-2 Scale Factor" />
-            <ComboBoxItem Content="-1 Scale Factor" />
-            <ComboBoxItem Content="0.25 Scale Factor" />
-            <ComboBoxItem Content="0.5 Scale Factor" />
-            <ComboBoxItem Content="0.75 Scale Factor" />
-            <ComboBoxItem Content="2 Scale Factor" />
+            <ComboBoxItem Content="{lex:Loc sf-2}" />
+            <ComboBoxItem Content="{lex:Loc sf-1}" />
+            <ComboBoxItem Content="{lex:Loc sf025}" />
+            <ComboBoxItem Content="{lex:Loc sf05}" />
+            <ComboBoxItem Content="{lex:Loc sf075}" />
+            <ComboBoxItem Content="{lex:Loc sf2}" />
         </ComboBox>
 
         <Button Width="112" Height="38"
                 Margin="0,0,82,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Click="SubmitAnswer" Content="Submit" FontWeight="Bold" />
+                Click="SubmitAnswer"
+                Content="{lex:Loc Submit}"
+                FontWeight="Bold" />
 
         <Label x:Name="timer"
                Grid.Row="1"
@@ -146,6 +151,7 @@
         <Button Grid.Row="1"
                 Width="238" Height="80"
                 Margin="306,0" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Click="Exit" Content="Exit Exam" />
+                Click="Exit"
+                Content="{lex:Loc ExitExam}" />
     </Grid>
 </Window>
