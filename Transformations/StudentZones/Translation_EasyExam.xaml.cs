@@ -17,13 +17,13 @@ namespace Transformations
 	/// </summary>
 	public partial class Translation_EasyExam : Window
 	{
-        readonly Exam Exams; //Creates a new exam object
-		List<Shapes> MyShapes = new List<Shapes>();                 //Creates a list of shape object
+        Exam Exams; //Creates a new exam object
+		List<Shapes> MyShapes = new List<Shapes>();   //Creates a list of shape object
 
 		
-		public int CorrectAnswerValue;              //Used to record the corr_answer
+		public int CorrectAnswerValue;          //Used to record the corr_answer
 		GridLine GridLine;					    //Creates a grid object
-		public const int ScaleFactor = 30;           //Sets the scale factor to be 30 pixels.
+		public const int ScaleFactor = 30;      //Sets the scale factor to be 30 pixels.
 		
 		public Translation_EasyExam()
 		{

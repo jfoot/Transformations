@@ -242,6 +242,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attempts.
+        /// </summary>
+        public static string Attempts {
+            get {
+                return ResourceManager.GetString("Attempts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to re-log you in, please manually logout and re-login. .
         /// </summary>
         public static string AutoLoginFailed {
@@ -400,6 +409,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Coordinates:.
+        /// </summary>
+        public static string Coordinates {
+            get {
+                return ResourceManager.GetString("Coordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Account.
         /// </summary>
         public static string CreateAccount {
@@ -445,6 +463,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 135 Degrees.
+        /// </summary>
+        public static string d135 {
+            get {
+                return ResourceManager.GetString("d135", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 180 Degrees.
         /// </summary>
         public static string d180 {
@@ -454,11 +481,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 225 Degrees.
+        /// </summary>
+        public static string d225 {
+            get {
+                return ResourceManager.GetString("d225", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 270 Degrees.
         /// </summary>
         public static string d270 {
             get {
                 return ResourceManager.GetString("d270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 315 Degrees.
+        /// </summary>
+        public static string d315 {
+            get {
+                return ResourceManager.GetString("d315", resourceCulture);
             }
         }
         
@@ -928,6 +973,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit Exam.
+        /// </summary>
+        public static string ExitExam {
+            get {
+                return ResourceManager.GetString("ExitExam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Export {
@@ -1239,6 +1293,15 @@ namespace Transformations.Properties {
         public static string HighRes {
             get {
                 return ResourceManager.GetString("HighRes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hint.
+        /// </summary>
+        public static string Hint {
+            get {
+                return ResourceManager.GetString("Hint", resourceCulture);
             }
         }
         
@@ -1659,6 +1722,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string Question {
+            get {
+                return ResourceManager.GetString("Question", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Rotations Ghosts.
         /// </summary>
         public static string RDeleteGhosts {
@@ -1975,6 +2047,15 @@ namespace Transformations.Properties {
         public static string SaveSuccesful {
             get {
                 return ResourceManager.GetString("SaveSuccesful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string Score {
+            get {
+                return ResourceManager.GetString("Score", resourceCulture);
             }
         }
         
@@ -2343,6 +2424,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Submit {
+            get {
+                return ResourceManager.GetString("Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Take An Exam.
         /// </summary>
         public static string TakeAnExamString {
@@ -2511,6 +2601,24 @@ namespace Transformations.Properties {
         public static string TGhostVisible {
             get {
                 return ResourceManager.GetString("TGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tip: Answer may be 0.5/ non-integer.
+        /// </summary>
+        public static string Tip1 {
+            get {
+                return ResourceManager.GetString("Tip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hint: This shape has rotated: 0 Degrees Clockwise.
+        /// </summary>
+        public static string Tip2 {
+            get {
+                return ResourceManager.GetString("Tip2", resourceCulture);
             }
         }
         

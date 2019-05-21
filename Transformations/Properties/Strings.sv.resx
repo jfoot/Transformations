@@ -837,4 +837,40 @@
   <data name="PDFSaved" xml:space="preserve">
     <value>Dina resultat har sparats till en PDF.</value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Försök</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Fråga</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Poäng</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Koordinater:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 grader</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 grader</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 grader</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Exit-examen</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Tips</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Lämna in</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Tips: Svaret kan vara 0,5 / icke-heltal</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Tips: Denna form har roterats: 0 grader medurs</value>
+  </data>
 </root>

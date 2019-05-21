@@ -837,4 +837,40 @@
   <data name="PDFSaved" xml:space="preserve">
     <value>您的结果已成功保存到 PDF。</value>
   </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>尝试</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>问题</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>得分</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>坐标：</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135度</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225度</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315度</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>退出考试</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>提示: 答案可能为 0.5/非整数</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>提示: 此形状已旋转: 0度顺时针方向</value>
+  </data>
 </root>
