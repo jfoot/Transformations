@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Tip: Tento obrazec otočit: 0 stupňů ve směru hodinových ručiček</value>
   </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Nejste vlastníkem této třídy, přestože ji můžete stále upravovat, jako by to bylo vaše vlastní; buďte prosím ohleduplní k ostatním učitelům.</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Upozornění</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Třída byla vytvořena.!</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Smazat třídu a studenty!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Zde můžete spravovat všechny své třídy, jednoduše použít tlačítka níže k provedení akce na vybrané třídě. Vezměte prosím na vědomí, že tyto akce nelze vrátit.</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Editor tříd!</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Zobrazit pouze vlastní třídy!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Přejmenovat třídu!</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Převod vlastnictví třídy!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Opravdu chcete smazat tuto třídu a všechny její účty? Tuto akci nelze vrátit.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Vytvořit...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Vytvořit třídu</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Chcete-li vytvořit nový typ třídy, zadejte do pole níže název a jednoduše klikněte na tlačítko Vytvořit.</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Chyba zápisu do databáze: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>"Chyba databáze!"</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Nepodařilo se odstranit třídu. !</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Nepodařilo se načíst vlastní třídy. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Nepodařilo se načíst data z databáze.!</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Nepodařilo se vytvořit novou třídu.!</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Nová třída nazvaná "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" bylo úspěšně provedeno.</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Do textového pole prosím zadejte nový název této třídy.!</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Viz vybrané výsledky třídy!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Vaše třída byla úspěšně smazána, včetně!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Studentské účty.</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Vyberte níže nového učitele, na kterého chcete převést vlastnictví třídy. Tuto akci nelze vrátit.</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Zobrazit všechny třídy!</value>
+  </data>
 </root>

@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Sugerencia: Esta forma ha girado: 0 grados hacia la derecha</value>
   </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>No eres el propietario de esta clase, aunque puedes editarla como si fuera la tuya; por favor sea considerado con otros maestros.</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Atención</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>¡Nueva Clase Creada!</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Eliminar clase y estudiantes!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Aquí puede administrar todas sus clases, simplemente use los botones a continuación para realizar una acción en una clase seleccionada. Tenga en cuenta que estas acciones no se pueden deshacer.</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Editor de clases!</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Ver solo las clases que poseo!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Renombrar clase!</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Transferencia de propiedad de clase!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminar esta clase y todas las cuentas de los estudiantes que contiene? Esta acción no se puede deshacer.!</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Crear clase</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Para crear una nueva clase, escriba un nombre en el cuadro a continuación y simplemente haga clic en &amp;#39;Crear&amp;#39;.</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Error de escritura de la base de datos: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Error en Base de Datos</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>XXX</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Error al recuperar las clases que posee. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Error al recuperar datos de la base de datos.</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Error al crear una nueva clase.</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Una nueva clase llamada "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" se ha realizado con éxito.!</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Escriba a continuación en el cuadro de texto un nuevo nombre para esta clase.</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Ver los resultados de la clase seleccionada!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Eliminado con éxito su clase, incluyendo!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Cuentas del Alumno</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Seleccione a continuación un nuevo profesor al que le gustaría transferir la propiedad de la clase. Esta acción no se puede deshacer.!</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Todos los Eventos</value>
+  </data>
 </root>

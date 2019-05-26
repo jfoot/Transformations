@@ -1,25 +1,29 @@
 ﻿<Window x:Class="Transformations.ClassEditor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:Transformations" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="Class Editor"
+        Title="{lex:Loc ClassEditor}"
         Width="610" Height="610"
         lex:LocalizeDictionary.DesignCulture="en-GB" lex:ResxLocalizationProvider.DefaultAssembly="Transformations" lex:ResxLocalizationProvider.DefaultDictionary="Strings" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid>
-        <GroupBox Width="582" Height="91" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Header="Create Class">
+        <GroupBox Width="582" Height="91" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Header="{lex:Loc CreateClass}">
             <Grid>
-                <Button Width="75" Height="23" Margin="485,39,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CreateClass" IsEnabled="{Binding ElementName=classname, Path=Text.Length}">Create</Button>
+                <Button Width="75" Height="23"
+                        Margin="485,39,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Click="CreateClass"
+                        Content="{lex:Loc Create}"
+                        IsEnabled="{Binding ElementName=classname, Path=Text.Length}" />
                 <TextBox x:Name="classname"
                          Width="401" Height="23"
                          Margin="79,39,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                          Text="" TextWrapping="Wrap" />
-                <Label Margin="0,36,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Class Name:" />
-                <Label Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="To create a new class type a name in the box below and simply click 'Create'." />
+                <Label Margin="0,36,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc ClassName}" />
+                <Label Margin="0,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc CreateDesc}" />
             </Grid>
         </GroupBox>
 
 
-        <GroupBox Width="582" Height="475" Margin="10,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Header="Class Editor">
+        <GroupBox Width="582" Height="475" Margin="10,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Header="{lex:Loc ClassEditor}">
             <Grid>
                 <!--  this code creates the data grid for data, it also has a  "expander, this allows items in the data grid to be grouped  -->
                 <DataGrid x:Name="_ClassGrid"
@@ -66,7 +70,7 @@
                         Click="DeleteClass"
                         Command="{Binding Remove}"
                         CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}"
-                        Content="Delete class and students">
+                        Content="{lex:Loc ClassDelete}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="IsEnabled" Value="True" />
@@ -85,7 +89,7 @@
                         Click="SeeClassData"
                         Command="{Binding Remove}"
                         CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}"
-                        Content="See selected class results">
+                        Content="{lex:Loc SeeClassResults}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="IsEnabled" Value="True" />
@@ -100,13 +104,13 @@
                     </Button.Style>
                 </Button>
 
-                <TextBlock Margin="10,6,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Here you can manage all of your classes, simply use the buttons below to perform an action on a selected class. Please note these actions can not be undone.  " TextWrapping="Wrap" />
+                <TextBlock Margin="10,6,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc ClassEditDesc}" TextWrapping="Wrap" />
                 <Button Width="160"
                         Margin="10,0,0,35" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                         Click="TransferClass"
                         Command="{Binding Remove}"
                         CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}"
-                        Content="Transfer Ownership of class">
+                        Content="{lex:Loc ClassTransfer}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="IsEnabled" Value="True" />
@@ -126,7 +130,7 @@
                         Click="RenameClass"
                         Command="{Binding Remove}"
                         CommandParameter="{Binding ElementName=grdUsers, Path=SelectedItem}"
-                        Content="Rename Class">
+                        Content="{lex:Loc ClassRename}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="IsEnabled" Value="True" />
@@ -140,8 +144,12 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <RadioButton Margin="10,43,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ViewSpecific" Content="View only classes I own" GroupName="SelectType" IsChecked="True" />
-                <RadioButton x:Name="ViewAll" Margin="175,43,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ViewAllClass" Content="View all classes" GroupName="SelectType" />
+                <RadioButton Width="160"
+                             Margin="10,43,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                             Checked="ViewSpecific"
+                             Content="{lex:Loc ClassesOwned}"
+                             GroupName="SelectType" IsChecked="True" />
+                <RadioButton x:Name="ViewAll" Margin="175,43,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ViewAllClass" Content="{lex:Loc ViewAllClasses}" GroupName="SelectType" />
             </Grid>
         </GroupBox>
     </Grid>

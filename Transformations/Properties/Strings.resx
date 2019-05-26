@@ -7318,4 +7318,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Hint: This shape has rotated: 0 Degrees Clockwise</value>
   </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>You are not the owner of this class, although you may still edit it as if it was your own; please be considerate to other teachers.</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Class Created.</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Delete class and students</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Here you can manage all of your classes, simply use the buttons below to perform an action on a selected class. Please note these actions can not be undone.</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Class Editor</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>View only classes I own</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Rename Class</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Transfer Ownership of class</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Are you sure you wish to delete this class and all the student accounts inside of it? This action can not be undone.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Create Class</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>To create a new class type a name in the box below and simply click 'Create'.</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>DataBase Write Error : 101</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>DataBase Error : 100</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Failed to delete class. </value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Failed to retrieve the classes you own. </value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Failed to retrieve data from the database.</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Failed to create a new class.</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>A new class called "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" has been made successfully.</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Please type below in the text box a new name for this class.</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>See selected class results</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Successfully deleted your class, including </value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value> Student accounts.</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Please select below a new teacher to which you would like to transfer class ownership to. This action can not be undone.</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>View all classes</value>
+  </data>
 </root>

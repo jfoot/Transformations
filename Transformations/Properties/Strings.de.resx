@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Hinweis: Diese Form gedreht hat: 0 Grad im Uhrzeigersinn</value>
   </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Sie sind nicht der Besitzer dieser Klasse, können sie jedoch bearbeiten, als ob es Ihre eigene wäre. Bitte nehmen Sie Rücksicht auf andere Lehrer!</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Warnung</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Klasse erstellt.!</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Klasse und Schüler löschen!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Hier können Sie alle Ihre Klassen verwalten. Verwenden Sie einfach die folgenden Schaltflächen, um eine Aktion für eine ausgewählte Klasse auszuführen. Bitte beachten Sie, dass diese Aktionen nicht rückgängig gemacht werden können.!</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Klassen Editor!</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Nur Kurse anzeigen, die ich besitze!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Klasse umbenennen!</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Übertragen Sie das Eigentum an der Klasse!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Möchten Sie diese Klasse und alle darin enthaltenen Schülerkonten wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.!</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Erstellen...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Klasse %1 kann nicht erstellt werden</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Um eine neue Klasse zu erstellen, geben Sie einen Namen in das Feld unten ein und klicken Sie einfach auf &amp;quot;Erstellen&amp;quot;.!</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Datenbank-Schreibfehler: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Datenbankfehler!</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Fehler beim Löschen!</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Fehler beim Abrufen der Klassen, die Sie besitzen. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Daten konnten nicht aus der Datenbank abgerufen werden.!</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Fehler beim Erstellen einer neuen Klasse.!</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Eine neue Klasse namens "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" wurde erfolgreich erstellt.!</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Bitte geben Sie unten in das Textfeld einen neuen Namen für diese Klasse ein.!</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Ausgewählte Klassenergebnisse anzeigen!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Ihre Klasse wurde erfolgreich gelöscht, einschließlich!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Studentenkonten.!</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Bitte wählen Sie unten einen neuen Lehrer aus, auf den Sie den Klassenbesitz übertragen möchten. Diese Aktion kann nicht rückgängig gemacht werden.!</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Alle Kurse</value>
+  </data>
 </root>

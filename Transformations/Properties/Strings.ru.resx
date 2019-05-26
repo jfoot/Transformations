@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Подсказка: Эта форма вращалось: 0 градусов по часовой стрелке</value>
   </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создать...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Создать класс</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Вы не являетесь владельцем этого класса, хотя вы все равно можете редактировать его, как если бы он был вашим собственным; пожалуйста, будьте внимательны к другим учителям.</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Класс создан.</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Удалить класс и учеников!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Здесь вы можете управлять всеми своими классами, просто используйте кнопки ниже, чтобы выполнить действие с выбранным классом. Обратите внимание, что эти действия не могут быть отменены.!</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Редактор классов!</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Просмотреть только те классы, которые у меня есть!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Переименуй класс!</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Передача владения классом!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этот класс и все учетные записи студентов внутри него? Это действие не может быть отменено.!</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Чтобы создать новый класс, введите имя в поле ниже и просто нажмите «Создать».!</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Ошибка записи в базу данных: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Ошибка базы данных</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Не удалось удалить класс. !</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Не удалось получить принадлежащие вам классы. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Не удалось получить данные из базы данных.</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Не удалось создать новый класс.</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Новый класс называется "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" было сделано успешно.!</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Пожалуйста, введите ниже в текстовое поле новое имя для этого класса.!</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Посмотреть результаты выбранного класса!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Успешно удалили ваш класс, в том числе!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Студенческие счета.</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель, к которому вы хотите передать собственность класса. Это действие не может быть отменено.</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Посмотреть все классы</value>
+  </data>
 </root>

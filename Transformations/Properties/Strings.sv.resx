@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Tips: Denna form har roterats: 0 grader medurs</value>
   </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Observera</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Importera kod tillbaka från en klass som skapats med hjälp av kommandot för att exportera kod.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Skapa...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Skapa klass</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Du är inte ägare av denna klass, även om du kan fortfarande redigera den som om det var din egen; Vänligen vara hänsynsfull till andra lärare.</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Ta bort klass och studenter</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Här kan du hantera alla dina klasser, helt enkelt använda knapparna nedan för att utföra en åtgärd på en vald klass. Observera dessa åtgärder inte kan ångras.</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Klass Editor</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Visa endast klasser som jag äger</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Byt namn på klass</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Överföra äganderätten för klass</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Är du säker du vill ta bort den här klassen och alla konton som student inne i den? Åtgärden kan inte ångras.</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Att skapa en ny klasstyp ett namn i rutan nedan och klicka 'Skapa'.</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Skriva fel: 101</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Fel: 100</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Det gick inte att ta bort klass.</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Kunde inte hämta de klasser som du äger.</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Det gick inte att hämta data från databasen.</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Det gick inte att skapa en ny klass.</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>En ny klass som heter "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" har genomförts.</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Vänligen ange nedan i textrutan ett nytt namn för denna klass.</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Se valda klass resultat</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Bort din klass, inklusive</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Elevkonton.</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Vänligen välj nedan en ny lärare som du vill överföra klass äganderätten till. Åtgärden kan inte ångras.</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Visa alla klasser</value>
+  </data>
 </root>

@@ -205,7 +205,7 @@ namespace Transformations
 		}
 		private void Exit(object sender, RoutedEventArgs e)
 		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", "Are you sure?",
+			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", Properties.Strings.AreYouSure,
 				 System.Windows.MessageBoxButton.OKCancel,
 				 MessageBoxImage.Warning);
 

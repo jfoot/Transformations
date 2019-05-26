@@ -873,4 +873,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>提示: 此形状已旋转: 0度顺时针方向</value>
   </data>
+  <data name="Attention" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>创建类</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>您不是此类的所有者, 尽管您仍可能将其编辑为您自己的;请体谅其他老师。</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>类已创建。</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>删除班级和学生</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>在这里, 您可以管理所有类, 只需使用下面的按钮对选定的类执行操作。请注意, 这些操作无法撤消。</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>类编辑器</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>仅查看我所拥有的课程</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>重命名类</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>转让阶级的所有权</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>您确定要删除此类课程及其中的所有学生帐户吗？此操作无法撤消。</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>要创建新类, 请在下面的框中键入名称, 然后单击 "创建"。</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>数据库写入错误: 101</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>数据库错误: 100</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>无法删除类。</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>无法检索您所拥有的类。</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>无法从数据库中检索数据。</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>未能创建新类。</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>一个名为  的新类</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>"已成功制作。</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>请在下面的文本框中键入此类的新名称。</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>查看所选的班级结果</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>已成功删除您的类, 包括</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>学生帐户。</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>请在下面选择您要将班级所有权转让给的新教师。此操作无法撤消。</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>查看所有类</value>
+  </data>
 </root>
