@@ -7318,4 +7318,85 @@
   <data name="Tip2" xml:space="preserve">
     <value>Astuce : Cette forme a une rotation : 0 degrés dans le sens horaire</value>
   </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Importer un code à partir d'une classe créée à l'aide de la commande Exporter le code.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Créer...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Créer une classe</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Vous n&amp;#39;êtes pas propriétaire de cette classe, mais vous pouvez toujours la modifier comme si elle était la vôtre. s&amp;#39;il vous plaît soyez respectueux envers les autres enseignants.</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Supprimer la classe et les étudiants!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Ici, vous pouvez gérer toutes vos classes, utilisez simplement les boutons ci-dessous pour effectuer une action sur une classe sélectionnée. Veuillez noter que ces actions ne peuvent pas être annulées.!</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Éditeur de classe du véhicule</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Voir seulement les classes que je possède!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Renommer la classe...</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Transfert de propriété de classe!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer cette classe et tous les comptes d’élèves qu’elle contient? Cette action ne peut pas être annulée.!</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Pour créer une nouvelle classe, tapez un nom dans la case ci-dessous et cliquez simplement sur &amp;quot;Créer&amp;quot;.</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Erreur d&amp;#39;écriture de la base de données: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Erreur de base de données:</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Echec de la suppression</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Échec de récupération des classes que vous possédez. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Échec d&amp;#39;extraction des données de la base de données.!</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Échec de la création d&amp;#39;une nouvelle classe.!</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Une nouvelle classe appelée "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" été faite avec succès.!</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Veuillez saisir ci-dessous dans la zone de texte un nouveau nom pour cette classe.!</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Voir les résultats de classe sélectionnés!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Supprimé avec succès votre classe, y compris!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Comptes d&amp;#39;étudiants.!</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Veuillez sélectionner ci-dessous un nouvel enseignant auquel vous souhaitez transférer la propriété de la classe. Cette action ne peut pas être annulée.!</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Voir tous les cours</value>
+  </data>
 </root>
