@@ -7548,9 +7548,6 @@
   <data name="ResultAreYouSure" xml:space="preserve">
     <value>Are you sure you want to delete this exam result?</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Information</value>
-  </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Unable to delete this exam result. This result could already be deleted.</value>
   </data>

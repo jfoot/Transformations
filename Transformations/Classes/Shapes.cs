@@ -17,9 +17,9 @@ namespace Transformations
         public TranslateTransform MyTranslateTransform { get; set; } = new TranslateTransform(); //Applies a translation rotation
         public Shape MyShape { get; set; }           //Declares the actual shape
         public string PartnerShape { get; set; }    //Declares the partner shape - used for reflection
+        public string Name { get; set; } = "";
 
-        
-		public void SetDefualts(Canvas canvas)
+        public void SetDefualts(Canvas canvas)
 		{
             MyTransformGroup.Children.Add(MyScalingTransform);
             MyTransformGroup.Children.Add(MyRotateTransform);
@@ -32,7 +32,6 @@ namespace Transformations
 
     class Circle : Shapes	//A class specifically for the creation of circles  
     {
-        public string Name;
 		public Circle()		//Creates a circle without a name (default constructor)
 		{
             MyShape = new Ellipse
@@ -75,7 +74,6 @@ namespace Transformations
 
     class FreeForm : Shapes //A class specifically for the creation of polygons (free-forms)  
 	{
-        public string Name;
 		public FreeForm()   //Creates a new polygon shape without a name (default constructor)
 		{
             MyShape = new Polygon
@@ -124,8 +122,7 @@ namespace Transformations
 
     class Ghost : Shapes //A class specifically for the creation of ghost shapes  
 	{
-        public string Name;
-        public Ghost(string name) { Name = name;}
+        public Ghost(string name) { Name = name; }
         public Ghost() { }
 
         public Shapes SpawnGhostShape(byte R, byte G, byte B, Shape selectedShape, Canvas canvas, bool ghostVisibality) //A reusable function for spawning Ellipse ghost shapes (transformed shapes)

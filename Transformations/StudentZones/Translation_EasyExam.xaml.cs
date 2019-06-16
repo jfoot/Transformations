@@ -77,13 +77,14 @@ namespace Transformations
 					Canvas.SetTop(MyShapes[MyShapes.Count - 1].MyShape, Rnd.RandomY(border, ScaleFactor));
                 }
 		    }
-			catch (Exception)
+			catch (Exception ex)
 			{
-				//MessageBox.Show(
-				//"Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
-				//Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
-}
+                MessageBox.Show(ex.Message);
+                MessageBox.Show(
+                "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
+                Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 		private int XAnswer()  //Gives the X answer value.
 		{
 			int x_answer;
@@ -188,9 +189,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                ////MessageBox.Show(
-                ////    "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
-                ////    Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void RefreshText()   //Used to refresh the text UI.

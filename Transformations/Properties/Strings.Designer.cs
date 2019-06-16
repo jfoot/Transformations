@@ -2839,15 +2839,6 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information.
-        /// </summary>
-        public static string String2 {
-            get {
-                return ResourceManager.GetString("String2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Student.
         /// </summary>
         public static string Student {
