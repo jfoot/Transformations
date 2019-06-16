@@ -654,6 +654,13 @@
                         </Viewbox>
                     </MenuItem.Icon>
                 </MenuItem>
+                <MenuItem x:Name="TroubleShoot" Click="TroubleShoot_Click" Header="{lex:Loc TroubleShootDrop}">
+                    <MenuItem.Icon>
+                        <Viewbox Width="17" Margin="0,0,-1,-1" HorizontalAlignment="Left">
+                            <Image Source="/Transformations;component/Resources/Fixme.png" />
+                        </Viewbox>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <Button x:Name="DeleteAllGhostsButton" Width="112" Margin="391,23,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="DeleteAllGhosts">

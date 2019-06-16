@@ -424,6 +424,7 @@
     </FileAssociation>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\FixMe.png" />
     <Resource Include="T.ico" />
     <Resource Include="bug.ico" />
     <Content Include="Database.accdb">

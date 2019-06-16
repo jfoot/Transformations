@@ -5684,7 +5684,7 @@
     <comment>WebsiteURL to give feedback</comment>
   </data>
   <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/wiki</value>
+    <value>https://jonathanfoot.com/Projects/Transformations/index.html</value>
     <comment>Website URL to an on-line help manual.</comment>
   </data>
   <data name="Report" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -7398,5 +7398,43 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>View all classes</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Troubleshoot Problems</value>
+  </data>
+  <data name="FixMe" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAktJREFUSEut1U2ITWEcx/HjZcprs1GGBcrkLbMiK0VIWWAxu2kUCwtJWSmyMYUw
+        XhJ5KzQjFhamDLJCURJlNqSw8BK2oryb7+/M+Z/5z7nPOfeZ4Vef5pznnPv85t57nucmZBn6sE4nI0gD
+        2tGLd3iAiajJU/zN3MICxGY1XsFe/wLTEcxa2I3yE3NQL5vxG1ElltvwZVNRFX00X+Bfswh1Mx96J/Yi
+        FY9HWTSpL5E9CGUMWgYOB9IMvRN7d1VlM1Askp3wGYVzOJmeFaLJY8r8Q+RZmUqOQ2PbNRBKTNkO+ALv
+        DK6484UoTVXZCnyFTVTlDuomVDYXsSU/sARRKZZNwCV8h9aOPa1/sr9Ga2wLhpViWSNmQgtUi/sAZqED
+        N9AFbW3Djv6zJviyq9C7aMN/yT5o8kfwZeYw/jlWItpypuGaG5PPWINJiI5uXgxtGfvhJ3yNpYUxTw9F
+        2TaUZzK0VXxDaBLR97EKJ3AXv6BxPV0fsmM5gmD0uD6E3VhGE2+ART8TGn+PKdDCtHs7UZPdsBt6sBVa
+        +W+zMVHJJvjowbDrKimWHcKQPIMuvEzPBjMbb6Br1zUQyHnYxKGyg8ijFa7B0+nZ0FyGrj1Jz2qj3xot
+        Tps4VLYXaT5CA6fSs8Fom/8EXbungZKo7CJs4lDZSiTdbkBbiKL1sg02vgtVUdkF2P1Wdj87Tz9C7VX+
+        91/rxY5F35P2tnpRmf/OVHIzO8431+Xwa8E8xzzEZjTOws/xGOOQR7vCRhyD1kErxmIkWY+j0MfPzp8k
+        /eKnDRQTTlxIAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="support" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAu9JREFUaEPV2kvIDlEcx/HXNdesUELIUthZIGVBCbmuZCELFoiVXN6URJKFa4oF
+        uYRsJCVhZeGWhbJgoeSSJCzI/fL9laem6X/OzJn3zMzxq0/v5n07//M8M3P+58zb1VKGYQG24gIe4SU+
+        40/GXQxEcpmLK/iGbMEuvzEWyWQ0rsEq1mcfkslUvIJVqM9B9EISmYh3sAr1OYRkJqEb+jGsQn0OI5lJ
+        KPthFepzFElNYgy+wCrWJblJKN2winU5huQmodyBVbDLSFTJFKxGLYtmb/yAVbDLAIRmKb5Df68OIXpG
+        IF9oET3hQrIE2e5A91f0jEO2yDImoGwWId/iHEH06DLJDlLGTJTJQlh92h7UktfID+azCkVxTUK2o5ac
+        hDWgyzn0gyvz4euYy3wQlaK9hjWgjwq9jzM4gB1Yj53wTULmoJZocXsIa9A6TEJtmQ1tjKyBY1Ir1B+1
+        ZMi/n6GtShW3ET1a1bWXuIU+0CV2ClYBsWxG1OjrPY/OALphFU1IN3B28Fh+YTyiZShuID+Q9iRKXZM5
+        i2hR5/oA1kBS12Q+IqS18UZ91VNYA2XFnowuqcWIkskIaUWykzkO63fK+IqViJJZ+ABrIJ/OZJSNCN23
+        vMF0RIm+0tD9eNYJdDZSOi66hKKFU0epuxC6b3FG28qfsAYLobUmm1FYg9O4CT08rkJ7ee0EByNatiFG
+        y6ED62ifbEi0Wuv40ioq1DPoHLjx5FfrnngL3RONR43fdVhFhfqEaWg8w3EPVlGhtClSS994tFo/gVVU
+        KD0cVqDxhK7WRdah8czAe1gFVVHbEY0vequUfxHZE1q9Gz+U7gstUlZBVVyGGsPGswxWQVVo/zwIreQi
+        rKJCtdZ6dBLjUfsCrbQe2TyHVVxZrbUe+ejfJKwCy9CTrpXWw8puWEUWUetR25lrlWhTo32wVaxLa61H
+        UdbCKthlE5JNmUtM38QWJJ/lcD3F9O5Cpyf/TbQrnAe9aNmLDdD77ITT1fUXr/+JYtFTetwAAAAASUVO
+        RK5CYII=
+</value>
   </data>
 </root>
