@@ -1044,9 +1044,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>Dieser Benutzer hat Prüfungsergebnisse noch keinen. Wenn sie eine Prüfung ablegen, erscheinen deren Ergebnisse hier.</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Informationen</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>Diese Aktion kann nicht rückgängig gemacht werden.</value>
   </data>
@@ -1061,5 +1058,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Nicht in der Lage, dieses Prüfungsergebnis zu löschen. Dieses Ergebnis konnte bereits gelöscht werden.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Versäumt, Ihre Prüfung nach dem Zufallsprinzip generieren.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Harte Prüfung Übersetzung</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Welche Übersetzung Vektorkarten die ursprüngliche Form auf den Geist?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Übersetzung einfach Prüfung</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Grad im Uhrzeigersinn</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Harte Prüfung Drehung</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Hinweis: Diese Form hat gedreht:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Was ist die Koordinate für Drehmittelpunkt?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Die Übersetzung die ursprüngliche Form der Geist Form Vektorkarten?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Sie haben kein im Uhrzeigersinn bzw. eine Drehung gegen den Uhrzeigersinn gewählt.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Harte Prüfung Reflexion</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Welche Linie spiegelt das Original der Geist Form?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Einfache Prüfung Drehung</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Welche Rotation ist vorgeformt, um die Form?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Einfache Prüfung Reflexion</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Erweiterung leicht Prüfung</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Was ist der Skalierfaktor vorgeformt auf die Geist-Form?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Harte Prüfung Erweiterung</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Hinweis: Diese Form ist durch erweitert:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Was ist die Koordinate für Center der Erweiterung?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Ende der Prüfung</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Ihre Prüfungsergebnisse Speichern fehlgeschlagen.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>bestehen</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Save und Exit Prüfung</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>Zoomfaktor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Verstrichene Zeit</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>Um eine Prüfung zu bestehen, braucht man eine Punktzahl über 80 %, oder nur eine falsche Antwort.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Insgesamt versuche</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Richtig</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Falsche</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Gut gemacht!</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Von versuchen</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Frage übersprungen</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie diese Prüfung verzichten möchten?</value>
   </data>
 </root>

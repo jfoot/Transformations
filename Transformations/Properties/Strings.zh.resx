@@ -1044,9 +1044,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>此用户尚未获得任何考试结果。当他们参加考试时,他们的结果将在这里显示。</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>信息!</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>此操作无法撤消。</value>
   </data>
@@ -1061,5 +1058,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>无法删除此考试结果。此结果已可能被删除。</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>无法随机生成考试。</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>翻译硬考</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>哪个翻译向量将原始形状映射到鬼?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>翻译轻松考试</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>顺时针度</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>旋转硬考试</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>提示:此形状已旋转:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>旋转中心的坐标是什么?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>哪个转换向量将原始形状映射到鬼形?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>您尚未同时选择顺时针和/或逆时针旋转。</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>反思硬考</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>哪条线将原始反映到幽灵形状?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>旋转轻松考试</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>形状的旋转是什么?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>反射轻松考试</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>扩大容易考试</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>在幽灵形状上预先构成的刻度因子是什么?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>扩大硬考试</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>提示:此形状已扩大:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>放大中心的坐标是什么?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>考试结束</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>无法保存您的考试结果。</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>通过</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>保存和退出考试</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>缩放因子。</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>时间经过</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>要通过考试,您必须有超过 80% 的分数,或者只有一个错误的答案。</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>总尝试次数</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>正确</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>再试一次</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>干的好！</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>尝试失败后</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>已跳过问题</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>你确定要放弃这次考试吗?</value>
   </data>
 </root>

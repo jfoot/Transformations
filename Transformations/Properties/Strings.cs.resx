@@ -1044,9 +1044,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>Tento uživatel zatím nemá žádné výsledky zkoušky. Když se zkoušky, jejich výsledky se objeví zde.</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Informace!</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>Tuto akci nelze vrátit zpět.</value>
   </data>
@@ -1061,5 +1058,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Nelze odstranit tento výsledek zkoušky. Tento výsledek by mohl být již odstraněn.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Nepodařilo se vygenerovat náhodně zkoušku.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Překlad tvrdá zkouška</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Který překlad vektorové mapy původní tvar ducha?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Snadné překlad zkouška</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Stupňů ve směru hodinových ručiček</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Rotace tvrdá zkouška</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Tip: Tento obrazec otočit:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Co je souřadnice pro střed otáčení?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Který překlad vektorové mapy původní tvar na ghost obrazce?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Nevybrali jste si, jak po směru nebo proti směru hodinových ručiček otočení.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Reflexe tvrdá zkouška</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Jakou hranicí odráží původní obrazce ghost?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Otáčení Easy zkoušky</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Co rotace je vytvarované do tvaru?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Reflexe Easy zkoušky</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Snadné rozšíření zkouška</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Co je faktor měřítka vytvarované na ghost obrazce?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Rozšíření tvrdá zkouška</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Tip: Tento obrazec rozšiřoval o:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Co je souřadnice centra rozšíření?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Konec zkoušky</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Selhání</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Nepodařilo se uložit výsledky zkoušek.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Uložit a ukončit zkoušku</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>ScaleFactor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Uplynulý čas</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>Složit zkoušku musí mít skóre více než 80 %, nebo jen jeden špatný odpovědět.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Pokusy o celkem</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Opravit</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Nesprávné</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Zkuste to znovu</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Skvělá práce!</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Z pokusů</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Otázka přeskočena</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Opravdu že chcete opustit tuto zkoušku?</value>
   </data>
 </root>

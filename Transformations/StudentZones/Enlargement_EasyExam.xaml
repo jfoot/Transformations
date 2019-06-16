@@ -20,8 +20,8 @@
                 HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="50"
                 Background="#E5FFFFFF" BorderBrush="Red" BorderThickness="4" Visibility="Hidden">
             <Grid>
-                <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Incorrect" FontSize="72" FontWeight="Bold" />
-                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Try Again" FontSize="22" FontWeight="Bold" />
+                <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="{lex:Loc Incorrect}" FontSize="72" FontWeight="Bold" />
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc TryAgain}" FontSize="22" FontWeight="Bold" />
             </Grid>
         </Border>
         <Border x:Name="CorrectAnswer"
@@ -30,8 +30,8 @@
                 HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="50"
                 Background="#E5FFFFFF" BorderBrush="#FF59FF00" BorderThickness="4" Visibility="Hidden">
             <Grid>
-                <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Correct" FontSize="72" FontWeight="Bold" />
-                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Well Done!" FontSize="22" FontWeight="Bold" />
+                <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="{lex:Loc Correct}" FontSize="72" FontWeight="Bold" />
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc WellDone}" FontSize="22" FontWeight="Bold" />
             </Grid>
         </Border>
         <Border x:Name="OutofAttempts"
@@ -41,8 +41,9 @@
                 Background="#E5FFFFFF" BorderBrush="#FF5D5D5D" BorderThickness="4" Visibility="Hidden">
             <Grid>
                 <Label Margin="16,0,15.6,6.2" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"
-                       Content="Question Skipped" FontSize="48" FontWeight="Bold" />
-                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="Out Of attempts" FontSize="24" FontWeight="Bold" />
+                       Content="{lex:Loc QSkiped}"
+                       FontSize="48" FontWeight="Bold" />
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="{lex:Loc OutOfAttempts}" FontSize="24" FontWeight="Bold" />
             </Grid>
         </Border>
 

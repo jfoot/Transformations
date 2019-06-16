@@ -6,27 +6,25 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
 
 namespace Transformations
 {
-	/// <summary>
-	/// A translation hard exam generates two different shapes, the user must then manually enter the translation vector into the text boxs.
-	/// </summary>
-	public partial class Translation_HardExam : Window
+    /// <summary>
+    /// A translation hard exam generates two different shapes, the user must then manually enter the translation vector into the text boxs.
+    /// </summary>
+    public partial class Translation_HardExam : Window
 	{
-        readonly Exam Exams;	//Creates a new exam object
+        Exam Exams;	//Creates a new exam object
 		List<Shapes> MyShapes = new List<Shapes>();								//Creates a list to contain the shape objects
-
 		GridLine Grid;						//Creates a grid object
-        public const int ScaleFactor = 25;	//Declares the scale factor 
+        const int ScaleFactor = 25;	//Declares the scale factor 
 				
 		public Translation_HardExam()
 		{
 			InitializeComponent();
             //Sets a variety of events for both the timer and the canvas- for timing and scaling/moving around.
             //This allows code to be reused and prevents the need for redundant code.
-            Exams = new Exam(0, -2, "Translation Hard Exam", 4, timer);
+            Exams = new Exam(0, -2, Properties.Strings.THardExam, 4, timer);
             border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove +=	new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, canvas, Cursor));
@@ -76,9 +74,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                ////MessageBox.Show(
-                ////    "Failed to randomly generate an 'Translation Hard' exam. " + Properties.Strings.CriticalFailuer,
-                ////    Properties.Strings.EM_CriticalFailure + "400 M", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 M", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -117,10 +115,10 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-     //           MessageBox.Show(
-					//"The vector entered was not in the correct format; only numerical values are allowed. " + Properties.Strings.UserError,
-					//Properties.Strings.EM_InvalidInputTypeError + "302 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-			}
+                MessageBox.Show(
+                    Properties.Strings.VectorNotInFormat + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidInputTypeError + "302 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             finally
             {
                 RefreshText();
@@ -164,11 +162,9 @@ namespace Transformations
             }
             else //Else next question
             {
-                foreach (var item in MyShapes)		//Hide all shapes
-                {
-                    item.MyShape.Visibility = Visibility.Hidden;
-                }
-				//Make only the two shapes needed visible
+                //makes all shapes invisible 
+                MyShapes.ForEach(p => p.MyShape.Visibility = Visibility.Hidden);
+                //Make only the two shapes needed visible
                 MyShapes[Exams.ArrayPos].MyShape.Visibility = Visibility.Visible;
                 MyShapes[Exams.ArrayPos + 1].MyShape.Visibility = Visibility.Visible;
 
@@ -187,35 +183,18 @@ namespace Transformations
         }
         private void RefreshText()	//Used to update the text in the UI
 		{
-			question_no.Content = "Question: " + Exams.QuestionPos.ToString() + "/6";
-			score.Content = "Score: " + Exams.ScoreValue.ToString() + "/6";
-			attempts.Content = "Attempts: " + Exams.Attmepts.ToString() + "/2";
-			question.Content = "Which translation vector maps the original shape to the ghost?";
+            Exams.Refresh(question_no, score, attempts);
+            question.Content = Properties.Strings.THardEText;
 		}
         private void Canvas_Loaded(object sender, RoutedEventArgs e)	//Once the canvas has loaded spawn the grid
 		{
 			Grid = new GridLine().DrawGrid(3500, ScaleFactor, canvas);
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
 			Randomise();          
-			NextQuestion();		
-			foreach (Label t in Grid.Labels)
-			{
-				canvas.Children.Add(t);
-			}
-		}
-		private void Exit(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", Properties.Strings.AreYouSure,
-				 System.Windows.MessageBoxButton.OKCancel,
-				 MessageBoxImage.Warning);
-
-			if (exit == MessageBoxResult.OK)
-			{
-				TakeExam exam = new TakeExam();
-				exam.Show();
-				this.Close();
-			}
-		}
+			NextQuestion();
+            Grid.Labels.ForEach(p => canvas.Children.Add(p));
+        }
+		
 
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
@@ -232,26 +211,14 @@ namespace Transformations
 		{
 			cords.Content = "( " + (Convert.ToDouble(Mouse.GetPosition(canvas).X) / ScaleFactor).ToString("0.0") + "  ,  " + (-Convert.ToDouble(Mouse.GetPosition(canvas).Y) / ScaleFactor).ToString("0.0") + " )";
 		}
-        private void Show(Border type)	//Used to display the overlay 
-        {
-            type.Visibility = System.Windows.Visibility.Visible;	//Makes the overlay visible
 
-            var a = new DoubleAnimation	//Creates a double animation
-            {
-                From = 1.0,	//From 100% opacity 
-                To = 0.0,	//To 0% opacity
-                FillBehavior = FillBehavior.Stop,
-                BeginTime = TimeSpan.FromSeconds(1),				//Wait one second before starting
-                Duration = new Duration(TimeSpan.FromSeconds(0.5))	//Last only 0.5s
-            };
-            var storyboard = new Storyboard();
-			//Create a new storyboard for the animation
-            storyboard.Children.Add(a);		
-            Storyboard.SetTarget(a, type);
-            Storyboard.SetTargetProperty(a, new PropertyPath(OpacityProperty));
-			//Once the animation is completed set the visibility to hidden
-            storyboard.Completed += delegate { type.Visibility = System.Windows.Visibility.Hidden; };
-            storyboard.Begin();	//Start the animation
+        private void Show(Border type) //Shows the correct, incorrect or skip answer method.
+        {
+            Exams.Show(type);
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Exams.Exit(this);
         }
     }
 }

@@ -7501,9 +7501,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>Cet utilisateur n’a pas encore les résultats de l’examen. Quand ils prennent un examen, leurs résultats apparaîtra ici.</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Information !</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>Cette action ne peut pas être annulée.</value>
   </data>
@@ -7518,5 +7515,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Impossible de supprimer ce résultat de l’examen. Ce résultat pourrait déjà être supprimé.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Impossible de générer de façon aléatoire votre examen.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Traduction examen dur</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Quel vecteur de translation mappe la forme originale sur le fantôme ?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Traduction examen facile</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Degrés vers la droite</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Rotation dur examen</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Astuce : Cette forme a une rotation :</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Quelle est la coordonnée de centre de rotation ?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Quel vecteur de translation mappe la forme originale à la forme de fantômes ?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Vous n’avez pas sélectionné un horaire et/ou une rotation anti-horaire.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Réflexion dur examen</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Quelle ligne reflète l’original à la forme de fantômes ?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Rotation simple examen</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Ce que la rotation est préformée à la forme ?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Examen simple réflexion</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>L’élargissement examen facile</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Quel est le facteur d’échelle préformé sur la forme de fantômes ?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>L’élargissement dur examen</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Astuce : Cette forme s’élargie :</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Quelle est la coordonnée de centre de l’élargissement ?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Fin de l’examen</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>En cas d’échec</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Impossible d’enregistrer le résultat de votre examen.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Save and Exit Exam</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>ScaleFactor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Temps écoulé</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>Pour passer un examen, vous devez avoir un score de plus de 80 %, ou qu’une mauvaise réponse.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Total des tentatives</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Corriger</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Incorrecte</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Réessayez</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Bien joué !</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Des tentatives</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Question ignorée</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Êtes-vous certain de que vouloir abandonner cet examen ?</value>
   </data>
 </root>

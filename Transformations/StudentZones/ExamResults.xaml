@@ -8,18 +8,20 @@
         mc:Ignorable="d">
     <Border BorderBrush="Black" BorderThickness="5">
         <Grid>
-            <Button Width="259" Height="49" Margin="10,279,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Exit" Content="Save and Exit Exam" />
-            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="End Of Exam" />
+            <Button Width="259" Height="49" Margin="10,279,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Exit" Content="{lex:Loc SaveandExit}" />
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="{lex:Loc ExamEnd}" />
             <Label x:Name="PassOrFail"
                    Width="259" Height="77"
                    Margin="10,10,10,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
-                   BorderBrush="Black" Content="Pass" FontSize="48" FontWeight="Bold" Foreground="Lime" />
+                   BorderBrush="Black"
+                   Content="{lex:Loc Pass}"
+                   FontSize="48" FontWeight="Bold" Foreground="Lime" />
             <UniformGrid Margin="0,152,0,106" Columns="2" Rows="2">
-                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="Score:" FontSize="16" FontWeight="Bold" />
+                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="{lex:Loc Score}" FontSize="16" FontWeight="Bold" />
                 <Label x:Name="Score" HorizontalAlignment="Left" VerticalAlignment="Top" Content="0" FontSize="16" />
-                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="Total Attempts:" FontSize="16" FontWeight="Bold" />
+                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="{lex:Loc TotalAttempts}" FontSize="16" FontWeight="Bold" />
                 <Label x:Name="Attempts" HorizontalAlignment="Left" VerticalAlignment="Top" Content="0" FontSize="16" />
-                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="Time Elapsed:" FontSize="16" FontWeight="Bold" />
+                <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="{lex:Loc TimeElapsed}" FontSize="16" FontWeight="Bold" />
                 <Label x:Name="time" HorizontalAlignment="Left" VerticalAlignment="Top" Content="0" FontSize="16" />
 
             </UniformGrid>
@@ -27,7 +29,7 @@
                    Width="279"
                    Margin="0,82,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center"
                    Content="Exam Name" FontSize="14" FontWeight="Bold" />
-            <TextBlock Margin="10,113,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontStyle="Italic" Text="To pass an exam you must have a score over 80%, or only one wrong answer." TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock Margin="10,113,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontStyle="Italic" Text="{lex:Loc ToPass}" TextAlignment="Center" TextWrapping="Wrap" />
 
         </Grid>
     </Border>

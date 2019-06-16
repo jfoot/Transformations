@@ -4,7 +4,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
 
@@ -15,24 +14,20 @@ namespace Transformations
 	/// </summary>
 	public partial class Enlargement_HardExam : Window
 	{
-        readonly Exam Exams;
+        Exam Exams;
 		List<Shapes> MyShapes = new List<Shapes>();
-
-		public readonly double[] Values = {-2, -1, 0.5, 2};
-		public List<int> XAnswer = new List<int>();
-		public List<int> YAnswer = new List<int>();
-
+		readonly double[] Values = {-2, -1, 0.5, 2};
+		List<int> XAnswer = new List<int>();
+		List<int> YAnswer = new List<int>();
 		GridLine GridLine;
-		public const int ScaleFactor = 40;
-
+		const int ScaleFactor = 40;
 		List<RayLines> MyRayLines = new List<RayLines>();
-		public bool IsDrawingRays = false;
-
+		bool IsDrawingRays = false;
 		        
 		public Enlargement_HardExam()
 		{
 			InitializeComponent();
-            Exams = new Exam(0, -3, "Enlargement Hard Exam", 2, timer);
+            Exams = new Exam(0, -3, Properties.Strings.EHardE, 2, timer);
             border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
@@ -76,7 +71,6 @@ namespace Transformations
 
 					MyShapes.Add((new FreeForm().WrongGhost(233, 255, 0, (Polygon)MyShapes[MyShapes.Count - 1].MyShape, MyCanvas)));
                     				
-
 					if (Rnd.RandomNumber(0, 2) == 0)
                     {
                         MyShapes[MyShapes.Count - 1].MyScalingTransform.CenterX = Rnd.RandomNumber(7, 12) * ScaleFactor;
@@ -94,7 +88,6 @@ namespace Transformations
                         MyShapes[MyShapes.Count - 1].MyScalingTransform.CenterY = Rnd.RandomNumber(1, 6) * -ScaleFactor;
                     }
 
-
                     int RandomScale = Rnd.RandomNumber(0, 4);
                     MyShapes[MyShapes.Count - 1].MyScalingTransform.ScaleX = Values[RandomScale];
                     MyShapes[MyShapes.Count - 1].MyScalingTransform.ScaleY = Values[RandomScale];
@@ -103,14 +96,13 @@ namespace Transformations
                     YAnswer.Add(-Convert.ToInt32((Canvas.GetTop(MyShapes[MyShapes.Count - 1].MyShape) + MyShapes[MyShapes.Count - 1].MyScalingTransform.CenterY) / ScaleFactor));
 
 					MyShapes.Add((new Circle("dupe_enlargement").MakerSpawn((Canvas.GetLeft(MyShapes[MyShapes.Count - 1].MyShape) + MyShapes[MyShapes.Count - 1].MyScalingTransform.CenterX), (Canvas.GetTop(MyShapes[MyShapes.Count - 1].MyShape) + MyShapes[MyShapes.Count - 1].MyScalingTransform.CenterY), MyCanvas)));
-
 				}
             }
             catch (Exception)
             {
-                //MessageBox.Show(
-                //    "Failed to randomly generate an 'Enlargement Hard' exam. " + Properties.Strings.CriticalFailuer,
-                //    Properties.Strings.EM_CriticalFailure + "400 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void SubmitAnswer(object sender, RoutedEventArgs e)
@@ -148,8 +140,8 @@ namespace Transformations
                 }
                 catch (Exception)
                 {
-                    //MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
-                    //    Properties.Strings.EM_InvalidInputTypeError + "302 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                        Properties.Strings.EM_InvalidInputTypeError + "302 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
            RefreshText();
@@ -173,19 +165,9 @@ namespace Transformations
             }
             else
             {
-                foreach (var raygroup in MyRayLines)
-                {
-                    foreach (var line in raygroup.RayLinesList)
-                    {
-                        MyCanvas.Children.Remove(line);
-                    }
-                }
-
-                foreach (var shape in MyShapes)
-                {
-                    shape.MyShape.Visibility = Visibility.Hidden;
-                }
-
+                MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
+                MyShapes.ForEach(p => p.MyShape.Visibility = Visibility.Hidden);
+               
                 MyShapes[Exams.ArrayPos].MyShape.Visibility = Visibility.Visible;        //Original Shape
                 MyShapes[Exams.ArrayPos + 1].MyShape.Visibility = Visibility.Visible;    //Ghost Shape
                 if (hint.IsChecked == true)
@@ -205,11 +187,9 @@ namespace Transformations
     	}
         private void RefreshText()
 		{
-			question_no.Content = "Question: " + Exams.QuestionPos.ToString() + "/6";
-			score.Content = "Score: " + Exams.ScoreValue.ToString() + "/6";
-			attempts.Content = "Attempts: " + Exams.Attmepts.ToString() + "/2";
-			question.Content = "What is the coordinate for center of enlargement?";
-			ShapeRotAmount.Content = "Hint: This shape has enlarged by: " + MyShapes[Exams.ArrayPos + 1].MyScalingTransform.ScaleX + " ScaleFactor";
+            Exams.Refresh(question_no, score, attempts);
+            question.Content = Properties.Strings.EHardText;
+            ShapeRotAmount.Content = Properties.Strings.EHardHint + MyShapes[Exams.ArrayPos + 1].MyScalingTransform.ScaleX + Properties.Strings.ScaleFactor;
 		}
         private void CanvasLoaded(object sender, RoutedEventArgs e)
 		{
@@ -217,49 +197,28 @@ namespace Transformations
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
 			Randomise();
 			NextQuestion();
-			foreach (Label t in GridLine.Labels)
-			{
-				MyCanvas.Children.Add(t);
-			}
-		}
+            GridLine.Labels.ForEach(p => MyCanvas.Children.Add(p));
+        }
 
-        private void Exit(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", Properties.Strings.AreYouSure,
-				System.Windows.MessageBoxButton.OKCancel,
-				MessageBoxImage.Warning);
-
-			if (exit == MessageBoxResult.OK)
-			{
-				TakeExam exam = new TakeExam();
-				exam.Show();
-				this.Close();
-			}
-		}
         private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
 		}
         private void HintsOff(object sender, RoutedEventArgs e)
 		{
-			try
-			{
-				MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Hidden; //Marker Point
-			}
-			catch (Exception)
-			{
-			}
-		}
+            try
+            {
+                MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Hidden; //Marker Point
+            }
+            catch (Exception) { }
+        }
         private void HintsOn(object sender, RoutedEventArgs e)
 		{
-			try
-			{
-				MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Visible; //Marker Point
-			}
-			catch (Exception)
-			{
-			}
-
+            try
+            {
+                MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Visible; //Marker Point
+            }
+            catch (Exception) { }
 		}
         private void KeyPressed(object sender, KeyEventArgs e)
 		{
@@ -314,49 +273,34 @@ namespace Transformations
 		}
         private void LineCaculator(double X, double Y)
 		{
-			try
-			{
-				double m = (((Convert.ToDouble(Y) - Convert.ToDouble(Mouse.GetPosition(MyCanvas).Y)) / (Convert.ToDouble(X) - Convert.ToDouble(Mouse.GetPosition(MyCanvas).X))));
-				double c = -(Convert.ToDouble(Y) - (m * Convert.ToDouble(X)));
+            try
+            {
+                double m = (((Convert.ToDouble(Y) - Convert.ToDouble(Mouse.GetPosition(MyCanvas).Y)) / (Convert.ToDouble(X) - Convert.ToDouble(Mouse.GetPosition(MyCanvas).X))));
+                double c = -(Convert.ToDouble(Y) - (m * Convert.ToDouble(X)));
 
-				//Left
-				MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].Y1 = (-(c) + ((3500) * (m)));
-				MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].X2 = -3500;
+                //Left
+                MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].Y1 = (-(c) + ((3500) * (m)));
+                MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].X2 = -3500;
 
-				//Right
-				MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].X1 = 3500;
-				MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].Y2 = (-(c) - ((3500) * (m)));
+                //Right
+                MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].X1 = 3500;
+                MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].Y2 = (-(c) - ((3500) * (m)));
 
-			}
-			catch (Exception)
-			{
-
-			}
+            }
+            catch (Exception) { }
 		}
         private void DeleteRays(object sender, RoutedEventArgs e)
 		{
             MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
             MyRayLines.Clear();
         }
-        private void Show(Border type)
+        private void Show(Border type) //Shows the correct, incorrect or skip answer method.
         {
-            type.Visibility = System.Windows.Visibility.Visible;
-
-            var a = new DoubleAnimation
-            {
-                From = 1.0,
-                To = 0.0,
-                FillBehavior = FillBehavior.Stop,
-                BeginTime = TimeSpan.FromSeconds(1),
-                Duration = new Duration(TimeSpan.FromSeconds(0.5))
-            };
-            var storyboard = new Storyboard();
-
-            storyboard.Children.Add(a);
-            Storyboard.SetTarget(a, type);
-            Storyboard.SetTargetProperty(a, new PropertyPath(OpacityProperty));
-            storyboard.Completed += delegate { type.Visibility = System.Windows.Visibility.Hidden; };
-            storyboard.Begin();
+            Exams.Show(type);
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Exams.Exit(this);
         }
     }
 }
