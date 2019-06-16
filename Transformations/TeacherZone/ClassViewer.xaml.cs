@@ -23,7 +23,7 @@ namespace Transformations
 		public ResultsViewer(string _id, string title)
 		{
 			InitializeComponent();
-			titleClass.Content = "Class: " + title;
+			titleClass.Content = Properties.Strings.Class + " : " + title;
 			ClassID = _id;
 
 			try
@@ -46,10 +46,10 @@ namespace Transformations
             }
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//	"Failed to retrieve the students inside of the selected class. " + Properties.Strings.DataBaseError ,
-				//	Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
+                MessageBox.Show(
+                    Properties.Strings.FailedToGetClass + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 		}
         private void GridLoaded(object sender, RoutedEventArgs e)
 		{
@@ -78,8 +78,8 @@ namespace Transformations
 
 				//Checks the user is sure they wish to delete the account
 				MessageBoxResult messageBoxResult = MessageBox.Show(
-					"Are you sure you want to delete this Students account?" + "\n" +
-					"Doing so will delete both their account and any saved exam results.", "Delete Confirmation",
+			        Properties.Strings.AreYouSureDelete + "\n " +
+					Properties.Strings.StudentDelete, Properties.Strings.AreYouSure,
 					System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Warning);
 				if (messageBoxResult == MessageBoxResult.Yes)
 				{
@@ -102,21 +102,20 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//	"Failed to delete the selected user. " + Properties.Strings.DataBaseError ,
-				//	"Database Write Error: 101 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
+                MessageBox.Show(
+                    Properties.Strings.FailedToDeleteSelectedUser + Properties.Strings.DataBaseError,
+                    Properties.Strings.DatabaseWriteError + " E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 		}
         private void AllUsers(object sender, RoutedEventArgs e) //View the whole class exam results
 		{
-			ClassViewer ClassResults = new ClassViewer("All User", ClassID, "all") {Owner = this};
+			ClassViewer ClassResults = new ClassViewer(Properties.Strings.AllUser, ClassID, "all") {Owner = this};
 			ClassResults.Show();
 		}
         private void TransferUser(object sender, RoutedEventArgs e) //transfer the user to a new class
 		{
-				Dialog_ComboBox Combo = new Dialog_ComboBox("Transfer User",
-					"Please select below a new teacher  and a new class to which you would like to transfer this student. This action can not be undone.",
-					"user_transfer",
+				Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.TransferUser,
+					Properties.Strings.TransferUserPrompt, "user_transfer",
 					(UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text) {Owner = this};
 				Combo.Show();
 				Combo.Closed += SetContentHandler;
@@ -151,10 +150,10 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//	"Failed to retrieve the students inside of the selected class. " + Properties.Strings.DataBaseError ,
-				//	Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
+                MessageBox.Show(
+                    Properties.Strings.FailedToGetClass + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 		}
 	}
 }

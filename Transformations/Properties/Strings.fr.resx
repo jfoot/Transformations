@@ -5680,11 +5680,11 @@
 </value>
   </data>
   <data name="FeedbackLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/issues</value>
+    <value></value>
     <comment>WebsiteURL to give feedback</comment>
   </data>
   <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/wiki</value>
+    <value></value>
     <comment>Website URL to an on-line help manual.</comment>
   </data>
   <data name="Report" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5733,7 +5733,7 @@
 </value>
   </data>
   <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.microsoft.com/en-us/download/details.aspx?id=54920</value>
+    <value></value>
     <comment>The site to download the required dependences</comment>
   </data>
   <data name="black_dark" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5832,7 +5832,7 @@
 </value>
   </data>
   <data name="BugReport" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/issues</value>
+    <value></value>
     <comment>Link to report a bug</comment>
   </data>
   <data name="PDFBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -7398,5 +7398,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>Voir tous les cours</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Résoudre les problèmes</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Tous les utilisateurs</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Classe</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Demande de changement de nom de classe n’était pas valide.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Classe transférées avec succès à un nouvel enseignant.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Ici vous pouvez gérer les profils des conseils scolaires de l’élève et revoir leurs récents résultats de l’examen. Il suffit de cliquer sur le rang de l’élève et puis utilisez les boutons ci-dessous pour effectuer une action. Veuillez noter que les changements sont automatiquement sauvegardées et pas annuler-able.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Visionneuse de classe</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Créer compte enseignant</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Supprimer le résultat</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Supprimer l’utilisateur</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Exporter une Table vers Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Impossible de renommer la classe.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Impossible de supprimer l’utilisateur sélectionné.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Impossible de récupérer les élèves à l’intérieur de la classe sélectionnée.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Impossible de créer un nouveau compte d’enseignant.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Le mot de passe que vous avez entré est incorrect. S’il vous plaît, s’assurer que vous avez tapé correctement ; n’oubliez pas que le mot de passe est sensible à la casse.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Le nouveau propriétaire ne peut pas être laissé vide.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>mot de passe :</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Visionneuse de résultat d’examen</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Voir tous les résultats de l’utilisateur</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Voir les résultats de l’utilisateur sélectionné</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Cela supprimera fois leur compte et les résultats des examens sauvé.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Transfert réussi</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Compte d’enseignant a été correctement créé, l’application va redémarrer maintenant. S’il vous plaît login une fois redémarré.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Création d’un compte enseignant</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Nom de l’enseignant :</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Impossible de transférer/classe d’utilisateur à un nouveau propriétaire.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Veuillez sélectionner ci-dessous un nouvel enseignant et une nouvelle classe à laquelle vous souhaitez transférer cet étudiant.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Transférer l’utilisateur</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Demande de transfert de classe/utilisateur n’était pas valide.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>L’utilisateur transféré avec succès à un nouvel enseignant.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Impossible d’extraire les résultats de l’examen/classe d’utilisateur.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Cet utilisateur n’a pas encore les résultats de l’examen. Quand ils prennent un examen, leurs résultats apparaîtra ici.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Information !</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Cette action ne peut pas être annulée.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Confirmer la suppression</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Exportation des résultats a échoué.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Êtes-vous sûr de que vouloir supprimer ce résultat d’examen ?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Impossible de supprimer ce résultat de l’examen. Ce résultat pourrait déjà être supprimé.</value>
   </data>
 </root>

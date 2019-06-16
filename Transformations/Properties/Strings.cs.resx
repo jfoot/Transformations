@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeedbackLink" xml:space="preserve">
-    <value>https://GitHub.com/jfoot/Transformations/issues</value>
-  </data>
-  <data name="HelpLink" xml:space="preserve">
-    <value>https://GitHub.com/jfoot/Transformations/wiki</value>
-  </data>
   <data name="DataBaseError" xml:space="preserve">
     <value>Opakujte akci nebo Zkontrolujte připojovací řetězec databáze v "Upřesnit nastavení"</value>
   </data>
@@ -134,12 +128,6 @@
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
     <value>Neznámý problém způsobil kritickou chybu. Opakujte akci nebo se obraťte na správce systému.</value>
-  </data>
-  <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.Microsoft.com/en-us/download/details.aspx?ID=54920</value>
-  </data>
-  <data name="BugReport" xml:space="preserve">
-    <value>https://GitHub.com/jfoot/Transformations/issues</value>
   </data>
   <data name="CircleString" xml:space="preserve">
     <value>Kruh</value>
@@ -953,5 +941,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>Zobrazit všechny třídy!</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Odstranit potíže</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Všechny uživatele</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Třída</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Žádost o přejmenování třídy byl neplatný.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Třídy úspěšně převedena do nového učitele.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Zde můžete spravovat profily studenta a zkontrolovat jejich nedávné výsledky zkoušek. Jednoduše klikněte na řádek studenta a pak pomocí následujících tlačítek k provedení akce. Vezměte prosím na vědomí, že změny se automaticky uloží a není možné vrátit zpět.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Třída prohlížeč</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Vytvořit účet učitel</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Smazat výsledek</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Odstranit uživatele</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Exportovat tabulku do aplikace Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Přejmenovat třídy se nezdařilo.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Nepodařilo se odstranit vybraného uživatele.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Nepodařilo se načíst studenti uvnitř vybrané třídy.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Nepodařilo se vytvořit účet nový učitel.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Heslo, které jste zadali, je nesprávné. Ujistěte se prosím, že jste je zadali správně; Pamatujte, že heslo je velká a malá písmena.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Nový majitel nemůže být ponecháno prázdné.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Heslo:</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Prohlížeč výsledků zkoušky</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Zobrazit všechny výsledky-uživatel</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Viz výsledky vybraného uživatele</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Studentka</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Tím dojde k odstranění jejich účet a všechny uložené zkouąka výsledky.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Úspěšný přenos</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Učitelka účet byl úspěšně vytvořen, aplikace bude nyní restartován. Prosím přihlášení po restartování.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Vytvoření účtu učitel</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Jméno učitele:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Nepodařilo se přenést uživatele/třídy k novému majiteli.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Vyberte prosím níže nového učitele a novou třídu, do které chcete převést tento student.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Přenést uživatele</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Třídy uživatelů/přenos požadavek je neplatný.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>Uživatel úspěšně převedena do nového učitele.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Nepodařilo se načíst výsledky zkoušky/třídy uživatelů.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Tento uživatel zatím nemá žádné výsledky zkoušky. Když se zkoušky, jejich výsledky se objeví zde.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Informace!</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Tuto akci nelze vrátit zpět.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Potvrzení odstranění</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Výsledky vývozu se nezdařilo.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Opravdu že chcete odstranit tento výsledek zkoušky?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Nelze odstranit tento výsledek zkoušky. Tento výsledek by mohl být již odstraněn.</value>
   </data>
 </root>

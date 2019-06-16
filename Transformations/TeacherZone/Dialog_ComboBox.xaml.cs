@@ -36,11 +36,11 @@ namespace Transformations
 				Selected = _selected;
 			}
 			catch (Exception)
-			{
-     //           MessageBox.Show(
-					//"User/Class transfer request was invalid. " + Properties.Strings.UserError,
-					//Properties.Strings.EM_InvalidRequestError + "301 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
+            {
+                MessageBox.Show(
+                    Properties.Strings.UserClassInvalid + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidRequestError + "301 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
 
 			if (Command == "class_transfer" || Command == "user_transfer")    //If the user is trying to transfer a user or transfer a class
@@ -68,10 +68,10 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					//MessageBox.Show(
-				 //  "Failed to retrieve teacher names. " + Properties.Strings.DataBaseError ,
-				 //  Properties.Strings.EM_DataBaseReadError + "100 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-				}
+                    MessageBox.Show(
+                   Properties.Strings.TeacherNameFail + Properties.Strings.DataBaseError,
+                   Properties.Strings.EM_DataBaseReadError + "100 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 			}
 			if (Command == "user_transfer")    //if user transfer, make two drop-down menus visible.
 			{
@@ -99,8 +99,8 @@ namespace Transformations
 
 					this.Close();
 					MessageBox.Show(
-						"Class successfully transfered to a new teacher.",
-						"Successful Move", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+						Properties.Strings.ClassTransferedSuccesful,
+						Properties.Strings.SuccessfulMove, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
 				}
 				else if (Command == "user_transfer" && UserCombo.SelectedIndex > -1)
@@ -118,23 +118,23 @@ namespace Transformations
 
 					this.Close();
 					MessageBox.Show(
-						"User successfully transfered to a new teacher.",
-						"Successful Move", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+						Properties.Strings.UserTransferedSuccessful,
+                        Properties.Strings.SuccessfulMove, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 				}
 				else
 				{
-					////MessageBox.Show(
-					////	"The new owner can not be left blank. " + Properties.Strings.DataBaseError ,
-					////	Properties.Strings.EM_FieldEmpty + "300 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-				}
-			}
+                    MessageBox.Show(
+                    Properties.Strings.OwnerBlank + Properties.Strings.DataBaseError ,
+                    	Properties.Strings.EM_FieldEmpty + "300 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//		 "Failed to transfer user/class to a new owner. " + Properties.Strings.DataBaseError ,
-				//		 "Database Write Error: 101 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                        Properties.Strings.TransferFailed + Properties.Strings.DataBaseError,
+                         Properties.Strings.DatabaseWriteError + " B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 
-			}
+            }
 	   }
         private void TeacherSelected(object sender, SelectionChangedEventArgs e)
 		{
@@ -165,11 +165,11 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//	"Failed to retrieve classes owned by selected teacher. " + Properties.Strings.DataBaseError ,
-				//	Properties.Strings.EM_DataBaseReadError + "100 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    Properties.Strings.ClassOwnedFail + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "100 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
 
-			}
+            }
 		}
 	}
 }

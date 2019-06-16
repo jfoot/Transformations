@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeedbackLink" xml:space="preserve">
-    <value>HTTPS://GitHub.com/jfoot/Transformations/Issues</value>
-  </data>
-  <data name="HelpLink" xml:space="preserve">
-    <value>HTTPS://GitHub.com/jfoot/Transformations/wiki</value>
-  </data>
   <data name="DataBaseError" xml:space="preserve">
     <value>Пожалуйста, попробуйте снова или проверить строку подключения базы данных в «Настройки заранее»</value>
   </data>
@@ -134,12 +128,6 @@
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
     <value>Неизвестная проблема вызвала критического сбоя. Пожалуйста, повторите попытку или обратитесь к системному администратору.</value>
-  </data>
-  <data name="AccessDownload" xml:space="preserve">
-    <value>HTTPS://www.Microsoft.com/en-US/download/Details.aspx?ID=54920</value>
-  </data>
-  <data name="BugReport" xml:space="preserve">
-    <value>HTTPS://GitHub.com/jfoot/Transformations/Issues</value>
   </data>
   <data name="CircleString" xml:space="preserve">
     <value>Круг</value>
@@ -953,5 +941,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>Посмотреть все классы</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Устранение неполадок</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Всех пользователей</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Класс</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Просьба переименовать класс был признан недействительным.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Класс успешно перенесены на новый учитель.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Здесь вы можете управлять профилями студента и обзор их последние результаты экзамена. Просто нажмите на студента строки и затем использовать кнопки, расположенные ниже для выполнения действий. Пожалуйста, обратите внимание, что изменения автоматически сохраняются и не в состоянии отменить.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Программа просмотра классов</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Создайте учетную запись учитель</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Удаление результата</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Удаление пользователя</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Экспорт таблицы в Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Не удалось переименовать класс.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Не удалось удалить выбранного пользователя.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Не удалось получить студенты внутри выбранного класса.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Не удалось создать новую учетную запись учителя.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Введенный вами пароль неверный. Пожалуйста убедитесь, что вы ввели его правильно; Помните, что пароль чувствителен к регистру.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Новый владелец не может быть оставлено пустым.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Просмотра результатов экзамена</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Просмотреть все результаты пользователей</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Просмотреть результаты выбранных пользователей</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Студент</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Это удалит их счета и любые сохраненные экзамен результаты.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Успешная передача</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Учитель учетная запись успешно, приложение теперь будет перезагружен. Пожалуйста Войти после перезагрузки.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Создание учетной записи учитель</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Имя учителя:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Не удалось передать новому владельцу класса пользователей.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель и новый класс, к которому вы хотите передать этот студент.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Передавать пользователю</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Запрос передачи класса пользователя был признан недействительным.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>Пользователь успешно перенесены на новый учитель.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Не удалось получить результаты экзамена класса пользователей.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Этот пользователь не имеет каких-либо результаты экзамена еще. Когда они принимают экзамен, их результаты будут отображаться здесь.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Сведения.</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Это действие не может быть отменено.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Подтверждение удаления</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Результаты вывоза не удалось.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этот результат экзамена?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Не удается удалить этот результат экзамена. Этот результат уже могут быть удалены.</value>
   </data>
 </root>

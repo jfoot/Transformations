@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeedbackLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/Issues</value>
-  </data>
-  <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/Wiki</value>
-  </data>
   <data name="DataBaseError" xml:space="preserve">
     <value>Bitte versuchen Sie es erneut oder überprüfen Sie Ihre Datenbank-Verbindungszeichenfolge in "Erweiterte Einstellungen"</value>
   </data>
@@ -134,12 +128,6 @@
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
     <value>Ein unbekanntes Problem hat einen kritischen Fehler verursacht. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Systemadministrator.</value>
-  </data>
-  <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.Microsoft.com/en-US/Download/Details.aspx?ID=54920</value>
-  </data>
-  <data name="BugReport" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/Issues</value>
   </data>
   <data name="CircleString" xml:space="preserve">
     <value>Kreis</value>
@@ -953,5 +941,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>Alle Kurse</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Problembehandlung beim Arbeiten</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Alle Benutzer</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Klasse</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Klasse umbenennen Anforderung ist ungültig.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Klasse erfolgreich auf einen neuen Lehrer übertragen.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Hier können Sie Schülers Profile verwalten und überprüfen Sie ihre aktuellen Prüfungsergebnisse. Klicken Sie einfach auf die Zeile des Schülers und verwenden Sie die Schaltflächen unten, um eine Aktion auszuführen. Bitte beachten Sie, dass die Änderungen automatisch gespeichert und nicht "Rückgängig"-in der Lage sind.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Klasse-Viewer</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Lehrer-Konto erstellen</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Ergebnis löschen</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Benutzer löschen</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Tabelle nach Excel exportieren</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Fehler beim Umbenennen der Klasse.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Fehler beim Löschen des ausgewählten Benutzers.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Fehler beim Abrufen der Studenten innerhalb der ausgewählten Klasse.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Fehler beim Erstellen eines neuen Lehrer-Kontos.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Die von das Ihnen eingegebene Kennwort ist falsch. Vergewissern Sie sich, dass Sie ihn richtig eingegeben haben; Denken Sie daran, dass das Kennwort Groß-/Kleinschreibung ist.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Der neue Eigentümer kann nicht leer sein.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort:</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Prüfung-Ergebnis-Viewer</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Alle Benutzer-Ergebnisse anzeigen</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Ausgewählte Benutzer Ergebnisse anzeigen</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Damit löschen Sie ihren Account und alle gespeicherten Prüfungsergebnisse.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Erfolgreiche Übertragung</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Lehrer-Konto erfolgreich erstellt, wird die Anwendung neu gestartet. Bitte Login einmal neu gestartet.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Lehrer-Account-Erstellung</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Name des Lehrers:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Fehler beim übertragen der Benutzerklasse/an einen neuen Eigentümer.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Bitte wählen Sie unten einen neuen Lehrer und eine neue Klasse, die Sie übertragen, dieser Schüler möchten.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Benutzer zu übertragen</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Benutzerklasse/Transfer-Anforderung ist ungültig.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>Benutzer erfolgreich auf einen neuen Lehrer übertragen.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Fehler beim Abrufen der Benutzerklasse/Prüfungsergebnisse.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Dieser Benutzer hat Prüfungsergebnisse noch keinen. Wenn sie eine Prüfung ablegen, erscheinen deren Ergebnisse hier.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Informationen</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Diese Aktion kann nicht rückgängig gemacht werden.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Bestätigung löschen</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Export der Ergebnisse ist fehlgeschlagen.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie dieses Prüfungsergebnis löschen möchten?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Nicht in der Lage, dieses Prüfungsergebnis zu löschen. Dieses Ergebnis konnte bereits gelöscht werden.</value>
   </data>
 </root>
