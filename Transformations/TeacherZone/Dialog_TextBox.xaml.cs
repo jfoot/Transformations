@@ -25,9 +25,9 @@ namespace Transformations
             }
             catch (System.Exception)
             {
-                ////MessageBox.Show(
-                ////    "Class rename request was invalid. " + Properties.Strings.UserError,
-                ////    Properties.Strings.EM_InvalidRequestError + "301 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    Properties.Strings.ClassRenameFailed + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidRequestError + "301 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 		private void Execute(object sender, RoutedEventArgs e)
@@ -51,9 +51,9 @@ namespace Transformations
 	        }
             catch (System.Exception)
             {
-                //MessageBox.Show(
-                //       "Failed to rename the class. " + Properties.Strings.DataBaseError ,
-                //       "Database Write Error: 101 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                       Properties.Strings.FailedClassRename + Properties.Strings.DataBaseError,
+                       Properties.Strings.DatabaseWriteError + " C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 	}

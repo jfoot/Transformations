@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeedbackLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/Issues</value>
-  </data>
-  <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/wiki</value>
-  </data>
   <data name="DataBaseError" xml:space="preserve">
     <value>Försök igen eller kontrollera din databasanslutningssträng i 'Avancerade inställningar'</value>
   </data>
@@ -134,12 +128,6 @@
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
     <value>Ett okänt problem har orsakat en kritisk misslyckande. Vänligen försök igen eller kontakta din systemadministratör.</value>
-  </data>
-  <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.microsoft.com/en-US/Download/details.aspx?id=54920</value>
-  </data>
-  <data name="BugReport" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/Issues</value>
   </data>
   <data name="CircleString" xml:space="preserve">
     <value>Cirkel</value>
@@ -953,5 +941,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>Visa alla klasser</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Felsöka problem</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Alla användare</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Klass</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Klass rename begäran var ogiltigt.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Klass har överförts till en ny lärare.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Här kan du hantera studentens profiler och deras senaste testresultat. Klicka bara på studentens rad och sedan använda knapparna nedan för att utföra en åtgärd. Observera förändringar är automatiskt sparade och inte ångra-stånd.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Klass Viewer</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Skapa lärarkonto</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Ta bort resultatet</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Ta bort användare</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Exportera tabell till Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Det gick inte att byta namn på klassen.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Kunde inte ta bort den markerade användaren.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Kunde inte hämta studenterna inuti den markerade klassen.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Det gick inte att skapa ett nytt lärarkonto.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Det lösenord som du har angett är felaktig. Kontrollera, att du har skrivit in det korrekt. kom ihåg lösenordet är skiftlägeskänsligt.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Den nya ägaren kan inte lämnas tomt.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lösenord:</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Tenta resultatet Viewer</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Se alla resultat för användaren</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Se valda användaren resultat</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Därigenom tar bort både sitt konto och eventuella sparade testresultat.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Lyckad överföring</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Lärarkonto skapats, programmet startas om. Vänligen logga in en gång startas om.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Skapa ett konto för lärare</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Lärare namn:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Det gick inte att överföra användare/klass till en ny ägare.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Vänligen välj nedan nya lärare och en ny klass som du vill överföra detta student.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Överföra användare</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Användarklassen/överföring begäran var ogiltigt.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>Användaren har överförts till en ny lärare.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Kunde inte hämta användarklass / examensresultat.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Den här användaren har inte någon exam resultat ännu. När de tar examen, kommer att deras resultat visas här.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Åtgärden kan inte ångras.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Ta bort bekräftelse</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Resultat export misslyckades.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Är du säker du vill ta bort detta exam resultat?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Det går inte att ta bort detta exam resultat. Detta resultat kunde redan raderas.</value>
   </data>
 </root>

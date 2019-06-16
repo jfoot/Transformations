@@ -6926,7 +6926,7 @@
     <value>You are currently not logged in. No progress will be saved or recorded while using a Guest login.</value>
   </data>
   <data name="AreYouSureDelete" xml:space="preserve">
-    <value>Are you sure you want to delete </value>
+    <value>Are you sure you want to delete?</value>
   </data>
   <data name="DeleteConfirm" xml:space="preserve">
     <value>Deleted Successfully</value>
@@ -7436,5 +7436,122 @@
         UdbCKthlE5JNmUtM38QWJJ/lcD3F9O5Cpyf/TbQrnAe9aNmLDdD77ITT1fUXr/+JYtFTetwAAAAASUVO
         RK5CYII=
 </value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>All User</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Class rename request was invalid.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Class successfully transfered to a new teacher.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Here you can manage student's profiles and review their recent exam results. Simply click on the student's row and then use the buttons below to perform an action. Please note changes are automatically saved and not undo-able.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Class Viewer</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Create Teacher Account</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Delete Result</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Export Table To Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Failed to rename the class.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Failed to delete the selected user.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Failed to retrieve the students inside of the selected class.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Failed to create a new teacher account. </value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>The password you've entered is incorrect. Please, ensure you have typed it correctly; remember the password is case sensitive.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>The new owner can not be left blank. </value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password: </value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Exam Result Viewer</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>See all user results</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>See selected user results</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Student</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Doing so will delete both their account and any saved exam results.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Successful Transfer</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Teacher account successfully created, the application will now restart. Please login once restarted.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Teacher Account Creation</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Teacher Name: </value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Failed to transfer user/class to a new owner.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Please select below a new teacher  and a new class to which you would like to transfer this student.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Transfer User</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>User/Class transfer request was invalid.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>User successfully transfered to a new teacher.</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>This action can not be undone.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Delete Confirmation</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Results exportation failed.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Failed to retrieve  user/class exam results.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>This user does not have any exam results yet. When they take an exam, their results will appear here.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Are you sure you want to delete this exam result?</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Unable to delete this exam result. This result could already be deleted.</value>
   </data>
 </root>

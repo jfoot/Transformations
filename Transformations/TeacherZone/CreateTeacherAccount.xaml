@@ -1,28 +1,29 @@
 ﻿<Window x:Class="Transformations.CreateTeacherAccount"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:lex="http://wpflocalizeextension.codeplex.com" xmlns:local="clr-namespace:Transformations" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="Teacher Account Creation"
+        Title="{lex:Loc TeacherCreation}"
         Width="300" Height="311.96"
         lex:LocalizeDictionary.DesignCulture="en-GB" lex:ResxLocalizationProvider.DefaultAssembly="Transformations" lex:ResxLocalizationProvider.DefaultDictionary="Strings" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid Background="#FF2D2D30">
         <UniformGrid Margin="31,101,23,46" Columns="2" Rows="5">
-            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="UserName: " Foreground="White" />
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc UserName}" Foreground="White" />
             <Label x:Name="username" Margin="-24,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="[username]" Foreground="White" />
-            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="UserID: " Foreground="White" />
-            <Label Margin="-24,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="To Be assigned " Foreground="White" />
-            <Label Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Teacher Name: " Foreground="White" />
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc UserID}" Foreground="White" />
+            <Label Margin="-24,-0.2,53,0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="{lex:Loc TBA}" Foreground="White" />
+            <Label Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc TeacherName}" Foreground="White" />
             <TextBox x:Name="name"
                      Width="120" Height="23"
                      Margin="-24,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
                      Text="" TextWrapping="Wrap" />
-            <Label Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Password: " Foreground="White" />
+            <Label Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{lex:Loc Password}" Foreground="White" />
             <PasswordBox x:Name="passbox" Width="120" Height="21" Margin="-24,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
         </UniformGrid>
         <Image Width="272" Height="81" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Transformations;component/Resources/logo.png" />
         <Button Width="272" Height="41"
                 Margin="10,228,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Click="CreateTeacherAccountButton" Content="Create Teacher Account"
+                Click="CreateTeacherAccountButton"
+                Content="{lex:Loc CreateTeacher}"
                 IsEnabled="{Binding ElementName=name, Path=Text.Length}" />
     </Grid>
 </Window>

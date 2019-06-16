@@ -169,6 +169,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All User.
+        /// </summary>
+        public static string AllUser {
+            get {
+                return ResourceManager.GetString("AllUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Heres the error message, this is all we know....
         /// </summary>
         public static string AllWeKnow {
@@ -205,7 +214,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete .
+        ///   Looks up a localized string similar to Are you sure you want to delete?.
         /// </summary>
         public static string AreYouSureDelete {
             get {
@@ -354,6 +363,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This action can not be undone..
+        /// </summary>
+        public static string CanNotBeUndone {
+            get {
+                return ResourceManager.GetString("CanNotBeUndone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Class.
         /// </summary>
         public static string ChangeClass {
@@ -378,6 +396,15 @@ namespace Transformations.Properties {
         public static string CircleString {
             get {
                 return ResourceManager.GetString("CircleString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class.
+        /// </summary>
+        public static string Class {
+            get {
+                return ResourceManager.GetString("Class", resourceCulture);
             }
         }
         
@@ -463,11 +490,47 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Class rename request was invalid..
+        /// </summary>
+        public static string ClassRenameFailed {
+            get {
+                return ResourceManager.GetString("ClassRenameFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Transfer Ownership of class.
         /// </summary>
         public static string ClassTransfer {
             get {
                 return ResourceManager.GetString("ClassTransfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class successfully transfered to a new teacher..
+        /// </summary>
+        public static string ClassTransferedSuccesful {
+            get {
+                return ResourceManager.GetString("ClassTransferedSuccesful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Here you can manage student&apos;s profiles and review their recent exam results. Simply click on the student&apos;s row and then use the buttons below to perform an action. Please note changes are automatically saved and not undo-able..
+        /// </summary>
+        public static string ClassViewDesc {
+            get {
+                return ResourceManager.GetString("ClassViewDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class Viewer.
+        /// </summary>
+        public static string ClassViewer {
+            get {
+                return ResourceManager.GetString("ClassViewer", resourceCulture);
             }
         }
         
@@ -549,6 +612,15 @@ namespace Transformations.Properties {
         public static string CreateDesc {
             get {
                 return ResourceManager.GetString("CreateDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Teacher Account.
+        /// </summary>
+        public static string CreateTeacher {
+            get {
+                return ResourceManager.GetString("CreateTeacher", resourceCulture);
             }
         }
         
@@ -796,6 +868,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Confirmation.
+        /// </summary>
+        public static string DeleteConfirmation {
+            get {
+                return ResourceManager.GetString("DeleteConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deleted Successfully.
         /// </summary>
         public static string DeletedSuccessfully {
@@ -805,11 +886,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Result.
+        /// </summary>
+        public static string DeleteResult {
+            get {
+                return ResourceManager.GetString("DeleteResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Shape.
         /// </summary>
         public static string DeleteShape {
             get {
                 return ResourceManager.GetString("DeleteShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete User.
+        /// </summary>
+        public static string DeleteUser {
+            get {
+                return ResourceManager.GetString("DeleteUser", resourceCulture);
             }
         }
         
@@ -1099,6 +1198,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export Table To Excel.
+        /// </summary>
+        public static string ExcelExport {
+            get {
+                return ResourceManager.GetString("ExcelExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Execute.
         /// </summary>
         public static string ExecuteString {
@@ -1123,6 +1231,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Export", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Results exportation failed..
+        /// </summary>
+        public static string ExportationFailed {
+            get {
+                return ResourceManager.GetString("ExportationFailed", resourceCulture);
             }
         }
         
@@ -1152,6 +1269,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("eye_visable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to rename the class..
+        /// </summary>
+        public static string FailedClassRename {
+            get {
+                return ResourceManager.GetString("FailedClassRename", resourceCulture);
             }
         }
         
@@ -1192,6 +1318,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to delete the selected user..
+        /// </summary>
+        public static string FailedToDeleteSelectedUser {
+            get {
+                return ResourceManager.GetString("FailedToDeleteSelectedUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve the students inside of the selected class..
+        /// </summary>
+        public static string FailedToGetClass {
+            get {
+                return ResourceManager.GetString("FailedToGetClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to retrieve the classes you own. .
         /// </summary>
         public static string FailedToGetClasses {
@@ -1219,11 +1363,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve  user/class exam results..
+        /// </summary>
+        public static string FailedToGetUserClassResults {
+            get {
+                return ResourceManager.GetString("FailedToGetUserClassResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to create a new class..
         /// </summary>
         public static string FailedToMakeNewClass {
             get {
                 return ResourceManager.GetString("FailedToMakeNewClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to create a new teacher account. .
+        /// </summary>
+        public static string FailedToMakeTeacher {
+            get {
+                return ResourceManager.GetString("FailedToMakeTeacher", resourceCulture);
             }
         }
         
@@ -1506,6 +1668,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The password you&apos;ve entered is incorrect. Please, ensure you have typed it correctly; remember the password is case sensitive..
+        /// </summary>
+        public static string IncorrectPassword {
+            get {
+                return ResourceManager.GetString("IncorrectPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Info {
@@ -1762,6 +1933,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This user does not have any exam results yet. When they take an exam, their results will appear here..
+        /// </summary>
+        public static string NoResults {
+            get {
+                return ResourceManager.GetString("NoResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No Shape Currently Selected.
         /// </summary>
         public static string NoShapeSelected {
@@ -1817,6 +1997,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The new owner can not be left blank. .
+        /// </summary>
+        public static string OwnerBlank {
+            get {
+                return ResourceManager.GetString("OwnerBlank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Paralalgram {
@@ -1832,6 +2021,15 @@ namespace Transformations.Properties {
         public static string ParallelogramString {
             get {
                 return ResourceManager.GetString("ParallelogramString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password: .
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
@@ -2100,6 +2298,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this exam result?.
+        /// </summary>
+        public static string ResultAreYouSure {
+            get {
+                return ResourceManager.GetString("ResultAreYouSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exam Result Viewer.
+        /// </summary>
+        public static string ResultViewer {
+            get {
+                return ResourceManager.GetString("ResultViewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Return {
@@ -2336,6 +2552,24 @@ namespace Transformations.Properties {
         public static string SeeClassResults {
             get {
                 return ResourceManager.GetString("SeeClassResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See all user results.
+        /// </summary>
+        public static string SeeResults {
+            get {
+                return ResourceManager.GetString("SeeResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See selected user results.
+        /// </summary>
+        public static string SeeSpecificResult {
+            get {
+                return ResourceManager.GetString("SeeSpecificResult", resourceCulture);
             }
         }
         
@@ -2605,11 +2839,38 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string String2 {
+            get {
+                return ResourceManager.GetString("String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student.
+        /// </summary>
+        public static string Student {
+            get {
+                return ResourceManager.GetString("Student", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Student Account.
         /// </summary>
         public static string StudentAccount {
             get {
                 return ResourceManager.GetString("StudentAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doing so will delete both their account and any saved exam results..
+        /// </summary>
+        public static string StudentDelete {
+            get {
+                return ResourceManager.GetString("StudentDelete", resourceCulture);
             }
         }
         
@@ -2664,6 +2925,25 @@ namespace Transformations.Properties {
         public static string SuccDeletedClass2 {
             get {
                 return ResourceManager.GetString("SuccDeletedClass2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successful Transfer.
+        /// </summary>
+        public static string SuccessfulMove {
+            get {
+                return ResourceManager.GetString("SuccessfulMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap support {
+            get {
+                object obj = ResourceManager.GetObject("support", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -2750,6 +3030,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Teacher account successfully created, the application will now restart. Please login once restarted..
+        /// </summary>
+        public static string TeacherCreated {
+            get {
+                return ResourceManager.GetString("TeacherCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher Account Creation.
+        /// </summary>
+        public static string TeacherCreation {
+            get {
+                return ResourceManager.GetString("TeacherCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Successfully deleted your account, including.
         /// </summary>
         public static string TeacherDelete1 {
@@ -2791,6 +3089,15 @@ namespace Transformations.Properties {
         public static string TeacherLogOutDrop {
             get {
                 return ResourceManager.GetString("TeacherLogOutDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teacher Name: .
+        /// </summary>
+        public static string TeacherName {
+            get {
+                return ResourceManager.GetString("TeacherName", resourceCulture);
             }
         }
         
@@ -2887,11 +3194,29 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to transfer user/class to a new owner..
+        /// </summary>
+        public static string TransferFailed {
+            get {
+                return ResourceManager.GetString("TransferFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Transfer User.
         /// </summary>
         public static string TransferUser {
             get {
                 return ResourceManager.GetString("TransferUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select below a new teacher  and a new class to which you would like to transfer this student..
+        /// </summary>
+        public static string TransferUserPrompt {
+            get {
+                return ResourceManager.GetString("TransferUserPrompt", resourceCulture);
             }
         }
         
@@ -2962,6 +3287,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Transfer User.
+        /// </summary>
+        public static string TrasnferUser {
+            get {
+                return ResourceManager.GetString("TrasnferUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap triangle {
@@ -2986,6 +3320,15 @@ namespace Transformations.Properties {
         public static string TroubleShootDrop {
             get {
                 return ResourceManager.GetString("TroubleShootDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to delete this exam result. This result could already be deleted..
+        /// </summary>
+        public static string UnableToDeleteResult {
+            get {
+                return ResourceManager.GetString("UnableToDeleteResult", resourceCulture);
             }
         }
         
@@ -3044,6 +3387,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User/Class transfer request was invalid..
+        /// </summary>
+        public static string UserClassInvalid {
+            get {
+                return ResourceManager.GetString("UserClassInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please ensure you’ve correctly inputted/ selected a valid value..
         /// </summary>
         public static string UserError {
@@ -3077,6 +3429,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Users", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User successfully transfered to a new teacher..
+        /// </summary>
+        public static string UserTransferedSuccessful {
+            get {
+                return ResourceManager.GetString("UserTransferedSuccessful", resourceCulture);
             }
         }
         

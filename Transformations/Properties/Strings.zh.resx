@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeedbackLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/issues</value>
-  </data>
-  <data name="HelpLink" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/wiki</value>
-  </data>
   <data name="DataBaseError" xml:space="preserve">
     <value>请重试或在 "高级设置" 中检查数据库连接字符串</value>
   </data>
@@ -134,12 +128,6 @@
   </data>
   <data name="CriticalFailuer" xml:space="preserve">
     <value>未知问题已导致严重故障。请重试或与系统管理员联系。</value>
-  </data>
-  <data name="AccessDownload" xml:space="preserve">
-    <value>https://www.microsoft.com/en-us/download/details.aspx？id=54920</value>
-  </data>
-  <data name="BugReport" xml:space="preserve">
-    <value>https://github.com/jfoot/Transformations/issues</value>
   </data>
   <data name="CircleString" xml:space="preserve">
     <value>圈</value>
@@ -953,5 +941,125 @@
   </data>
   <data name="ViewAllClasses" xml:space="preserve">
     <value>查看所有类</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>疑难解答问题</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>所有用户</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>类</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>类重命名请求无效。</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>班成功地转到了新老师。</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>在这里,您可以管理学生的个人资料并查看他们最近的考试成绩。只需单击学生的行,然后使用下面的按钮执行操作。请注意,更改将自动保存,且不可撤消。</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>类查看器</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>创建教师帐户</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>删除结果</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>删除用户</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>将表导出到 Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>无法重命名类。</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>无法删除所选用户。</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>无法检索所选班级内的学生。</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>无法创建新教师帐户。</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>您输入的密码不正确。请确保您键入正确;请记住密码区分大小写。</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>新所有者不能留空。</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码：</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>考试成绩查看器</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>查看所有用户结果</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>查看所选用户结果</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>学生</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>这样做将删除他们的帐户和任何保存的考试结果。</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>成功传输</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>教师帐户已成功创建,应用程序现在将重新启动。请登录一旦重新启动。</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>教师帐户创建</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>教师姓名:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>无法将用户/类转移到新所有者。</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>请在下面选择一位新教师和一个新班级,您要将该学生转到该班级。</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>传输用户</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>用户/类转移请求无效。</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>用户已成功转移到新教师。</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>无法检索用户/类考试结果。</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>此用户尚未获得任何考试结果。当他们参加考试时,他们的结果将在这里显示。</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>信息!</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>此操作无法撤消。</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>删除确认</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>结果导出失败。</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>是否确实要删除此考试结果?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>无法删除此考试结果。此结果已可能被删除。</value>
   </data>
 </root>
