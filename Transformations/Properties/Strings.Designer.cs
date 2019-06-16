@@ -1320,6 +1320,16 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap FixMe {
+            get {
+                object obj = ResourceManager.GetObject("FixMe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Free Form.
         /// </summary>
         public static string FreeFormString {
@@ -1450,7 +1460,7 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/jfoot/Transformations/wiki.
+        ///   Looks up a localized string similar to https://jonathanfoot.com/Projects/Transformations/index.html.
         /// </summary>
         public static string HelpLink {
             get {
@@ -2967,6 +2977,15 @@ namespace Transformations.Properties {
         public static string TriangleString {
             get {
                 return ResourceManager.GetString("TriangleString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Troubleshoot Problems.
+        /// </summary>
+        public static string TroubleShootDrop {
+            get {
+                return ResourceManager.GetString("TroubleShootDrop", resourceCulture);
             }
         }
         

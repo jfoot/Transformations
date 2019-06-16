@@ -523,5 +523,12 @@ namespace Transformations
 				this.Close();
 			}
 		}
-	}
+
+        private void TroubleShoot_Click(object sender, RoutedEventArgs e)
+        {
+            Troubleshooting tb = new Troubleshooting();
+            tb.Show();
+            this.Close();
+        }
+    }
 }
