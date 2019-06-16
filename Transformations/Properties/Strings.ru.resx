@@ -1044,9 +1044,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>Этот пользователь не имеет каких-либо результаты экзамена еще. Когда они принимают экзамен, их результаты будут отображаться здесь.</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Сведения.</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>Это действие не может быть отменено.</value>
   </data>
@@ -1061,5 +1058,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Не удается удалить этот результат экзамена. Этот результат уже могут быть удалены.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Не случайно генерировать ваш экзамен.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Перевод жесткий экзамен</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Какой перевод векторных карт первоначальную форму с призраком?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Перевод легко экзамен</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Градусов по часовой стрелке</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Вращение жесткий экзамен</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Подсказка: Циклический сдвиг эту форму:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Что такое координату для центра вращения?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Какой перевод векторных карт первоначальную форму в форму призрак?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Вы не выбрали, как по часовой стрелке или против часовой стрелки вращения.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Отражение жесткий экзамен</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Какая линия отражает оригинал формы призрак?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Вращение легко экзамен</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Какие вращение преформированных к фигуре?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Отражение легко экзамен</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Расширение легко экзамен</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Что такое коэффициент масштабирования, предварительно отформованных на фигуре призрак?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Расширение жесткий экзамен</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Подсказка: Эта форма расширила путем:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Что такое координату центра расширения?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Конец экзамен</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Сбой</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Не удалось сохранить ваши результаты экзамена.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Перевал</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Сохранить и выход экзамен</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>ScaleFactor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Прошедшее время</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>Для сдачи экзамена необходимо иметь оценка более 80%, или только один неверный ответ.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Всего попыток</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Правильно</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Неправильный</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Прекрасно!</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Из попыток</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Вопрос пропущен</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Вы уверены, что вы хотите, чтобы оставить этот экзамен?</value>
   </data>
 </root>

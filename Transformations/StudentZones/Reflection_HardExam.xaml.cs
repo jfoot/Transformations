@@ -4,10 +4,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
-
 
 namespace Transformations
 {
@@ -16,21 +14,18 @@ namespace Transformations
 	/// </summary>
 	public partial class Reflection_HardExam : Window
 	{
-        readonly Exam Exams;
+        Exam Exams;
 		List<Shapes> MyShapes = new List<Shapes>();
-
 		List<Line> RefLine = new List<Line>();
 		List<int> MList = new List<int>();
 		List<int> CList = new List<int>();
-
 		GridLine GridLine;
-		public const int ScaleFactor = 25;
-		
-        
+		const int ScaleFactor = 25;
+	
 		public Reflection_HardExam()
 		{
 			InitializeComponent();
-            Exams = new Exam(0, -2, "Reflection Hard Exam", 6, timer);
+            Exams = new Exam(0, -2, Properties.Strings.RefHardE, 6, timer);
             border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
@@ -144,9 +139,9 @@ namespace Transformations
             }
             catch (Exception)
             {
-                //MessageBox.Show(
-                //    "Failed to randomly generate an 'Reflection Hard' exam. " + Properties.Strings.CriticalFailuer,
-                //    Properties.Strings.EM_CriticalFailure + "400 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(
+                    Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
 
@@ -230,10 +225,10 @@ namespace Transformations
 			}
 			catch (Exception)
 			{
-				//MessageBox.Show(
-				//	"The line equation entered is not in the correct format; only numerical values are allowed. " + Properties.Strings.UserError,
-				//	Properties.Strings.EM_InvalidInputTypeError + "302 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-			}
+                MessageBox.Show(
+                    Properties.Strings.ReflectNotCorrectFormat + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidInputTypeError + "302 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 		}
 		private void NextQuestion()
 		{
@@ -241,14 +236,8 @@ namespace Transformations
 			Exams.ArrayPos += 2;
 			Exams.ResetAttempts();
 
-			foreach (var shape in MyShapes)
-			{
-				shape.MyShape.Visibility = Visibility.Hidden;
-			}
-			foreach (var shape in RefLine)
-			{
-				shape.Visibility = Visibility.Hidden;
-			}
+            MyShapes.ForEach(p => p.MyShape.Visibility = Visibility.Hidden);
+            RefLine.ForEach(p => p.Visibility = Visibility.Hidden);
 
 			if (Exams.QuestionPos > 6)
 			{
@@ -282,11 +271,9 @@ namespace Transformations
 		}
 	    private void RefreshText()
 		{
-			question_no.Content = "Question: " + Exams.QuestionPos.ToString() + "/6";
-			score.Content = "Score: " + Exams.ScoreValue.ToString() + "/6";
-			attempts.Content = "Attempts: " + Exams.Attmepts.ToString() + "/2";
-			question.Content = "What line reflects the original to the ghost shape?";
-		}
+            Exams.Refresh(question_no, score, attempts);
+            question.Content = Properties.Strings.RefHardText;
+        }
 		private void HintsOn(object sender, RoutedEventArgs e)
 		{
 			try
@@ -312,25 +299,9 @@ namespace Transformations
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
 	        Randomise();
 	        NextQuestion();
-	        foreach (Label t in GridLine.Labels)
-	        {
-		        MyCanvas.Children.Add(t);
-	        }
-		}
+            GridLine.Labels.ForEach(p => MyCanvas.Children.Add(p));
+        }
   
-		private void Exit(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", Properties.Strings.AreYouSure,
-				System.Windows.MessageBoxButton.OKCancel,
-				MessageBoxImage.Warning);
-
-			if (exit == MessageBoxResult.OK)
-			{
-				TakeExam exam = new TakeExam();
-				exam.Show();
-				this.Close();
-			}
-		}
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
@@ -346,25 +317,13 @@ namespace Transformations
 		{
 			cords.Content = "( " + (Convert.ToDouble(Mouse.GetPosition(MyCanvas).X) / ScaleFactor).ToString("0.0") + "  ,  " + (-Convert.ToDouble(Mouse.GetPosition(MyCanvas).Y) / ScaleFactor).ToString("0.0") + " )";
 		}
-        private void Show(Border type)
+        private void Show(Border type) //Shows the correct, incorrect or skip answer method.
         {
-            type.Visibility = System.Windows.Visibility.Visible;
-
-            var a = new DoubleAnimation
-            {
-                From = 1.0,
-                To = 0.0,
-                FillBehavior = FillBehavior.Stop,
-                BeginTime = TimeSpan.FromSeconds(1),
-                Duration = new Duration(TimeSpan.FromSeconds(0.5))
-            };
-            var storyboard = new Storyboard();
-
-            storyboard.Children.Add(a);
-            Storyboard.SetTarget(a, type);
-            Storyboard.SetTargetProperty(a, new PropertyPath(OpacityProperty));
-            storyboard.Completed += delegate { type.Visibility = System.Windows.Visibility.Hidden; };
-            storyboard.Begin();
+            Exams.Show(type);
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Exams.Exit(this);
         }
     }
 }

@@ -1044,9 +1044,6 @@
   <data name="NoResults" xml:space="preserve">
     <value>Den här användaren har inte någon exam resultat ännu. När de tar examen, kommer att deras resultat visas här.</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>Information</value>
-  </data>
   <data name="CanNotBeUndone" xml:space="preserve">
     <value>Åtgärden kan inte ångras.</value>
   </data>
@@ -1061,5 +1058,113 @@
   </data>
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Det går inte att ta bort detta exam resultat. Detta resultat kunde redan raderas.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Misslyckades att slumpmässigt generera din examen.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Översättning hårt examen</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Vilken översättning vektorkartor den ursprungliga formen till spöket?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Översättning lätt Exam</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Grader medsols</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Rotation hårt examen</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Tips: Denna form har roterats:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Vad är koordinaten för rotationspunkten?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Vilken översättning vektorkartor den ursprungliga formen till ghost formen?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Du har inte valt både en medurs och en moturs rotation.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Speglar hårt examen</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Vilken linje reflekterar ursprungliga ghost form?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Rotation lätt Exam</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Vilken rotation är förformade till formen?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Speglar lätt Exam</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Utvidgningen lätt Exam</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Vad är den skalfaktor som förformade på formen ghost?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Utvidgningen hårt examen</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Tips: Denna form har utvidgat genom:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Vad är koordinaten för centrera av utvidgningen?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Slutet av examen</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Misslyckas</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Det gick inte att spara dina testresultat.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Passera</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Spara och avsluta tentamen</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>ScaleFactor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Förfluten tid</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>För att klara en examen måste du ha en poäng över 80%, eller bara ett fel svar.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Totala försök</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Korrigera</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Felaktiga</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Försök igen</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Bra gjort!</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Av försöken</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Fråga hoppas över</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Är du säker du vill överge denna examen?</value>
   </data>
 </root>

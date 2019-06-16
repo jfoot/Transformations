@@ -571,6 +571,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Correct.
+        /// </summary>
+        public static string Correct {
+            get {
+                return ResourceManager.GetString("Correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         public static string Create {
@@ -841,6 +850,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  Degrees Clockwise.
+        /// </summary>
+        public static string DegreeClockWise {
+            get {
+                return ResourceManager.GetString("DegreeClockWise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Account.
         /// </summary>
         public static string DeleteAccount {
@@ -1012,6 +1030,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enlargement Easy Exam.
+        /// </summary>
+        public static string EEasyE {
+            get {
+                return ResourceManager.GetString("EEasyE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is the scale factor preformed on the ghost shape?.
+        /// </summary>
+        public static string EEasyText {
+            get {
+                return ResourceManager.GetString("EEasyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enlargment Ghosts Hidden.
         /// </summary>
         public static string EGhostHidden {
@@ -1026,6 +1062,33 @@ namespace Transformations.Properties {
         public static string EGhostVisible {
             get {
                 return ResourceManager.GetString("EGhostVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enlargement Hard Exam.
+        /// </summary>
+        public static string EHardE {
+            get {
+                return ResourceManager.GetString("EHardE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hint: This shape has enlarged by:.
+        /// </summary>
+        public static string EHardHint {
+            get {
+                return ResourceManager.GetString("EHardHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is the coordinate for center of enlargement?.
+        /// </summary>
+        public static string EHardText {
+            get {
+                return ResourceManager.GetString("EHardText", resourceCulture);
             }
         }
         
@@ -1189,6 +1252,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End Of Exam.
+        /// </summary>
+        public static string ExamEnd {
+            get {
+                return ResourceManager.GetString("ExamEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exams By Type.
         /// </summary>
         public static string ExamType {
@@ -1269,6 +1341,15 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("eye_visable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fail.
+        /// </summary>
+        public static string Fail {
+            get {
+                return ResourceManager.GetString("Fail", resourceCulture);
             }
         }
         
@@ -1372,6 +1453,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to randomly generate your exam. .
+        /// </summary>
+        public static string FailedToMakeExam {
+            get {
+                return ResourceManager.GetString("FailedToMakeExam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to create a new class..
         /// </summary>
         public static string FailedToMakeNewClass {
@@ -1395,6 +1485,15 @@ namespace Transformations.Properties {
         public static string FailedToSave {
             get {
                 return ResourceManager.GetString("FailedToSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save your exam results..
+        /// </summary>
+        public static string FailedToSaveResult {
+            get {
+                return ResourceManager.GetString("FailedToSaveResult", resourceCulture);
             }
         }
         
@@ -1668,6 +1767,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect.
+        /// </summary>
+        public static string Incorrect {
+            get {
+                return ResourceManager.GetString("Incorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The password you&apos;ve entered is incorrect. Please, ensure you have typed it correctly; remember the password is case sensitive..
         /// </summary>
         public static string IncorrectPassword {
@@ -1728,6 +1836,15 @@ namespace Transformations.Properties {
         public static string LanguageText2 {
             get {
                 return ResourceManager.GetString("LanguageText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wish to abandon this exam?.
+        /// </summary>
+        public static string LeaveExam {
+            get {
+                return ResourceManager.GetString("LeaveExam", resourceCulture);
             }
         }
         
@@ -1933,6 +2050,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have not selected both a clockwise and/or an anti-clockwise rotation..
+        /// </summary>
+        public static string NoClockGuess {
+            get {
+                return ResourceManager.GetString("NoClockGuess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This user does not have any exam results yet. When they take an exam, their results will appear here..
         /// </summary>
         public static string NoResults {
@@ -1997,6 +2123,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Out Of attempts.
+        /// </summary>
+        public static string OutOfAttempts {
+            get {
+                return ResourceManager.GetString("OutOfAttempts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The new owner can not be left blank. .
         /// </summary>
         public static string OwnerBlank {
@@ -2021,6 +2156,15 @@ namespace Transformations.Properties {
         public static string ParallelogramString {
             get {
                 return ResourceManager.GetString("ParallelogramString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pass.
+        /// </summary>
+        public static string Pass {
+            get {
+                return ResourceManager.GetString("Pass", resourceCulture);
             }
         }
         
@@ -2119,6 +2263,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Question Skipped.
+        /// </summary>
+        public static string QSkiped {
+            get {
+                return ResourceManager.GetString("QSkiped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Question.
         /// </summary>
         public static string Question {
@@ -2185,6 +2338,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reflection Easy Exam.
+        /// </summary>
+        public static string RefEasyE {
+            get {
+                return ResourceManager.GetString("RefEasyE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap refH_1 {
@@ -2201,6 +2363,24 @@ namespace Transformations.Properties {
             get {
                 object obj = ResourceManager.GetObject("refH_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reflection Hard Exam.
+        /// </summary>
+        public static string RefHardE {
+            get {
+                return ResourceManager.GetString("RefHardE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What line reflects the original to the ghost shape?.
+        /// </summary>
+        public static string RefHardText {
+            get {
+                return ResourceManager.GetString("RefHardText", resourceCulture);
             }
         }
         
@@ -2391,6 +2571,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rotation Easy Exam.
+        /// </summary>
+        public static string RotEasyE {
+            get {
+                return ResourceManager.GetString("RotEasyE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What rotation is preformed to the shape?.
+        /// </summary>
+        public static string RotEasyEText {
+            get {
+                return ResourceManager.GetString("RotEasyEText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap rotH_1 {
@@ -2411,12 +2609,48 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rotation Hard Exam.
+        /// </summary>
+        public static string RotHardE {
+            get {
+                return ResourceManager.GetString("RotHardE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hint: This shape has rotated: .
+        /// </summary>
+        public static string RotHardEHint {
+            get {
+                return ResourceManager.GetString("RotHardEHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What is the coordinate for center of rotation?.
+        /// </summary>
+        public static string RotHardEText {
+            get {
+                return ResourceManager.GetString("RotHardEText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save and Exit Exam.
+        /// </summary>
+        public static string SaveandExit {
+            get {
+                return ResourceManager.GetString("SaveandExit", resourceCulture);
             }
         }
         
@@ -2471,6 +2705,15 @@ namespace Transformations.Properties {
         public static string SaveSuccesful {
             get {
                 return ResourceManager.GetString("SaveSuccesful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  ScaleFactor..
+        /// </summary>
+        public static string ScaleFactor {
+            get {
+                return ResourceManager.GetString("ScaleFactor", resourceCulture);
             }
         }
         
@@ -3111,6 +3354,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Translation Easy Exam.
+        /// </summary>
+        public static string TEasyE {
+            get {
+                return ResourceManager.GetString("TEasyE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Which translation vector maps the original shape to the ghost shape?.
+        /// </summary>
+        public static string TEasyEText {
+            get {
+                return ResourceManager.GetString("TEasyEText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Testing Zone.
         /// </summary>
         public static string TestingZone {
@@ -3138,6 +3399,33 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Which translation vector maps the original shape to the ghost?.
+        /// </summary>
+        public static string THardEText {
+            get {
+                return ResourceManager.GetString("THardEText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Translation Hard Exam.
+        /// </summary>
+        public static string THardExam {
+            get {
+                return ResourceManager.GetString("THardExam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time Elapsed.
+        /// </summary>
+        public static string TimeElapsed {
+            get {
+                return ResourceManager.GetString("TimeElapsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tip: Answer may be 0.5/ non-integer.
         /// </summary>
         public static string Tip1 {
@@ -3152,6 +3440,24 @@ namespace Transformations.Properties {
         public static string Tip2 {
             get {
                 return ResourceManager.GetString("Tip2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To pass an exam you must have a score over 80%, or only one wrong answer..
+        /// </summary>
+        public static string ToPass {
+            get {
+                return ResourceManager.GetString("ToPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Attempts.
+        /// </summary>
+        public static string TotalAttempts {
+            get {
+                return ResourceManager.GetString("TotalAttempts", resourceCulture);
             }
         }
         
@@ -3315,6 +3621,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Try Again.
+        /// </summary>
+        public static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to delete this exam result. This result could already be deleted..
         /// </summary>
         public static string UnableToDeleteResult {
@@ -3465,6 +3780,15 @@ namespace Transformations.Properties {
         public static string ViewDrop {
             get {
                 return ResourceManager.GetString("ViewDrop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Well Done!.
+        /// </summary>
+        public static string WellDone {
+            get {
+                return ResourceManager.GetString("WellDone", resourceCulture);
             }
         }
         

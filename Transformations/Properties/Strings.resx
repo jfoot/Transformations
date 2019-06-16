@@ -7551,4 +7551,112 @@
   <data name="UnableToDeleteResult" xml:space="preserve">
     <value>Unable to delete this exam result. This result could already be deleted.</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Correct</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value> Degrees Clockwise</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Enlargement Easy Exam</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>What is the scale factor preformed on the ghost shape?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Enlargement Hard Exam</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Hint: This shape has enlarged by:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>What is the coordinate for center of enlargement?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>End Of Exam</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Failed to randomly generate your exam. </value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Failed to save your exam results.</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Incorrect</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Are you sure you wish to abandon this exam?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>You have not selected both a clockwise and/or an anti-clockwise rotation.</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Out Of attempts</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Question Skipped</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Reflection Easy Exam</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Reflection Hard Exam</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>What line reflects the original to the ghost shape?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Rotation Easy Exam</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>What rotation is preformed to the shape?</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Rotation Hard Exam</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Hint: This shape has rotated: </value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>What is the coordinate for center of rotation?</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Save and Exit Exam</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value> ScaleFactor.</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Translation Easy Exam</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Which translation vector maps the original shape to the ghost shape?</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Which translation vector maps the original shape to the ghost?</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Translation Hard Exam</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Time Elapsed</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>To pass an exam you must have a score over 80%, or only one wrong answer.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Total Attempts</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Well Done!</value>
+  </data>
 </root>
