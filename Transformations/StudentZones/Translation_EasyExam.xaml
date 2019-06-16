@@ -4,7 +4,7 @@
         x:Name="window" Title="Translation_EasyExam"
         MinWidth="850" MinHeight="600"
         d:DesignHeight="600" d:DesignWidth="850" lex:LocalizeDictionary.DesignCulture="en-GB" lex:ResxLocalizationProvider.DefaultAssembly="Transformations" lex:ResxLocalizationProvider.DefaultDictionary="Strings" ResizeMode="NoResize" Topmost="True"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None"
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -12,6 +12,7 @@
             <RowDefinition Height="451*" />
             <RowDefinition Height="51*" />
         </Grid.RowDefinitions>
+
 
         <Border x:Name="WrongAnswer"
                 Grid.Row="1" Grid.Column="1"
