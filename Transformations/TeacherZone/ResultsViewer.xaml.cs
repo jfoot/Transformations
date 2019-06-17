@@ -33,8 +33,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "User/Class data request was invalid. " + Properties.Resources.UserError,
-                    "Invalid Request Error: 301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.UserClassInvalid + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidRequestError + "301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void FillData()
@@ -85,8 +85,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                                "Failed to retrieve  user/class exam results. " + Properties.Resources.DataBaseError,
-                                "Database Read Error: 100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                                Properties.Strings.FailedToGetUserClassResults + Properties.Strings.DataBaseError,
+                                Properties.Strings.EM_DataBaseReadError + "100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void GirdLoaded(object sender, RoutedEventArgs e)
@@ -112,8 +112,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "This user does not have any exam results yet. When they take an exam, their results will appear here.",
-                    "Information", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                   Properties.Strings.NoResults,
+                    Properties.Strings.Information, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
 
@@ -125,7 +125,7 @@ namespace Transformations
                 SaveFileDialog save = new SaveFileDialog		//Save file dialog box appears
                 {
                     Filter = "Microsoft Excel Comma Separated Values|*.csv",
-                    Title = "Save an project file"
+                    Title = Properties.Strings.ExcelExport
                 };
                 save.ShowDialog();
 
@@ -158,8 +158,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Results exportation failed. " + Properties.Resources.CriticalFailuer,
-                    "Critical Program Failure: 400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.ExportationFailed + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void DeleteResult(object sender, RoutedEventArgs e)	//Delete an exam result
@@ -169,8 +169,8 @@ namespace Transformations
 				//Retrieves the result ID selected
                 string ID = (UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text;
                 MessageBoxResult messageBoxResult = MessageBox.Show(
-                    "Are you sure you want to delete this exam result?" + "\n" + "This action can not be undone.",
-                    "Delete Confirmation",
+                   Properties.Strings.ResultAreYouSure + "\n" + Properties.Strings.CanNotBeUndone,
+                    Properties.Strings.DeleteConfirmation,
                     System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (messageBoxResult == MessageBoxResult.Yes)	//Confirm the user is sure
                 {
@@ -190,8 +190,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Unable to delete this exam result. This result could already be deleted. " + Properties.Resources.UserError,
-                    "Invalid Request Error: 301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.UnableToDeleteResult + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidRequestError + "301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

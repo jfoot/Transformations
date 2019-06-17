@@ -11,7 +11,6 @@ namespace Transformations
     /// </summary>
     public partial class ExamResults : Window
 	{
-		
 		public bool Pass = true;
 		public ExamResults(Exam Result)
 		{
@@ -20,17 +19,16 @@ namespace Transformations
 			ExamName.Content = Result.ExamName;
 			Score.Content = Result.ScoreValue;
 			Attempts.Content = Result.TotalAttempts;
-            time.Content = Result.Timer.Seconds <= 9 ? Result.Timer.Minutes + ":0" + Result.Timer.Seconds : time.Content = Result.Timer.Minutes + ":" + Result.Timer.Seconds;
+            time.Content = Result.Timer.GetString();
             
             if (Result.ScoreValue < 5)     //Sets if the user has passed or failed an exam.
 			{
-				PassOrFail.Content = "Fail";
+                PassOrFail.Content = Properties.Strings.Fail;
 				PassOrFail.Foreground = new SolidColorBrush(Colors.Red);
 				Pass = false;
 			}
-
-			
-			if (Properties.Settings.Default.CurrentUser != "Guest" && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
+	
+			if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
 			{
 				try
 				{
@@ -50,11 +48,11 @@ namespace Transformations
 					}
 				}
 				catch (Exception)
-				{
-					MessageBox.Show(
-						"Failed to save your exam results. " + Properties.Resources.DataBaseError,
-						"Database Write Error: 101 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-				}
+                {
+                    MessageBox.Show(
+                        Properties.Strings.FailedToSaveResult + Properties.Strings.DataBaseError,
+                        Properties.Strings.DatabaseWriteError + " D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 			}
 		}
         private void Exit(object sender, RoutedEventArgs e) //Exit the exam.

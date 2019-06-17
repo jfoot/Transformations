@@ -6,31 +6,26 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
-using System.Linq;
+
 
 namespace Transformations
 {
-	/// <summary>
-	/// Contains all the code for an easy translation exam, which randomly generates 2 shapes, the user then has a multiple choice selection to find the translation vector.
-	/// </summary>
-	public partial class Translation_EasyExam : Window
+    /// <summary>
+    /// Contains all the code for an easy translation exam, which randomly generates 2 shapes, the user then has a multiple choice selection to find the translation vector.
+    /// </summary>
+    public partial class Translation_EasyExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -2, "Translation Easy Exam" , 3);  //Creates a new exam object
-		List<Shapes> MyShapes = new List<Shapes>();                 //Creates a list of shape object
-
-		
-		public int CorrectAnswerValue;              //Used to record the corr_answer
+        Exam Exams; //Creates a new exam object
+		List<Shapes> MyShapes = new List<Shapes>();   //Creates a list of shape object
+		int CorrectAnswerValue;          //Used to record the corr_answer
 		GridLine GridLine;					    //Creates a grid object
-		public const int ScaleFactor = 30;           //Sets the scale factor to be 30 pixels.
+		const int ScaleFactor = 30;      //Sets the scale factor to be 30 pixels.
 		
 		public Translation_EasyExam()
 		{
             InitializeComponent();
-            Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);                       //The timer will tick every second.
-			Exams.Timer.DispatcherTimer.Start();                                                //Start the timer upon launching the exam window.
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));      //Sets the mouse wheel to scalling.mousewheel method
+            Exams = new Exam(0, -2, Properties.Strings.TEasyE, 3,timer);                                           //Start the timer upon launching the exam window.
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));      //Sets the mouse wheel to scalling.mousewheel method
 																																		   //Allows the user to move and pan around the grid.
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
@@ -80,18 +75,16 @@ namespace Transformations
 		    }
 			catch (Exception)
 			{
-				MessageBox.Show(
-				"Failed to randomly generate an 'Translation Easy' exam. " + Properties.Resources.CriticalFailuer,
-				"Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-			}
-}
+                MessageBox.Show(
+                Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 		private int XAnswer()  //Gives the X answer value.
 		{
-			int x_answer = 0;
+			int x_answer;
 			double original_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_x = 0;
-							
-			ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_x = Canvas.GetLeft(MyShapes[Exams.ArrayPos + 1].MyShape);
 	
 			double answer_pixel = ghost_x - original_x;
 			x_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -99,11 +92,9 @@ namespace Transformations
 		}
 		private int YAnswer()  //Gives the Y answer value.
 		{
-			int y_answer = 0;
+			int y_answer;
 			double original_y = Canvas.GetTop(MyShapes[Exams.ArrayPos].MyShape);
-			double ghost_y = 0;
-				
-			ghost_y = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
+			double ghost_y = Canvas.GetTop(MyShapes[Exams.ArrayPos + 1].MyShape);
 
 			double answer_pixel = original_y - ghost_y;
 			y_answer = Convert.ToInt32(answer_pixel / ScaleFactor);
@@ -118,7 +109,7 @@ namespace Transformations
                
                 if (Exams.QuestionPos > 6) //if the exam questions have reached the end then display the exam results dialog.
                 {
-                    Exams.Timer.DispatcherTimer.Stop();
+                    Exams.Timer.Stop();
                     BlurEffect myBlurEffect = new BlurEffect { Radius = 10 };
                     window.Effect = myBlurEffect;
                     this.Topmost = false;
@@ -130,10 +121,9 @@ namespace Transformations
                 }
                 else //Change to the next question.
                 {
-                    foreach (var item in MyShapes)
-                    {
-                      item.MyShape.Visibility = Visibility.Hidden;  //makes all shapes invisible 
-                    }
+                    //makes all shapes invisible 
+                    MyShapes.ForEach(p => p.MyShape.Visibility = Visibility.Hidden);
+
                     //Makes the shape for the current question visible
                     MyShapes[Exams.ArrayPos].MyShape.Visibility = Visibility.Visible;      
                     MyShapes[Exams.ArrayPos + 1].MyShape.Visibility = Visibility.Visible;
@@ -194,17 +184,15 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Translation Easy' exam. " + Properties.Resources.CriticalFailuer,
-                    "Critical Program Failure: 400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void RefreshText()   //Used to refresh the text UI.
 		{
-			question_no.Content = "Question: " + Exams.QuestionPos.ToString() + "/6";
-			score.Content = "Score: " + Exams.ScoreValue.ToString() + "/6";
-			attempts.Content = "Attempts: " + Exams.Attmepts.ToString() + "/2";
-			question.Content = "Which translation vector maps the original shape to the ghost shape?";
-		}   
+            Exams.Refresh(question_no, score, attempts);
+            question.Content = Properties.Strings.TEasyEText;
+        }   
 		private void CheckAnswer(int button)   //used to check if the pressed button matches the answer or not.
 		{
 			if (button == CorrectAnswerValue)   //If correct add a value to the score and skip to the next question
@@ -230,68 +218,21 @@ namespace Transformations
 		}
       
         //When the button is pressed check the answer.
-        private void Button1(object sender, RoutedEventArgs e)
+        private void OptionPressed(object sender, RoutedEventArgs e)
 		{
-			CheckAnswer(1);
+			CheckAnswer(Convert.ToInt32(((Button)sender).Tag.ToString()));
 		}
-		private void Button2(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(2);
-		}
-		private void Button3(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(3);
-		}
-		private void Button4(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(4);
-		}
-		private void Button5(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(5);
-		}
-		private void Button6(object sender, RoutedEventArgs e)
-		{
-			CheckAnswer(6);
-		}
-
+	
         //Used to setup the exam
         private void CanvasLoaded(object sender, RoutedEventArgs e)
         {
 			GridLine = new GridLine().DrawGrid(3500, ScaleFactor, MyCanvas);
-			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
+            Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
             Randomise();
             NextQuestion();
-            foreach (Label t in GridLine.Labels)
-            {
-                MyCanvas.Children.Add(t);
-            }
+            GridLine.Labels.ForEach(p => MyCanvas.Children.Add(p));
         }
-        private void Exit(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", "Are you sure?",
-				 System.Windows.MessageBoxButton.OKCancel,
-				 MessageBoxImage.Warning);
-
-			if (exit == MessageBoxResult.OK)
-			{
-				TakeExam exam = new TakeExam();
-				exam.Show();
-				this.Close();
-			}
-		}
-		private void TimerTick(object sender, EventArgs e)
-		{
-
-			Exams.Timer.Seconds++;
-            timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
-
-            if (Exams.Timer.Seconds >= 59)
-			{
-				Exams.Timer.Seconds = -1;
-				Exams.Timer.Minutes++;
-			}
-		}
+        
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
@@ -300,25 +241,14 @@ namespace Transformations
 		{
 			cords.Content = "( " + (Convert.ToDouble(Mouse.GetPosition(MyCanvas).X) / ScaleFactor).ToString("0.0") + "  ,  " + (-Convert.ToDouble(Mouse.GetPosition(MyCanvas).Y) / ScaleFactor).ToString("0.0") + " )";
 		}
+
         private void Show(Border type) //Shows the correct, incorrect or skip answer method.
         {
-            type.Visibility = System.Windows.Visibility.Visible;
-
-            var a = new DoubleAnimation
-            {
-                From = 1.0,
-                To = 0.0,
-                FillBehavior = FillBehavior.Stop,
-                BeginTime = TimeSpan.FromSeconds(1),
-                Duration = new Duration(TimeSpan.FromSeconds(0.5))
-            };
-            var storyboard = new Storyboard();
-
-            storyboard.Children.Add(a);
-            Storyboard.SetTarget(a, type);
-            Storyboard.SetTargetProperty(a, new PropertyPath(OpacityProperty));
-            storyboard.Completed += delegate { type.Visibility = System.Windows.Visibility.Hidden; };
-            storyboard.Begin();
+            Exams.Show(type);
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Exams.Exit(this);
         }
     }
 }

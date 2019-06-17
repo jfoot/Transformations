@@ -82,7 +82,7 @@ namespace Transformations
 					{
 						try
 						{
-							if ((subkey.GetValue("DisplayName")).ToString().Contains("Microsoft Office Access database engine 2007"))
+							if ((subkey.GetValue("DisplayName")).ToString().Contains("Microsoft Office Access database engine"))
 							{
 								DatabaseDependcy = true;
 							}
@@ -222,7 +222,7 @@ namespace Transformations
 		{
 			Text.Add("STAGE 3 : PROGRAM DEPENDENCY TROUBLESHOOTING");
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/PdfSharp.dll"))
+			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/PdfSharp.dll"))
 			{
 				Text.Add("          PDFSHARP.DLL WAS SUCCESSFULLY FOUND                 ✔");
 				pdfsharpfound = true;
@@ -232,7 +232,7 @@ namespace Transformations
 				Text.Add("          PDFSHARP.DLL WAS NOT FOUND                          ✖");
 			}
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/System.Windows.Controls.DataVisualization.Toolkit.dll"))
+			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/System.Windows.Controls.DataVisualization.Toolkit.dll"))
 			{
 				Text.Add("          SYSTEM.WINDOWS.CONTROLS.DLL WAS SUCCESSFULLY FOUND  ✔");
 				WinControlsFound = true;
@@ -242,7 +242,7 @@ namespace Transformations
 				Text.Add("          SYSTEM.WINDOWS.CONTROLS.DLL WAS NOT FOUND           ✖");
 			}
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/WPFToolkit.dll"))
+			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/WPFToolkit.dll"))
 			{
 				Text.Add("          WPFTOOLKIT.DLL WAS SUCCESSFULLY FOUND               ✔");
 				WPFToolFound = true;
@@ -252,7 +252,7 @@ namespace Transformations
 				Text.Add("          WPFTOOLKIT.DLL WAS NOT FOUND                        ✖");
 			}
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/HtmlAgilityPack.dll"))
+			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/HtmlAgilityPack.dll"))
 			{
 				Text.Add("          HTMLAGILITYPACK.DLL WAS SUCCESSFULLY FOUND          ✔");
 				WPFToolFound = true;
@@ -322,10 +322,10 @@ namespace Transformations
 
 			Properties.Settings.Default.DefaultPerformance = false;
 			Properties.Settings.Default.DefaultResolution = false;
-			Properties.Settings.Default.CurrentUser = "Guest";
+			Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 			Properties.Settings.Default.UserID = 0;
 			Properties.Settings.Default.ClassID = 0;
-			Properties.Settings.Default.AliasName = "Guest";
+			Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 			Properties.Settings.Default.IsTeacher = false;
 
 			Properties.Settings.Default.Save();

@@ -88,11 +88,11 @@ namespace Transformations
 			{
 				if (GridSnap.IsChecked == true)    //If snap to grid is turned on
 				{   //Move the shapes only by scale factor values
-					double newleft = (Round.ToNearest((e.GetPosition(MyCanvas).X), (ScaleFactor)));
-					Canvas.SetLeft(SelectedShape, (newleft) - (ClickV.X));
+					double newleft = (Round.ToNearest((e.GetPosition(MyCanvas).X ) - (ClickV.X), (ScaleFactor)));
+					Canvas.SetLeft(SelectedShape, (newleft) );
 
-					double newtop = (Round.ToNearest((e.GetPosition(MyCanvas).Y), (ScaleFactor)));
-					Canvas.SetTop(SelectedShape, (newtop) - (ClickV.Y));
+					double newtop = (Round.ToNearest((e.GetPosition(MyCanvas).Y) - (ClickV.Y), (ScaleFactor)));
+					Canvas.SetTop(SelectedShape, (newtop) );
 				}
 				else
 				{   //Else allow the shape to be moved around freely
@@ -131,16 +131,12 @@ namespace Transformations
 				}
 				//Create a new free form shape out of the points created
 				Counter.myPolygon++;
-				MyShapes.Add((new FreeForm(("FreeForm_" + (Counter.myPolygon).ToString())).SpawnCustomShape(MyLines[MyLines.Count - 1].MyPoints, MyCanvas)));
+				MyShapes.Add((new FreeForm((Properties.Strings.FreeFormString + "_" + (Counter.myPolygon).ToString())).SpawnCustomShape(MyLines[MyLines.Count - 1].MyPoints, MyCanvas)));
 				MyShapes[MyShapes.Count - 1].MyShape.MouseLeftButtonDown += new MouseButtonEventHandler(MyPolygonMouseDown);
 				Canvas.SetTop(MyShapes[MyShapes.Count - 1].MyShape, 0); 
 				Canvas.SetLeft(MyShapes[MyShapes.Count - 1].MyShape, 0);
 
-				foreach (Line t in MyLines[MyLines.Count - 1].LinesList)    //Remove the original lines.
-				{
-					MyCanvas.Children.Remove(t);
-				}
-				
+                MyLines[MyLines.Count - 1].LinesList.ForEach(o => MyCanvas.Children.Remove(o));
 			}
 			else if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)   //If ctrl is being held down
 			{

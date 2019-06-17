@@ -19,7 +19,7 @@ namespace Transformations
 		/// 
 		//Code for enlargement	
 	
-		private void enlargementExecute(object sender, RoutedEventArgs e)
+		private void EnlargementExecute(object sender, RoutedEventArgs e)
 		{
 			double[] enlAmounts = { -5, -4, -3, -2, -1, 0.25, 0.5, 0.75, 1, 2, 3, 4, 5 };
 			if (SelectedShape != null)  //If the user has a shape selected
@@ -52,15 +52,15 @@ namespace Transformations
 				}
 				catch (Exception)   //Coordinates not in a numerical value 
 				{
-					MessageBox.Show("The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
-						"Invalid Input Type Error: 302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-				}
+                    MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                         Properties.Strings.EM_InvalidInputTypeError +  "302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
 			}
 			else //No shape has been selected 
 			{
-				MessageBox.Show("You have not selected any shape.  " + Properties.Resources.UserError,
-					"Field Empty Error: 300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 		}
 
         private void DrawRaysClick(object sender, RoutedEventArgs e)   //The user has clicked on the ray-lines button
@@ -80,9 +80,9 @@ namespace Transformations
 			}
 			else
 			{
-				MessageBox.Show("You have not selected any shape or the selected shape is invalid.  " + Properties.Resources.UserError,
-					"Field Empty Error: 300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-			}
+                MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 		}
         private void LineCaculator(double X, double Y)  //Used to calculate to position of the ray-lines so that they stretch to infinity
 		{
@@ -110,34 +110,16 @@ namespace Transformations
 		private void HideGhostEnlargement(object sender, RoutedEventArgs e)   //Hides all of the ghost enlargement
 		{
 			HideGhosts("enlargement");
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					line.Visibility = Visibility.Hidden;
-				}
-			}
-		}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Hidden));
+        }
 		private void ShowGhostEnlargement(object sender, RoutedEventArgs e)   //Shows all of the ghost enlargement
 		{
 			ShowGhosts("enlargement");
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					line.Visibility = Visibility.Visible;
-				}
-			}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Visible));
 		}
         private void DeleteRays(object sender, RoutedEventArgs e)      //Deletes all of the ray-lines from the grid
 		{
-			foreach (var raygroup in MyRayLines)
-			{
-				foreach (var line in raygroup.RayLinesList)
-				{
-					MyCanvas.Children.Remove(line);
-				}
-			}
+            MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
 			MyRayLines.Clear();
 		}
         private void DeleteEnlargementGhosts(object sender, RoutedEventArgs e)  //Deletes all the enlargement ghosts

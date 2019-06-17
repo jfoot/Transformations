@@ -30,10 +30,10 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                   "Failed to retrieve your Windows User name. " + Properties.Resources.WindowsError,
-                   "Insufficient Privileges Error : 200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                   Properties.Strings.WinUserNameFail +  Properties.Strings.WindowsError,
+                   Properties.Strings.EM_InsuffientPrivileges + "200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
-           
+
             try
             {
                 using (var conn = new OleDbConnection { ConnectionString = DataBase.ConnectionString() })
@@ -57,8 +57,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to retrieve teacher names. " + Properties.Resources.DataBaseError,
-                    "DataBase Read Error : 100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.TeacherNameFail+ Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
 		}
         private void TeacherSelected(object sender, SelectionChangedEventArgs e)
@@ -91,10 +91,10 @@ namespace Transformations
 			catch (Exception)
 			{
                 MessageBox.Show(
-                    "Failed to retrieve classes owned by selected teacher. " + Properties.Resources.DataBaseError,
-                    "DataBase Read Error : 100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.ClassOwnedFail + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
-		}
+        }
         private void CreateAccountButton(object sender, RoutedEventArgs e)
 		{
 			if (name.Text != "" && teacher.SelectedIndex > -1 && ClassCombo.SelectedIndex > -1) //Checks that the user has both a teacher and a class selected and that their name is not blank.
@@ -134,8 +134,8 @@ namespace Transformations
                     }
 
                     MessageBox.Show(
-                    "User account successfully created, the application will now restart and log you in.",
-                    "Account Created.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                    Properties.Strings.AccountCreated,
+                    Properties.Strings.AccountCreatedHeader, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                     //Restart the program.
                     Process.Start(Application.ResourceAssembly.Location);
@@ -145,16 +145,16 @@ namespace Transformations
 				catch (Exception)
 				{
                     MessageBox.Show(
-                 "Failed to create a new user account. " + Properties.Resources.DataBaseError,
-                 "Database Read & Write Error : 102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.FailedToCreateAccount + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 			}
 			else
 			{
-				MessageBox.Show(
-					"Teacher or class selection has been left blank or invalid. " + Properties.Resources.UserError,
-					"Field Empty Error : 300 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-			}
+                MessageBox.Show(
+                    Properties.Strings.TeacherOrClassBlank +  Properties.Strings.UserError,
+                    Properties.Strings.EM_FieldEmpty + "300 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 		}
 	}
 }
