@@ -88,11 +88,11 @@ namespace Transformations
 			{
 				if (GridSnap.IsChecked == true)    //If snap to grid is turned on
 				{   //Move the shapes only by scale factor values
-					double newleft = (Round.ToNearest((e.GetPosition(MyCanvas).X), (ScaleFactor)));
-					Canvas.SetLeft(SelectedShape, (newleft) - (ClickV.X));
+					double newleft = (Round.ToNearest((e.GetPosition(MyCanvas).X ) - (ClickV.X), (ScaleFactor)));
+					Canvas.SetLeft(SelectedShape, (newleft) );
 
-					double newtop = (Round.ToNearest((e.GetPosition(MyCanvas).Y), (ScaleFactor)));
-					Canvas.SetTop(SelectedShape, (newtop) - (ClickV.Y));
+					double newtop = (Round.ToNearest((e.GetPosition(MyCanvas).Y) - (ClickV.Y), (ScaleFactor)));
+					Canvas.SetTop(SelectedShape, (newtop) );
 				}
 				else
 				{   //Else allow the shape to be moved around freely
