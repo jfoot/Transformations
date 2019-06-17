@@ -71,16 +71,16 @@ namespace Transformations
 		{
             return new PointCollection
             {
-                new Point((default_height / 2), (0)), //1
-                new Point((default_height / 3) * 2, (default_height / 3)), //2
-                new Point((default_height), (default_height / 3)), //3
-                new Point((default_height / 10) * 8, (default_height / 10) * 6), //4
-                new Point((default_height), (default_height)), //5
-                new Point((default_height / 2), (default_height / 3) * 2), //6
-                new Point((0), (default_height)), //7
-                new Point((default_height / 10) * 3, (default_height / 10) * 6), //8
-                new Point(0, (default_height / 3)), //9
-                new Point((default_height / 3), (default_height / 3)) //10
+                new Point((default_height / 2), (0)),
+                new Point((default_height / 8) * 5, (default_height/3)),
+                new Point((default_height), (default_height/3)),
+                new Point((default_height/8) * 6, (default_height/2)), //4
+                new Point((default_height/8)*7, (default_height/10)*9),
+                new Point((default_height/2), (default_height/3)*2),
+                new Point(default_height/8, (default_height/10)*9),
+                new Point((default_height / 8) * 2, (default_height/2)), //8
+                new Point(0, (default_height/3)),
+                new Point((default_height/8)*3, (default_height/3))
             };
 		}
 

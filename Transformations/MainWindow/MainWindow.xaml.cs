@@ -136,6 +136,15 @@ namespace Transformations
 			//Draws the grid and labels 
 			Grid = new GridLine().DrawGrid(MaxValue, ScaleFactor, MyCanvas);
 			LabelsChecked(sender, e);
-		}
+        }
+
+        private void ProgramLoaded(object sender, RoutedEventArgs e)    //When the program loads open a file if the program launched from a file.
+        {
+            Labels.IsChecked = true;
+            if ((((App)Application.Current).file) != null)
+            {
+                OpenFunction(((App)Application.Current).file_path);
+            }
+        }
     }
 }

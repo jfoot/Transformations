@@ -49,8 +49,9 @@ namespace Transformations
 					else
 					{
 						file_path = file.ToString();
-					}		
-				}
+					}
+                    StartupUri = new Uri("MainWindow\\MainWindow.xaml", UriKind.Relative);
+                }
 			}
 			else //else just start up the program normally and launch the main window.
 			{
