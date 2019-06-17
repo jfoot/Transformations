@@ -13,7 +13,7 @@
         <!--  Canvas XAML  -->
         <Border x:Name="border"
                 Margin="277,45,13,11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Panel.ZIndex="3"
-                Background="Transparent" BorderBrush="#FF7D7D7D" BorderThickness="4" ClipToBounds="True" MouseDown="MouseDown" MouseMove="MouseMove" MouseUp="MouseUp"
+                Background="White" BorderBrush="#FF7D7D7D" BorderThickness="4" ClipToBounds="True" MouseDown="MouseDown" MouseMove="MouseMove" MouseUp="MouseUp"
                 MouseWheel="MouesWheel">
             <StackPanel ClipToBounds="True">
                 <Canvas x:Name="MyCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="CanvasLoaded">

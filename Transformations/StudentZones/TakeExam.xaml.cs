@@ -21,9 +21,9 @@ namespace Transformations
     /// </summary>
     public partial class TakeExam : Window
 	{
-		public PdfDocument PDF;
-		public PdfPage PDFPage;
-		public XGraphics Graph;
+		private PdfDocument PDF;
+        private PdfPage PDFPage;
+        private XGraphics Graph;
 	
 		public TakeExam()
 		{
@@ -92,7 +92,8 @@ namespace Transformations
 			{	//If user is a guest blur the graphs as they will be empty.
 				BlurEffect myBlurEffect = new BlurEffect {Radius = 10};
 				HomeGrid.Effect = myBlurEffect;
-			}
+                tab_control.SelectedIndex = 1;
+            }
 		}
 
 		private void Return(object sender, RoutedEventArgs e)   //Return to the main window
@@ -176,11 +177,11 @@ namespace Transformations
                     };
                     saveFileDialog1.ShowDialog();
                     string pdfFilename = saveFileDialog1.FileName;
-
+        
                     if (saveFileDialog1.FileName != "")         //If the user has entered a save name
                     {
-                        XImage image = XImage.FromGdiPlusImage(LocalizationProvider.GetLocalizedValue<Image>("PDFBack"));   //Adds the background
-                        Graph.DrawImage(image, 0, 0, 595, 842);
+                        XImage image = XImage.FromGdiPlusImage(Properties.Strings.PDFBack);   //Adds the background
+                        Graph.DrawImage(image, 0, 0, 612, 792);
 
                         PDF.Info.Title = "Exam Results";                            //Adds the title to the document
                         XFont font = new XFont("Verdana", 20, XFontStyle.Bold);

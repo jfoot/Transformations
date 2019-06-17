@@ -2,8 +2,6 @@ using System;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -18,7 +16,7 @@ using MessageBox = System.Windows.MessageBox;
 
 namespace Transformations
 {
-	public partial class MainWindow
+    public partial class MainWindow
 	{
 		/// <summary>
 		///             Menu items
@@ -73,30 +71,19 @@ namespace Transformations
 		}
         private void LabelsChecked(object sender, RoutedEventArgs e) //Turn on Labels
 		{
-			try
-			{
-				foreach (Label t in Grid.Labels)
-				{
-					MyCanvas.Children.Add(t);
-				}
-			}
-			catch (Exception)
-			{
-		
-			}
+            try
+            {
+                Grid.Labels.ForEach(o => MyCanvas.Children.Add(o));
+            }
+            catch (Exception) { }
 		}
         private void LabelsUnchecked(object sender, RoutedEventArgs e) //Turn off labels
 		{
-			try
-			{
-				foreach (Label t in Grid.Labels)
-				{
-					MyCanvas.Children.Remove(t);
-				}
-			}
-			catch (Exception)
-			{
-			}
+            try
+            {
+                Grid.Labels.ForEach(o => MyCanvas.Children.Remove(o));
+            }
+            catch (Exception) { }
 		}
         private void GridSnapState(object sender, RoutedEventArgs e)   //Grid snapping- snaps all of the shapes to the grid.
         {
@@ -214,10 +201,7 @@ namespace Transformations
 			}
 			finally
 			{
-				foreach (Shapes t in MyShapes)  //make every shape on top of the canvas
-				{
-					Canvas.SetZIndex(t.MyShape, 2);
-				}
+                MyShapes.ForEach(o => Canvas.SetZIndex(o.MyShape, 2));
 			}
 		}
         private void SaveImageClick(object sender, RoutedEventArgs e) //Save an image of the current project
@@ -226,39 +210,30 @@ namespace Transformations
 			{
 				SaveFileDialog saveFile = new SaveFileDialog //Open a save file window
 				{
-					Filter = "PNG Image - Transparent Background|*.png| PNG Image - White Background|*.png",
+					Filter = "PNG Image|*.png",
 					Title = "Save an Image File",
 					FilterIndex = 2
 				};
 				saveFile.ShowDialog();
-                //Change background color accordingly 
-				if (saveFile.FilterIndex == 1)
-				{
-					border.Background = new SolidColorBrush(Colors.Transparent);
-				}
-				else if (saveFile.FilterIndex == 2)
-				{
-					border.Background = new SolidColorBrush(Colors.White);
-				}
 
-				if (saveFile.FileName != "")
+                if (saveFile.FileName != "")
 				{
 					for (int x = 0; x < 2; x++)
 					{
                         //Save a screen shoot of the current canvas.
-						System.IO.FileStream fs = (System.IO.FileStream) saveFile.OpenFile();
+                        System.IO.FileStream fs = (System.IO.FileStream) saveFile.OpenFile();
 
 						Rect bounds = VisualTreeHelper.GetDescendantBounds(MyCanvas);
 						double dpi = 96d;
 
-						RenderTargetBitmap rtb = new RenderTargetBitmap((int) bounds.Width, (int) bounds.Height, dpi, dpi,
+						RenderTargetBitmap rtb = new RenderTargetBitmap((int) border.ActualWidth, (int) border.ActualHeight, dpi, dpi,
 							System.Windows.Media.PixelFormats.Default);
 
 						DrawingVisual dv = new DrawingVisual();
 						using (DrawingContext dc = dv.RenderOpen())
 						{
 							VisualBrush vb = new VisualBrush(border);
-							dc.DrawRectangle(vb, null, new Rect(new Point(), bounds.Size));
+							dc.DrawRectangle(vb, null, new Rect(new Point(), border.RenderSize));
 						}
 
 						rtb.Render(dv);
