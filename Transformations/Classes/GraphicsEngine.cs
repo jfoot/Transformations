@@ -62,11 +62,11 @@ namespace Transformations
 
 	class Scaling
 	{
-		public static bool CtrlDown = false;        //If the ctrl button is being pressed down
-		public static bool Ctrldragging = false;    //If user is dragging while holding down ctrl
-		public static Point ClickX;     //A point on the canvas.
-										//The main scaling function for the program, it accepts the variables from different windows and then can be used in multiple situations.
-		public static void Main(TranslateTransform TranslationTransformCanvas, ScaleTransform scaleTransformCanvas, Slider x_slider, Slider y_slider, Slider slider_sf, Border border) //Generic Scaling Function- used to trigger the individual functions in order.
+		public static bool CtrlDown { get; set; } = false;        //If the ctrl button is being pressed down
+		public static bool Ctrldragging { get; set; }  = false;    //If user is dragging while holding down ctrl
+		public static Point ClickX { get; set; }     //A point on the canvas.
+                                                     //The main scaling function for the program, it accepts the variables from different windows and then can be used in multiple situations.
+        public static void Main(TranslateTransform TranslationTransformCanvas, ScaleTransform scaleTransformCanvas, Slider x_slider, Slider y_slider, Slider slider_sf, Border border) //Generic Scaling Function- used to trigger the individual functions in order.
 		{
 			try
 			{   //Movement of the canvas up or down and left or right
@@ -109,13 +109,4 @@ namespace Transformations
 			ClickX = e.GetPosition(canvas);
 		}
 	}
-
-    public static class LocalizationProvider
-    {
-        public static T GetLocalizedValue<T>(string key)
-        {
-            return LocExtension.GetLocalizedValue<T>
-                 (Assembly.GetCallingAssembly().GetName().Name + ":Resources:" + key);
-        }
-    }
 }

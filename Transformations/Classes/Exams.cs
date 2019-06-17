@@ -15,8 +15,8 @@ namespace Transformations
         public int QuestionPos { get; private set; }           //Records the current question their on.
 		public int ArrayPos { get; set; }              //Records the current array index.
         public Time Timer { get; set; }    //Creates a timer object
-        public readonly int ExamID;                 //Records the exam ID.
-        public readonly string ExamName;            //Records the name of the exam.
+        public int ExamID { get; private set; }                 //Records the exam ID.
+        public string ExamName { get; private set; }             //Records the name of the exam.
 
         public Exam(int quePos, int arrPos, string examName, int examID, Label label)
 		{
