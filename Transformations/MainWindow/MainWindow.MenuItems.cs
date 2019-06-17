@@ -103,14 +103,6 @@ namespace Transformations
                 HighlightDetials();
             }
         }
-        private void ProgramLoaded(object sender, RoutedEventArgs e)    //When the program loads open a file if the program launched from a file.
-		{
-			Labels.IsChecked = true;
-			if ((((App) Application.Current).file) != null)
-			{
-				OpenFunction(((App) Application.Current).file_path);
-			}
-		}
         private void OpenClick(object sender, RoutedEventArgs e) //Select files to open using a dialog window.
 		{
 			try
@@ -221,11 +213,9 @@ namespace Transformations
 					for (int x = 0; x < 2; x++)
 					{
                         //Save a screen shoot of the current canvas.
-                        System.IO.FileStream fs = (System.IO.FileStream) saveFile.OpenFile();
-
-						Rect bounds = VisualTreeHelper.GetDescendantBounds(MyCanvas);
+                        System.IO.FileStream fs = (FileStream) saveFile.OpenFile();
+;
 						double dpi = 96d;
-
 						RenderTargetBitmap rtb = new RenderTargetBitmap((int) border.ActualWidth, (int) border.ActualHeight, dpi, dpi,
 							System.Windows.Media.PixelFormats.Default);
 
@@ -265,7 +255,6 @@ namespace Transformations
 				};
 				save.ShowDialog();
 
-			
 
 				if (save.FileName != "")
 				{

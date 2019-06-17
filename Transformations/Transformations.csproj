@@ -57,7 +57,7 @@
     <StartupObject>Transformations.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>T.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>33A126103192973F6E708FCAEA75088EF6989539</ManifestCertificateThumbprint>
@@ -425,7 +425,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\FixMe.png" />
-    <Resource Include="T.ico" />
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
