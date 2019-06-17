@@ -5,33 +5,28 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
 namespace Transformations
 {
-	/// <summary>
-	/// Rotation hard exam, two shapes will spawn, the original and the rotated, the user is given the rotation amount and must specify the center of rotation.
-	/// </summary>
-	public partial class Rotation_HardExam : Window
+    /// <summary>
+    /// Rotation hard exam, two shapes will spawn, the original and the rotated, the user is given the rotation amount and must specify the center of rotation.
+    /// </summary>
+    public partial class Rotation_HardExam : Window
 	{
-		readonly Exam Exams = new Exam(0, -3, "Rotation Hard Exam", 8);
+        Exam Exams;
 		List<Shapes> MyShapes = new List<Shapes>();
-
-		readonly public int[] Values = {  90,  180,  270, };
-		public List<int> XAnswer = new List<int>();
-		public List<int> YAnswer = new List<int>();
-
+		readonly int[] Values = {  90,  180,  270, };
+		List<int> XAnswer = new List<int>();
+		List<int> YAnswer = new List<int>();
 		GridLine GirdLine;
-		public const int ScaleFactor = 50;
+		const int ScaleFactor = 50;
 	
 		public Rotation_HardExam()
 		{
 			InitializeComponent();
-			Exams.Timer.DispatcherTimer.Tick += new EventHandler(TimerTick);
-			Exams.Timer.DispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-			Exams.Timer.DispatcherTimer.Start();
-			border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
+			Exams = new Exam(0, -3, Properties.Strings.RotHardE, 8,timer);
+            border.MouseWheel += new MouseWheelEventHandler((sender, e) => Transformations.Scaling.MouesWheel(sender, e, sliderSf));
 			border.MouseUp += new MouseButtonEventHandler(Transformations.Scaling.BorderMouseUp);
 			border.MouseMove += new MouseEventHandler((sender, e) => Transformations.Scaling.BorderMouseMove(sender, e, xSlider, ySlider, MyCanvas, Cursor));
 			border.MouseDown += new MouseButtonEventHandler((sender, e) => Transformations.Scaling.BorderMouseDown(sender, e, MyCanvas));
@@ -88,7 +83,6 @@ namespace Transformations
                         MyShapes[MyShapes.Count - 1].MyRotateTransform.CenterY = Rnd.RandomNumber(1, 5) * -ScaleFactor;
                     }
 
-
                     MyShapes[MyShapes.Count - 1].MyRotateTransform.Angle = Values[Rnd.RandomNumber(0, 3)];
                     XAnswer.Add(Convert.ToInt32((Canvas.GetLeft(MyShapes[MyShapes.Count - 1].MyShape) + MyShapes[MyShapes.Count - 1].MyRotateTransform.CenterX) / ScaleFactor));
                     YAnswer.Add(-Convert.ToInt32((Canvas.GetTop(MyShapes[MyShapes.Count - 1].MyShape) + MyShapes[MyShapes.Count - 1].MyRotateTransform.CenterY) / ScaleFactor));
@@ -98,8 +92,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to randomly generate an 'Rotation Hard' exam. " + Properties.Resources.CriticalFailuer,
-                    "Critical Program Failure: 400 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.FailedToMakeExam + Properties.Strings.CriticalFailuer,
+                    Properties.Strings.EM_CriticalFailure + "400 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void AnswerSubmit(object sender, RoutedEventArgs e)
@@ -138,11 +132,11 @@ namespace Transformations
                 RefreshText();
             }
 			catch (Exception)
-			{
-				MessageBox.Show(
-					"The coordinates entered were not in the correct format; only numerical values are allowed. " + Properties.Resources.UserError,
-					"Invalid Input Type Error: 300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-			}
+            {
+                MessageBox.Show(
+                    Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
+                    Properties.Strings.EM_InvalidInputTypeError + "300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 		}
 		private void NextQuestion()
 		{
@@ -150,14 +144,12 @@ namespace Transformations
 			Exams.ArrayPos += 3;
 			Exams.ResetAttempts();
 
-			foreach (var shape in MyShapes)
-			{
-				shape.MyShape.Visibility = Visibility.Hidden;
-			}
+            //makes all shapes invisible 
+            MyShapes.ForEach(p => p.MyShape.Visibility = Visibility.Hidden);
 
 			if (Exams.QuestionPos > 6)
 			{
-				Exams.Timer.DispatcherTimer.Stop();
+				Exams.Timer.Stop();
 				BlurEffect myBlurEffect = new BlurEffect {Radius = 10};
 				window.Effect = myBlurEffect;
 				this.Topmost = false;
@@ -188,11 +180,9 @@ namespace Transformations
 		}
 		private void RefreshText()
 		{
-			question_no.Content = "Question: " + Exams.QuestionPos.ToString() + "/6";
-			score.Content = "Score: " + Exams.ScoreValue.ToString() + "/6";
-			attempts.Content = "Attempts: " + Exams.Attmepts.ToString() + "/2";
-			question.Content = "What is the coordinate for center of rotation?";
-			ShapeRotAmount.Content = "Hint: This shape has rotated: "+ MyShapes[Exams.ArrayPos+1].MyRotateTransform.Angle + " Degrees Clockwise"; 
+            Exams.Refresh(question_no, score, attempts);
+            question.Content = Properties.Strings.RotHardEText;
+			ShapeRotAmount.Content = Properties.Strings.RotHardEHint + MyShapes[Exams.ArrayPos+1].MyRotateTransform.Angle + Properties.Strings.DegreeClockWise; 
 		}
         private void CanvasLoaded(object sender, RoutedEventArgs e)
 		{
@@ -200,35 +190,9 @@ namespace Transformations
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
 			Randomise();
 			NextQuestion();
-			foreach (Label t in GirdLine.Labels)
-			{
-				MyCanvas.Children.Add(t);
-			}
+            GirdLine.Labels.ForEach(p => MyCanvas.Children.Add(p));
 		}
-		private void TimerTick(object sender, EventArgs e)
-		{
-			Exams.Timer.Seconds++;
-            timer.Content = Exams.Timer.Seconds <= 9 ? timer.Content = Exams.Timer.Minutes + ":0" + Exams.Timer.Seconds : timer.Content = Exams.Timer.Minutes + ":" + Exams.Timer.Seconds;
-
-            if (Exams.Timer.Seconds >= 59)
-			{
-				Exams.Timer.Seconds = -1;
-				Exams.Timer.Minutes++;
-			}
-		}
-		private void Exit(object sender, RoutedEventArgs e)
-		{
-			MessageBoxResult exit = MessageBox.Show("Are you sure you wish to abandon this exam?", "Are you sure?",
-				System.Windows.MessageBoxButton.OKCancel,
-				MessageBoxImage.Warning);
-
-			if (exit == MessageBoxResult.OK)
-			{
-				TakeExam exam = new TakeExam();
-				exam.Show();
-				this.Close();
-			}
-		}
+        		
 		private void Scaling(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			Transformations.Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, xSlider, ySlider, sliderSf, border);
@@ -238,19 +202,14 @@ namespace Transformations
 			try
 			{
 				MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Hidden;    //Marker Point
-			}
-			catch (Exception)
-			{ }
-		}
+            }catch (Exception){}
+        }
         private void HintsOn(object sender, RoutedEventArgs e)
 		{
 			try
 			{
 				MyShapes[Exams.ArrayPos + 2].MyShape.Visibility = Visibility.Visible;    //Marker Point
-			}
-			catch (Exception)
-			{	}
-
+			}catch (Exception){}
 		}
         private void KeyPressed(object sender, KeyEventArgs e)
 		{
@@ -263,25 +222,13 @@ namespace Transformations
 		{
 			cords.Content = "( " + (Convert.ToDouble(Mouse.GetPosition(MyCanvas).X) / ScaleFactor).ToString("0.0") + "  ,  " + (-Convert.ToDouble(Mouse.GetPosition(MyCanvas).Y) / ScaleFactor).ToString("0.0") + " )";
 		}
-        private void Show(Border type)
+        private void Show(Border type) //Shows the correct, incorrect or skip answer method.
         {
-            type.Visibility = System.Windows.Visibility.Visible;
-
-            var a = new DoubleAnimation
-            {
-                From = 1.0,
-                To = 0.0,
-                FillBehavior = FillBehavior.Stop,
-                BeginTime = TimeSpan.FromSeconds(1),
-                Duration = new Duration(TimeSpan.FromSeconds(0.5))
-            };
-            var storyboard = new Storyboard();
-
-            storyboard.Children.Add(a);
-            Storyboard.SetTarget(a, type);
-            Storyboard.SetTargetProperty(a, new PropertyPath(OpacityProperty));
-            storyboard.Completed += delegate { type.Visibility = System.Windows.Visibility.Hidden; };
-            storyboard.Begin();
+            Exams.Show(type);
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Exams.Exit(this);
         }
     }
 }

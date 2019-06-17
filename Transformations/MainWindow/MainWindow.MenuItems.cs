@@ -2,8 +2,6 @@ using System;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -18,7 +16,7 @@ using MessageBox = System.Windows.MessageBox;
 
 namespace Transformations
 {
-	public partial class MainWindow
+    public partial class MainWindow
 	{
 		/// <summary>
 		///             Menu items
@@ -47,16 +45,16 @@ namespace Transformations
 		}
 		private void ReportBug(object sender, RoutedEventArgs e)    //If the user wants to restart the program.
 		{
-			System.Diagnostics.Process.Start(Properties.Resources.BugReport);
-		}
+            Process.Start(Properties.Strings.BugReport);
+        }
 		private void FeedbackClick(object sender, RoutedEventArgs e)   //If the user wants to provide feedback
 		{
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.FeedbackLink);
+            Process.Start(Properties.Strings.FeedbackLink);
 		}
        
         private void HelpClick(object sender, RoutedEventArgs e)       //If the user needs help
 		{
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.HelpLink);
+            Process.Start(Properties.Strings.HelpLink);
 		}
         private void SettingsClick(object sender, RoutedEventArgs e) //Open Settings
 		{
@@ -73,30 +71,19 @@ namespace Transformations
 		}
         private void LabelsChecked(object sender, RoutedEventArgs e) //Turn on Labels
 		{
-			try
-			{
-				foreach (Label t in Grid.Labels)
-				{
-					MyCanvas.Children.Add(t);
-				}
-			}
-			catch (Exception)
-			{
-		
-			}
+            try
+            {
+                Grid.Labels.ForEach(o => MyCanvas.Children.Add(o));
+            }
+            catch (Exception) { }
 		}
         private void LabelsUnchecked(object sender, RoutedEventArgs e) //Turn off labels
 		{
-			try
-			{
-				foreach (Label t in Grid.Labels)
-				{
-					MyCanvas.Children.Remove(t);
-				}
-			}
-			catch (Exception)
-			{
-			}
+            try
+            {
+                Grid.Labels.ForEach(o => MyCanvas.Children.Remove(o));
+            }
+            catch (Exception) { }
 		}
         private void GridSnapState(object sender, RoutedEventArgs e)   //Grid snapping- snaps all of the shapes to the grid.
         {
@@ -116,19 +103,11 @@ namespace Transformations
                 HighlightDetials();
             }
         }
-        private void ProgramLoaded(object sender, RoutedEventArgs e)    //When the program loads open a file if the program launched from a file.
-		{
-			Labels.IsChecked = true;
-			if ((((App) Application.Current).file) != null)
-			{
-				OpenFunction(((App) Application.Current).file_path);
-			}
-		}
         private void OpenClick(object sender, RoutedEventArgs e) //Select files to open using a dialog window.
 		{
 			try
 			{
-				MessageBoxResult open = MessageBox.Show("Do you wish to save before opening a new file?", "Are you sure?",
+				MessageBoxResult open = MessageBox.Show(Properties.Strings.SaveBeforeOpening, Properties.Strings.AreYouSure,
 					System.Windows.MessageBoxButton.YesNoCancel,
 					MessageBoxImage.Information);
 
@@ -163,10 +142,10 @@ namespace Transformations
 			catch (Exception)   //Corrupted file format.
 			{
 				Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, XSlider, YSlider, sliderSf, border);
-				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 D",
-					System.Windows.MessageBoxButton.OK,
-					MessageBoxImage.Error);
-				Process.Start(Application.ResourceAssembly.Location);   
+                MessageBox.Show(Properties.Strings.UnableToOpen +  Properties.Strings.CriticalFailuer, Properties.Strings.EM_CriticalFailure + "400 D",
+                    System.Windows.MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                Process.Start(Application.ResourceAssembly.Location);   
 				Application.Current.Shutdown();
 			}
 		}
@@ -200,25 +179,21 @@ namespace Transformations
 
 					MyShapes[MyShapes.Count - 1].MyShape.MouseLeftButtonDown += new MouseButtonEventHandler(MyPolygonMouseDown);
 					MyCanvas.Children.Add(MyShapes[MyShapes.Count - 1].MyShape);
-
 				}
                 //Refreshes the scaling/ screen
 				Scaling.Main(TranslationTransformCanvas, scaleTransformCanvas, XSlider, YSlider, sliderSf, border);
 			}
 			catch (Exception) //corrupt file
 			{
-				MessageBox.Show("Unable to open file. The selected file could be corrupted or not compatible with the current version of this program. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 E",
-					System.Windows.MessageBoxButton.OK,
-					MessageBoxImage.Error);
-				Process.Start(Application.ResourceAssembly.Location);
+                MessageBox.Show(Properties.Strings.UnableToOpen + Properties.Strings.CriticalFailuer, Properties.Strings.EM_CriticalFailure + "400 E",
+                    System.Windows.MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                Process.Start(Application.ResourceAssembly.Location);
 				Application.Current.Shutdown();
 			}
 			finally
 			{
-				foreach (Shapes t in MyShapes)  //make every shape on top of the canvas
-				{
-					Canvas.SetZIndex(t.MyShape, 2);
-				}
+                MyShapes.ForEach(o => Canvas.SetZIndex(o.MyShape, 2));
 			}
 		}
         private void SaveImageClick(object sender, RoutedEventArgs e) //Save an image of the current project
@@ -227,39 +202,28 @@ namespace Transformations
 			{
 				SaveFileDialog saveFile = new SaveFileDialog //Open a save file window
 				{
-					Filter = "PNG Image - Transparent Background|*.png| PNG Image - White Background|*.png",
+					Filter = "PNG Image|*.png",
 					Title = "Save an Image File",
 					FilterIndex = 2
 				};
 				saveFile.ShowDialog();
-                //Change background color accordingly 
-				if (saveFile.FilterIndex == 1)
-				{
-					border.Background = new SolidColorBrush(Colors.Transparent);
-				}
-				else if (saveFile.FilterIndex == 2)
-				{
-					border.Background = new SolidColorBrush(Colors.White);
-				}
 
-				if (saveFile.FileName != "")
+                if (saveFile.FileName != "")
 				{
 					for (int x = 0; x < 2; x++)
 					{
                         //Save a screen shoot of the current canvas.
-						System.IO.FileStream fs = (System.IO.FileStream) saveFile.OpenFile();
-
-						Rect bounds = VisualTreeHelper.GetDescendantBounds(MyCanvas);
+                        System.IO.FileStream fs = (FileStream) saveFile.OpenFile();
+;
 						double dpi = 96d;
-
-						RenderTargetBitmap rtb = new RenderTargetBitmap((int) bounds.Width, (int) bounds.Height, dpi, dpi,
+						RenderTargetBitmap rtb = new RenderTargetBitmap((int) border.ActualWidth, (int) border.ActualHeight, dpi, dpi,
 							System.Windows.Media.PixelFormats.Default);
 
 						DrawingVisual dv = new DrawingVisual();
 						using (DrawingContext dc = dv.RenderOpen())
 						{
 							VisualBrush vb = new VisualBrush(border);
-							dc.DrawRectangle(vb, null, new Rect(new Point(), bounds.Size));
+							dc.DrawRectangle(vb, null, new Rect(new Point(), border.RenderSize));
 						}
 
 						rtb.Render(dv);
@@ -269,16 +233,16 @@ namespace Transformations
 						fs.Close();
 
 					}
-					MessageBox.Show("The file save successful.", "Save Completed", System.Windows.MessageBoxButton.OK,
-						MessageBoxImage.Information);
-				}
+                    MessageBox.Show(Properties.Strings.SaveSuccesful, Properties.Strings.SaveCompeted, System.Windows.MessageBoxButton.OK,
+                           MessageBoxImage.Information);
+                }
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Failed to save the image. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 F",
-					System.Windows.MessageBoxButton.OK,
-					MessageBoxImage.Error);
-			}
+                MessageBox.Show(Properties.Strings.FailedToSave + Properties.Strings.CriticalFailuer, Properties.Strings.EM_CriticalFailure + "400 F",
+                    System.Windows.MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
 		}
 		private void SaveFileClick(object sender, RoutedEventArgs e) //Save a file containing the current project
 		{
@@ -291,7 +255,6 @@ namespace Transformations
 				};
 				save.ShowDialog();
 
-			
 
 				if (save.FileName != "")
 				{
@@ -304,7 +267,7 @@ namespace Transformations
 						}
 					}
                     //Splits the file using a "!"
-					SaveFile = SaveFile + "!";
+					SaveFile += "!";
 
 
 					foreach (Shapes t in MyShapes)  //Saves each circle shape
@@ -318,20 +281,20 @@ namespace Transformations
 					writer.WriteLine(SaveFile);
 					writer.Close();
 
-					MessageBox.Show("The file save successful.", "Save Completed", System.Windows.MessageBoxButton.OK,
+					MessageBox.Show(Properties.Strings.SaveSuccesful, Properties.Strings.SaveCompeted, System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Information);
 				}
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Failed to save the shape file. " + Properties.Resources.CriticalFailuer, "Critical Program Failure: 400 G",
-					System.Windows.MessageBoxButton.OK,
-					MessageBoxImage.Error);
-			}
+                MessageBox.Show(Properties.Strings.FailedToSaveShape + Properties.Strings.CriticalFailuer, Properties.Strings.EM_CriticalFailure + "400 G",
+                    System.Windows.MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
 		}
         private void StudentLoginClick(object sender, RoutedEventArgs e) //Student Login to the program
 		{
-			if (Properties.Settings.Default.CurrentUser == "Guest") //If the user is a guest (currently logged out)
+			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest) //If the user is a guest (currently logged out)
 			{
 				try
 				{
@@ -360,11 +323,11 @@ namespace Transformations
                     }
 
 
-					if (Properties.Settings.Default.CurrentUser == "Guest") //If he user could not log in then they have no account.
+					if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest) //If the user could not log in then they have no account.
 					{
 						MessageBox.Show(
-							"No user account could be found, please make a new user account.",
-							"Account Not Found", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+							Properties.Strings.NoAccountFound,
+							Properties.Strings.AccountNotFound, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
 						CreateAccount account = new CreateAccount {Owner = this};   //They are asked to create a new account.
 						account.Show();
@@ -372,47 +335,46 @@ namespace Transformations
 					else
 					{
 						MessageBox.Show(
-							"Login Successful, you have now been logged into your account.",
-							"Account Found", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+							Properties.Strings.LoginSuccesfull,
+							Properties.Strings.AccountFound, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                         
-						Login.Header = "Student Log Out";
+						Login.Header = Properties.Strings.StudentLogOutDrop;
 						accountName.Content = Properties.Settings.Default.AliasName;
 					}
 				}
 				catch (Exception)
 				{
-					MessageBox.Show("Failed to retrieve user login details and accounts. " + Properties.Resources.DataBaseError, "Database Read Error: 100 F",
-						System.Windows.MessageBoxButton.OK,
+                    MessageBox.Show(Properties.Strings.FailToGetLoginAccounts + Properties.Strings.DataBaseError , Properties.Strings.EM_DataBaseReadError + "100 F",
+                    System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Error);
-				}
+                }
 				
 			}
 			else if (Properties.Settings.Default.IsTeacher == true)
 			{
 				MessageBox.Show(
-					"You are currently logged in as a teacher, please first log out of teacher login, before trying to log in into the student login.",
-					"Invalid Request Error: 301 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+					Properties.Strings.LoggedInAsTeacherError,
+                    Properties.Strings.EM_InvalidRequestError + "301 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 			else
 			{
-				accountName.Content = "Guest";
-				Login.Header = "Student Login";
-				Properties.Settings.Default.CurrentUser = "Guest";
+			    accountName.Content = Properties.Strings.Guest;
+                Login.Header = Properties.Strings.StudentLoginDrop;
+				Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 				Properties.Settings.Default.UserID = 0;
 				Properties.Settings.Default.ClassID = 0;
-				Properties.Settings.Default.AliasName = "Guest";
+				Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 				Properties.Settings.Default.IsTeacher = false;
 
 				Properties.Settings.Default.Save();
-				MessageBox.Show(
-					"You have been Successful logged out.",
-					"Logged out.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Properties.Strings.logoutSuccessful,
+                    Properties.Strings.Loggedout, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 
 		}
         private void TeacherLoginClick(object sender, RoutedEventArgs e) //Login into the teacher screen
 		{
-			if (Properties.Settings.Default.CurrentUser == "Guest")
+			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
 			{
                 try
                 {
@@ -425,7 +387,7 @@ namespace Transformations
                             {
                                 while (reader.Read())
                                 {
-                                    if (reader[1].ToString() == System.Environment.UserName)    //If the username matches a known username on the database then log them in.
+                                    if (reader[1].ToString() == System.Environment.UserName)    //If the user name matches a known user name on the database then log them in.
                                     {
                                         Properties.Settings.Default.UserID = Convert.ToInt32(reader[0]);
                                         Properties.Settings.Default.CurrentUser = reader[1].ToString();
@@ -439,12 +401,11 @@ namespace Transformations
                     }
 
 
-                    if (Properties.Settings.Default.CurrentUser == "Guest") //If they were not logged in then they do not have an account and will be asked to make one.
+                    if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest) //If they were not logged in then they do not have an account and will be asked to make one.
                     {
-
                         MessageBox.Show(
-                            "No user account could be found, please make a new user account.",
-                            "Account Not Found", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                            Properties.Strings.NoAccountFound,
+                            Properties.Strings.AccountNotFound, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                         CreateTeacherAccount account = new CreateTeacherAccount() { Owner = this };
                         account.Show();
@@ -452,41 +413,39 @@ namespace Transformations
                     else
                     {
                         MessageBox.Show(
-                            "Login Successful, you have now been logged into your account.",
-                            "Account Found", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-                        Teacher.Header = "Teacher Log Out";
+                            Properties.Strings.LoginSuccesfull,
+                            Properties.Strings.AccountFound, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                        Teacher.Header = Properties.Strings.TeacherLogOutDrop;
                         accountName.Content = Properties.Settings.Default.AliasName;
-
-
                     }
                 }
                 catch (Exception)
                 {
-					MessageBox.Show("Failed to retrieve Teacher login details and accounts. " + Properties.Resources.DataBaseError, "Database Read Error: 100 G",
-						System.Windows.MessageBoxButton.OK,
-						MessageBoxImage.Error);
-				}
+                    MessageBox.Show(Properties.Strings.FailToGetLoginAccounts + Properties.Strings.DataBaseError, Properties.Strings.EM_DataBaseReadError + "100 G",
+                        System.Windows.MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+                }
            	}
 			else if (Properties.Settings.Default.IsTeacher == false)
 			{
 				MessageBox.Show(
-					"You are currently logged in as a student, please first log out of student login, before trying to log in into the teacher login.",
-					"Invalid Request Error: 301 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+					Properties.Strings.LogOutOfStudentFirst,
+					Properties.Strings.EM_InvalidRequestError + "301 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 			else //Else they can log out 
 			{
-				accountName.Content = "Guest";
-				Teacher.Header = "Teacher Login";
-				Properties.Settings.Default.CurrentUser = "Guest";
+				accountName.Content = Properties.Strings.Guest;
+				Teacher.Header = Properties.Strings.TeacherLoginDrop;
+				Properties.Settings.Default.CurrentUser = Properties.Strings.Guest;
 				Properties.Settings.Default.UserID = 0;
 				Properties.Settings.Default.ClassID = 0;
-				Properties.Settings.Default.AliasName = "Guest";
+				Properties.Settings.Default.AliasName = Properties.Strings.Guest;
 				Properties.Settings.Default.IsTeacher = false;
 
 				Properties.Settings.Default.Save();
 				MessageBox.Show(
-					"You have been Successful logged out.",
-					"Logged out.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+					Properties.Strings.logoutSuccessful,
+					Properties.Strings.Loggedout, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 		}
         private void StudentManagerClick(object sender, RoutedEventArgs e)
@@ -499,24 +458,24 @@ namespace Transformations
 			else
 			{
 				MessageBox.Show(
-					"You are currently logged in as a student or guest, please login to the teacher login.",
-					"Invalid Request Error: 301 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+				    Properties.Strings.LogOutOfStudentOrGuest,
+					Properties.Strings.EM_InvalidRequestError + "301 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 		}
         private void TakeExamClick(object sender, RoutedEventArgs e) //Open the student portal/ exam taker
 		{
-			if (Properties.Settings.Default.CurrentUser == "Guest")
+			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
 			{
 				MessageBox.Show(
-					"You are currently not logged in. No progress will be saved or recorded while using a Guest login.",
-					"Currently using a guest account.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+					Properties.Strings.NotLoggedIn,
+					Properties.Strings.CurrentlyUsingGuest, System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 
 			if (Properties.Settings.Default.IsTeacher == true)  //Teachers can not launch the exam zone.
 			{
 				MessageBox.Show(
-					"You are currently logged in as a teacher, please log out of a teacher account and login into a student account to access exams.",
-					"Invalid Request Error: 301 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+					Properties.Strings.LogOutOfTeacher,
+					Properties.Strings.EM_InvalidRequestError + "301 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
 			}
 			else
 			{
@@ -528,5 +487,12 @@ namespace Transformations
 				this.Close();
 			}
 		}
-	}
+
+        private void TroubleShoot_Click(object sender, RoutedEventArgs e)
+        {
+            Troubleshooting tb = new Troubleshooting();
+            tb.Show();
+            this.Close();
+        }
+    }
 }

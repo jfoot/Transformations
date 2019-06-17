@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DataBaseError" xml:space="preserve">
+    <value>Пожалуйста, попробуйте снова или проверить строку подключения базы данных в «Настройки заранее»</value>
+  </data>
+  <data name="WindowsError" xml:space="preserve">
+    <value>Пожалуйста, проверьте, что у вас достаточно привилегий компьютер.</value>
+  </data>
+  <data name="UserError" xml:space="preserve">
+    <value>Пожалуйста, убедитесь, вы правильно введены / выбрано допустимое значение.</value>
+  </data>
+  <data name="CriticalFailuer" xml:space="preserve">
+    <value>Неизвестная проблема вызвала критического сбоя. Пожалуйста, повторите попытку или обратитесь к системному администратору.</value>
+  </data>
+  <data name="CircleString" xml:space="preserve">
+    <value>Круг</value>
+  </data>
+  <data name="AccountDrop" xml:space="preserve">
+    <value>Учетная запись</value>
+  </data>
+  <data name="ArrowString" xml:space="preserve">
+    <value>Стрелка</value>
+  </data>
+  <data name="BugDrop" xml:space="preserve">
+    <value>Сообщить об ошибке</value>
+  </data>
+  <data name="DataBaseFailure" xml:space="preserve">
+    <value>ОШИБКА БАЗЫ ДАННЫХ: ПОЖАЛУЙСТА, ОБРАТИТЕСЬ К РУКОВОДСТВО</value>
+  </data>
+  <data name="DeleteAllGhostsString" xml:space="preserve">
+    <value>Удалить все призраки</value>
+  </data>
+  <data name="DeleteShape" xml:space="preserve">
+    <value>Удаление фигуры</value>
+  </data>
+  <data name="DrawRaylinesString" xml:space="preserve">
+    <value>Рэй-линии</value>
+  </data>
+  <data name="EDeleteGhosts" xml:space="preserve">
+    <value>Удаление увеличения призраков</value>
+  </data>
+  <data name="EDeleteRayLines" xml:space="preserve">
+    <value>Удаление Рэй линии</value>
+  </data>
+  <data name="EditShapeString" xml:space="preserve">
+    <value>Изменить форму</value>
+  </data>
+  <data name="EGhostHidden" xml:space="preserve">
+    <value>Увеличение призраки скрытые</value>
+  </data>
+  <data name="EGhostVisible" xml:space="preserve">
+    <value>Увеличение призраки видимой</value>
+  </data>
+  <data name="EnlargmentString" xml:space="preserve">
+    <value>Englargment</value>
+  </data>
+  <data name="ExecuteString" xml:space="preserve">
+    <value>Выполнение</value>
+  </data>
+  <data name="FeedbackDrop" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="FileDrop" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="FreeFormString" xml:space="preserve">
+    <value>Свободная форма</value>
+  </data>
+  <data name="GuestAccount" xml:space="preserve">
+    <value>Учетная запись гостя</value>
+  </data>
+  <data name="HelpDrop" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="HomeString" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="LabelsDrop" xml:space="preserve">
+    <value>Этикетки</value>
+  </data>
+  <data name="LShapeString" xml:space="preserve">
+    <value>L форма</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Главное окно</value>
+  </data>
+  <data name="NoShapeSelected" xml:space="preserve">
+    <value>Фигура не выбран</value>
+  </data>
+  <data name="OpenDrop" xml:space="preserve">
+    <value>Открытые</value>
+  </data>
+  <data name="ParallelogramString" xml:space="preserve">
+    <value>Параллелограмм</value>
+  </data>
+  <data name="PentagonString" xml:space="preserve">
+    <value>Пентагон</value>
+  </data>
+  <data name="RDeleteGhosts" xml:space="preserve">
+    <value>Удаление вращений призраков</value>
+  </data>
+  <data name="ReflectionString" xml:space="preserve">
+    <value>Отражение</value>
+  </data>
+  <data name="ResetAxisDrop" xml:space="preserve">
+    <value>Сбросить оси</value>
+  </data>
+  <data name="RestartDrop" xml:space="preserve">
+    <value>Перезагрузка</value>
+  </data>
+  <data name="RGhostHidden" xml:space="preserve">
+    <value>Вращение призрак скрытые</value>
+  </data>
+  <data name="RGhostVisible" xml:space="preserve">
+    <value>Вращение призрак видимый</value>
+  </data>
+  <data name="RotationString" xml:space="preserve">
+    <value>Вращение</value>
+  </data>
+  <data name="SaveDrop" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SaveFileDrop" xml:space="preserve">
+    <value>Сохранить файл</value>
+  </data>
+  <data name="SaveImageDrop" xml:space="preserve">
+    <value>Сохранить изображение</value>
+  </data>
+  <data name="SearchingForSetting" xml:space="preserve">
+    <value>Поиск для параметра? Проверьте в окне «Параметры» под «Файл» для нескольких элементов управления.</value>
+  </data>
+  <data name="SettingsDrop" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="SnapGridString" xml:space="preserve">
+    <value>Привязка к сетке</value>
+  </data>
+  <data name="SpawnShapeString" xml:space="preserve">
+    <value>Спаун форма</value>
+  </data>
+  <data name="SquareString" xml:space="preserve">
+    <value>Площадь</value>
+  </data>
+  <data name="StarString" xml:space="preserve">
+    <value>Звезда</value>
+  </data>
+  <data name="StudentLoginDrop" xml:space="preserve">
+    <value>Вход для студентов</value>
+  </data>
+  <data name="StudentMangerDrop" xml:space="preserve">
+    <value>Студент яслях</value>
+  </data>
+  <data name="TakeExamDrop" xml:space="preserve">
+    <value>Сдать экзамен</value>
+  </data>
+  <data name="TDeleteGhosts" xml:space="preserve">
+    <value>Удалить перевод призраков</value>
+  </data>
+  <data name="TeacherLoginDrop" xml:space="preserve">
+    <value>Вход для преподавателя</value>
+  </data>
+  <data name="TGhostHidden" xml:space="preserve">
+    <value>Перевод призраки скрытые</value>
+  </data>
+  <data name="TGhostVisible" xml:space="preserve">
+    <value>Перевод призраки видимой</value>
+  </data>
+  <data name="TranslationString" xml:space="preserve">
+    <value>Перевод</value>
+  </data>
+  <data name="TrapeziumString" xml:space="preserve">
+    <value>Трапеция</value>
+  </data>
+  <data name="TriangleString" xml:space="preserve">
+    <value>Треугольник</value>
+  </data>
+  <data name="UnselectShape" xml:space="preserve">
+    <value>Отменить выбор формы</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="XAxisRef" xml:space="preserve">
+    <value>X оси отражения</value>
+  </data>
+  <data name="YAxisRef" xml:space="preserve">
+    <value>Y оси отражения</value>
+  </data>
+  <data name="YMXCRef" xml:space="preserve">
+    <value>Y = MX + C Relfection</value>
+  </data>
+  <data name="acw" xml:space="preserve">
+    <value>Против часовой стрелки</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Создан</value>
+  </data>
+  <data name="cw" xml:space="preserve">
+    <value>По часовой стрелке</value>
+  </data>
+  <data name="d180" xml:space="preserve">
+    <value>180 градусов</value>
+  </data>
+  <data name="d270" xml:space="preserve">
+    <value>270 градусов</value>
+  </data>
+  <data name="d360" xml:space="preserve">
+    <value>360 градусов</value>
+  </data>
+  <data name="d45" xml:space="preserve">
+    <value>45 градусов</value>
+  </data>
+  <data name="d90" xml:space="preserve">
+    <value>90 градусов</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Гость</value>
+  </data>
+  <data name="seconds0" xml:space="preserve">
+    <value>0 секунд</value>
+  </data>
+  <data name="seconds1" xml:space="preserve">
+    <value>1 второй</value>
+  </data>
+  <data name="seconds10" xml:space="preserve">
+    <value>10 секунд</value>
+  </data>
+  <data name="seconds15" xml:space="preserve">
+    <value>15 секунд</value>
+  </data>
+  <data name="seconds3" xml:space="preserve">
+    <value>3 секунды</value>
+  </data>
+  <data name="seconds5" xml:space="preserve">
+    <value>5 секунд</value>
+  </data>
+  <data name="sf-1" xml:space="preserve">
+    <value>-Масштаб 1</value>
+  </data>
+  <data name="sf-2" xml:space="preserve">
+    <value>-2 масштабный коэффициент</value>
+  </data>
+  <data name="sf-3" xml:space="preserve">
+    <value>-3 масштабный коэффициент</value>
+  </data>
+  <data name="sf-4" xml:space="preserve">
+    <value>-4 масштабный коэффициент</value>
+  </data>
+  <data name="sf-5" xml:space="preserve">
+    <value>-5 масштабный коэффициент</value>
+  </data>
+  <data name="sf025" xml:space="preserve">
+    <value>0,25 масштабный коэффициент</value>
+  </data>
+  <data name="sf05" xml:space="preserve">
+    <value>0.5 коэффициент масштабирования</value>
+  </data>
+  <data name="sf075" xml:space="preserve">
+    <value>0,75 масштабный коэффициент</value>
+  </data>
+  <data name="sf1" xml:space="preserve">
+    <value>1 масштабный коэффициент</value>
+  </data>
+  <data name="sf2" xml:space="preserve">
+    <value>2 масштаб</value>
+  </data>
+  <data name="sf3" xml:space="preserve">
+    <value>3 масштабный коэффициент</value>
+  </data>
+  <data name="sf4" xml:space="preserve">
+    <value>4 масштабный коэффициент</value>
+  </data>
+  <data name="sf5" xml:space="preserve">
+    <value>5 масштабный коэффициент</value>
+  </data>
+  <data name="StudentLogOutDrop" xml:space="preserve">
+    <value>Студент выход</value>
+  </data>
+  <data name="TeacherLogOutDrop" xml:space="preserve">
+    <value>Учитель выход</value>
+  </data>
+  <data name="ver" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="EM_FieldEmpty" xml:space="preserve">
+    <value>Поле пустым ошибка:</value>
+  </data>
+  <data name="EM_InvalidInputTypeError" xml:space="preserve">
+    <value>Ошибка недопустимый тип входных данных:</value>
+  </data>
+  <data name="NoShapeSelected1" xml:space="preserve">
+    <value>Вы не выбрали любой формы или выделенной фигуры является недопустимым.</value>
+  </data>
+  <data name="NumericCordsOnly" xml:space="preserve">
+    <value>Координаты вступил были не в правильный формат; допускаются только числовые значения.</value>
+  </data>
+  <data name="AccountFound" xml:space="preserve">
+    <value>Учетная запись найдена</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Учетная запись не найдена</value>
+  </data>
+  <data name="EM_CriticalFailure" xml:space="preserve">
+    <value>Сбой критических программы:</value>
+  </data>
+  <data name="EM_DataBaseReadError" xml:space="preserve">
+    <value>Ошибка чтения базы данных:</value>
+  </data>
+  <data name="EM_InvalidRequestError" xml:space="preserve">
+    <value>Ошибка недопустимого запроса:</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>Не удается сохранить изображение.</value>
+  </data>
+  <data name="FailedToSaveShape" xml:space="preserve">
+    <value>Не удалось сохранить файл формы.</value>
+  </data>
+  <data name="FailToGetLoginAccounts" xml:space="preserve">
+    <value>Не удалось получить данные для входа пользователя и учетных записей.</value>
+  </data>
+  <data name="LoggedInAsTeacherError" xml:space="preserve">
+    <value>Вы в настоящее время вошли в качестве преподавателя, пожалуйста первый журнал из учитель входа, прежде чем пытаться войти в студенческих входа.</value>
+  </data>
+  <data name="LoginSuccesfull" xml:space="preserve">
+    <value>Успешный вход, вы теперь были войти в свой аккаунт.</value>
+  </data>
+  <data name="NoAccountFound" xml:space="preserve">
+    <value>Нет учетной записи пользователя может быть найден, пожалуйста, сделайте новую учетную запись пользователя.</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>Не удается открыть файл. Выбранный файл может быть поврежден или не совместим с текущей версией этой программы.</value>
+  </data>
+  <data name="Loggedout" xml:space="preserve">
+    <value>Вышли из.</value>
+  </data>
+  <data name="logoutSuccessful" xml:space="preserve">
+    <value>Вы успешно выполнен.</value>
+  </data>
+  <data name="LogOutOfStudentFirst" xml:space="preserve">
+    <value>Вы в настоящее время вошли качестве студента, пожалуйста первый журнал из студентов-входа, прежде чем пытаться войти в учитель входа.</value>
+  </data>
+  <data name="LogOutOfStudentOrGuest" xml:space="preserve">
+    <value>Вы в настоящее время вошли как студент или гость, пожалуйста, логин для входа учитель.</value>
+  </data>
+  <data name="CurrentlyUsingGuest" xml:space="preserve">
+    <value>В настоящее время с помощью гостевой учетной записи.</value>
+  </data>
+  <data name="LogOutOfTeacher" xml:space="preserve">
+    <value>Вы в настоящее время вошли в качестве преподавателя, пожалуйста, войдите из учитель учетную запись и войти в студенческий счет для доступа к экзаменам.</value>
+  </data>
+  <data name="NotLoggedIn" xml:space="preserve">
+    <value>В настоящее время вы не вошли. Никакого прогресса будет сохранен или записанных при использовании Гостевой вход.</value>
+  </data>
+  <data name="NoCircleReflection" xml:space="preserve">
+    <value>Круг не могут быть отражены с использованием Y = MX + C линия.</value>
+  </data>
+  <data name="ReflectNotCorrectFormat" xml:space="preserve">
+    <value>Уравнение линии вступил находится не в правильный формат; допускаются только числовые значения.</value>
+  </data>
+  <data name="VectorNotInFormat" xml:space="preserve">
+    <value>Вектор вступил был не в правильный формат; допускаются только числовые значения</value>
+  </data>
+  <data name="AreYouSureDelete" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Высота:</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Подтверждение удаления</value>
+  </data>
+  <data name="UnknownShape" xml:space="preserve">
+    <value>НЕИЗВЕСТНЫЕ ПОЛЬЗОВАТЕЛЬСКИЕ ФОРМЫ</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Ширина:</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Уверен?</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>Вы хотите сохранить перед открытием нового файла?</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>Сохранение завершено</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>Файл, сохранить успешным.</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>Параметры приложений позволяют изменять параметры по умолчанию. Эти варианты будут помнить в следующий раз вы перезапустите приложение.</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>Цвет deufalt для фигур породил.</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Общие</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Черный</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>Цвет сетки defualt</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>Defualt цвет сетки.</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Грин</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>Темно-серый</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>Темно - темно-серый</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>Темно - серый</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>Светло-серый</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>Темно - белый</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Размер:</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Удалено успешно</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>Цвет по умолчанию</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Применить изменения</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>Размер по умолчанию</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>По умолчанию размер породил фигур</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>Сброс значений по умолчанию</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Расширенный</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>Дополнительные настройки предназначены для опытных пользователей только. Измените эти настройки на свой собственный риск. Если проблемы возникают, «Сброс по умолчанию».</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>Дисплей с высоким разрешением (1920 × 1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>Низкое разрешение дисплея</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>Разрешение монитора</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>Изменение этого параметра будет сделать начальный размер приложения отличаются</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>Строка подключения:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>Подключение к базе данных</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>ТОЛЬКО ДЛЯ ТОГО, ЧТОБЫ БЫТЬ ИЗМЕНЕНЫ АДМИНИСТРАТОРОМ СИСТЕМЫ</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Язык будет обновлять после перезапуска.</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>Ниже вы можете выбрать язык для использования на протяжении всей программы. Если вы нашли ошибку в переводе не стесняйтесь, чтобы помочь исправить его на хранилище GitHub.</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>Низкий конец устройства</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>Стандартное устройство (нормальный)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>Использование пользовательских</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>Использовать по умолчанию</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Если вы испытываете производительность вопросы переключения «Низкий конец устройства»</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>Измените класс</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Удаление учетной записи</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>Скачать зависимостей</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Тип счета:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>Псевдоним:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>Идентификатор класса:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>Имя класса:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>Учитель</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>Идентификатор пользователя:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Имя пользователя:</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>Не удалось получить ваш учитель и класс.</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>Учитель счета</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>Heres сообщение об ошибке, это все, что мы знаем...</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>Не удается подключиться к базе данных с помощью пользовательской строки подключения:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Ошибка: Не удалось установить подключение</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Параметры не удалось сохранить из-за недопустимого базы данных строка подключения. Пожалуйста введите строку правильного подключения или использовать по умолчанию для сохранения настроек.</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>Ваши настройки были сброшены по умолчанию успешно. Приложение будет перезагружен.</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Ваши настройки сохранены успешно. Приложение будет перезагружен.</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>Ошибка: Не удалось сохранить параметры.</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>Успешно удалил ваш аккаунт, вы можете создать другую учетную запись.</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить свой аккаунт? Хотя вы можете создать новый один будут потеряны любые результаты экзамена в настоящее время у вас.</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить свой аккаунт учитель? Удаление учетной записи учитель будет удалить все ваши классы, все учетные записи студентов внутри классов и все их результаты экзамена. Это действие не может быть отменено. Не забудьте передать класса или студент другой учитель если вы хотите сохранить свои данные.</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>Не удалось повторно войти в, пожалуйста вручную, выйдите из системы и повторного входа.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>Удалено успешно</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>Базы данных чтения &amp; ошибка записи:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>Не удалось удалить учетную запись пользователя.</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>Успешно удалил ваш аккаунт, включая</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>Классы, содержащие в общей сложности</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>Учетные записи студентов и их результаты.</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>Передавать пользователю</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель и новый класс, к которому вы хотите передать.»</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>Студенческий счет</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>Этот продукт был лицензирован и создан для образовательных учреждений. Все права защищены Джонатан Фут ©. Для ознакомления с полными условиями перейдите на страницу магазина и просмотрите раздел с подробностями.!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>имя</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>Создание аккаунта</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Создать учетную запись</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>Быть назначенным!</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>Ошибка недостаточных привилегий:!</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>Не удалось получить ваше имя пользователя Windows. !</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Учетная запись пользователя успешно создана, приложение перезапустится и войдет в систему.!</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>Создана учетная запись</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>Не удалось получить классы, принадлежащие выбранному учителю. !</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>Не удалось создать новую учетную запись пользователя.!</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>Не удалось получить имена учителей. !</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>Выбор учителя или класса был оставлен пустым или недействительным. !</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Сведения.</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>Добро пожаловать на Студенческий портал, здесь вы можете просмотреть ваше прошлое экзамен результаты и принять новый экзамен. Ваши результаты будут видны вашим учителем. Получить начал использовать вкладки выше выбрать тему и экзамен трудности.</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>Легко экзамен</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>Увеличение экзамены</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>Экзамены по сложности</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>Экзамены по типу</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Экспорт результатов в PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>Гостевой вход: Никакого прогресса будут сохранены.</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>Жесткий экзамен</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>Недавние результаты экзамена</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>Отражение экзамены</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>Вернуться к изучению</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>Вращение экзамены</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>Сдать экзамен</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>Здесь вы можете сдавать экзамен по вопросам преобразований и проверить свои знания. Существует две трудности для экзаменов, легкий и жесткий. Это настоятельно рекомендуем вам попытка легко и только прогресс на жесткий, как только вы достигли 90% +. Каждый экзамен генерируется случайным образом, и ваши знаки будут записаны в конце каждого экзамена. Не волнуйтесь вы можете сдавать экзамен столько раз, сколько пожелаете!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>Тестирование зоны</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>Экзамены для перевода</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>Не удалось получить данные результатов экзамена.</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>В настоящее время вы вошли как гость, гость не имеет права сохранять результаты для экспорта.</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>Не удалось экспортировать результаты в файл PDF.</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>Ваши результаты успешно сохранены в формате PDF.</value>
+  </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>Попытки</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Вопрос</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Оценка</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Координаты:</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135 градусов</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225 градусов</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315 градусов</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>Выход экзамен</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Подсказка</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>Подсказка: Ответ может быть 0.5 / нецелого</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>Подсказка: Эта форма вращалось: 0 градусов по часовой стрелке</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создать...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>Создать класс</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>Вы не являетесь владельцем этого класса, хотя вы все равно можете редактировать его, как если бы он был вашим собственным; пожалуйста, будьте внимательны к другим учителям.</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>Класс создан.</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>Удалить класс и учеников!</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>Здесь вы можете управлять всеми своими классами, просто используйте кнопки ниже, чтобы выполнить действие с выбранным классом. Обратите внимание, что эти действия не могут быть отменены.!</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>Редактор классов!</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>Просмотреть только те классы, которые у меня есть!</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>Переименуй класс!</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>Передача владения классом!</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этот класс и все учетные записи студентов внутри него? Это действие не может быть отменено.!</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>Чтобы создать новый класс, введите имя в поле ниже и просто нажмите «Создать».!</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>Ошибка записи в базу данных: 101!</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>Ошибка базы данных</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>Не удалось удалить класс. !</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>Не удалось получить принадлежащие вам классы. !</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>Не удалось получить данные из базы данных.</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>Не удалось создать новый класс.</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>Новый класс называется "</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>" было сделано успешно.!</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>Пожалуйста, введите ниже в текстовое поле новое имя для этого класса.!</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>Посмотреть результаты выбранного класса!</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>Успешно удалили ваш класс, в том числе!</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>Студенческие счета.</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель, к которому вы хотите передать собственность класса. Это действие не может быть отменено.</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>Посмотреть все классы</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>Устранение неполадок</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>Всех пользователей</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Класс</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>Просьба переименовать класс был признан недействительным.</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>Класс успешно перенесены на новый учитель.</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>Здесь вы можете управлять профилями студента и обзор их последние результаты экзамена. Просто нажмите на студента строки и затем использовать кнопки, расположенные ниже для выполнения действий. Пожалуйста, обратите внимание, что изменения автоматически сохраняются и не в состоянии отменить.</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>Программа просмотра классов</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>Создайте учетную запись учитель</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>Удаление результата</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Удаление пользователя</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Экспорт таблицы в Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>Не удалось переименовать класс.</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>Не удалось удалить выбранного пользователя.</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>Не удалось получить студенты внутри выбранного класса.</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>Не удалось создать новую учетную запись учителя.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Введенный вами пароль неверный. Пожалуйста убедитесь, что вы ввели его правильно; Помните, что пароль чувствителен к регистру.</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>Новый владелец не может быть оставлено пустым.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>Просмотра результатов экзамена</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>Просмотреть все результаты пользователей</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>Просмотреть результаты выбранных пользователей</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>Студент</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>Это удалит их счета и любые сохраненные экзамен результаты.</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>Успешная передача</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>Учитель учетная запись успешно, приложение теперь будет перезагружен. Пожалуйста Войти после перезагрузки.</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>Создание учетной записи учитель</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>Имя учителя:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>Не удалось передать новому владельцу класса пользователей.</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>Пожалуйста, выберите ниже новый учитель и новый класс, к которому вы хотите передать этот студент.</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>Передавать пользователю</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>Запрос передачи класса пользователя был признан недействительным.</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>Пользователь успешно перенесены на новый учитель.</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>Не удалось получить результаты экзамена класса пользователей.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Этот пользователь не имеет каких-либо результаты экзамена еще. Когда они принимают экзамен, их результаты будут отображаться здесь.</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>Это действие не может быть отменено.</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Подтверждение удаления</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>Результаты вывоза не удалось.</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить этот результат экзамена?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>Не удается удалить этот результат экзамена. Этот результат уже могут быть удалены.</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>Не случайно генерировать ваш экзамен.</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>Перевод жесткий экзамен</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>Какой перевод векторных карт первоначальную форму с призраком?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>Перевод легко экзамен</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>Градусов по часовой стрелке</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>Вращение жесткий экзамен</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>Подсказка: Циклический сдвиг эту форму:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>Что такое координату для центра вращения?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>Какой перевод векторных карт первоначальную форму в форму призрак?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>Вы не выбрали, как по часовой стрелке или против часовой стрелки вращения.</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>Отражение жесткий экзамен</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>Какая линия отражает оригинал формы призрак?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>Вращение легко экзамен</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>Какие вращение преформированных к фигуре?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>Отражение легко экзамен</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>Расширение легко экзамен</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>Что такое коэффициент масштабирования, предварительно отформованных на фигуре призрак?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>Расширение жесткий экзамен</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>Подсказка: Эта форма расширила путем:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>Что такое координату центра расширения?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>Конец экзамен</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Сбой</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>Не удалось сохранить ваши результаты экзамена.</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Перевал</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>Сохранить и выход экзамен</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>ScaleFactor.</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>Прошедшее время</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>Для сдачи экзамена необходимо иметь оценка более 80%, или только один неверный ответ.</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>Всего попыток</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Правильно</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Неправильный</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Прекрасно!</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>Из попыток</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>Вопрос пропущен</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>Вы уверены, что вы хотите, чтобы оставить этот экзамен?</value>
+  </data>
+</root>

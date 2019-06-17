@@ -8,16 +8,11 @@ namespace Transformations
     {
         public static string ConnectionString() //used to return the connection string being used by the user.
 	    {
-		    switch (Properties.Settings.Default.DatalocDefault)    //If they are using the default connection string then.
-		    {
-			    case false:
-				    return ConfigurationManager.ConnectionStrings["Transformations.Properties.Settings.DatabaseConnectionString"].ConnectionString;
-				case true:
-				    return  Properties.Settings.Default.ConnectionString;
-			
-		    }
-			return ConfigurationManager.ConnectionStrings["Transformations.Properties.Settings.DatabaseConnectionString"].ConnectionString;
+		    if (Properties.Settings.Default.DatalocDefault)    //If they are using the default connection string then.
+		        return ConfigurationManager.ConnectionStrings["Transformations.Properties.Settings.DatabaseConnectionString"].ConnectionString;
+            return  Properties.Settings.Default.ConnectionString;
 		}
+
         public static int Counter(string SQL)   //Used to count the number of hard and easy exams the user has taken.
 	    {
 		    int total = 0;

@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DataBaseError" xml:space="preserve">
+    <value>请重试或在 "高级设置" 中检查数据库连接字符串</value>
+  </data>
+  <data name="WindowsError" xml:space="preserve">
+    <value>请检查您是否具有足够的计算机权限。</value>
+  </data>
+  <data name="UserError" xml:space="preserve">
+    <value>请确保您正确输入/选择了一个有效值。</value>
+  </data>
+  <data name="CriticalFailuer" xml:space="preserve">
+    <value>未知问题已导致严重故障。请重试或与系统管理员联系。</value>
+  </data>
+  <data name="CircleString" xml:space="preserve">
+    <value>圈</value>
+  </data>
+  <data name="AccountDrop" xml:space="preserve">
+    <value>帐户</value>
+  </data>
+  <data name="ArrowString" xml:space="preserve">
+    <value>箭头</value>
+  </data>
+  <data name="BugDrop" xml:space="preserve">
+    <value>报告错误</value>
+  </data>
+  <data name="DataBaseFailure" xml:space="preserve">
+    <value>数据库故障: 请返回到用户</value>
+  </data>
+  <data name="DeleteAllGhostsString" xml:space="preserve">
+    <value>删除所有鬼</value>
+  </data>
+  <data name="DeleteShape" xml:space="preserve">
+    <value>删除形状</value>
+  </data>
+  <data name="DrawRaylinesString" xml:space="preserve">
+    <value>绘制光线</value>
+  </data>
+  <data name="EDeleteGhosts" xml:space="preserve">
+    <value>删除放大鬼</value>
+  </data>
+  <data name="EDeleteRayLines" xml:space="preserve">
+    <value>删除光线线</value>
+  </data>
+  <data name="EditShapeString" xml:space="preserve">
+    <value>编辑形状</value>
+  </data>
+  <data name="EGhostHidden" xml:space="preserve">
+    <value>隐藏的放大鬼</value>
+  </data>
+  <data name="EGhostVisible" xml:space="preserve">
+    <value>更大的幽灵可见</value>
+  </data>
+  <data name="EnlargmentString" xml:space="preserve">
+    <value>恩格拉门特</value>
+  </data>
+  <data name="ExecuteString" xml:space="preserve">
+    <value>执行</value>
+  </data>
+  <data name="FeedbackDrop" xml:space="preserve">
+    <value>反馈</value>
+  </data>
+  <data name="FileDrop" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FreeFormString" xml:space="preserve">
+    <value>免费表格</value>
+  </data>
+  <data name="GuestAccount" xml:space="preserve">
+    <value>客户账户</value>
+  </data>
+  <data name="HelpDrop" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="HomeString" xml:space="preserve">
+    <value>家</value>
+  </data>
+  <data name="LabelsDrop" xml:space="preserve">
+    <value>标签</value>
+  </data>
+  <data name="LShapeString" xml:space="preserve">
+    <value>L 形</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>主窗口</value>
+  </data>
+  <data name="NoShapeSelected" xml:space="preserve">
+    <value>当前未选择任何形状</value>
+  </data>
+  <data name="OpenDrop" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="ParallelogramString" xml:space="preserve">
+    <value>平行四边形</value>
+  </data>
+  <data name="PentagonString" xml:space="preserve">
+    <value>五角大楼</value>
+  </data>
+  <data name="RDeleteGhosts" xml:space="preserve">
+    <value>删除旋转鬼</value>
+  </data>
+  <data name="ReflectionString" xml:space="preserve">
+    <value>反射</value>
+  </data>
+  <data name="ResetAxisDrop" xml:space="preserve">
+    <value>重置轴</value>
+  </data>
+  <data name="RestartDrop" xml:space="preserve">
+    <value>重新 启动</value>
+  </data>
+  <data name="RGhostHidden" xml:space="preserve">
+    <value>旋转幽灵隐藏</value>
+  </data>
+  <data name="RGhostVisible" xml:space="preserve">
+    <value>旋转幽灵可见</value>
+  </data>
+  <data name="RotationString" xml:space="preserve">
+    <value>旋转</value>
+  </data>
+  <data name="SaveDrop" xml:space="preserve">
+    <value>救</value>
+  </data>
+  <data name="SaveFileDrop" xml:space="preserve">
+    <value>保存文件</value>
+  </data>
+  <data name="SaveImageDrop" xml:space="preserve">
+    <value>保存图像</value>
+  </data>
+  <data name="SearchingForSetting" xml:space="preserve">
+    <value>正在寻找设置吗？检查 "文件" 下的 "设置" 窗口, 了解更多控件。</value>
+  </data>
+  <data name="SettingsDrop" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SnapGridString" xml:space="preserve">
+    <value>捕捉到网格</value>
+  </data>
+  <data name="SpawnShapeString" xml:space="preserve">
+    <value>产卵形状</value>
+  </data>
+  <data name="SquareString" xml:space="preserve">
+    <value>广场</value>
+  </data>
+  <data name="StarString" xml:space="preserve">
+    <value>明星</value>
+  </data>
+  <data name="StudentLoginDrop" xml:space="preserve">
+    <value>学生登录</value>
+  </data>
+  <data name="StudentMangerDrop" xml:space="preserve">
+    <value>学生经理</value>
+  </data>
+  <data name="TakeExamDrop" xml:space="preserve">
+    <value>参加考试</value>
+  </data>
+  <data name="TDeleteGhosts" xml:space="preserve">
+    <value>删除翻译鬼</value>
+  </data>
+  <data name="TeacherLoginDrop" xml:space="preserve">
+    <value>教师登录</value>
+  </data>
+  <data name="TGhostHidden" xml:space="preserve">
+    <value>隐藏的翻译幽灵</value>
+  </data>
+  <data name="TGhostVisible" xml:space="preserve">
+    <value>翻译鬼可见</value>
+  </data>
+  <data name="TranslationString" xml:space="preserve">
+    <value>翻译</value>
+  </data>
+  <data name="TrapeziumString" xml:space="preserve">
+    <value>梯形</value>
+  </data>
+  <data name="TriangleString" xml:space="preserve">
+    <value>三角形</value>
+  </data>
+  <data name="UnselectShape" xml:space="preserve">
+    <value>取消选择形状</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="XAxisRef" xml:space="preserve">
+    <value>X 轴反射</value>
+  </data>
+  <data name="YAxisRef" xml:space="preserve">
+    <value>Y 轴反射</value>
+  </data>
+  <data name="YMXCRef" xml:space="preserve">
+    <value>Y = MX + C 重新定位</value>
+  </data>
+  <data name="acw" xml:space="preserve">
+    <value>逆时针方向</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>创建者</value>
+  </data>
+  <data name="cw" xml:space="preserve">
+    <value>顺时针</value>
+  </data>
+  <data name="d180" xml:space="preserve">
+    <value>180度</value>
+  </data>
+  <data name="d270" xml:space="preserve">
+    <value>270度</value>
+  </data>
+  <data name="d360" xml:space="preserve">
+    <value>360度</value>
+  </data>
+  <data name="d45" xml:space="preserve">
+    <value>45度</value>
+  </data>
+  <data name="d90" xml:space="preserve">
+    <value>90度</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>客人</value>
+  </data>
+  <data name="seconds0" xml:space="preserve">
+    <value>0秒</value>
+  </data>
+  <data name="seconds1" xml:space="preserve">
+    <value>1秒</value>
+  </data>
+  <data name="seconds10" xml:space="preserve">
+    <value>10秒</value>
+  </data>
+  <data name="seconds15" xml:space="preserve">
+    <value>15秒</value>
+  </data>
+  <data name="seconds3" xml:space="preserve">
+    <value>3秒</value>
+  </data>
+  <data name="seconds5" xml:space="preserve">
+    <value>5秒</value>
+  </data>
+  <data name="sf-1" xml:space="preserve">
+    <value>-1个比例因子</value>
+  </data>
+  <data name="sf-2" xml:space="preserve">
+    <value>-2个比例因子</value>
+  </data>
+  <data name="sf-3" xml:space="preserve">
+    <value>-3个比例因子</value>
+  </data>
+  <data name="sf-4" xml:space="preserve">
+    <value>-4个比例因子</value>
+  </data>
+  <data name="sf-5" xml:space="preserve">
+    <value>-5个比例因子</value>
+  </data>
+  <data name="sf025" xml:space="preserve">
+    <value>0.25 比例因子</value>
+  </data>
+  <data name="sf05" xml:space="preserve">
+    <value>0.5 比例因子</value>
+  </data>
+  <data name="sf075" xml:space="preserve">
+    <value>0.75 比例因子</value>
+  </data>
+  <data name="sf1" xml:space="preserve">
+    <value>1比例因子</value>
+  </data>
+  <data name="sf2" xml:space="preserve">
+    <value>2比例因子</value>
+  </data>
+  <data name="sf3" xml:space="preserve">
+    <value>3比例因子</value>
+  </data>
+  <data name="sf4" xml:space="preserve">
+    <value>4比例因子</value>
+  </data>
+  <data name="sf5" xml:space="preserve">
+    <value>5比例因子</value>
+  </data>
+  <data name="StudentLogOutDrop" xml:space="preserve">
+    <value>学生注销</value>
+  </data>
+  <data name="TeacherLogOutDrop" xml:space="preserve">
+    <value>教师注销</value>
+  </data>
+  <data name="ver" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="EM_FieldEmpty" xml:space="preserve">
+    <value>字段空错误:</value>
+  </data>
+  <data name="EM_InvalidInputTypeError" xml:space="preserve">
+    <value>无效的输入类型错误:</value>
+  </data>
+  <data name="NoShapeSelected1" xml:space="preserve">
+    <value>您没有选择任何形状, 或者所选形状无效。</value>
+  </data>
+  <data name="NumericCordsOnly" xml:space="preserve">
+    <value>输入的坐标格式不正确;只允许数值。</value>
+  </data>
+  <data name="AccountFound" xml:space="preserve">
+    <value>找到的帐户</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>找不到帐户</value>
+  </data>
+  <data name="EM_CriticalFailure" xml:space="preserve">
+    <value>关键程序失败:</value>
+  </data>
+  <data name="EM_DataBaseReadError" xml:space="preserve">
+    <value>数据库读取错误:</value>
+  </data>
+  <data name="EM_InvalidRequestError" xml:space="preserve">
+    <value>无效的请求错误:</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>未能保存图像。</value>
+  </data>
+  <data name="FailedToSaveShape" xml:space="preserve">
+    <value>未能保存形状文件。</value>
+  </data>
+  <data name="FailToGetLoginAccounts" xml:space="preserve">
+    <value>检索用户登录详细信息和帐户失败。</value>
+  </data>
+  <data name="LoggedInAsTeacherError" xml:space="preserve">
+    <value>您目前以教师身份登录, 请先注销教师登录, 然后再尝试登录学生登录。</value>
+  </data>
+  <data name="LoginSuccesfull" xml:space="preserve">
+    <value>登录成功, 您现在已经登录到您的帐户。</value>
+  </data>
+  <data name="NoAccountFound" xml:space="preserve">
+    <value>找不到用户帐户, 请创建一个新的用户帐户。</value>
+  </data>
+  <data name="UnableToOpen" xml:space="preserve">
+    <value>无法打开文件。所选文件可能已损坏或与此程序的当前版本不兼容。</value>
+  </data>
+  <data name="Loggedout" xml:space="preserve">
+    <value>已注销。</value>
+  </data>
+  <data name="logoutSuccessful" xml:space="preserve">
+    <value>您已成功注销。</value>
+  </data>
+  <data name="LogOutOfStudentFirst" xml:space="preserve">
+    <value>您目前以学生身份登录, 请先注销学生登录, 然后再尝试登录教师登录。</value>
+  </data>
+  <data name="LogOutOfStudentOrGuest" xml:space="preserve">
+    <value>您目前是以学生或访客身份登录的, 请登录到教师登录。</value>
+  </data>
+  <data name="CurrentlyUsingGuest" xml:space="preserve">
+    <value>当前正在使用来宾帐户。</value>
+  </data>
+  <data name="LogOutOfTeacher" xml:space="preserve">
+    <value>您目前以教师身份登录, 请从教师帐户登录并登录学生帐户以访问考试。</value>
+  </data>
+  <data name="NotLoggedIn" xml:space="preserve">
+    <value>您当前未登录。使用来宾登录时, 不会保存或记录任何进度。</value>
+  </data>
+  <data name="NoCircleReflection" xml:space="preserve">
+    <value>不能使用 Y = MX + C 线反射圆。</value>
+  </data>
+  <data name="ReflectNotCorrectFormat" xml:space="preserve">
+    <value>输入的行方程的格式不正确;只允许数值。</value>
+  </data>
+  <data name="VectorNotInFormat" xml:space="preserve">
+    <value>输入的向量格式不正确;只允许数值</value>
+  </data>
+  <data name="AreYouSureDelete" xml:space="preserve">
+    <value>确实要删除</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>高度：</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>删除确认</value>
+  </data>
+  <data name="UnknownShape" xml:space="preserve">
+    <value>不知名的客户形状</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>宽度：</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>是否确定？</value>
+  </data>
+  <data name="SaveBeforeOpening" xml:space="preserve">
+    <value>是否要在打开新文件之前保存？</value>
+  </data>
+  <data name="SaveCompeted" xml:space="preserve">
+    <value>保存已完成</value>
+  </data>
+  <data name="SaveSuccesful" xml:space="preserve">
+    <value>文件保存成功。</value>
+  </data>
+  <data name="SettingsGeneral" xml:space="preserve">
+    <value>应用程序设置允许您更改默认设置。这些选择将在下次重新启动应用程序时被记住。</value>
+  </data>
+  <data name="DefualtColourText" xml:space="preserve">
+    <value>形状的变形颜色产生了。</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>黑</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>蓝色</value>
+  </data>
+  <data name="DefualtGridColour" xml:space="preserve">
+    <value>默认网格颜色</value>
+  </data>
+  <data name="DefualtGridColourText" xml:space="preserve">
+    <value>网格的褪色颜色。</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>绿色</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>红</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>深灰色</value>
+  </data>
+  <data name="DDarkGray" xml:space="preserve">
+    <value>深灰色</value>
+  </data>
+  <data name="DLightGray" xml:space="preserve">
+    <value>暗色-浅灰色</value>
+  </data>
+  <data name="LightGray" xml:space="preserve">
+    <value>浅灰色</value>
+  </data>
+  <data name="DWhite" xml:space="preserve">
+    <value>深色-白色</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>大小：</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>已成功删除</value>
+  </data>
+  <data name="DefualtColour" xml:space="preserve">
+    <value>默认颜色</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>应用更改</value>
+  </data>
+  <data name="DefualtSize" xml:space="preserve">
+    <value>默认大小</value>
+  </data>
+  <data name="DefualtSizeText" xml:space="preserve">
+    <value>生成形状的默认大小</value>
+  </data>
+  <data name="ResetDefualts" xml:space="preserve">
+    <value>重置默认值</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>先进</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="DetailsText" xml:space="preserve">
+    <value>高级设置仅为有经验的用户设计。更改这些设置的风险由您自己承担。如果出现问题, "重置默认值"。</value>
+  </data>
+  <data name="HighRes" xml:space="preserve">
+    <value>高分辨率显示器 (1920x1080) +</value>
+  </data>
+  <data name="LowRes" xml:space="preserve">
+    <value>低恢复显示</value>
+  </data>
+  <data name="MResoultion" xml:space="preserve">
+    <value>监控恢复</value>
+  </data>
+  <data name="MResoultionText" xml:space="preserve">
+    <value>更改此设置将使应用程序启动大小不同</value>
+  </data>
+  <data name="ConnString" xml:space="preserve">
+    <value>连接字符串:</value>
+  </data>
+  <data name="DBConnection" xml:space="preserve">
+    <value>数据库连接</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>已成功删除</value>
+  </data>
+  <data name="DBWarning" xml:space="preserve">
+    <value>只有由系统管理员更改</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>语言将在重新启动时更新。</value>
+  </data>
+  <data name="LanguageText2" xml:space="preserve">
+    <value>下面您可以选择整个程序中使用的语言。如果您在翻译中发现错误, 请随时帮助在 GitHub 存储库中修复它。</value>
+  </data>
+  <data name="LowEndDevice" xml:space="preserve">
+    <value>低端设备</value>
+  </data>
+  <data name="Performance" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="StandardDevice" xml:space="preserve">
+    <value>标准设备 (正常)</value>
+  </data>
+  <data name="UseCustom" xml:space="preserve">
+    <value>使用自定义</value>
+  </data>
+  <data name="UseDefault" xml:space="preserve">
+    <value>使用默认值</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>如果您遇到性能问题, 请切换到 "低端设备"</value>
+  </data>
+  <data name="ChangeClass" xml:space="preserve">
+    <value>更改类</value>
+  </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>删除帐户</value>
+  </data>
+  <data name="DependencyDownload" xml:space="preserve">
+    <value>依赖关系下载</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>账户类型:</value>
+  </data>
+  <data name="AliasName" xml:space="preserve">
+    <value>别名:</value>
+  </data>
+  <data name="ClassID" xml:space="preserve">
+    <value>类别 ID:</value>
+  </data>
+  <data name="ClassName" xml:space="preserve">
+    <value>类名:</value>
+  </data>
+  <data name="Teacher2" xml:space="preserve">
+    <value>老师</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>用户 ID:</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用户：</value>
+  </data>
+  <data name="FailiedToGetTeacherandClass" xml:space="preserve">
+    <value>无法检索您的老师和类。</value>
+  </data>
+  <data name="TeacherAccount" xml:space="preserve">
+    <value>教师账户</value>
+  </data>
+  <data name="AllWeKnow" xml:space="preserve">
+    <value>这是错误消息, 这就是我们所知道的.....。</value>
+  </data>
+  <data name="ConnectionStringUnable" xml:space="preserve">
+    <value>无法使用自定义连接字符串连接到数据库:</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>错误: 无法建立连接</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>由于数据库连接字符串无效, 无法保存设置。请输入正确的连接字符串或使用默认值保存设置。</value>
+  </data>
+  <data name="SettingsReset" xml:space="preserve">
+    <value>您的设置已成功重置为默认值。应用程序现在将重新启动。</value>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>您的设置已成功保存。应用程序现在将重新启动。</value>
+  </data>
+  <data name="UnableToSaveSettings" xml:space="preserve">
+    <value>错误: 无法保存设置。</value>
+  </data>
+  <data name="AccountDeleted" xml:space="preserve">
+    <value>已成功删除您的帐户, 请随时创建另一个帐户。</value>
+  </data>
+  <data name="AreYouSureDeleteAccount" xml:space="preserve">
+    <value>确实要删除您的帐户吗？虽然你可以创建一个新的, 你会失去你目前有的任何考试成绩。</value>
+  </data>
+  <data name="AreYouSureDeleteAccountTeacher" xml:space="preserve">
+    <value>确实要删除您的教师帐户吗？删除教师帐户将删除您的所有课程、课程中的所有学生帐户及其所有考试成绩。此操作无法撤消。如果你想保留一个班级或学生的数据, 一定要把他们转给另一个老师。</value>
+  </data>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>未能重新登录, 请手动注销并重新登录。</value>
+  </data>
+  <data name="EM_DBRandWError" xml:space="preserve">
+    <value>数据库读和写错误:</value>
+  </data>
+  <data name="FailedToDeleteAccount" xml:space="preserve">
+    <value>无法删除您的用户帐户。</value>
+  </data>
+  <data name="TeacherDelete1" xml:space="preserve">
+    <value>已成功删除您的帐户, 包括</value>
+  </data>
+  <data name="TeacherDelete2" xml:space="preserve">
+    <value>类, 包含总的</value>
+  </data>
+  <data name="TeacherDelete3" xml:space="preserve">
+    <value>学生帐户和他们的结果。</value>
+  </data>
+  <data name="TransferUser" xml:space="preserve">
+    <value>传输用户</value>
+  </data>
+  <data name="TransferUserText" xml:space="preserve">
+    <value>请选择下面的新老师和一个新的班级, 你想转移到。</value>
+  </data>
+  <data name="StudentAccount" xml:space="preserve">
+    <value>学生账户</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="AccountCreation" xml:space="preserve">
+    <value>取消帐户创建</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>创建帐户</value>
+  </data>
+  <data name="TBA" xml:space="preserve">
+    <value>由于此用户以前在另一台计算机上安装过来自策略 %2!s! 的已发布应用程序 %1!s!，所以它设置成已分配。</value>
+  </data>
+  <data name="AccountCreatedHeader" xml:space="preserve">
+    <value>已创建帐户</value>
+  </data>
+  <data name="DetailsText2" xml:space="preserve">
+    <value>该产品已获得许可并为教育机构创建。保留所有权利Jonathan Foot©。有关完整的条款和条件，请转到商店页面并查看详细信息部分。</value>
+  </data>
+  <data name="EM_InsuffientPrivileges" xml:space="preserve">
+    <value>权限不足错误：</value>
+  </data>
+  <data name="WinUserNameFail" xml:space="preserve">
+    <value>无法检索Windows用户名。</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>用户帐户已成功创建，应用程序现在将重新启动并登录。</value>
+  </data>
+  <data name="ClassOwnedFail" xml:space="preserve">
+    <value>无法检索所选教师拥有的课程。</value>
+  </data>
+  <data name="FailedToCreateAccount" xml:space="preserve">
+    <value>无法创建新的用户帐户。</value>
+  </data>
+  <data name="TeacherNameFail" xml:space="preserve">
+    <value>无法检索教师姓名。</value>
+  </data>
+  <data name="TeacherOrClassBlank" xml:space="preserve">
+    <value>教师或班级选择已空白或无效。 </value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>信息!</value>
+  </data>
+  <data name="TakeExamText" xml:space="preserve">
+    <value>欢迎来到学生门户网站, 在这里您可以查看您过去的考试成绩并参加新的考试。你的成绩将向你的老师观看。若要开始使用上面的选项卡选择主题和考试难度。</value>
+  </data>
+  <data name="EasyExam" xml:space="preserve">
+    <value>简单的考试</value>
+  </data>
+  <data name="EnlargmentExam" xml:space="preserve">
+    <value>扩大考试</value>
+  </data>
+  <data name="ExamDifficulty" xml:space="preserve">
+    <value>难度考试</value>
+  </data>
+  <data name="ExamType" xml:space="preserve">
+    <value>按类型划分的考试</value>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>将结果导出到 PDF</value>
+  </data>
+  <data name="GuestWarning" xml:space="preserve">
+    <value>来宾登录: 不会保存任何进度。</value>
+  </data>
+  <data name="HardExam" xml:space="preserve">
+    <value>硬质考试</value>
+  </data>
+  <data name="RecentExamResults" xml:space="preserve">
+    <value>最近的考试结果</value>
+  </data>
+  <data name="ReflectionExam" xml:space="preserve">
+    <value>反射考试</value>
+  </data>
+  <data name="ReturnToStudying" xml:space="preserve">
+    <value>重返学习</value>
+  </data>
+  <data name="RotationExam" xml:space="preserve">
+    <value>旋转考试</value>
+  </data>
+  <data name="TakeAnExamString" xml:space="preserve">
+    <value>参加考试</value>
+  </data>
+  <data name="TakeExamText2" xml:space="preserve">
+    <value>在这里, 您可以参加关于转换主题的考试, 并测试您的知识。考试有两个困难, 容易和困难。强烈建议您尝试轻松, 只有在达到90% 以上后才会艰难地前进。每次考试都是随机生成的, 每次考试结束时都会记录你的分数。别担心, 你可以参加尽可能多的考试, 你想!</value>
+  </data>
+  <data name="TestingZone" xml:space="preserve">
+    <value>测试区</value>
+  </data>
+  <data name="TranslationExam" xml:space="preserve">
+    <value>翻译考试</value>
+  </data>
+  <data name="FailedToGetExamResults" xml:space="preserve">
+    <value>检索考试成绩数据失败。</value>
+  </data>
+  <data name="GuestExportError" xml:space="preserve">
+    <value>您当前以来宾身份登录, 来宾没有要导出的保存结果。</value>
+  </data>
+  <data name="PDFFailed" xml:space="preserve">
+    <value>无法将结果导出到 PDF。</value>
+  </data>
+  <data name="PDFSaved" xml:space="preserve">
+    <value>您的结果已成功保存到 PDF。</value>
+  </data>
+  <data name="Attempts" xml:space="preserve">
+    <value>尝试</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>问题</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>得分</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>坐标：</value>
+  </data>
+  <data name="d135" xml:space="preserve">
+    <value>135度</value>
+  </data>
+  <data name="d225" xml:space="preserve">
+    <value>225度</value>
+  </data>
+  <data name="d315" xml:space="preserve">
+    <value>315度</value>
+  </data>
+  <data name="ExitExam" xml:space="preserve">
+    <value>退出考试</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Tip1" xml:space="preserve">
+    <value>提示: 答案可能为 0.5/非整数</value>
+  </data>
+  <data name="Tip2" xml:space="preserve">
+    <value>提示: 此形状已旋转: 0度顺时针方向</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建...</value>
+  </data>
+  <data name="CreateClass" xml:space="preserve">
+    <value>创建类</value>
+  </data>
+  <data name="AreYourSureClassTransfer" xml:space="preserve">
+    <value>您不是此类的所有者, 尽管您仍可能将其编辑为您自己的;请体谅其他老师。</value>
+  </data>
+  <data name="ClassCreated" xml:space="preserve">
+    <value>类已创建。</value>
+  </data>
+  <data name="ClassDelete" xml:space="preserve">
+    <value>删除班级和学生</value>
+  </data>
+  <data name="ClassEditDesc" xml:space="preserve">
+    <value>在这里, 您可以管理所有类, 只需使用下面的按钮对选定的类执行操作。请注意, 这些操作无法撤消。</value>
+  </data>
+  <data name="ClassEditor" xml:space="preserve">
+    <value>类编辑器</value>
+  </data>
+  <data name="ClassesOwned" xml:space="preserve">
+    <value>仅查看我所拥有的课程</value>
+  </data>
+  <data name="ClassRename" xml:space="preserve">
+    <value>重命名类</value>
+  </data>
+  <data name="ClassTransfer" xml:space="preserve">
+    <value>转让阶级的所有权</value>
+  </data>
+  <data name="ConfirmClassDelete" xml:space="preserve">
+    <value>您确定要删除此类课程及其中的所有学生帐户吗？此操作无法撤消。</value>
+  </data>
+  <data name="CreateDesc" xml:space="preserve">
+    <value>要创建新类, 请在下面的框中键入名称, 然后单击 "创建"。</value>
+  </data>
+  <data name="DatabaseWriteError" xml:space="preserve">
+    <value>数据库写入错误: 101</value>
+  </data>
+  <data name="Error100" xml:space="preserve">
+    <value>数据库错误: 100</value>
+  </data>
+  <data name="FailedToDeleteclass" xml:space="preserve">
+    <value>无法删除类。</value>
+  </data>
+  <data name="FailedToGetClasses" xml:space="preserve">
+    <value>无法检索您所拥有的类。</value>
+  </data>
+  <data name="FailedToGetDataBase" xml:space="preserve">
+    <value>无法从数据库中检索数据。</value>
+  </data>
+  <data name="FailedToMakeNewClass" xml:space="preserve">
+    <value>未能创建新类。</value>
+  </data>
+  <data name="NewClassCalled" xml:space="preserve">
+    <value>一个名为  的新类</value>
+  </data>
+  <data name="NewClassCalled2" xml:space="preserve">
+    <value>"已成功制作。</value>
+  </data>
+  <data name="RenameDesc" xml:space="preserve">
+    <value>请在下面的文本框中键入此类的新名称。</value>
+  </data>
+  <data name="SeeClassResults" xml:space="preserve">
+    <value>查看所选的班级结果</value>
+  </data>
+  <data name="SuccDeletedClass" xml:space="preserve">
+    <value>已成功删除您的类, 包括</value>
+  </data>
+  <data name="SuccDeletedClass2" xml:space="preserve">
+    <value>学生帐户。</value>
+  </data>
+  <data name="TransferDesc" xml:space="preserve">
+    <value>请在下面选择您要将班级所有权转让给的新教师。此操作无法撤消。</value>
+  </data>
+  <data name="ViewAllClasses" xml:space="preserve">
+    <value>查看所有类</value>
+  </data>
+  <data name="TroubleShootDrop" xml:space="preserve">
+    <value>疑难解答问题</value>
+  </data>
+  <data name="AllUser" xml:space="preserve">
+    <value>所有用户</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>类</value>
+  </data>
+  <data name="ClassRenameFailed" xml:space="preserve">
+    <value>类重命名请求无效。</value>
+  </data>
+  <data name="ClassTransferedSuccesful" xml:space="preserve">
+    <value>班成功地转到了新老师。</value>
+  </data>
+  <data name="ClassViewDesc" xml:space="preserve">
+    <value>在这里,您可以管理学生的个人资料并查看他们最近的考试成绩。只需单击学生的行,然后使用下面的按钮执行操作。请注意,更改将自动保存,且不可撤消。</value>
+  </data>
+  <data name="ClassViewer" xml:space="preserve">
+    <value>类查看器</value>
+  </data>
+  <data name="CreateTeacher" xml:space="preserve">
+    <value>创建教师帐户</value>
+  </data>
+  <data name="DeleteResult" xml:space="preserve">
+    <value>删除结果</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>删除用户</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>将表导出到 Excel</value>
+  </data>
+  <data name="FailedClassRename" xml:space="preserve">
+    <value>无法重命名类。</value>
+  </data>
+  <data name="FailedToDeleteSelectedUser" xml:space="preserve">
+    <value>无法删除所选用户。</value>
+  </data>
+  <data name="FailedToGetClass" xml:space="preserve">
+    <value>无法检索所选班级内的学生。</value>
+  </data>
+  <data name="FailedToMakeTeacher" xml:space="preserve">
+    <value>无法创建新教师帐户。</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>您输入的密码不正确。请确保您键入正确;请记住密码区分大小写。</value>
+  </data>
+  <data name="OwnerBlank" xml:space="preserve">
+    <value>新所有者不能留空。</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码：</value>
+  </data>
+  <data name="ResultViewer" xml:space="preserve">
+    <value>考试成绩查看器</value>
+  </data>
+  <data name="SeeResults" xml:space="preserve">
+    <value>查看所有用户结果</value>
+  </data>
+  <data name="SeeSpecificResult" xml:space="preserve">
+    <value>查看所选用户结果</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>学生</value>
+  </data>
+  <data name="StudentDelete" xml:space="preserve">
+    <value>这样做将删除他们的帐户和任何保存的考试结果。</value>
+  </data>
+  <data name="SuccessfulMove" xml:space="preserve">
+    <value>成功传输</value>
+  </data>
+  <data name="TeacherCreated" xml:space="preserve">
+    <value>教师帐户已成功创建,应用程序现在将重新启动。请登录一旦重新启动。</value>
+  </data>
+  <data name="TeacherCreation" xml:space="preserve">
+    <value>教师帐户创建</value>
+  </data>
+  <data name="TeacherName" xml:space="preserve">
+    <value>教师姓名:</value>
+  </data>
+  <data name="TransferFailed" xml:space="preserve">
+    <value>无法将用户/类转移到新所有者。</value>
+  </data>
+  <data name="TransferUserPrompt" xml:space="preserve">
+    <value>请在下面选择一位新教师和一个新班级,您要将该学生转到该班级。</value>
+  </data>
+  <data name="TrasnferUser" xml:space="preserve">
+    <value>传输用户</value>
+  </data>
+  <data name="UserClassInvalid" xml:space="preserve">
+    <value>用户/类转移请求无效。</value>
+  </data>
+  <data name="UserTransferedSuccessful" xml:space="preserve">
+    <value>用户已成功转移到新教师。</value>
+  </data>
+  <data name="FailedToGetUserClassResults" xml:space="preserve">
+    <value>无法检索用户/类考试结果。</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>此用户尚未获得任何考试结果。当他们参加考试时,他们的结果将在这里显示。</value>
+  </data>
+  <data name="CanNotBeUndone" xml:space="preserve">
+    <value>此操作无法撤消。</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>删除确认</value>
+  </data>
+  <data name="ExportationFailed" xml:space="preserve">
+    <value>结果导出失败。</value>
+  </data>
+  <data name="ResultAreYouSure" xml:space="preserve">
+    <value>是否确实要删除此考试结果?</value>
+  </data>
+  <data name="UnableToDeleteResult" xml:space="preserve">
+    <value>无法删除此考试结果。此结果已可能被删除。</value>
+  </data>
+  <data name="FailedToMakeExam" xml:space="preserve">
+    <value>无法随机生成考试。</value>
+  </data>
+  <data name="THardExam" xml:space="preserve">
+    <value>翻译硬考</value>
+  </data>
+  <data name="THardEText" xml:space="preserve">
+    <value>哪个翻译向量将原始形状映射到鬼?</value>
+  </data>
+  <data name="TEasyE" xml:space="preserve">
+    <value>翻译轻松考试</value>
+  </data>
+  <data name="DegreeClockWise" xml:space="preserve">
+    <value>顺时针度</value>
+  </data>
+  <data name="RotHardE" xml:space="preserve">
+    <value>旋转硬考试</value>
+  </data>
+  <data name="RotHardEHint" xml:space="preserve">
+    <value>提示:此形状已旋转:</value>
+  </data>
+  <data name="RotHardEText" xml:space="preserve">
+    <value>旋转中心的坐标是什么?</value>
+  </data>
+  <data name="TEasyEText" xml:space="preserve">
+    <value>哪个转换向量将原始形状映射到鬼形?</value>
+  </data>
+  <data name="NoClockGuess" xml:space="preserve">
+    <value>您尚未同时选择顺时针和/或逆时针旋转。</value>
+  </data>
+  <data name="RefHardE" xml:space="preserve">
+    <value>反思硬考</value>
+  </data>
+  <data name="RefHardText" xml:space="preserve">
+    <value>哪条线将原始反映到幽灵形状?</value>
+  </data>
+  <data name="RotEasyE" xml:space="preserve">
+    <value>旋转轻松考试</value>
+  </data>
+  <data name="RotEasyEText" xml:space="preserve">
+    <value>形状的旋转是什么?</value>
+  </data>
+  <data name="RefEasyE" xml:space="preserve">
+    <value>反射轻松考试</value>
+  </data>
+  <data name="EEasyE" xml:space="preserve">
+    <value>扩大容易考试</value>
+  </data>
+  <data name="EEasyText" xml:space="preserve">
+    <value>在幽灵形状上预先构成的刻度因子是什么?</value>
+  </data>
+  <data name="EHardE" xml:space="preserve">
+    <value>扩大硬考试</value>
+  </data>
+  <data name="EHardHint" xml:space="preserve">
+    <value>提示:此形状已扩大:</value>
+  </data>
+  <data name="EHardText" xml:space="preserve">
+    <value>放大中心的坐标是什么?</value>
+  </data>
+  <data name="ExamEnd" xml:space="preserve">
+    <value>考试结束</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="FailedToSaveResult" xml:space="preserve">
+    <value>无法保存您的考试结果。</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>通过</value>
+  </data>
+  <data name="SaveandExit" xml:space="preserve">
+    <value>保存和退出考试</value>
+  </data>
+  <data name="ScaleFactor" xml:space="preserve">
+    <value>缩放因子。</value>
+  </data>
+  <data name="TimeElapsed" xml:space="preserve">
+    <value>时间经过</value>
+  </data>
+  <data name="ToPass" xml:space="preserve">
+    <value>要通过考试,您必须有超过 80% 的分数,或者只有一个错误的答案。</value>
+  </data>
+  <data name="TotalAttempts" xml:space="preserve">
+    <value>总尝试次数</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>正确</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>再试一次</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>干的好！</value>
+  </data>
+  <data name="OutOfAttempts" xml:space="preserve">
+    <value>尝试失败后</value>
+  </data>
+  <data name="QSkiped" xml:space="preserve">
+    <value>已跳过问题</value>
+  </data>
+  <data name="LeaveExam" xml:space="preserve">
+    <value>你确定要放弃这次考试吗?</value>
+  </data>
+</root>

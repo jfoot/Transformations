@@ -75,8 +75,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to retrieve data from the database. " + Properties.Resources.DataBaseError,
-                    "DataBase Error : 100", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                   Properties.Strings.FailedToGetDataBase + Properties.Strings.DataBaseError,
+                    Properties.Strings.Error100, System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void CreateClass(object sender, RoutedEventArgs e)      //used to create a new class
@@ -96,16 +96,16 @@ namespace Transformations
 
                 RefreshGrid();
                 MessageBox.Show(
-                    "A new class called \"" + classname.Text.ToString() + "\" has been made successfully.",
-                    "Class Created.", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                    Properties.Strings.NewClassCalled + classname.Text.ToString() + Properties.Strings.NewClassCalled2,
+                    Properties.Strings.ClassCreated, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                 classname.Text = "";
             }
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to create a new class. " + Properties.Resources.DataBaseError,
-                    "DataBase Write Error : 101 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.FailedToMakeNewClass + Properties.Strings.DataBaseError,
+                    Properties.Strings.DatabaseWriteError + "A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void GridLoaded(object sender, RoutedEventArgs e)       //Called upon when the grid is loaded
@@ -120,8 +120,8 @@ namespace Transformations
                 string ID = (_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text; //The currently selected column on the data grid.
                                                                                                                             //Asks the user are they sure?
                 MessageBoxResult open = MessageBox.Show(
-                    "Are you sure you wish to delete this class and all the student accounts inside of it? This action can not be undone.",
-                    "Are you sure?",
+                    Properties.Strings.ConfirmClassDelete,
+                    Properties.Strings.AreYouSure,
                     System.Windows.MessageBoxButton.YesNo,
                     MessageBoxImage.Warning);
 
@@ -165,8 +165,8 @@ namespace Transformations
                         }
                     }
 
-                    MessageBox.Show("Successfully deleted your class, including " + StudentIDs.Count + " Student accounts.",
-                        "Class Deleted Successfully.",
+                    MessageBox.Show(Properties.Strings.SuccDeletedClass + StudentIDs.Count + Properties.Strings.SuccDeletedClass2,
+                        Properties.Strings.DeletedSuccessfully,
                         System.Windows.MessageBoxButton.OK,
                         MessageBoxImage.Information);
                     RefreshGrid();
@@ -176,8 +176,8 @@ namespace Transformations
             catch (Exception)
             {
                 MessageBox.Show(
-                    "Failed to delete class. " + Properties.Resources.DataBaseError,
-                    "DataBase Read & Write Error : 102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                    Properties.Strings.FailedToDeleteclass + Properties.Strings.DataBaseError,
+                    Properties.Strings.EM_DataBaseReadError + "102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void SeeClassData(object sender, RoutedEventArgs e)     //See all the class data
@@ -188,15 +188,15 @@ namespace Transformations
         private void TransferClass(object sender, RoutedEventArgs e)    //Transfer a class to a different user.
         {
             IsOwner();
-            Dialog_ComboBox Combo = new Dialog_ComboBox("Transfer Class Ownership", "Please select below a new teacher to which you would like to transfer class ownership to. This action can not be undone.", "class_transfer", (_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text) { Owner = this };
+            Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.ClassTransfer,Properties.Strings.TransferDesc, "class_transfer", (_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text) { Owner = this };
             Combo.Closed += SetContentHandler;
             Combo.Show();
         }
         private void RenameClass(object sender, RoutedEventArgs e)  //Rename a class
         {
             IsOwner();
-            Dialog_TextBox TextBox = new Dialog_TextBox("Rename Class",
-                    "Please type below in the text box a new name for this class.", "class_rename",
+            Dialog_TextBox TextBox = new Dialog_TextBox(Properties.Strings.ClassRename,
+                    Properties.Strings.RenameDesc, "class_rename",
                     (_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text)
             { Owner = this };
             TextBox.Closed += SetContentHandler;
@@ -245,16 +245,16 @@ namespace Transformations
                     if (check == false)
                     {
                         MessageBox.Show(
-                            "You are not the owner of this class, although you may still edit it as if it was your own; please be considerate to other teachers.",
-                            "Attention", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                            Properties.Strings.AreYourSureClassTransfer,
+                            Properties.Strings.Attention, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
 
                     }
                 }
                 catch (Exception)
                 {
                     MessageBox.Show(
-                        "Failed to retrieve the classes you own. " + Properties.Resources.DataBaseError,
-                        "Database Read Error : 100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                        Properties.Strings.FailedToGetClasses + Properties.Strings.DataBaseError,
+                        Properties.Strings.EM_DataBaseReadError + "100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

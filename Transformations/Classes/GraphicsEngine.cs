@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using WPFLocalizeExtension.Extensions;
 using Cursor = System.Windows.Input.Cursor;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 
@@ -24,7 +26,7 @@ namespace Transformations
 
 		public static double RandomX(Border border, int scaleFactor)   //Creates a random X position for a shape inside of the canvas.
 		{
-			double x = 0;
+			double x;
 
 			int shape_X = Rnd.RandomNumber(0, Convert.ToInt32(border.ActualWidth - scaleFactor * 5));
 			double newleft = (Round.ToNearest((shape_X), (scaleFactor)));
@@ -35,7 +37,7 @@ namespace Transformations
 
 		public static double RandomY(Border border, int scaleFactor) //Creates a random Y position for a shape inside of the canvas.
 		{
-			double y = 0;
+			double y;
 
 			int shape_y = Rnd.RandomNumber(0, Convert.ToInt32(border.ActualHeight - scaleFactor * 5));
 			double newtop = (Round.ToNearest((shape_y), (scaleFactor)));
@@ -60,11 +62,11 @@ namespace Transformations
 
 	class Scaling
 	{
-		public static bool CtrlDown = false;        //If the ctrl button is being pressed down
-		public static bool Ctrldragging = false;    //If user is dragging while holding down ctrl
-		public static Point ClickX;     //A point on the canvas.
-										//The main scaling function for the program, it accepts the variables from different windows and then can be used in multiple situations.
-		public static void Main(TranslateTransform TranslationTransformCanvas, ScaleTransform scaleTransformCanvas, Slider x_slider, Slider y_slider, Slider slider_sf, Border border) //Generic Scaling Function- used to trigger the individual functions in order.
+		public static bool CtrlDown { get; set; } = false;        //If the ctrl button is being pressed down
+		public static bool Ctrldragging { get; set; }  = false;    //If user is dragging while holding down ctrl
+		public static Point ClickX { get; set; }     //A point on the canvas.
+                                                     //The main scaling function for the program, it accepts the variables from different windows and then can be used in multiple situations.
+        public static void Main(TranslateTransform TranslationTransformCanvas, ScaleTransform scaleTransformCanvas, Slider x_slider, Slider y_slider, Slider slider_sf, Border border) //Generic Scaling Function- used to trigger the individual functions in order.
 		{
 			try
 			{   //Movement of the canvas up or down and left or right
@@ -97,7 +99,7 @@ namespace Transformations
 			{
 				x_slider.Value += ((e.GetPosition(canvas).X) - (ClickX.X)); //Get position on the canvas and minus it from the original position to allow canvas panning
 				y_slider.Value -= ((e.GetPosition(canvas).Y) - (ClickX.Y));
-				Mouse.SetCursor(new Cursor(new System.IO.MemoryStream(Transformations.Properties.Resources.grabbing)));    //Change mouse cursor 
+				Mouse.SetCursor(new Cursor(new System.IO.MemoryStream(Transformations.Properties.Strings.grabbing)));    //Change mouse cursor 
 			}
 		}
 

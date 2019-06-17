@@ -21,15 +21,14 @@ namespace Transformations
     /// </summary>
     public partial class TakeExam : Window
 	{
-		public PdfDocument PDF;
-		public PdfPage PDFPage;
-		public XGraphics Graph;
+		private PdfDocument PDF;
+        private PdfPage PDFPage;
+        private XGraphics Graph;
 	
-
 		public TakeExam()
 		{
 			InitializeComponent();
-			if (Properties.Settings.Default.CurrentUser != "Guest") //If user is logged into their student account
+			if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest) //If user is logged into their student account
 			{
 				GuestWarning.Visibility = Visibility.Hidden;
 				try
@@ -84,16 +83,17 @@ namespace Transformations
 				}
 				catch (Exception)
 				{
-					MessageBox.Show(
-						"Failed to retrieve your exam results data. " + Properties.Resources.DataBaseError,
-						"Database Read Error: 100 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-				}
+                    MessageBox.Show(
+                        Properties.Strings.FailedToGetExamResults + Properties.Strings.DataBaseError,
+                        Properties.Strings.EM_DataBaseReadError + "100 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 			}
 			else
 			{	//If user is a guest blur the graphs as they will be empty.
 				BlurEffect myBlurEffect = new BlurEffect {Radius = 10};
 				HomeGrid.Effect = myBlurEffect;
-			}
+                tab_control.SelectedIndex = 1;
+            }
 		}
 
 		private void Return(object sender, RoutedEventArgs e)   //Return to the main window
@@ -155,73 +155,73 @@ namespace Transformations
 		}
         private void Help(object sender, RoutedEventArgs e)     //Opens the help link
         {
-			System.Diagnostics.Process.Start(Transformations.Properties.Resources.HelpLink);
+			System.Diagnostics.Process.Start(Properties.Strings.HelpLink);
 		}
         private void SavePDF(object sender, RoutedEventArgs e)  //Saves the users exam results into a PDF file.
         {
-			if (Properties.Settings.Default.CurrentUser != "Guest")		//If user is not a guest - Hence has results
-			{
-				try
-				{
-					PDF = new PdfDocument();					//Create a new PDF Document
-					PDFPage = PDF.AddPage();					//Add a page to this document
-					Graph = XGraphics.FromPdfPage(PDFPage);		//Creates a graphic (the graphs) to add to the page
+            if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest)        //If user is not a guest - Hence has results
+            {
+                try
+                {
+                    PDF = new PdfDocument();                    //Create a new PDF Document
+                    PDFPage = PDF.AddPage();                    //Add a page to this document
+                    Graph = XGraphics.FromPdfPage(PDFPage);     //Creates a graphic (the graphs) to add to the page
 
-					this.WindowState = WindowState.Maximized;
+                    this.WindowState = WindowState.Maximized;
 
-					SaveFileDialog saveFileDialog1 = new SaveFileDialog		//Creates a save file dialog box
-					{
-						Filter = "PDF Exam Results|*.pdf",
-						Title = "Save PDF File",
-						FilterIndex = 1
-					};
-					saveFileDialog1.ShowDialog();
-					string pdfFilename = saveFileDialog1.FileName;
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog     //Creates a save file dialog box
+                    {
+                        Filter = "PDF Exam Results|*.pdf",
+                        Title = "Save PDF File",
+                        FilterIndex = 1
+                    };
+                    saveFileDialog1.ShowDialog();
+                    string pdfFilename = saveFileDialog1.FileName;
+        
+                    if (saveFileDialog1.FileName != "")         //If the user has entered a save name
+                    {
+                        XImage image = XImage.FromGdiPlusImage(Properties.Strings.PDFBack);   //Adds the background
+                        Graph.DrawImage(image, 0, 0, 612, 792);
 
-					if (saveFileDialog1.FileName != "")			//If the user has entered a save name
-					{
-						XImage image = XImage.FromGdiPlusImage(Properties.Resources.PDFBack);	//Adds the background
-						Graph.DrawImage(image, 0, 0, 595, 842);
+                        PDF.Info.Title = "Exam Results";                            //Adds the title to the document
+                        XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
 
-						PDF.Info.Title = "Exam Results";							//Adds the title to the document
-						XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
+                        Graph.DrawString(Properties.Settings.Default.AliasName.ToString() + "'s Exam Results", font, XBrushes.White,
+                            new XRect(0, 50, PDFPage.Width.Point, PDFPage.Height.Point), XStringFormats.TopCenter);
 
-						Graph.DrawString(Properties.Settings.Default.AliasName.ToString() + "'s Exam Results", font, XBrushes.White,
-							new XRect(0, 50, PDFPage.Width.Point, PDFPage.Height.Point), XStringFormats.TopCenter);
+                        //Adds the recent results graph
+                        XImage image1 = XImage.FromGdiPlusImage((TempImages(RecentResults)));
+                        Graph.DrawImage(image1, 96, 90, 404, 200);
+                        //Adds the exam difficulty graph
+                        XImage image2 = XImage.FromGdiPlusImage((TempImages(ExamDifficulty)));
+                        Graph.DrawImage(image2, 96, 310, 404, 200);
+                        //Adds the exam types graph
+                        XImage image3 = XImage.FromGdiPlusImage((TempImages(ExamType)));
+                        Graph.DrawImage(image3, 96, 530, 404, 200);
 
-						//Adds the recent results graph
-						XImage image1 = XImage.FromGdiPlusImage((TempImages(RecentResults)));	
-						Graph.DrawImage(image1, 96, 90, 404, 200);
-						//Adds the exam difficulty graph
-						XImage image2 = XImage.FromGdiPlusImage((TempImages(ExamDifficulty)));
-						Graph.DrawImage(image2, 96, 310, 404, 200);
-						//Adds the exam types graph
-						XImage image3 = XImage.FromGdiPlusImage((TempImages(ExamType)));
-						Graph.DrawImage(image3, 96, 530, 404, 200);
+                        //Saves the PDF and then opens the PDF once completed.
+                        PDF.Save(pdfFilename);
+                        Process.Start(pdfFilename);
 
-						//Saves the PDF and then opens the PDF once completed.
-						PDF.Save(pdfFilename);
-						Process.Start(pdfFilename);
-
-						MessageBox.Show("Your results have been saved successfully to a PDF.", "Save Completed",
-							System.Windows.MessageBoxButton.OK,
-							MessageBoxImage.Information);
-					}
-				}
-				catch (Exception)
-				{
-					MessageBox.Show(
-						"Failed to export your results to a PDF. " + Properties.Resources.CriticalFailuer,
-						"Critical Program Failure: 400 N", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-				}
-			}
-			else	//The user was logged in as a guest account.
-			{
-				MessageBox.Show(
-					"You are currently logged in as a guest, guest have no save results to export.",
-					"Invalid Request Error: 301 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
-			}
-		}
+                        MessageBox.Show(Properties.Strings.PDFSaved, Properties.Strings.SaveCompeted,
+                            System.Windows.MessageBoxButton.OK,
+                            MessageBoxImage.Information);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(
+                        Properties.Strings.PDFFailed + Properties.Strings.CriticalFailuer,
+                        Properties.Strings.EM_CriticalFailure + "400 N", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else    //The user was logged in as a guest account.
+            {
+                MessageBox.Show(
+                    Properties.Strings.GuestExportError,
+                    Properties.Strings.EM_InvalidRequestError + "301 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
         private Bitmap TempImages(Chart graph)  //Used to take a screen-shoot of the graph to insert into the PDF.
 		{
 			Rect bounds = VisualTreeHelper.GetDescendantBounds(graph);	//Takes the region around the graph
