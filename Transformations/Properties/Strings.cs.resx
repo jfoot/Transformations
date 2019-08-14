@@ -1167,4 +1167,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>Opravdu že chcete opustit tuto zkoušku?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Zásady ochrany osobních údajů</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>Telemetrie</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>Krach &amp; údaje o chybě</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>Neposílejte žádné selhání nebo chyba data.</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>Odesílání dat chyb a chyb dat (doporučeno).</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>Zařízení &amp; údaje o využití</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>Nezasílejte žádná zařízení nebo použití data.</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>Odešlete údaje souhrnné informace a používání zařízení.</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>Zjistili jsme program havaroval naposled, co jste spustili. Jsme applogise, crash data protokolu byla odeslána k nám a tím zabránit děje znovu.</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Promiň, že jsme havarovali</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>Podobně jako většina programů budeme shromažďovat telemetrické údaje ke zlepšení našeho produktu. Shromažďujeme dva hlavní typy dat, jeden je využití informací a programu zařízení, například jakou verzi systému Windows, kterou používáte a funkce, které používáte nejčastěji často. Jiné formy údajů, které shromažďujeme je selhání a chyb dat, zjistit, co štve lidi setkávají tak můžeme opravit v budoucích aktualizací. Veškeré údaje, které shromažďujeme je entierly-osobní a v žádném případě vás mohou identifikovat. Další informace o přesné údaje, které shromažďujeme Přečtěte si naše zásady ochrany osobních údajů. Můžete vypnout některé nebo všechny z telemetrické údaje záznamu pomocí níže uvedených možností.</value>
+  </data>
 </root>

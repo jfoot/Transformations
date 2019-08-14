@@ -1167,4 +1167,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>¿Está seguro que desea abandonar este examen?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Política de privacidad</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>Telemetría</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>Accidente y datos de Error</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>No envíe los datos del accidente o error.</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>Enviar datos de accidente y error de datos (muy recomendados).</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>Dispositivo y uso de datos</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>No envíe los datos de cualquier dispositivo o uso.</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>Enviar datos de la información y el uso del dispositivo.</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>Hemos detectado el programa se estrelló a última vez que funcionó. Nos applogise, datos de registro de accidente ha sido enviados a nosotros para revisar y evitar que esto vuelva a suceder.</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Lo siento nos estrellamos</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>Como la mayoría de los programas que recopilamos datos de telemetría para mejorar nuestro producto. Recogemos dos tipos principales de datos, uno es el uso de la información y programa del dispositivo, por ejemplo qué versión de Windows estás usando y que cuenta le utilizan más comúnmente. La otra forma de datos que recopilamos es accidente y los datos de error, para saber qué errores gente encuentran así que nos podemos fijar en el futuro actualizaciones. Todos los datos que recopilamos es entierly no personal y no de puede identificar. Para más información sobre los datos exactos que recopilamos por favor vea nuestra política de privacidad. Puede desactivar algunos o la totalidad de la grabación de datos de telemetría utilizando las siguientes opciones.</value>
+  </data>
 </root>
