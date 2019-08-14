@@ -1167,4 +1167,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>你确定要放弃这次考试吗?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>隐私政策</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>遥测</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>崩溃和错误数据</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>不要发送任何崩溃或错误数据。</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>发送崩溃数据和错误率数据(强烈建议)。</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>设备与使用情况数据</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>不要发送任何设备或使用情况数据。</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>发送设备来自内传递和使用数据。</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>上次运行该程序时,我们检测到该程序崩溃。我们记录,崩溃日志数据已发送给我们来审查和防止这种情况再次发生。</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>抱歉我们坠毁了</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>与大多数程序一样,我们收集遥测数据以改进我们的产品。我们收集两种主要类型的数据,一种是设备信息和程序使用情况,例如您使用的 Windows 版本以及最常用的功能。我们收集的另一种形式的数据是崩溃和错误数据,以找出人们遇到哪些错误,以便我们可以在将来的更新中修复它们。我们收集的所有数据都是非个人数据,无法识别您的身份。有关我们收集的确切数据的更多信息,请查看我们的隐私政策。您可以使用以下选项关闭部分或全部遥测数据记录。</value>
+  </data>
 </root>

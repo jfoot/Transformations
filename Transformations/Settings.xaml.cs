@@ -158,13 +158,21 @@ namespace Transformations
 
             //DataLocation
             if (Properties.Settings.Default.DatalocDefault == false)
-            {
                 data_defualt.IsChecked = true;
-            }
             else if (Properties.Settings.Default.DatalocDefault == true)
-            {
                 data_custom.IsChecked = true;
-            }
+
+            if (Properties.Settings.Default.UserTel)
+                UserTel.IsChecked = true;
+            else
+                NoUserTel.IsChecked = true;
+
+            if (Properties.Settings.Default.CrashTel)
+                CrashTel.IsChecked = true;
+            else
+                NoCrashTel.IsChecked = true;
+
+
 
             size_slider.Value = (Properties.Settings.Default.DefaultHeight) / (75 / 5);
             size_label.Content = Properties.Strings.Size + ": " + size_slider.Value.ToString();
@@ -312,6 +320,15 @@ namespace Transformations
                 Properties.Settings.Default.DatalocDefault = false;
             }
 
+            if(CrashTel.IsChecked == true)
+                Properties.Settings.Default.CrashTel = true;
+            else
+                Properties.Settings.Default.CrashTel = false;
+
+            if (UserTel.IsChecked == true)
+                Properties.Settings.Default.UserTel = true;
+            else
+                Properties.Settings.Default.UserTel = false;
 
             Properties.Settings.Default.ConnectionString = connectionstring.Text;
             Properties.Settings.Default.DefaultHeight = Convert.ToInt32(size_slider.Value * (75 / 5));
@@ -532,6 +549,11 @@ namespace Transformations
                     Properties.Strings.EM_DataBaseReadError + "100 L", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
             Load(sender, new RoutedEventArgs());
+        }
+
+        private void PrivacyPolicyView(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start(Properties.Strings.PPolicyLink);
         }
     }
 }

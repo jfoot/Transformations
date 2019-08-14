@@ -7624,4 +7624,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>Êtes-vous certain de que vouloir abandonner cet examen ?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Politique de confidentialité</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>Télémétrie</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>Crash &amp; erreur de données</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>Ne pas envoyer des données accident ou erreur.</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>Envoyer des données d’accident et erreur tarifs données (fortement recommandées).</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>Dispositif &amp; données d’utilisation</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>Ne pas envoyer n’importe quel dispositif ou utilisation des données.</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>Envoyer données infromation et l’utilisation de périphérique.</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>Nous avons détecté le programme s’est écrasé la dernière fois que vous l’avez exécuté. Nous applogise, journal des données d’accident a été envoyées pour nous d’examiner et d’empêcher que cela se reproduise.</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Désolé que nous avons écrasé</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>Comme la plupart des programmes, nous recueillons les données de télémétrie pour améliorer notre produit. Nous recueillons deux types de données, on est programme d’information et utilisation du périphérique, par exemple quelle version de Windows que vous utilisez et qui vous propose utilisent le plus couramment. L’autre forme de données que nous recueillons est accident et erreur de données, pour savoir quels bugs personnes rencontre donc nous pouvons corriger à l’avenir les mises à jour. Toutes les données que nous collectons est entièrement non personnelles et peut en aucun cas vous identifier. Pour plus d’informations sur les données que nous recueillons, veuillez consulter notre politique de confidentialité. Vous pouvez désactiver certains ou la totalité de l’enregistrement de données de télémétrie en utilisant les options ci-dessous.</value>
+  </data>
 </root>

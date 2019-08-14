@@ -4,6 +4,9 @@ using System.IO;
 using System.Windows;
 using WPFLocalizeExtension.Engine;
 using Transformations.Properties;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Transformations
 {
@@ -23,7 +26,10 @@ namespace Transformations
 
         private void Application_Startup(object sender, StartupEventArgs e)
 		{
-         
+            AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
+            AppCenter.Start(Classes.AppCenterAPI.Secret, typeof(Analytics), typeof(Microsoft.AppCenter.Crashes.Crashes));
+
+
             if (e.Args.Length == 1) //If a startup argument is sent to the program.
 			{
                 //If the start up argument matches a known start up command then preform the command.
