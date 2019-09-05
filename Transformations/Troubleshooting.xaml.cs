@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
-using System.IO;
 using System.Data.OleDb;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Effects;
-using Microsoft.AppCenter.Analytics;
 
 namespace Transformations
 {
@@ -63,16 +61,6 @@ namespace Transformations
 			Text.Add("TROUBLESHOOTING COMPLETED. PLEASE REVIEW ABOVE FOR ANY ERRORS OR ISSUES.");
 			Text.Add("REFER TO THE USER MANUAL TO FIX ANY ISSUES YOU MAY HAVE.");
 			Text.Add("IF PROBLEMS STILL PERSIST TRY CONTACTING YOUR SOFTWARE VENDOR.");
-            try
-            {
-                Analytics.TrackEvent("TroubleShooting Tool Completed");
-            }
-            catch (Exception)
-            {
-                Text.Add("");
-                Text.Add("");
-                Text.Add("TELEMETRY DATA FAILED TO SEND. TURN OFF TELEMETRY DATA TO INCREASE PROGRAM STABALITY.");
-            }
         }
 
 
@@ -230,38 +218,29 @@ namespace Transformations
 
 		public void stage3()    //Program dependency troubleshooting - checks the required files are installed
 		{
-			Text.Add("STAGE 3 : PROGRAM DEPENDENCY TROUBLESHOOTING");
+			Text.Add("STAGE 3 : TELEMETRY DATA");
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/PdfSharp.dll"))
-			{
-				Text.Add("          PDFSHARP.DLL WAS SUCCESSFULLY FOUND                 ✔");
-				pdfsharpfound = true;
-			}
-			else
-			{
-				Text.Add("          PDFSHARP.DLL WAS NOT FOUND                          ✖");
-			}
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/System.Windows.Controls.DataVisualization.Toolkit.dll"))
-			{
-				Text.Add("          SYSTEM.WINDOWS.CONTROLS.DLL WAS SUCCESSFULLY FOUND  ✔");
-				WinControlsFound = true;
-			}
-			else
-			{
-				Text.Add("          SYSTEM.WINDOWS.CONTROLS.DLL WAS NOT FOUND           ✖");
-			}
+            try
+            {
+                Microsoft.AppCenter.Analytics.Analytics.TrackEvent("TroubleShooting Tool Example");
+                Text.Add("          ANALYTICS TELEMETRY DATA SENT SUCCESSFULLY          ✔");
+            }
+            catch (Exception)
+            {
+                Text.Add("          ANALYTICS TELEMETRY DATA SENT UNSUCCESSFULLY        ✖");
+            }
 
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/WPFToolkit.dll"))
-			{
-				Text.Add("          WPFTOOLKIT.DLL WAS SUCCESSFULLY FOUND               ✔");
-				WPFToolFound = true;
-			}
-			else
-			{
-				Text.Add("          WPFTOOLKIT.DLL WAS NOT FOUND                        ✖");
-			}
-		}
+            try
+            {
+                Microsoft.AppCenter.Crashes.Crashes.TrackError(new Exception("Example Crash"));
+                Text.Add("          CRASHES TELEMETRY DATA SENT SUCCESSFULLY            ✔");
+            }
+            catch (Exception)
+            {
+                Text.Add("          CRASHES TELEMETRY DATA SENT UNSUCCESSFULLY          ✖");
+            }
+        }
 
 
 		public void stage4()    //Graphical troubleshooting - checks that .net framework is installed correctly.
