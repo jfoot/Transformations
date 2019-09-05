@@ -5,6 +5,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 namespace Transformations
 {
@@ -49,15 +52,19 @@ namespace Transformations
 					//Start the animation
 					MyShapes[MyShapes.Count - 1].MyScalingTransform.BeginAnimation(ScaleTransform.ScaleXProperty, myanimation);
 					MyShapes[MyShapes.Count - 1].MyScalingTransform.BeginAnimation(ScaleTransform.ScaleYProperty, myanimation);
-				}
-				catch (Exception)   //Coordinates not in a numerical value 
+
+                    Analytics.TrackEvent("Enlargment Executed");
+                }
+                catch (Exception ex)   //Coordinates not in a numerical value 
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
                          Properties.Strings.EM_InvalidInputTypeError +  "302 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
 			}
 			else //No shape has been selected 
 			{
+                Analytics.TrackEvent("Enlargment No Shape Selected");
                 MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
                     Properties.Strings.EM_FieldEmpty + "300 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -77,9 +84,12 @@ namespace Transformations
 				});  //Add a line to the new ray-line object.
 				Panel.SetZIndex(MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1], 2); //Make this new line on top of the canvas	
 				MyCanvas.Children.Add(MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1]);
-			}
-			else
+
+                Analytics.TrackEvent("Raylines Executed");
+            }
+            else
 			{
+                Analytics.TrackEvent("Ray Lines No Shape Selected");
                 MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
                     Properties.Strings.EM_FieldEmpty + "300 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -101,30 +111,33 @@ namespace Transformations
 				MyRayLines[MyRayLines.Count - 1].RayLinesList[((MyRayLines[MyRayLines.Count - 1].RayLinesList).Count) - 1].Y2 = (-(c) - ((MaxValue) * (m)));
 
 			}
-			catch (Exception )
+			catch (Exception ex)
 			{
-				
-			}
-		}
+                Crashes.TrackError(ex);
+            }
+        }
         
 		private void HideGhostEnlargement(object sender, RoutedEventArgs e)   //Hides all of the ghost enlargement
 		{
-			HideGhosts("enlargement");
+            Analytics.TrackEvent("Hide Enlargment Ghosts");
+            HideGhosts("enlargement");
             MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Hidden));
         }
 		private void ShowGhostEnlargement(object sender, RoutedEventArgs e)   //Shows all of the ghost enlargement
 		{
-			ShowGhosts("enlargement");
+            ShowGhosts("enlargement");
             MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => o.Visibility = Visibility.Visible));
 		}
         private void DeleteRays(object sender, RoutedEventArgs e)      //Deletes all of the ray-lines from the grid
 		{
+            Analytics.TrackEvent("Delete Ray Line Ghosts");
             MyRayLines.ForEach(p => p.RayLinesList.ForEach(o => MyCanvas.Children.Remove(o)));
 			MyRayLines.Clear();
 		}
         private void DeleteEnlargementGhosts(object sender, RoutedEventArgs e)  //Deletes all the enlargement ghosts
 		{
-			DeleteGhosts("enlargement");
+            Analytics.TrackEvent("Delete Enlargment Ghosts");
+            DeleteGhosts("enlargement");
 		}
 	}
 }

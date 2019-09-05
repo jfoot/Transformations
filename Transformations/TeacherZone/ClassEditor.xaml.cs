@@ -5,6 +5,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Data;
 using System.Windows.Data;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Transformations
 {
@@ -81,6 +83,8 @@ namespace Transformations
         }
         private void CreateClass(object sender, RoutedEventArgs e)      //used to create a new class
         {
+            Analytics.TrackEvent("Attempted To Create A Class");
+
             try
             {
                 using (var conn = new OleDbConnection { ConnectionString = DataBase.ConnectionString() })
@@ -98,11 +102,12 @@ namespace Transformations
                 MessageBox.Show(
                     Properties.Strings.NewClassCalled + classname.Text.ToString() + Properties.Strings.NewClassCalled2,
                     Properties.Strings.ClassCreated, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-
+                Analytics.TrackEvent("New Class Created");
                 classname.Text = "";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.FailedToMakeNewClass + Properties.Strings.DataBaseError,
                     Properties.Strings.DatabaseWriteError + "A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -114,6 +119,8 @@ namespace Transformations
         }
         private void DeleteClass(object sender, RoutedEventArgs e)  //Used to delete a class
         {
+            Analytics.TrackEvent("Attempted To Delete A Class");
+
             IsOwner();
             try
             {
@@ -171,10 +178,12 @@ namespace Transformations
                         MessageBoxImage.Information);
                     RefreshGrid();
                     StudentIDs.Clear();
+                    Analytics.TrackEvent("Class Deleted");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.FailedToDeleteclass + Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DataBaseReadError + "102 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -182,11 +191,13 @@ namespace Transformations
         }
         private void SeeClassData(object sender, RoutedEventArgs e)     //See all the class data
         {
+            Analytics.TrackEvent("See Class Data");
             ResultsViewer edit = new ResultsViewer(((_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text), ((_ClassGrid.SelectedCells[1].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text)) { Owner = this };
             edit.Show();
         }
         private void TransferClass(object sender, RoutedEventArgs e)    //Transfer a class to a different user.
         {
+            Analytics.TrackEvent("Transfer Class");
             IsOwner();
             Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.ClassTransfer,Properties.Strings.TransferDesc, "class_transfer", (_ClassGrid.SelectedCells[0].Column.GetCellContent(_ClassGrid.SelectedItem) as TextBlock).Text) { Owner = this };
             Combo.Closed += SetContentHandler;
@@ -194,6 +205,7 @@ namespace Transformations
         }
         private void RenameClass(object sender, RoutedEventArgs e)  //Rename a class
         {
+            Analytics.TrackEvent("Rename Class");
             IsOwner();
             Dialog_TextBox TextBox = new Dialog_TextBox(Properties.Strings.ClassRename,
                     Properties.Strings.RenameDesc, "class_rename",
@@ -208,11 +220,13 @@ namespace Transformations
         }
         private void ViewSpecific(object sender, RoutedEventArgs e) //View only classes owned by a teacher
         {
+            Analytics.TrackEvent("View Specific Class by Teacher");
             All = false;
             RefreshGrid();
         }
         private void ViewAllClass(object sender, RoutedEventArgs e) //View all classes on the database
         {
+            Analytics.TrackEvent("View All Classes");
             All = true;
             RefreshGrid();
         }
@@ -250,8 +264,9 @@ namespace Transformations
 
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                         Properties.Strings.FailedToGetClasses + Properties.Strings.DataBaseError,
                         Properties.Strings.EM_DataBaseReadError + "100 K", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);

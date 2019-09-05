@@ -1,3 +1,5 @@
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using System;
 using System.Windows;
 using System.Windows.Media;
@@ -33,10 +35,11 @@ namespace Transformations
 					//Create a new animation for the Y direction
                     DoubleAnimation yAnimation = new DoubleAnimation(0 , yVector, TimeSpan.FromSeconds(Times[transSpeed.SelectedIndex]));
 					MyShapes[MyShapes.Count - 1].MyTranslateTransform.BeginAnimation(TranslateTransform.YProperty, yAnimation);
-					
-				}
-				catch (Exception)	//If user input could not been turned into a double.
+                    Analytics.TrackEvent("Translation Executed");
+                }
+                catch (Exception ex)	//If user input could not been turned into a double.
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
 						Properties.Strings.VectorNotInFormat,
 						Properties.Strings.EM_InvalidInputTypeError + "302 E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -44,21 +47,24 @@ namespace Transformations
 			}
 			else	//If User did not select any shape
 			{
+                Analytics.TrackEvent("Translation No Shape Selected");
                 MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
                     Properties.Strings.EM_FieldEmpty + "300 H", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
         private void HideTranslationGhosts(object sender, RoutedEventArgs e)      //Hide translation ghosts
         {
-			HideGhosts("translation");
+            Analytics.TrackEvent("Hide Translation Ghost");
+            HideGhosts("translation");
 		}
 		private void ShowTranslationGhosts(object sender, RoutedEventArgs e)       //Show translation ghosts
 		{
-			ShowGhosts("translation");
+            ShowGhosts("translation");
 		}
 		private void DeleteTranslationGhosts(object sender, RoutedEventArgs e)     //Delete translation ghosts
         {
-			DeleteGhosts("translation");
+            Analytics.TrackEvent("Delete Translation Ghost");
+            DeleteGhosts("translation");
 		}
     }
 }

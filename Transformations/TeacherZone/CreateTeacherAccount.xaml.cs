@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.Windows;
@@ -17,8 +19,9 @@ namespace Transformations
             {
                 username.Content = System.Environment.UserName; //Retrieves the current windows user name.
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                    Properties.Strings.WinUserNameFail + Properties.Strings.WindowsError,
                    Properties.Strings.EM_InsuffientPrivileges + "200 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -26,7 +29,9 @@ namespace Transformations
     	}
         private void CreateTeacherAccountButton(object sender, RoutedEventArgs e)
 		{
-			if (passbox.Password == "Transformation17" && name.Text != "")    //If the password equals the correct password and the name is not blank.
+            Analytics.TrackEvent("Attempted To Create A Teacher Account");
+
+            if (passbox.Password == "Transformation17" && name.Text != "")    //If the password equals the correct password and the name is not blank.
 			{
                 try
                 {
@@ -62,13 +67,15 @@ namespace Transformations
                     MessageBox.Show(
                      Properties.Strings.TeacherCreated,
                      Properties.Strings.AccountCreatedHeader, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
+                    Analytics.TrackEvent("Teacher Account Created");
 
                     //Restarts the application
                     Process.Start(Application.ResourceAssembly.Location);
                     Application.Current.Shutdown();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                       Properties.Strings.FailedToMakeTeacher + Properties.Strings.DataBaseError,
                       Properties.Strings.EM_DataBaseReadError + "102 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -76,7 +83,9 @@ namespace Transformations
             }
             else
 			{   //if the username is blank or if the password is incorrect
-				MessageBox.Show(
+                Analytics.TrackEvent("UserName Blank Or Password Wrong");
+
+                MessageBox.Show(
 					Properties.Strings.IncorrectPassword,
                     Properties.Strings.EM_FieldEmpty + "300 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Exclamation);
 			}

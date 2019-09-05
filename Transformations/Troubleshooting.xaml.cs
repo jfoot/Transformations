@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Effects;
+using Microsoft.AppCenter.Analytics;
 
 namespace Transformations
 {
@@ -62,11 +63,20 @@ namespace Transformations
 			Text.Add("TROUBLESHOOTING COMPLETED. PLEASE REVIEW ABOVE FOR ANY ERRORS OR ISSUES.");
 			Text.Add("REFER TO THE USER MANUAL TO FIX ANY ISSUES YOU MAY HAVE.");
 			Text.Add("IF PROBLEMS STILL PERSIST TRY CONTACTING YOUR SOFTWARE VENDOR.");
+            try
+            {
+                Analytics.TrackEvent("TroubleShooting Tool Completed");
+            }
+            catch (Exception)
+            {
+                Text.Add("");
+                Text.Add("");
+                Text.Add("TELEMETRY DATA FAILED TO SEND. TURN OFF TELEMETRY DATA TO INCREASE PROGRAM STABALITY.");
+            }
+        }
 
-		}
 
-
-		public void stage1()    //Database trouble shooting
+        public void stage1()    //Database trouble shooting
 		{
 			Text.Add("STAGE 1 : DATABASE TROUBLESHOOTING");
 
@@ -250,16 +260,6 @@ namespace Transformations
 			else
 			{
 				Text.Add("          WPFTOOLKIT.DLL WAS NOT FOUND                        ✖");
-			}
-
-			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "/lib/HtmlAgilityPack.dll"))
-			{
-				Text.Add("          HTMLAGILITYPACK.DLL WAS SUCCESSFULLY FOUND          ✔");
-				WPFToolFound = true;
-			}
-			else
-			{
-				Text.Add("          HTMLAGILITYPACK.DLL WAS NOT FOUND                   ✖");
 			}
 		}
 

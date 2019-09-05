@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.OleDb;
@@ -22,13 +24,14 @@ namespace Transformations
 		public CreateAccount()
 		{
 			InitializeComponent();
-          
+            Analytics.TrackEvent("Attempted To Create A Student Account");
             try
             {
                 username.Content = System.Environment.UserName;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                    Properties.Strings.WinUserNameFail +  Properties.Strings.WindowsError,
                    Properties.Strings.EM_InsuffientPrivileges + "200 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -54,8 +57,9 @@ namespace Transformations
 
                 teacher.ItemsSource = TeacherLists;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.TeacherNameFail+ Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DataBaseReadError + "100 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -88,8 +92,9 @@ namespace Transformations
                 
 				ClassCombo.ItemsSource = ClassList;
             }
-			catch (Exception)
+			catch (Exception ex)
 			{
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.ClassOwnedFail + Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DataBaseReadError + "100 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -136,14 +141,15 @@ namespace Transformations
                     MessageBox.Show(
                     Properties.Strings.AccountCreated,
                     Properties.Strings.AccountCreatedHeader, System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
-
+                    Analytics.TrackEvent("Created Student Account");
                     //Restart the program.
                     Process.Start(Application.ResourceAssembly.Location);
                     Application.Current.Shutdown();
                     
                 }
-				catch (Exception)
+				catch (Exception ex)
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                     Properties.Strings.FailedToCreateAccount + Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DataBaseReadError + "102 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);

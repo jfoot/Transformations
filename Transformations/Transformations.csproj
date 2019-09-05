@@ -322,6 +322,9 @@
     <Compile Include="Troubleshooting.xaml.cs">
       <DependentUpon>Troubleshooting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WhatsNew.xaml.cs">
+      <DependentUpon>WhatsNew.xaml</DependentUpon>
+    </Compile>
     <Page Include="TeacherZone\ClassEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -403,6 +406,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Troubleshooting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WhatsNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -522,6 +529,7 @@
     </FileAssociation>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\TLogoWide.png" />
     <Resource Include="Resources\FixMe.png" />
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
