@@ -580,6 +580,42 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Crash &amp; Error Data.
+        /// </summary>
+        public static string CrashAn {
+            get {
+                return ResourceManager.GetString("CrashAn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do not send any crash or error data..
+        /// </summary>
+        public static string CrashAnN {
+            get {
+                return ResourceManager.GetString("CrashAnN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send crash data and error rates data (strongly recommended)..
+        /// </summary>
+        public static string CrashAnY {
+            get {
+                return ResourceManager.GetString("CrashAnY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We have detected the program crashed last time you ran it. We applogise, crash log data has been sent to us to review and prevent this from happening again..
+        /// </summary>
+        public static string CrashSorry {
+            get {
+                return ResourceManager.GetString("CrashSorry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         public static string Create {
@@ -963,6 +999,33 @@ namespace Transformations.Properties {
         public static string DetailsText2 {
             get {
                 return ResourceManager.GetString("DetailsText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device &amp; Usage Data.
+        /// </summary>
+        public static string DevAn {
+            get {
+                return ResourceManager.GetString("DevAn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do not send any device or usage data..
+        /// </summary>
+        public static string DevAnN {
+            get {
+                return ResourceManager.GetString("DevAnN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send device infromation and usage data..
+        /// </summary>
+        public static string DevAnY {
+            get {
+                return ResourceManager.GetString("DevAnY", resourceCulture);
             }
         }
         
@@ -2263,6 +2326,24 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://jonathanfoot.com/Projects/Transformations/TermsAndConditions.html#Privacy_Policy.
+        /// </summary>
+        public static string PPolicyLink {
+            get {
+                return ResourceManager.GetString("PPolicyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Question Skipped.
         /// </summary>
         public static string QSkiped {
@@ -3017,6 +3098,15 @@ namespace Transformations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry we crashed.
+        /// </summary>
+        public static string Sorry {
+            get {
+                return ResourceManager.GetString("Sorry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spawn Shape.
         /// </summary>
         public static string SpawnShapeString {
@@ -3368,6 +3458,24 @@ namespace Transformations.Properties {
         public static string TEasyEText {
             get {
                 return ResourceManager.GetString("TEasyEText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telemetry.
+        /// </summary>
+        public static string Telemetry {
+            get {
+                return ResourceManager.GetString("Telemetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Like most programs we collect telemetry data to improve our product. We collect two main types of data, one is device information and program usage, for example what version of Windows you&apos;re using and which features you use the most commonly. The other form of data we collect is crash and error data, to find out what bugs people encounter so we can fix them in future updates. All data we collect is entierly non-personal and can in no way identify you. For more information on the exact data we collect pleas [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TelemetryD {
+            get {
+                return ResourceManager.GetString("TelemetryD", resourceCulture);
             }
         }
         

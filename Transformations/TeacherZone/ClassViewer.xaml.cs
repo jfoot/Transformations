@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows;
@@ -44,8 +46,9 @@ namespace Transformations
 
                 UserGrid.ItemsSource = TableData.DefaultView;
             }
-			catch (Exception)
+			catch (Exception ex)
 			{
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.FailedToGetClass + Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DataBaseReadError + "100 I", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -66,13 +69,15 @@ namespace Transformations
 		}
         private void UserResult(object sender, RoutedEventArgs e)   //See a specific user result.
 		{
-			ClassViewer UserResults = new ClassViewer((UserGrid.SelectedCells[2].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text, (UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text, "user") { Owner = this };
+            Analytics.TrackEvent("View Specific User Results");
+            ClassViewer UserResults = new ClassViewer((UserGrid.SelectedCells[2].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text, (UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text, "user") { Owner = this };
 			UserResults.Show();
 		}
         private void DeleteUser(object sender, RoutedEventArgs e)   //Delete a student account.
 		{
-			try
-			{
+            Analytics.TrackEvent("Attempted To Delete A Student");
+            try
+            {
 				//Retrieves the ID of the selected user
 				string ID = (UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text;
 
@@ -99,9 +104,11 @@ namespace Transformations
 					}
 					SetContentHandler(sender, e);
 				}
-			}
-			catch (Exception)
+                Analytics.TrackEvent("Deleted A Student");
+            }
+            catch (Exception ex)
 			{
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.FailedToDeleteSelectedUser + Properties.Strings.DataBaseError,
                     Properties.Strings.DatabaseWriteError + " E", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -109,12 +116,15 @@ namespace Transformations
 		}
         private void AllUsers(object sender, RoutedEventArgs e) //View the whole class exam results
 		{
-			ClassViewer ClassResults = new ClassViewer(Properties.Strings.AllUser, ClassID, "all") {Owner = this};
+            Analytics.TrackEvent("View A Whole Class Exam Results");
+            ClassViewer ClassResults = new ClassViewer(Properties.Strings.AllUser, ClassID, "all") {Owner = this};
 			ClassResults.Show();
 		}
         private void TransferUser(object sender, RoutedEventArgs e) //transfer the user to a new class
 		{
-				Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.TransferUser,
+            Analytics.TrackEvent("Transfer User");
+
+            Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.TransferUser,
 					Properties.Strings.TransferUserPrompt, "user_transfer",
 					(UserGrid.SelectedCells[0].Column.GetCellContent(UserGrid.SelectedItem) as TextBlock).Text) {Owner = this};
 				Combo.Show();

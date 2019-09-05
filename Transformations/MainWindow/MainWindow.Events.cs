@@ -4,6 +4,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 //This Class contains all the events for the main window of the program
 //An event is triggered when a user preforms an action, such as moving a mouse or clicking on an object.
@@ -153,12 +156,14 @@ namespace Transformations
 			
 			if (e.Key == Key.F1) // If F1 is pressed open settings panel
 			{
-				Settings ownedWindow = new Settings {Owner = this};
+                Analytics.TrackEvent("F1, Settings Window Opened");
+                Settings ownedWindow = new Settings {Owner = this};
 				ownedWindow.Show();
 			}
 			if (e.Key == Key.Delete && SelectedShape != null)   //if delete is pressed delete the shape
 			{
-				DeleteShapeClick(sender, e);
+                Analytics.TrackEvent("Del, Shape Deleted");
+                DeleteShapeClick(sender, e);
 			}
 		}
         //Key Up - triggered when a key on the keyboard is released

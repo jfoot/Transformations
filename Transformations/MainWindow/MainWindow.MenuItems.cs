@@ -13,6 +13,9 @@ using System.Windows.Shapes;
 using Application = System.Windows.Application;
 using Label = System.Windows.Controls.Label;
 using MessageBox = System.Windows.MessageBox;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 namespace Transformations
 {
@@ -40,30 +43,36 @@ namespace Transformations
 	
 		private void RestartClick(object sender, RoutedEventArgs e)    //If the user wants to restart the program.
 		{
-			Process.Start(Application.ResourceAssembly.Location);
+            Analytics.TrackEvent("Program Restarted");
+            Process.Start(Application.ResourceAssembly.Location);
 			Application.Current.Shutdown();
 		}
 		private void ReportBug(object sender, RoutedEventArgs e)    //If the user wants to restart the program.
 		{
+            Analytics.TrackEvent("Bug Reported");
             Process.Start(Properties.Strings.BugReport);
         }
 		private void FeedbackClick(object sender, RoutedEventArgs e)   //If the user wants to provide feedback
 		{
+            Analytics.TrackEvent("Feedback Sent");
             Process.Start(Properties.Strings.FeedbackLink);
 		}
        
         private void HelpClick(object sender, RoutedEventArgs e)       //If the user needs help
 		{
+            Analytics.TrackEvent("Help Link Clicked");
             Process.Start(Properties.Strings.HelpLink);
 		}
         private void SettingsClick(object sender, RoutedEventArgs e) //Open Settings
 		{
-			Settings settings = new Settings {Owner = this};
+            Analytics.TrackEvent("Settings Window Opened");
+            Settings settings = new Settings {Owner = this};
 			settings.Show();
 		}
         private void ResetAxisClick(object sender, RoutedEventArgs e) //Reset the Axis position
 		{
-			XSlider.Value = 0;
+            Analytics.TrackEvent("Axis Reset");
+            XSlider.Value = 0;
 			YSlider.Value = 0;
 			TranslationTransformCanvas.X = 0;
 			TranslationTransformCanvas.Y = 0;
@@ -71,6 +80,8 @@ namespace Transformations
 		}
         private void LabelsChecked(object sender, RoutedEventArgs e) //Turn on Labels
 		{
+            Analytics.TrackEvent("Turn On Labels");
+
             try
             {
                 Grid.Labels.ForEach(o => MyCanvas.Children.Add(o));
@@ -79,6 +90,8 @@ namespace Transformations
 		}
         private void LabelsUnchecked(object sender, RoutedEventArgs e) //Turn off labels
 		{
+            Analytics.TrackEvent("Turn Off Labels");
+
             try
             {
                 Grid.Labels.ForEach(o => MyCanvas.Children.Remove(o));
@@ -87,6 +100,8 @@ namespace Transformations
 		}
         private void GridSnapState(object sender, RoutedEventArgs e)   //Grid snapping- snaps all of the shapes to the grid.
         {
+            Analytics.TrackEvent("Turn On Grid Snapping");
+
             if (GridSnap.IsChecked == true)
             {
                 foreach (Shapes t in MyShapes)
@@ -105,8 +120,10 @@ namespace Transformations
         }
         private void OpenClick(object sender, RoutedEventArgs e) //Select files to open using a dialog window.
 		{
-			try
-			{
+            Analytics.TrackEvent("Open File Click");
+
+            try
+            {
 				MessageBoxResult open = MessageBox.Show(Properties.Strings.SaveBeforeOpening, Properties.Strings.AreYouSure,
 					System.Windows.MessageBoxButton.YesNoCancel,
 					MessageBoxImage.Information);
@@ -151,8 +168,10 @@ namespace Transformations
 		}
 		private void OpenFunction(string file) //Open the files selected into the project
 		{
-			try
-			{   //Reads the file to open and then splits it a readable format
+            Analytics.TrackEvent("Open File");
+
+            try
+            {   //Reads the file to open and then splits it a readable format
 				string shapes = System.IO.File.ReadAllText(file);
 				string[] shapeGroups = shapes.Split('!');
 				string[] polygonShapes = shapeGroups[0].Split('*');
@@ -198,8 +217,10 @@ namespace Transformations
 		}
         private void SaveImageClick(object sender, RoutedEventArgs e) //Save an image of the current project
 		{
-			try
-			{
+            Analytics.TrackEvent("Save Image File");
+
+            try
+            {
 				SaveFileDialog saveFile = new SaveFileDialog //Open a save file window
 				{
 					Filter = "PNG Image|*.png",
@@ -246,8 +267,10 @@ namespace Transformations
 		}
 		private void SaveFileClick(object sender, RoutedEventArgs e) //Save a file containing the current project
 		{
-			try
-			{
+            Analytics.TrackEvent("Save Shape File");
+
+            try
+            {
 				SaveFileDialog save = new SaveFileDialog
 				{
 					Filter = "Shape Collection|*.shape",
@@ -294,7 +317,9 @@ namespace Transformations
 		}
         private void StudentLoginClick(object sender, RoutedEventArgs e) //Student Login to the program
 		{
-			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest) //If the user is a guest (currently logged out)
+            Analytics.TrackEvent("Student Login");
+
+            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest) //If the user is a guest (currently logged out)
 			{
 				try
 				{
@@ -342,8 +367,9 @@ namespace Transformations
 						accountName.Content = Properties.Settings.Default.AliasName;
 					}
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(Properties.Strings.FailToGetLoginAccounts + Properties.Strings.DataBaseError , Properties.Strings.EM_DataBaseReadError + "100 F",
                     System.Windows.MessageBoxButton.OK,
 						MessageBoxImage.Error);
@@ -374,7 +400,9 @@ namespace Transformations
 		}
         private void TeacherLoginClick(object sender, RoutedEventArgs e) //Login into the teacher screen
 		{
-			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
+            Analytics.TrackEvent("Teacher Login");
+
+            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
 			{
                 try
                 {
@@ -419,8 +447,9 @@ namespace Transformations
                         accountName.Content = Properties.Settings.Default.AliasName;
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Crashes.TrackError(ex);
                     MessageBox.Show(Properties.Strings.FailToGetLoginAccounts + Properties.Strings.DataBaseError, Properties.Strings.EM_DataBaseReadError + "100 G",
                         System.Windows.MessageBoxButton.OK,
                         MessageBoxImage.Error);
@@ -450,7 +479,9 @@ namespace Transformations
 		}
         private void StudentManagerClick(object sender, RoutedEventArgs e)
 		{
-			if (Properties.Settings.Default.IsTeacher == true)  //If they are a teacher and logged in then open the class editor
+            Analytics.TrackEvent("Student Manager Click");
+
+            if (Properties.Settings.Default.IsTeacher == true)  //If they are a teacher and logged in then open the class editor
 			{
                 ClassEditor teacherZone = new ClassEditor {  Owner = this };
                 teacherZone.Show();
@@ -464,7 +495,10 @@ namespace Transformations
 		}
         private void TakeExamClick(object sender, RoutedEventArgs e) //Open the student portal/ exam taker
 		{
-			if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
+            Analytics.TrackEvent("Take Exam Click");
+
+
+            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
 			{
 				MessageBox.Show(
 					Properties.Strings.NotLoggedIn,
@@ -490,6 +524,8 @@ namespace Transformations
 
         private void TroubleShoot_Click(object sender, RoutedEventArgs e)
         {
+            Analytics.TrackEvent("TroubleShoot Click");
+
             Troubleshooting tb = new Troubleshooting();
             tb.Show();
             this.Close();

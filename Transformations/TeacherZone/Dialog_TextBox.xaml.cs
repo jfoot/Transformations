@@ -1,4 +1,5 @@
-﻿using System.Data.OleDb;
+﻿using Microsoft.AppCenter.Crashes;
+using System.Data.OleDb;
 using System.Windows;
 
 namespace Transformations
@@ -23,8 +24,9 @@ namespace Transformations
                 Command = _command;
                 Selected = _selected;
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.ClassRenameFailed + Properties.Strings.UserError,
                     Properties.Strings.EM_InvalidRequestError + "301 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -49,8 +51,9 @@ namespace Transformations
 		            this.Close();
 	            }
 	        }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                        Properties.Strings.FailedClassRename + Properties.Strings.DataBaseError,
                        Properties.Strings.DatabaseWriteError + " C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
@@ -53,19 +57,20 @@ namespace Transformations
 		public MainWindow()
 		{	
 			InitializeComponent();
-
+         
             //If this is the first time loading the program first try and see if you can find the language of the 
             //user and match it with one of the languages the program is translated to. If it can't find a translation
             //then it will set it to EN English by default. 
-            if (!Properties.Settings.Default.IsSetUp)
+            if (Properties.Settings.Default.IsSetUp != Assembly.GetExecutingAssembly().GetName().Version.ToString())
             {
                 Properties.Settings.Default.Language = System.Globalization.CultureInfo.InstalledUICulture.TwoLetterISOLanguageName;
-                Properties.Settings.Default.IsSetUp = true;
+                Properties.Settings.Default.IsSetUp = Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 Properties.Settings.Default.Save();
+                WhatsNew wn = new WhatsNew();
+                wn.Show();
             }
             LocalizeDictionary.Instance.Culture = new System.Globalization.CultureInfo(Properties.Settings.Default.Language);
-                      
-
+            
             SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
 			splash.Show(true, true);
 			//Checks the database connection on startup.
@@ -138,8 +143,19 @@ namespace Transformations
 			LabelsChecked(sender, e);
         }
 
-        private void ProgramLoaded(object sender, RoutedEventArgs e)    //When the program loads open a file if the program launched from a file.
+        private async void ProgramLoaded(object sender, RoutedEventArgs e)    //When the program loads open a file if the program launched from a file.
         {
+            //Turns on or off telemetry data.
+            await Crashes.SetEnabledAsync(Properties.Settings.Default.CrashTel);
+            await Analytics.SetEnabledAsync(Properties.Settings.Default.UserTel);
+           
+            if (await Crashes.HasCrashedInLastSessionAsync())
+            {
+                MessageBox.Show(Properties.Strings.CrashSorry, Properties.Strings.Sorry, MessageBoxButton.OK, MessageBoxImage.Information);
+                Analytics.TrackEvent("Crash Apology Shown.");
+            }
+           
+
             Labels.IsChecked = true;
             if ((((App)Application.Current).file) != null)
             {

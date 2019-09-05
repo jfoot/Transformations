@@ -1167,4 +1167,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie diese Prüfung verzichten möchten?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>Telemetrie</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>Absturz &amp; Fehlerdaten</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>Senden Sie keine Absturz oder Fehler-Daten.</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>Crash-Daten senden und Fehler Daten (dringend empfohlen).</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>Gerät &amp; Nutzungsdaten</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>Senden Sie keine Geräte oder Nutzung Daten.</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>Senden Sie Gerätedaten Infromation und Nutzung.</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>Wir haben das Programm stürzte letztes Mal erkannt, lief Sie es. Wir Applogise, Crash-Log-Daten an uns zu überprüfen und zu verhindern, dass dies wieder geschieht gesendet wurde.</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Tut mir leid, dass wir abgestürzt</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>Wie die meisten Programme sammeln wir Telemetriedaten, um unser Produkt zu verbessern. Wir sammeln zwei Arten von Daten, Gerätenutzung Informationen und Programm, zum Beispiel welche Version von Windows Sie verwenden und welche Funktionen Sie nutzen die meisten allgemein. Die andere Form der von die uns gesammelten Daten ist Absturz und Fehlerdaten, um herauszufinden, was Menschen nervt begegnen, damit wir sie in Zukunft Updates beheben können. Alle von uns gesammelten Daten ist völlig nicht-personenbezogene und kann in keiner Weise identifizieren Sie. Weitere Informationen über die genauen Daten, die wir erfassen entnehmen Sie unserer Datenschutzrichtlinie. Sie können einige oder alle der Telemetrie-Daten-Aufnahme mit folgenden Optionen deaktivieren.</value>
+  </data>
 </root>

@@ -198,6 +198,26 @@
                     <TextBlock Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{lex:Loc LanguageText2}" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
+
+            <TabItem Header="{lex:Loc Telemetry}">
+                <Grid>
+                    <TextBlock Margin="12,10,9.6,209.6" Text="{lex:Loc TelemetryD}" TextDecorations="{x:Null}" TextWrapping="Wrap" />
+                    <GroupBox Margin="10,185,9.6,131.6" Header="{lex:Loc DevAn}">
+                        <UniformGrid Columns="1" Rows="2">
+                            <RadioButton x:Name="UserTel" Height="19" Margin="0,3,-0.2,0" VerticalAlignment="Top" Content="{lex:Loc DevAnY}" GroupName="UserTel" />
+                            <RadioButton x:Name="NoUserTel" VerticalAlignment="Top" Content="{lex:Loc DevAnN}" GroupName="UserTel" />
+                        </UniformGrid>
+                    </GroupBox>
+                    <GroupBox Margin="12,263,7.6,53.6" Header="{lex:Loc CrashAn}">
+                        <UniformGrid Columns="1" Rows="2">
+                            <RadioButton x:Name="CrashTel" Height="17" Margin="0,5,-0.2,0" VerticalAlignment="Top" Content="{lex:Loc CrashAnY}" GroupName="CrashTel" />
+                            <RadioButton x:Name="NoCrashTel" VerticalAlignment="Top" Content="{lex:Loc CrashAnN}" GroupName="CrashTel" />
+                        </UniformGrid>
+                    </GroupBox>
+                    <TextBlock Margin="10,359,9.6,-0.4" Cursor="Hand" Foreground="#FF000CFF" MouseDown="PrivacyPolicyView" Text="{lex:Loc PrivacyPolicy}" TextDecorations="Underline" TextWrapping="Wrap" />
+                </Grid>
+            </TabItem>
+
             <TabItem Header="{lex:Loc Details}">
                 <Grid>
                     <TextBlock Height="100" Margin="12,10,10,280" Text="{lex:Loc DetailsText2}" TextDecorations="{x:Null}" TextWrapping="Wrap" />
@@ -228,6 +248,9 @@
                     <TextBlock Margin="10,347,9.6,9.6" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="{lex:Loc DependencyDownload}" TextDecorations="Underline" TextWrapping="Wrap" />
                 </Grid>
             </TabItem>
+
+
+
         </TabControl>
         <Button x:Name="ResetDefualtsButton" Margin="171,401,168,10" Click="ResetChanges" Content="{lex:Loc ResetDefualts}" />
         <Button x:Name="ApplyChangesButton" Margin="314,401,12,10" Click="ApplyChanges" Content="{lex:Loc ApplyChanges}" />

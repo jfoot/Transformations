@@ -1167,4 +1167,37 @@
   <data name="LeaveExam" xml:space="preserve">
     <value>Är du säker du vill överge denna examen?</value>
   </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Sekretesspolicy för</value>
+  </data>
+  <data name="Telemetry" xml:space="preserve">
+    <value>Telemetri</value>
+  </data>
+  <data name="CrashAn" xml:space="preserve">
+    <value>Krasch &amp; feldata</value>
+  </data>
+  <data name="CrashAnN" xml:space="preserve">
+    <value>Skicka inte någon krasch eller fel uppgifter.</value>
+  </data>
+  <data name="CrashAnY" xml:space="preserve">
+    <value>Skicka krasch data och fel priser data (rekommenderas starkt).</value>
+  </data>
+  <data name="DevAn" xml:space="preserve">
+    <value>Enheten &amp; användningsdata</value>
+  </data>
+  <data name="DevAnN" xml:space="preserve">
+    <value>Skicka inte någon enhet eller användning data.</value>
+  </data>
+  <data name="DevAnY" xml:space="preserve">
+    <value>Skicka data för enheten infromation och användning.</value>
+  </data>
+  <data name="CrashSorry" xml:space="preserve">
+    <value>Vi har upptäckt programmet kraschade förra gången du körde den. Vi applogise, krasch loggdata har skickats till oss att granska och förhindra att detta händer igen.</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Tyvärr kraschade vi</value>
+  </data>
+  <data name="TelemetryD" xml:space="preserve">
+    <value>Som de flesta program samlar vi in telemetridata för att förbättra vår produkt. Vi samlar in två typer av data, en är apparatanvändning information och program, till exempel vilken version av Windows du använder och vilka funktioner du använder mest ofta. Den andra formen av data vi samlar in är krasch och feldata, ta reda på vad buggar personer stöter på så vi kan fixa dem i framtida uppdateringar. Alla data som vi samlar in är helt icke-personliga och kan i inget sätt att identifiera dig. Mer information om de exakta uppgifterna vi samlar in vänligen se vår sekretesspolicy. Du kan inaktivera vissa eller alla av telemetri data inspelning med hjälp av alternativen nedan.</value>
+  </data>
 </root>

@@ -1,4 +1,6 @@
-﻿using PdfSharp.Drawing;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using System;
 using System.Collections.Generic;
@@ -81,8 +83,9 @@ namespace Transformations
 					};
 					RecentResults.DataContext = RecentResultsData;
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                         Properties.Strings.FailedToGetExamResults + Properties.Strings.DataBaseError,
                         Properties.Strings.EM_DataBaseReadError + "100 J", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -107,58 +110,68 @@ namespace Transformations
 		}
 		private void TranslationEasy(object sender, RoutedEventArgs e) //Start an easy translation exam
 		{
+            Analytics.TrackEvent("Translation Easy Exam");
             Translation_EasyExam exam = new Translation_EasyExam();
             exam.Show();
 			this.Close();
 		}
 		private void TranslationHard(object sender, RoutedEventArgs e) //Start an hard translation exam
         {
-			Translation_HardExam exam = new Translation_HardExam();
+            Analytics.TrackEvent("Translation Hard Exam");
+            Translation_HardExam exam = new Translation_HardExam();
 			exam.Show();
 			this.Close();
 		}
         private void enlargementEasy(object sender, RoutedEventArgs e) //Start an enlargement easy exam
         {
-			Enlargement_EasyExam exam = new Enlargement_EasyExam();
+            Analytics.TrackEvent("Enlargment Easy Exam");
+            Enlargement_EasyExam exam = new Enlargement_EasyExam();
 			exam.Show();
 			this.Close();
 		}
         private void enlargementHard(object sender, RoutedEventArgs e)  //Start an enlargement hard exam
         {
-			Enlargement_HardExam exam = new Enlargement_HardExam();
+            Analytics.TrackEvent("Enlargment Hard Exam");
+            Enlargement_HardExam exam = new Enlargement_HardExam();
 			exam.Show();
 			this.Close();
 		}
         private void ReflectionEasy(object sender, RoutedEventArgs e)  //Start an reflection easy exam
         {
-			Reflection_EasyExam exam = new Reflection_EasyExam();
+            Analytics.TrackEvent("Reflection Easy Exam");
+            Reflection_EasyExam exam = new Reflection_EasyExam();
 			exam.Show();
 			this.Close();
 		}
         private void ReflectionHard(object sender, RoutedEventArgs e)  //Start an reflection hard exam
         {
-			Reflection_HardExam exam = new Reflection_HardExam();
+            Analytics.TrackEvent("Reflection Hard Exam");
+            Reflection_HardExam exam = new Reflection_HardExam();
 			exam.Show();
 			this.Close();
 		}
         private void RotationHard(object sender, RoutedEventArgs e)    //Start an rotation hard exam
         {
-			Rotation_HardExam exam = new Rotation_HardExam();
+            Analytics.TrackEvent("Rotation Hard Exam");
+            Rotation_HardExam exam = new Rotation_HardExam();
 			exam.Show();
 			this.Close();
 		}
         private void RotationEasy(object sender, RoutedEventArgs e)    //Start an rotation easy exam
         {
-			Rotation_EasyExam exam = new Rotation_EasyExam();
+            Analytics.TrackEvent("Rotation Easy Exam");
+            Rotation_EasyExam exam = new Rotation_EasyExam();
 			exam.Show();
 			this.Close();
 		}
         private void Help(object sender, RoutedEventArgs e)     //Opens the help link
         {
-			System.Diagnostics.Process.Start(Properties.Strings.HelpLink);
+            Analytics.TrackEvent("Help Clicked");
+            System.Diagnostics.Process.Start(Properties.Strings.HelpLink);
 		}
         private void SavePDF(object sender, RoutedEventArgs e)  //Saves the users exam results into a PDF file.
         {
+            Analytics.TrackEvent("Save to PDF");
             if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest)        //If user is not a guest - Hence has results
             {
                 try
@@ -208,8 +221,9 @@ namespace Transformations
                             MessageBoxImage.Information);
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                         Properties.Strings.PDFFailed + Properties.Strings.CriticalFailuer,
                         Properties.Strings.EM_CriticalFailure + "400 N", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);

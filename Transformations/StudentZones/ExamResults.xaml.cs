@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Data.OleDb;
 using System.Windows;
 using System.Windows.Media;
@@ -27,8 +28,18 @@ namespace Transformations
 				PassOrFail.Foreground = new SolidColorBrush(Colors.Red);
 				Pass = false;
 			}
-	
-			if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
+
+            //Without storing personally identifiable data track general user exam performance to assess if they are too hard or easy.
+            Analytics.TrackEvent("Completed Exam", new System.Collections.Generic.Dictionary<string, string> {
+                    { "ExamID",  Result.ExamID.ToString() },
+                    { "Score",  Result.ScoreValue.ToString()},
+                    { "Attempts", Result.TotalAttempts.ToString() },
+                    { "Time", time.Content.ToString() },
+                    { "Pass", Pass.ToString() }
+            });
+
+
+            if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
 			{
 				try
 				{
