@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -75,15 +76,18 @@ namespace Transformations
 
 					ReflectionPolygon();
 				}
-			}
-			else
+                Analytics.TrackEvent("Reflection Executed");
+            }
+            else
 			{
+                Analytics.TrackEvent("Reflection No Shape");
+
                 MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
                     Properties.Strings.EM_FieldEmpty + "300 F", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
                 Reflection_Execute.IsChecked = false;
             }
-		}
-       	private void ReflectionPolygon() //While user is moving the mouse and reflection is activated 
+        }
+        private void ReflectionPolygon() //While user is moving the mouse and reflection is activated 
 		{
 			try
 			{

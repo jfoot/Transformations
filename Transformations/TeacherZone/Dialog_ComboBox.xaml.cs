@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.OleDb;
@@ -35,8 +36,9 @@ namespace Transformations
 				Command = _command;
 				Selected = _selected;
 			}
-			catch (Exception)
+			catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.UserClassInvalid + Properties.Strings.UserError,
                     Properties.Strings.EM_InvalidRequestError + "301 B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -66,8 +68,9 @@ namespace Transformations
 
 					UserCombo.ItemsSource = TeacherLists;  //Fills the drop-down menu with the teacher list.
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
+                   Crashes.TrackError(ex);
                     MessageBox.Show(
                    Properties.Strings.TeacherNameFail + Properties.Strings.DataBaseError,
                    Properties.Strings.EM_DataBaseReadError + "100 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -128,8 +131,9 @@ namespace Transformations
                     	Properties.Strings.EM_FieldEmpty + "300 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
-			catch (Exception)
+			catch (Exception ex)
 			{
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                         Properties.Strings.TransferFailed + Properties.Strings.DataBaseError,
                          Properties.Strings.DatabaseWriteError + " B", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);

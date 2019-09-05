@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -44,9 +46,12 @@ namespace Transformations
 					//Set the rotations angle and then execute it.
 					MyShapes[MyShapes.Count - 1].MyRotateTransform.Angle = rotAmount;
 					MyShapes[MyShapes.Count - 1].MyRotateTransform.BeginAnimation(RotateTransform.AngleProperty, myanimation);
-				}
-				catch (Exception)
+
+                    Analytics.TrackEvent("Rotation Executed");
+                }
+                catch (Exception ex)
 				{
+                    Crashes.TrackError(ex);
                     MessageBox.Show(
                         Properties.Strings.NumericCordsOnly + Properties.Strings.UserError,
                         Properties.Strings.EM_InvalidInputTypeError + "302 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -54,21 +59,24 @@ namespace Transformations
             }
 			else
 			{
+                Analytics.TrackEvent("Rotation No Shape Selected");
                 MessageBox.Show(Properties.Strings.NoShapeSelected1 + Properties.Strings.UserError,
                     Properties.Strings.EM_FieldEmpty + "300 G", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
         private void ShowRotationGhosts(object sender, RoutedEventArgs e) //Show rotation ghosts
 		{
-			ShowGhosts("rotation");
+            ShowGhosts("rotation");
 		}
         private void HideRotationGhosts(object sender, RoutedEventArgs e) //Hide rotation ghosts
 		{
-			HideGhosts("rotation");
+            Analytics.TrackEvent("Hide Rotation Ghosts");
+            HideGhosts("rotation");
 		}
         private void DeleteRotationGhosts(object sender, RoutedEventArgs e)//Delete rotation ghosts
 		{
-			DeleteGhosts("rotation");
+            Analytics.TrackEvent("Delete Rotation Ghosts");
+            DeleteGhosts("rotation");
 		}
 	}
 }

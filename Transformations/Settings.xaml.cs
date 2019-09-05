@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Diagnostics;
@@ -205,6 +207,7 @@ namespace Transformations
         }
         private void ResetChanges(object sender, RoutedEventArgs e) //Reset settings to default button.
         {
+            Analytics.TrackEvent("Reset Settings Changes");
             Properties.Settings.Default.Reset();
             this.Close();
             MessageBox.Show(Properties.Strings.SettingsReset);
@@ -344,9 +347,23 @@ namespace Transformations
 
             Properties.Settings.Default.Language = ((ComboBoxItem)LangDrop.SelectedItem).Tag.ToString();
 
-
             if (valid)
             {
+                Analytics.TrackEvent("Saved Settings", new System.Collections.Generic.Dictionary<string, string> {
+                    { "Height",  Properties.Settings.Default.DefaultHeight.ToString() },
+                    { "Shape Colour",   Properties.Settings.Default.DefaultColour.ToString()},
+                    { "Grid Colour",  Properties.Settings.Default.DefaultGridColour.ToString() },
+                    { "Resoultion",  Properties.Settings.Default.DefaultResolution.ToString() },
+                    { "Performance",  Properties.Settings.Default.DefaultPerformance.ToString() },
+                    { "Defualt DataLocation",  Properties.Settings.Default.DatalocDefault.ToString() },
+                    { "Is Teacher",  Properties.Settings.Default.IsTeacher.ToString() },
+                    { "Dark Mode",  Properties.Settings.Default.DarkMode.ToString() },
+                    { "Language",  Properties.Settings.Default.Language.ToString() },
+                    { "UserTel",  Properties.Settings.Default.UserTel.ToString() },
+                    { "CrashTel",  Properties.Settings.Default.CrashTel.ToString() }
+                });
+                
+
                 Properties.Settings.Default.Save();
                 this.Close();
                 MessageBox.Show(Properties.Strings.SettingsSaved);
@@ -357,6 +374,8 @@ namespace Transformations
         }
         private void DeleteAccountButton(object sender, RoutedEventArgs e)  //Delete account 
         {
+            Analytics.TrackEvent("Attempt To Delete Account");
+
             try
             {
                 if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)
@@ -394,6 +413,7 @@ namespace Transformations
                         MessageBox.Show(Properties.Strings.AccountDeleted, Properties.Strings.DeletedSuccessfully,
                             System.Windows.MessageBoxButton.OK,
                             MessageBoxImage.Information);
+                        Analytics.TrackEvent("Student Account Deleted");
 
                         Process.Start(Application.ResourceAssembly.Location);
                         Application.Current.Shutdown();
@@ -486,14 +506,15 @@ namespace Transformations
 
                         StudentIDs.Clear();
                         ClassIDS.Clear();
-
+                        Analytics.TrackEvent("Teacher Account Deleted");
                         Process.Start(Application.ResourceAssembly.Location);
                         Application.Current.Shutdown();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.FailedToDeleteAccount+ Properties.Strings.DataBaseError,
                     Properties.Strings.EM_DBRandWError + "102 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -501,10 +522,12 @@ namespace Transformations
         }
         private void Download(object sender, System.Windows.Input.MouseButtonEventArgs e)   //Download dependency software
         {
+            Analytics.TrackEvent("Download Access");
             System.Diagnostics.Process.Start(Properties.Strings.AccessDownload);
         }
         private void ChangeClassClick(object sender, RoutedEventArgs e)     //Change class 
         {
+            Analytics.TrackEvent("Change Class");
             Dialog_ComboBox Combo = new Dialog_ComboBox(Properties.Strings.TransferUser,
                 Properties.Strings.TransferUserText,
                 "user_transfer", Properties.Settings.Default.UserID.ToString())
@@ -553,6 +576,7 @@ namespace Transformations
 
         private void PrivacyPolicyView(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
+            Analytics.TrackEvent("View Privacy Policy");
             System.Diagnostics.Process.Start(Properties.Strings.PPolicyLink);
         }
     }

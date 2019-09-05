@@ -203,10 +203,10 @@ namespace Transformations.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IsSetUp {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string IsSetUp {
             get {
-                return ((bool)(this["IsSetUp"]));
+                return ((string)(this["IsSetUp"]));
             }
             set {
                 this["IsSetUp"] = value;

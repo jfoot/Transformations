@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -117,7 +118,9 @@ namespace Transformations
 		}
         private void DeleteShapeClick(object sender, RoutedEventArgs e) //Allows the user to delete a shape upon pressing the button
 		{
-			MessageBoxResult messageBoxResult = MessageBox.Show(
+            Analytics.TrackEvent("Delete Shape Click");
+
+            MessageBoxResult messageBoxResult = MessageBox.Show(
 				Properties.Strings.AreYouSureDelete + SelectedShape.Name.ToString() + "?", Properties.Strings.DeleteConfirm,
 				System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Question);
 			if (messageBoxResult == MessageBoxResult.Yes)
@@ -142,7 +145,8 @@ namespace Transformations
 		}
         private void UnselectShapeClick(object sender, RoutedEventArgs e) //Allows the user to unselect a shape upon pressing the button
 		{
-			SelectedShape = null;
+            Analytics.TrackEvent("Unselect Shape");
+            SelectedShape = null;
 
 			unselectShape.IsEnabled = false;
 			deleteShape.IsEnabled = false;
@@ -167,7 +171,9 @@ namespace Transformations
 		}
 		private void DeleteAllGhosts(object sender, RoutedEventArgs e) //Allows the user to delete all ghost shapes upon pressing the button
 		{
-			foreach (Shapes t in MyShapes)
+            Analytics.TrackEvent("Delete All Ghosts");
+
+            foreach (Shapes t in MyShapes)
 			{
 				if (t.MyShape.Name.StartsWith("dupe"))
 				{

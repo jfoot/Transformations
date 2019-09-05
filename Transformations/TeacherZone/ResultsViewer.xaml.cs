@@ -8,6 +8,8 @@ using System.Windows.Input;
 using System.Data;
 using System.Windows.Data;
 using MessageBox = System.Windows.MessageBox;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Analytics;
 
 namespace Transformations
 {
@@ -30,8 +32,9 @@ namespace Transformations
                 Type = _type;
                 FillData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.UserClassInvalid + Properties.Strings.UserError,
                     Properties.Strings.EM_InvalidRequestError + "301 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -80,10 +83,10 @@ namespace Transformations
 
                     UserGrid.ItemsSource = TableData.DefaultView;
                 }
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                                 Properties.Strings.FailedToGetUserClassResults + Properties.Strings.DataBaseError,
                                 Properties.Strings.EM_DataBaseReadError + "100 C", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -120,6 +123,7 @@ namespace Transformations
         }
         private void Export(object sender, RoutedEventArgs e)	//Used to export the data grid to an excel document
         {
+            Analytics.TrackEvent("Attempted To Export To Excel");
             try
             {
                 SaveFileDialog save = new SaveFileDialog		//Save file dialog box appears
@@ -148,15 +152,17 @@ namespace Transformations
 					writer.WriteLine(CSVData);
 					writer.Close();
 				}
+                Analytics.TrackEvent("Saved To Excel");
 
-				if (Type == "all")
+                if (Type == "all")
                 {
                     UserGrid.Columns[1].Visibility = Visibility.Collapsed;
                 }
 				UserGrid.SelectionMode = DataGridSelectionMode.Single;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.ExportationFailed + Properties.Strings.CriticalFailuer,
                     Properties.Strings.EM_CriticalFailure + "400 A", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
@@ -164,6 +170,7 @@ namespace Transformations
         }
         private void DeleteResult(object sender, RoutedEventArgs e)	//Delete an exam result
         {
+            Analytics.TrackEvent("Attempted To Delete Exam Result");
             try
             {
 				//Retrieves the result ID selected
@@ -185,10 +192,12 @@ namespace Transformations
                         }
                     }
                 }
+                Analytics.TrackEvent("Exam Result Deleted");
                 FillData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 MessageBox.Show(
                     Properties.Strings.UnableToDeleteResult + Properties.Strings.UserError,
                     Properties.Strings.EM_InvalidRequestError + "301 D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
