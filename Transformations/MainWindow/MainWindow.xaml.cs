@@ -100,7 +100,7 @@ namespace Transformations
            // Updates the UI upon start up.
 
             accountName.Content = Properties.Settings.Default.AliasName;
-            version.Content = String.Format(Properties.Strings.CreatedBy + " Jonathan Foot 2019©    " + Properties.Strings.ver + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+            version.Content = String.Format(Properties.Strings.CreatedBy + " Jonathan Foot 2021©    " + Properties.Strings.ver + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
             if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
             {
