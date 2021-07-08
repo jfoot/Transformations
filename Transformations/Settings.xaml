@@ -221,31 +221,7 @@
             <TabItem Header="{lex:Loc Details}">
                 <Grid>
                     <TextBlock Height="100" Margin="12,10,10,280" Text="{lex:Loc DetailsText2}" TextDecorations="{x:Null}" TextWrapping="Wrap" />
-                    <UniformGrid Margin="12,81,161,259" Columns="2" Rows="2">
-                        <Label Width="100" Height="100" Content="{lex:Loc AccountType}" FontWeight="Bold" />
-                        <Label x:Name="AccountType" Width="100" Height="100" Content="{lex:Loc StudentAccount}" />
-                        <Label Width="100" Height="100" Content="{lex:Loc AliasName}" FontWeight="Bold" />
-                        <Label x:Name="AliasName" Width="100" Height="100" Content="Alias Name " />
-                        <Label Width="100" Height="100" Content="{lex:Loc UserName}" FontWeight="Bold" />
-                        <Label x:Name="usernameLabel" Width="100" Height="100" Content="USERNAME" />
-                        <Label Width="100" Height="100" Content="{lex:Loc UserID}" FontWeight="Bold" />
-                        <Label x:Name="userIDLabel" Width="100" Height="100" Content="ID" />
-                        <Label x:Name="TechDisc" Width="100" Height="100" Content="{lex:Loc Teacher2}" FontWeight="Bold" />
-                        <Label x:Name="TeacherName" Width="100" Height="100" Content="Null" />
-                        <Label x:Name="ClassDisc" Width="100" Height="100" Content="{lex:Loc ClassName}" FontWeight="Bold" />
-                        <Label x:Name="ClassName" Width="100" Height="100" Content="Null" />
-                        <Label x:Name="ClassIDDisc" Width="100" Height="100" Content="{lex:Loc ClassID}" FontWeight="Bold" />
-                        <Label x:Name="ClassID" Width="100" Height="100" Content="ID" />
-
-                        <Label Width="100" Height="100" Content="" FontWeight="Bold" />
-                        <Label Width="100" Height="100" Content="" />
-
-                        <Button x:Name="DeleteAccount" Margin="0,0,-3,0" Click="DeleteAccountButton" Content="{lex:Loc DeleteAccount}" FontWeight="Bold" Foreground="Red" />
-                        <Button x:Name="ChangeClass" Margin="8,0,-3,0" Click="ChangeClassClick" Content="{lex:Loc ChangeClass}" Foreground="Black" />
-                        <Label Width="100" Height="100" Content="{lex:Loc ver}" />
-                        <Label x:Name="Version" Width="100" Height="100" Content="V X" />
-                    </UniformGrid>
-                    <TextBlock Margin="10,347,9.6,9.6" Cursor="Hand" Foreground="#FF000CFF" MouseDown="Download" Text="{lex:Loc DependencyDownload}" TextDecorations="Underline" TextWrapping="Wrap" />
+                    <Label x:Name="Version" Content="V X" Margin="0,348,287.6,9.6" />
                 </Grid>
             </TabItem>
 

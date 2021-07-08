@@ -37,35 +37,7 @@ namespace Transformations
                     { "Time", time.Content.ToString() },
                     { "Pass", Pass.ToString() }
             });
-
-
-            if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)   //If not a guest or teacher then save results
-			{
-				try
-				{
-					using (var conn = new OleDbConnection { ConnectionString = DataBase.ConnectionString() })
-					{	
-						conn.Open();
-						using (var command = new OleDbCommand("INSERT INTO ExamResults ([StudentID], [ExamID], [Score], [Attempts], [Time], [Pass]) VALUES (@StudentID,  @ExamID, @Score, @Attempts, @Time, @Pass)", conn))
-						{   //Save the exam results into the exam results table.
-							command.Parameters.AddWithValue("@StudentID", Properties.Settings.Default.UserID);
-							command.Parameters.AddWithValue("@ExamID", Result.ExamID);
-							command.Parameters.AddWithValue("@Score", Result.ScoreValue);
-							command.Parameters.AddWithValue("@Attempts", Result.TotalAttempts);
-							command.Parameters.AddWithValue("@Time", time.Content);
-							command.Parameters.AddWithValue("@Pass", Pass);
-							command.ExecuteNonQuery();
-						}
-					}
-				}
-				catch (Exception)
-                {
-                    MessageBox.Show(
-                        Properties.Strings.FailedToSaveResult + Properties.Strings.DataBaseError,
-                        Properties.Strings.DatabaseWriteError + " D", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-			}
-		}
+        }
         private void Exit(object sender, RoutedEventArgs e) //Exit the exam.
 		{
 			TakeExam TakeExam = new TakeExam();

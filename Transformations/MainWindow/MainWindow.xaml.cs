@@ -73,21 +73,7 @@ namespace Transformations
             
             SplashScreen splash = new SplashScreen("splash_screen.png");	//Creates a start up splash screen
 			splash.Show(true, true);
-			//Checks the database connection on startup.
-			System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
-			try
-			{
-				conn.ConnectionString = DataBase.ConnectionString();
-				conn.Open();
-			}
-			catch (Exception)
-			{
-				DatabaseError.Visibility = Visibility.Visible;	//If no connection can be established display an error
-			}
-			finally
-			{
-				conn.Close();
-			}
+			
             
             //Change the width and height of the application based upon the monitors resolution
             this.Width = Properties.Settings.Default.DefaultResolution == false ? 850 : 1100;   
@@ -98,25 +84,9 @@ namespace Transformations
 					Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata { DefaultValue = 15 }); } catch (Exception){}
 
            // Updates the UI upon start up.
-
-            accountName.Content = Properties.Settings.Default.AliasName;
             version.Content = String.Format(Properties.Strings.CreatedBy + " Jonathan Foot 2021©    " + Properties.Strings.ver + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
-            if (Properties.Settings.Default.CurrentUser == Properties.Strings.Guest)
-            {
-                Login.Header = Properties.Strings.StudentLoginDrop;
-                Teacher.Header = Properties.Strings.TeacherLoginDrop;
-            }
-            else if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == true)
-            {
-                Login.Header = Properties.Strings.StudentLoginDrop;
-                Teacher.Header = Properties.Strings.TeacherLogOutDrop;
-            }
-            else if (Properties.Settings.Default.CurrentUser != Properties.Strings.Guest && Properties.Settings.Default.IsTeacher == false)
-            {
-                Login.Header = Properties.Strings.StudentLogOutDrop;
-                Teacher.Header = Properties.Strings.TeacherLoginDrop;
-            }
+          
 			if (Properties.Settings.Default.DarkMode)	//Sets the background colour
 				border.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 31, 31, 31));
 		}

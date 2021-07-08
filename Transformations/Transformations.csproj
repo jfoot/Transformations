@@ -93,12 +93,6 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
-    </Reference>
     <Reference Include="SQLite-net, Version=1.7.335.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\sqlite-net-pcl.1.7.335\lib\netstandard2.0\SQLite-net.dll</HintPath>
     </Reference>
@@ -258,30 +252,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TeacherZone\ClassEditor.xaml.cs">
-      <DependentUpon>ClassEditor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StudentZones\CreateAccount.xaml.cs">
-      <DependentUpon>CreateAccount.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherZone\CreateTeacherAccount.xaml.cs">
-      <DependentUpon>CreateTeacherAccount.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\DataBase.cs" />
-    <Compile Include="DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherZone\ResultsViewer.xaml.cs">
-      <DependentUpon>ResultsViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherZone\Dialog_ComboBox.xaml.cs">
-      <DependentUpon>Dialog_ComboBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherZone\Dialog_TextBox.xaml.cs">
-      <DependentUpon>Dialog_TextBox.xaml</DependentUpon>
-    </Compile>
     <Compile Include="StudentZones\Enlargement_EasyExam.xaml.cs">
       <DependentUpon>Enlargement_EasyExam.xaml</DependentUpon>
     </Compile>
@@ -321,9 +291,6 @@
     <Compile Include="StudentZones\TakeExam.xaml.cs">
       <DependentUpon>TakeExam.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TeacherZone\ClassViewer.xaml.cs">
-      <DependentUpon>ClassViewer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -334,36 +301,9 @@
     <Compile Include="StudentZones\Translation_HardExam.xaml.cs">
       <DependentUpon>Translation_HardExam.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Troubleshooting.xaml.cs">
-      <DependentUpon>Troubleshooting.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WhatsNew.xaml.cs">
       <DependentUpon>WhatsNew.xaml</DependentUpon>
     </Compile>
-    <Page Include="TeacherZone\ClassEditor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StudentZones\CreateAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TeacherZone\CreateTeacherAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TeacherZone\ResultsViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TeacherZone\Dialog_ComboBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TeacherZone\Dialog_TextBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="StudentZones\Enlargement_EasyExam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -404,10 +344,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TeacherZone\ClassViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -417,10 +353,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StudentZones\Translation_HardExam.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Troubleshooting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -454,17 +386,6 @@
     <EmbeddedResource Include="Properties\Strings.ru.resx" />
     <EmbeddedResource Include="Properties\Strings.sv.resx" />
     <EmbeddedResource Include="Properties\Strings.zh.resx" />
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -546,9 +467,6 @@
   <ItemGroup>
     <Resource Include="Resources\TLogoWide.png" />
     <Resource Include="Resources\FixMe.png" />
-    <Content Include="Database.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="trasnformations.ico" />
     <Resource Include="Resources\RussianF.jpg" />
     <Resource Include="Resources\CzechF.png" />
