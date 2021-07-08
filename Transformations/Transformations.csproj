@@ -50,6 +50,7 @@
     <PackageProjectUrl>https://www.jonathanfoot.com/Projects/Transformations/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jfoot/Transformations</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.fr.Designer - Copy.cs">
