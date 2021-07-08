@@ -3,10 +3,8 @@ using System.Globalization;
 using System.IO;
 using System.Windows;
 using WPFLocalizeExtension.Engine;
-using Transformations.Properties;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 
 namespace Transformations
 {

@@ -1,9 +1,7 @@
-﻿using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
+﻿using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Input;

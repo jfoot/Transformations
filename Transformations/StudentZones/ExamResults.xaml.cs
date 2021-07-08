@@ -1,6 +1,4 @@
 ﻿using Microsoft.AppCenter.Analytics;
-using System;
-using System.Data.OleDb;
 using System.Windows;
 using System.Windows.Media;
 

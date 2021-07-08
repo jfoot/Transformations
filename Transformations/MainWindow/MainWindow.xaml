@@ -450,37 +450,9 @@
                             </Grid>
                         </GroupBox>
 
-                        <Rectangle
-                            Width="224"
-                            Height="58"
-                            Margin="10,536,0,111"
-                            HorizontalAlignment="Left"
-                            Fill="White"
-                            RadiusX="5"
-                            RadiusY="5"
-                            Stroke="#FF2F65B8"
-                            StrokeThickness="3" />
-                        <Label
-                            x:Name="accountName"
-                            Width="161"
-                            Height="38"
-                            Margin="73,550,0,117"
-                            HorizontalAlignment="Left"
-                            Background="#00000000"
-                            Content="{lex:Loc GuestAccount}"
-                            FontFamily="Segoe UI Light"
-                            FontSize="20"
-                            FontWeight="Bold"
-                            Foreground="Black" />
-                        <Image
-                            Width="52"
-                            Height="46"
-                            Margin="21,542,0,117"
-                            HorizontalAlignment="Left"
-                            Source="/Transformations;component/Resources/login.png" />
 
                         <TextBlock
-                            Margin="10,602,10,0"
+                            Margin="10,537,10,65"
                             Foreground="#FF939393"
                             Text="{lex:Loc SearchingForSetting}"
                             TextWrapping="Wrap" />

@@ -81,7 +81,7 @@ namespace Transformations
 
             try
             {
-                Grid.Labels.ForEach(o => MyCanvas.Children.Add(o));
+                Grid?.Labels.ForEach(o => MyCanvas.Children.Add(o));
             }
             catch (Exception) { }
 		}

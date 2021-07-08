@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using WPFLocalizeExtension.Extensions;
 using Cursor = System.Windows.Input.Cursor;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 

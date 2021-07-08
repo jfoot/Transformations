@@ -1,18 +1,5 @@
 ﻿using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
 using System.Windows;
-using System.Windows.Controls.DataVisualization.Charting;
-using System.Windows.Forms;
-using System.Windows.Media;
-using System.Windows.Media.Effects;
-using System.Windows.Media.Imaging;
-using MessageBox = System.Windows.MessageBox;
-using Point = System.Windows.Point;
 
 namespace Transformations
 {
@@ -97,7 +84,6 @@ namespace Transformations
             Analytics.TrackEvent("Help Clicked");
             System.Diagnostics.Process.Start(Properties.Strings.HelpLink);
 		}
-      
-	}
+    }
 }
 

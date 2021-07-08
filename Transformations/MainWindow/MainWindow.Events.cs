@@ -5,7 +5,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 
 
 //This Class contains all the events for the main window of the program

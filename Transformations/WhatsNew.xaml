@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:Transformations"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Whats New!"
-    Width="806.449"
-    Height="264.406"
+    Width="804"
+    Height="304"
     ResizeMode="NoResize"
     Topmost="True"
     WindowStartupLocation="CenterScreen"
@@ -29,9 +29,9 @@
             VerticalAlignment="Top"
             FontSize="16"
             TextAlignment="Center"
-            TextWrapping="Wrap"><Run Text="In V1.9.0 we've fixed a handful of smaller bugs and updated the program dependencies." /></TextBlock>
+            TextWrapping="Wrap"><Run Text="In V2.0.0 we've removed the ability to have accounts and connect to a database. This feature was rarely used and complicated to maintain. The app has now been upgraded to .NET 5.0 and so should have several performance improvements." /></TextBlock>
         <CheckBox
-            Margin="2,208,0,0"
+            Margin="6,239,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Do Not Show Again"
@@ -47,14 +47,14 @@
         <Button
             Width="510"
             Height="45"
-            Margin="147,148,0,0"
+            Margin="151,179,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="Button_Click"
             Content="Close"
             FontWeight="Bold" />
         <Label
-            Margin="690,202,0,0"
+            Margin="694,233,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Privacy Policy"
@@ -62,7 +62,7 @@
             Foreground="#FF0C00FF"
             MouseDown="PPolicy" />
         <Label
-            Margin="542,202,0,0"
+            Margin="546,233,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Turn off Telemetry Data"
